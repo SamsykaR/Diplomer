@@ -1,0 +1,10 @@
+<RCC>
+  <qresource prefix="/qt/qml/app/">
+    <file alias="Main.qml">C:/Users/rodio/Desktop/W/Diplom/app/Main.qml</file>
+    <file alias="OrderPage.qml">C:/Users/rodio/Desktop/W/Diplom/app/OrderPage.qml</file>
+    <file alias="StockPage.qml">C:/Users/rodio/Desktop/W/Diplom/app/StockPage.qml</file>
+    <file alias="ReportsPage.qml">C:/Users/rodio/Desktop/W/Diplom/app/ReportsPage.qml</file>
+    <file alias="LoginPage.qml">C:/Users/rodio/Desktop/W/Diplom/app/LoginPage.qml</file>
+  </qresource>
+</RCC>
+

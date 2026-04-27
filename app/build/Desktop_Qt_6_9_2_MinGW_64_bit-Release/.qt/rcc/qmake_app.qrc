@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/app">
+    <file alias="qmldir">C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Release/app/qmldir</file>
+  </qresource>
+</RCC>
+

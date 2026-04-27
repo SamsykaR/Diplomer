@@ -1,0 +1,52 @@
+{
+    "classes": [
+        {
+            "className": "ClientConnection",
+            "lineNumber": 13,
+            "object": true,
+            "qualifiedClassName": "ClientConnection",
+            "slots": [
+                {
+                    "access": "private",
+                    "index": 0,
+                    "name": "onReadyRead",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "index": 1,
+                    "name": "onDisconnected",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        },
+        {
+            "className": "TcpServer",
+            "lineNumber": 32,
+            "object": true,
+            "qualifiedClassName": "TcpServer",
+            "slots": [
+                {
+                    "access": "private",
+                    "index": 0,
+                    "name": "onNewConnection",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "tcpserver.h",
+    "outputRevision": 69
+}

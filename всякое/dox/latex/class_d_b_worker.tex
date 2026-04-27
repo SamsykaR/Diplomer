@@ -1,0 +1,100 @@
+\doxysection{DBWorker Class Reference}
+\hypertarget{class_d_b_worker}{}\label{class_d_b_worker}\index{DBWorker@{DBWorker}}
+Inheritance diagram for DBWorker:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_d_b_worker}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_d_b_worker_aa3322617a25970789ce72c60f1c66def}\label{class_d_b_worker_aa3322617a25970789ce72c60f1c66def} 
+void {\bfseries error\+Occurred} (const QString \&message)
+\item 
+\Hypertarget{class_d_b_worker_a4b303b1e41b5cae3ec23de15b57fae88}\label{class_d_b_worker_a4b303b1e41b5cae3ec23de15b57fae88} 
+void {\bfseries food\+Availability\+Changed} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_d_b_worker_aa9780c5bc05eab6eb2ce9d09b4906ba3}\label{class_d_b_worker_aa9780c5bc05eab6eb2ce9d09b4906ba3} 
+{\bfseries DBWorker} (\doxymbox{\hyperlink{class_logs}{Logs}} \texorpdfstring{$\ast$}{*}logger, QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+\Hypertarget{class_d_b_worker_a1632dbe913deb9482384580fb2ecf317}\label{class_d_b_worker_a1632dbe913deb9482384580fb2ecf317} 
+Q\+\_\+\+INVOKABLE bool {\bfseries check\+User} (const QString \&login, const QString \&password)
+\item 
+\Hypertarget{class_d_b_worker_a0cea6bc29f96ecaaaf8658c63dc83367}\label{class_d_b_worker_a0cea6bc29f96ecaaaf8658c63dc83367} 
+Q\+\_\+\+INVOKABLE QString {\bfseries get\+User\+Name} () const
+\item 
+\Hypertarget{class_d_b_worker_a7ca50ed46388fda2bf966ee48a007d4e}\label{class_d_b_worker_a7ca50ed46388fda2bf966ee48a007d4e} 
+Q\+\_\+\+INVOKABLE QString {\bfseries get\+User\+Role} () const
+\item 
+\Hypertarget{class_d_b_worker_abeb4d481e6deef155d1a52a2e634f862}\label{class_d_b_worker_abeb4d481e6deef155d1a52a2e634f862} 
+Q\+\_\+\+INVOKABLE int {\bfseries get\+User\+Id} () const
+\item 
+\Hypertarget{class_d_b_worker_a620b9a23df8d7f5d841395fbb310dd29}\label{class_d_b_worker_a620b9a23df8d7f5d841395fbb310dd29} 
+Q\+\_\+\+INVOKABLE bool {\bfseries check\+And\+Consume} (int food\+Id, int quantity)
+\item 
+\Hypertarget{class_d_b_worker_a98a74e63537a608ffbcab569c92105fe}\label{class_d_b_worker_a98a74e63537a608ffbcab569c92105fe} 
+Q\+\_\+\+INVOKABLE bool {\bfseries return\+Ingredients} (int food\+Id, int quantity)
+\item 
+\Hypertarget{class_d_b_worker_a8e8c5c4585c20c2b91deaaecbce93ed1}\label{class_d_b_worker_a8e8c5c4585c20c2b91deaaecbce93ed1} 
+Q\+\_\+\+INVOKABLE bool {\bfseries refresh\+All\+Foods\+Availability} ()
+\item 
+\Hypertarget{class_d_b_worker_ab883b3de60f36bb85a0f25b3ce790998}\label{class_d_b_worker_ab883b3de60f36bb85a0f25b3ce790998} 
+Q\+\_\+\+INVOKABLE bool {\bfseries reconnect} (const QString \&host, int port, const QString \&db\+Name, const QString \&user, const QString \&password)
+\item 
+\Hypertarget{class_d_b_worker_adc2415126bc7c9a82cf56ccb684f5686}\label{class_d_b_worker_adc2415126bc7c9a82cf56ccb684f5686} 
+Q\+\_\+\+INVOKABLE QString\+List {\bfseries get\+Local\+Ips} ()
+\item 
+\Hypertarget{class_d_b_worker_aff1435f503b992c4bb581e01edba8961}\label{class_d_b_worker_aff1435f503b992c4bb581e01edba8961} 
+Q\+\_\+\+INVOKABLE bool {\bfseries ping\+Server} (const QString \&host, int port)
+\item 
+\Hypertarget{class_d_b_worker_a6c621568563fda53aec2b78e35f49189}\label{class_d_b_worker_a6c621568563fda53aec2b78e35f49189} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Foods} ()
+\item 
+\Hypertarget{class_d_b_worker_a4f3ae45af197d611a249f81040b43981}\label{class_d_b_worker_a4f3ae45af197d611a249f81040b43981} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Products} ()
+\item 
+\Hypertarget{class_d_b_worker_ac690f42b9b6ae8dd692f1c4eddff0d23}\label{class_d_b_worker_ac690f42b9b6ae8dd692f1c4eddff0d23} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Dishes\+List} ()
+\item 
+\Hypertarget{class_d_b_worker_ace7fc41838e18c5bd013c7321c0c5b92}\label{class_d_b_worker_ace7fc41838e18c5bd013c7321c0c5b92} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Waiters\+List} ()
+\item 
+\Hypertarget{class_d_b_worker_a8a566ccf8e3f88150d57bd5c2823ae71}\label{class_d_b_worker_a8a566ccf8e3f88150d57bd5c2823ae71} 
+Q\+\_\+\+INVOKABLE bool {\bfseries update\+Product\+Quantity} (int product\+Id, int new\+Quantity)
+\item 
+\Hypertarget{class_d_b_worker_abe3395aee201eb08c029364481a054b1}\label{class_d_b_worker_abe3395aee201eb08c029364481a054b1} 
+Q\+\_\+\+INVOKABLE bool {\bfseries add\+Product\+Quantity} (int product\+Id, int delta)
+\item 
+\Hypertarget{class_d_b_worker_ade7c3808032512ef7e804ad83bf65dc5}\label{class_d_b_worker_ade7c3808032512ef7e804ad83bf65dc5} 
+Q\+\_\+\+INVOKABLE int {\bfseries create\+Order} (int table\+Number, int user\+Id, const QString \&special\+Requests, double total\+Cost)
+\item 
+\Hypertarget{class_d_b_worker_a8186f7c3e1beb4441e3d6ea1b5c0043c}\label{class_d_b_worker_a8186f7c3e1beb4441e3d6ea1b5c0043c} 
+Q\+\_\+\+INVOKABLE bool {\bfseries add\+Order\+Item} (int order\+Id, int food\+Id, int quantity, double price)
+\item 
+\Hypertarget{class_d_b_worker_ac6c0a993e0dc166982ff2f06cc4702f1}\label{class_d_b_worker_ac6c0a993e0dc166982ff2f06cc4702f1} 
+Q\+\_\+\+INVOKABLE QVariant\+Map {\bfseries get\+Report\+Revenue} (const QString \&from, const QString \&to, int dish\+Id, int table\+Number, int waiter\+Id)
+\item 
+\Hypertarget{class_d_b_worker_a4a8642cecbf77c168246bbb73d837e93}\label{class_d_b_worker_a4a8642cecbf77c168246bbb73d837e93} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Revenue\+By\+Day} (const QString \&from, const QString \&to, int dish\+Id, int table\+Number, int waiter\+Id)
+\item 
+\Hypertarget{class_d_b_worker_a6bdab969c8debd217e3b2b01ddee8dba}\label{class_d_b_worker_a6bdab969c8debd217e3b2b01ddee8dba} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Food\+Popularity} (const QString \&from, const QString \&to)
+\item 
+\Hypertarget{class_d_b_worker_aead609c2fdf125f2863020dca2e9dbfc}\label{class_d_b_worker_aead609c2fdf125f2863020dca2e9dbfc} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Report\+Low\+Stock} ()
+\item 
+\Hypertarget{class_d_b_worker_a9a769692eb6878aa8eac94ff19cc48a8}\label{class_d_b_worker_a9a769692eb6878aa8eac94ff19cc48a8} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Low\+Stock\+Warning} (int food\+Id, int quantity)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+C:\+/\+\+Users/\+rodio/\+\+Desktop/\+\+W/\+\+Diplom/\+app/\+dbworker.\+h\item 
+C:\+/\+\+Users/\+rodio/\+\+Desktop/\+\+W/\+\+Diplom/\+app/\+build/\+\+Desktop\+\_\+\+Qt\+\_\+6\+\_\+9\+\_\+2\+\_\+\+Min\+GW\+\_\+64\+\_\+bit-\/\+Debug/\+appapp\+\_\+autogen/\+\+EWIEGA46\+WW/\+moc\+\_\+dbworker.\+cpp\item 
+C:\+/\+\+Users/\+rodio/\+\+Desktop/\+\+W/\+\+Diplom/\+app/\+build/\+\+Desktop\+\_\+\+Qt\+\_\+6\+\_\+9\+\_\+2\+\_\+\+Min\+GW\+\_\+64\+\_\+bit-\/\+Release/\+appapp\+\_\+autogen/\+\+EWIEGA46\+WW/\+moc\+\_\+dbworker.\+cpp\item 
+C:\+/\+\+Users/\+rodio/\+\+Desktop/\+\+W/\+\+Diplom/\+app/\+dbworker.\+cpp\end{DoxyCompactItemize}

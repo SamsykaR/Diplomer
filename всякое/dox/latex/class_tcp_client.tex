@@ -1,0 +1,109 @@
+\doxysection{Tcp\+Client Class Reference}
+\hypertarget{class_tcp_client}{}\label{class_tcp_client}\index{TcpClient@{TcpClient}}
+Inheritance diagram for Tcp\+Client:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tcp_client}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_tcp_client_a254f1163107f12a902908aa7350d31d8}\label{class_tcp_client_a254f1163107f12a902908aa7350d31d8} 
+void {\bfseries error\+Occurred} (const QString \&message)
+\item 
+\Hypertarget{class_tcp_client_a2a13e8742581e5c9e06f967b9566edbc}\label{class_tcp_client_a2a13e8742581e5c9e06f967b9566edbc} 
+void {\bfseries data\+Changed} ()
+\item 
+\Hypertarget{class_tcp_client_aac3554342664b2932ff03423e720f190}\label{class_tcp_client_aac3554342664b2932ff03423e720f190} 
+void {\bfseries response\+Received} (int request\+Id, bool success, const QVariant\+Map \&data)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_tcp_client_a17a79466e7001215a0d65941eb9fb863}\label{class_tcp_client_a17a79466e7001215a0d65941eb9fb863} 
+{\bfseries Tcp\+Client} (\doxymbox{\hyperlink{class_logs}{Logs}} \texorpdfstring{$\ast$}{*}logger, QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+\Hypertarget{class_tcp_client_a0c7f3e0bd5443584f03043dd3c739609}\label{class_tcp_client_a0c7f3e0bd5443584f03043dd3c739609} 
+bool {\bfseries connect\+To\+Server} (const QString \&host, quint16 port)
+\item 
+\Hypertarget{class_tcp_client_a394bcc2931190371006b3c3a891a22e8}\label{class_tcp_client_a394bcc2931190371006b3c3a891a22e8} 
+void {\bfseries disconnect\+From\+Server} ()
+\item 
+\Hypertarget{class_tcp_client_a9848295776a90b6de6acd2e32f69c7c5}\label{class_tcp_client_a9848295776a90b6de6acd2e32f69c7c5} 
+bool {\bfseries is\+Connected} () const
+\item 
+\Hypertarget{class_tcp_client_a113cf296d06543a7440cd3c724bd1f4d}\label{class_tcp_client_a113cf296d06543a7440cd3c724bd1f4d} 
+Q\+\_\+\+INVOKABLE bool {\bfseries check\+User} (const QString \&login, const QString \&password)
+\item 
+\Hypertarget{class_tcp_client_af223cf222ebf139f47899151659f9f39}\label{class_tcp_client_af223cf222ebf139f47899151659f9f39} 
+Q\+\_\+\+INVOKABLE QString {\bfseries get\+User\+Name} () const
+\item 
+\Hypertarget{class_tcp_client_ae01560db21768a959e4ba34e63d5cc82}\label{class_tcp_client_ae01560db21768a959e4ba34e63d5cc82} 
+Q\+\_\+\+INVOKABLE QString {\bfseries get\+User\+Role} () const
+\item 
+\Hypertarget{class_tcp_client_a260b320ff0fae17714f42e918a10a131}\label{class_tcp_client_a260b320ff0fae17714f42e918a10a131} 
+Q\+\_\+\+INVOKABLE int {\bfseries get\+User\+Id} () const
+\item 
+\Hypertarget{class_tcp_client_a941f4186de07d27f2552089616d1b59f}\label{class_tcp_client_a941f4186de07d27f2552089616d1b59f} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Foods} ()
+\item 
+\Hypertarget{class_tcp_client_a5a2d322c628caf861931e3abba256c45}\label{class_tcp_client_a5a2d322c628caf861931e3abba256c45} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Products} ()
+\item 
+\Hypertarget{class_tcp_client_a71b318c7621199531d0f6f7eea332db5}\label{class_tcp_client_a71b318c7621199531d0f6f7eea332db5} 
+Q\+\_\+\+INVOKABLE bool {\bfseries update\+Product\+Quantity} (int product\+Id, int new\+Quantity)
+\item 
+\Hypertarget{class_tcp_client_a267f834762cf8f2b324573de59e2fac8}\label{class_tcp_client_a267f834762cf8f2b324573de59e2fac8} 
+Q\+\_\+\+INVOKABLE bool {\bfseries add\+Product\+Quantity} (int product\+Id, int delta)
+\item 
+\Hypertarget{class_tcp_client_ab558f612aa1701ac232c8fef56466cd0}\label{class_tcp_client_ab558f612aa1701ac232c8fef56466cd0} 
+Q\+\_\+\+INVOKABLE int {\bfseries create\+Order} (int table\+Number, int user\+Id, const QString \&special\+Requests, double total\+Cost)
+\item 
+\Hypertarget{class_tcp_client_a56460b17d1c1348972e675fa4ca3a2dc}\label{class_tcp_client_a56460b17d1c1348972e675fa4ca3a2dc} 
+Q\+\_\+\+INVOKABLE bool {\bfseries add\+Order\+Item} (int order\+Id, int food\+Id, int quantity, double price)
+\item 
+\Hypertarget{class_tcp_client_ad4050d6beba03e7c132d747ee8c3e3d2}\label{class_tcp_client_ad4050d6beba03e7c132d747ee8c3e3d2} 
+Q\+\_\+\+INVOKABLE bool {\bfseries check\+And\+Consume} (int food\+Id, int quantity)
+\item 
+\Hypertarget{class_tcp_client_a3052b46770ba183481202436e4eb7f12}\label{class_tcp_client_a3052b46770ba183481202436e4eb7f12} 
+Q\+\_\+\+INVOKABLE bool {\bfseries return\+Ingredients} (int food\+Id, int quantity)
+\item 
+\Hypertarget{class_tcp_client_a59a08ab013c53cfeed6da37a812a7b05}\label{class_tcp_client_a59a08ab013c53cfeed6da37a812a7b05} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Low\+Stock\+Warning} (int food\+Id, int quantity)
+\item 
+\Hypertarget{class_tcp_client_a21e089583bb8a1359c6c96137cf4db90}\label{class_tcp_client_a21e089583bb8a1359c6c96137cf4db90} 
+Q\+\_\+\+INVOKABLE QVariant\+Map {\bfseries get\+Report\+Revenue} (const QString \&from, const QString \&to, int dish\+Id, int table\+Number, int waiter\+Id)
+\item 
+\Hypertarget{class_tcp_client_a64b62b2a0ae6a316a286397a32494e3d}\label{class_tcp_client_a64b62b2a0ae6a316a286397a32494e3d} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Revenue\+By\+Day} (const QString \&from, const QString \&to, int dish\+Id, int table\+Number, int waiter\+Id)
+\item 
+\Hypertarget{class_tcp_client_a90d8a11aa1c97c64fdfebea43fd0644a}\label{class_tcp_client_a90d8a11aa1c97c64fdfebea43fd0644a} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Food\+Popularity} (const QString \&from, const QString \&to)
+\item 
+\Hypertarget{class_tcp_client_a0d6677c1f99b7b29b1db8162a2efd034}\label{class_tcp_client_a0d6677c1f99b7b29b1db8162a2efd034} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Report\+Low\+Stock} ()
+\item 
+\Hypertarget{class_tcp_client_a401df9d7d2be57835952653a1e2d5011}\label{class_tcp_client_a401df9d7d2be57835952653a1e2d5011} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Dishes\+List} ()
+\item 
+\Hypertarget{class_tcp_client_adafa84aeb93f442e9664aac7078485ef}\label{class_tcp_client_adafa84aeb93f442e9664aac7078485ef} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Waiters\+List} ()
+\item 
+\Hypertarget{class_tcp_client_a0426d13f32105f9b7f3b8fe087e6174c}\label{class_tcp_client_a0426d13f32105f9b7f3b8fe087e6174c} 
+Q\+\_\+\+INVOKABLE QString\+List {\bfseries get\+Local\+Ips} ()
+\item 
+\Hypertarget{class_tcp_client_ae0467557c39edf4df9bf3a5b1f12b2b9}\label{class_tcp_client_ae0467557c39edf4df9bf3a5b1f12b2b9} 
+Q\+\_\+\+INVOKABLE bool {\bfseries ping\+Server} (const QString \&host, int port)
+\item 
+\Hypertarget{class_tcp_client_a328023748dba9e3d6432a229bc1c6ea5}\label{class_tcp_client_a328023748dba9e3d6432a229bc1c6ea5} 
+Q\+\_\+\+INVOKABLE bool {\bfseries reconnect} (const QString \&host, quint16 port)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+C:\+/\+\+Users/\+rodio/\+\+Desktop/\+\+W/\+\+Diplom/\+app/\+tcpclient.\+h\item 
+C:\+/\+\+Users/\+rodio/\+\+Desktop/\+\+W/\+\+Diplom/\+app/\+build/\+\+Desktop\+\_\+\+Qt\+\_\+6\+\_\+9\+\_\+2\+\_\+\+Min\+GW\+\_\+64\+\_\+bit-\/\+Debug/\+appapp\+\_\+autogen/\+\+EWIEGA46\+WW/\+moc\+\_\+tcpclient.\+cpp\item 
+C:\+/\+\+Users/\+rodio/\+\+Desktop/\+\+W/\+\+Diplom/\+app/\+build/\+\+Desktop\+\_\+\+Qt\+\_\+6\+\_\+9\+\_\+2\+\_\+\+Min\+GW\+\_\+64\+\_\+bit-\/\+Release/\+appapp\+\_\+autogen/\+\+EWIEGA46\+WW/\+moc\+\_\+tcpclient.\+cpp\item 
+C:\+/\+\+Users/\+rodio/\+\+Desktop/\+\+W/\+\+Diplom/\+app/\+tcpclient.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,84 @@
+\doxysection{settings.\+h}
+\hypertarget{settings_8h_source}{}\label{settings_8h_source}\index{C:/Users/rodio/Desktop/W/Diplom/app/settings.h@{C:/Users/rodio/Desktop/W/Diplom/app/settings.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SETTINGS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SETTINGS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}logs.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}exceptions.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }Settings\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00012\ \ \ \ \ Q\_PROPERTY(QString\ dbHost\ READ\ dbHost\ WRITE\ setDbHost\ NOTIFY\ dbHostChanged)}
+\DoxyCodeLine{00013\ \ \ \ \ Q\_PROPERTY(\textcolor{keywordtype}{int}\ dbPort\ READ\ dbPort\ WRITE\ setDbPort\ NOTIFY\ dbPortChanged)}
+\DoxyCodeLine{00014\ \ \ \ \ Q\_PROPERTY(QString\ dbName\ READ\ dbName\ WRITE\ setDbName\ NOTIFY\ dbNameChanged)}
+\DoxyCodeLine{00015\ \ \ \ \ Q\_PROPERTY(QString\ dbUser\ READ\ dbUser\ WRITE\ setDbUser\ NOTIFY\ dbUserChanged)}
+\DoxyCodeLine{00016\ \ \ \ \ Q\_PROPERTY(QString\ dbPassword\ READ\ dbPassword\ WRITE\ setDbPassword\ NOTIFY\ dbPasswordChanged)}
+\DoxyCodeLine{00017\ \ \ \ \ Q\_PROPERTY(\textcolor{keywordtype}{bool}\ isServerMode\ READ\ isServerMode\ WRITE\ setIsServerMode\ NOTIFY\ isServerModeChanged)}
+\DoxyCodeLine{00018\ \ \ \ \ Q\_PROPERTY(QString\ logPath\ READ\ logPath\ WRITE\ setLogPath\ NOTIFY\ logPathChanged)}
+\DoxyCodeLine{00019\ \ \ \ \ Q\_PROPERTY(QString\ serverHost\ READ\ serverHost\ WRITE\ setServerHost\ NOTIFY\ serverHostChanged)}
+\DoxyCodeLine{00020\ \ \ \ \ Q\_PROPERTY(\textcolor{keywordtype}{int}\ serverPort\ READ\ serverPort\ WRITE\ setServerPort\ NOTIFY\ serverPortChanged)}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{explicit}\ Settings(\doxymbox{\hyperlink{class_logs}{Logs}}\ *logger,\ QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ QString\ dbHost()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_dbHost;\ \}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ setDbHost(\textcolor{keyword}{const}\ QString\ \&host);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ dbPort()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_dbPort;\ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ setDbPort(\textcolor{keywordtype}{int}\ port);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ QString\ dbName()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_dbName;\ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ setDbName(\textcolor{keyword}{const}\ QString\ \&name);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ QString\ dbUser()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_dbUser;\ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ setDbUser(\textcolor{keyword}{const}\ QString\ \&user);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ QString\ dbPassword()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_dbPassword;\ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ setDbPassword(\textcolor{keyword}{const}\ QString\ \&password);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ isServerMode()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_isServerMode;\ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ setIsServerMode(\textcolor{keywordtype}{bool}\ mode);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ QString\ logPath()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_logPath;\ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ setLogPath(\textcolor{keyword}{const}\ QString\ \&path);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ QString\ serverHost()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_serverHost;\ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ setServerHost(\textcolor{keyword}{const}\ QString\ \&host);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ serverPort()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_serverPort;\ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ setServerPort(\textcolor{keywordtype}{int}\ port);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{void}\ load();}
+\DoxyCodeLine{00052\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{void}\ save();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ signals:}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ dbHostChanged();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ dbPortChanged();}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ dbNameChanged();}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ dbUserChanged();}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ dbPasswordChanged();}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ isServerModeChanged();}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ logPathChanged();}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ serverHostChanged();}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ serverPortChanged();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00066\ \ \ \ \ QString\ m\_dbHost;}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_dbPort;}
+\DoxyCodeLine{00068\ \ \ \ \ QString\ m\_dbName;}
+\DoxyCodeLine{00069\ \ \ \ \ QString\ m\_dbUser;}
+\DoxyCodeLine{00070\ \ \ \ \ QString\ m\_dbPassword;}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_isServerMode;}
+\DoxyCodeLine{00072\ \ \ \ \ QString\ m\_logPath;}
+\DoxyCodeLine{00073\ \ \ \ \ \doxymbox{\hyperlink{class_logs}{Logs}}\ *loger;}
+\DoxyCodeLine{00074\ \ \ \ \ QString\ m\_serverHost;}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_serverPort;}
+\DoxyCodeLine{00076\ \};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SETTINGS\_H}}
+
+\end{DoxyCode}

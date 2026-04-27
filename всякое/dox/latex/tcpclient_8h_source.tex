@@ -1,0 +1,72 @@
+\doxysection{tcpclient.\+h}
+\hypertarget{tcpclient_8h_source}{}\label{tcpclient_8h_source}\index{C:/Users/rodio/Desktop/W/Diplom/app/tcpclient.h@{C:/Users/rodio/Desktop/W/Diplom/app/tcpclient.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TCPCLIENT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TCPCLIENT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QTcpSocket>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QVariantList>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QVariantMap>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}logs.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}exceptions.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }TcpClient\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{explicit}\ TcpClient(\doxymbox{\hyperlink{class_logs}{Logs}}\ *logger,\ QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00016\ \ \ \ \ \string~TcpClient();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ connectToServer(\textcolor{keyword}{const}\ QString\ \&host,\ quint16\ port);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ disconnectFromServer();}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{bool}\ isConnected()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Все\ методы,\ как\ в\ DBWorker}}
+\DoxyCodeLine{00023\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ checkUser(\textcolor{keyword}{const}\ QString\ \&login,\ \textcolor{keyword}{const}\ QString\ \&password);}
+\DoxyCodeLine{00024\ \ \ \ \ Q\_INVOKABLE\ QString\ getUserName()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ \ \ \ \ Q\_INVOKABLE\ QString\ getUserRole()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{int}\ getUserId()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ getFoods();}
+\DoxyCodeLine{00028\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ getProducts();}
+\DoxyCodeLine{00029\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ updateProductQuantity(\textcolor{keywordtype}{int}\ productId,\ \textcolor{keywordtype}{int}\ newQuantity);}
+\DoxyCodeLine{00030\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ addProductQuantity(\textcolor{keywordtype}{int}\ productId,\ \textcolor{keywordtype}{int}\ delta);}
+\DoxyCodeLine{00031\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{int}\ createOrder(\textcolor{keywordtype}{int}\ tableNumber,\ \textcolor{keywordtype}{int}\ userId,\ \textcolor{keyword}{const}\ QString\ \&specialRequests,\ \textcolor{keywordtype}{double}\ totalCost);}
+\DoxyCodeLine{00032\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ addOrderItem(\textcolor{keywordtype}{int}\ orderId,\ \textcolor{keywordtype}{int}\ foodId,\ \textcolor{keywordtype}{int}\ quantity,\ \textcolor{keywordtype}{double}\ price);}
+\DoxyCodeLine{00033\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ checkAndConsume(\textcolor{keywordtype}{int}\ foodId,\ \textcolor{keywordtype}{int}\ quantity);}
+\DoxyCodeLine{00034\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ returnIngredients(\textcolor{keywordtype}{int}\ foodId,\ \textcolor{keywordtype}{int}\ quantity);}
+\DoxyCodeLine{00035\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ getLowStockWarning(\textcolor{keywordtype}{int}\ foodId,\ \textcolor{keywordtype}{int}\ quantity);}
+\DoxyCodeLine{00036\ \ \ \ \ Q\_INVOKABLE\ QVariantMap\ getReportRevenue(\textcolor{keyword}{const}\ QString\ \&from,\ \textcolor{keyword}{const}\ QString\ \&to,\ \textcolor{keywordtype}{int}\ dishId,\ \textcolor{keywordtype}{int}\ tableNumber,\ \textcolor{keywordtype}{int}\ waiterId);}
+\DoxyCodeLine{00037\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ getRevenueByDay(\textcolor{keyword}{const}\ QString\ \&from,\ \textcolor{keyword}{const}\ QString\ \&to,\ \textcolor{keywordtype}{int}\ dishId,\ \textcolor{keywordtype}{int}\ tableNumber,\ \textcolor{keywordtype}{int}\ waiterId);}
+\DoxyCodeLine{00038\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ getFoodPopularity(\textcolor{keyword}{const}\ QString\ \&from,\ \textcolor{keyword}{const}\ QString\ \&to);}
+\DoxyCodeLine{00039\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ getReportLowStock();}
+\DoxyCodeLine{00040\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ getDishesList();}
+\DoxyCodeLine{00041\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ getWaitersList();}
+\DoxyCodeLine{00042\ \ \ \ \ Q\_INVOKABLE\ QStringList\ getLocalIps();}
+\DoxyCodeLine{00043\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ pingServer(\textcolor{keyword}{const}\ QString\ \&host,\ \textcolor{keywordtype}{int}\ port);}
+\DoxyCodeLine{00044\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ reconnect(\textcolor{keyword}{const}\ QString\ \&host,\ quint16\ port);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ signals:}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ errorOccurred(\textcolor{keyword}{const}\ QString\ \&message);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ dataChanged();\ \textcolor{comment}{//\ уведомление\ от\ сервера\ (будет\ эмититься,\ если\ пришло\ уведомление)}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ responseReceived(\textcolor{keywordtype}{int}\ requestId,\ \textcolor{keywordtype}{bool}\ success,\ \textcolor{keyword}{const}\ QVariantMap\ \&data);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ sendRequest(\textcolor{keyword}{const}\ QString\ \&command,\ \textcolor{keyword}{const}\ QVariantMap\ \&data\ =\ QVariantMap());}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ waitForResponse(\textcolor{keywordtype}{int}\ requestId,\ QVariantMap\ \&resultData);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ QTcpSocket\ *socket;}
+\DoxyCodeLine{00056\ \ \ \ \ QByteArray\ buffer;}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ nextRequestId;}
+\DoxyCodeLine{00058\ \ \ \ \ QMap<int,\ QVariantMap>\ pendingResponses;}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ QString\ userName;}
+\DoxyCodeLine{00061\ \ \ \ \ QString\ userRole;}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ userId;}
+\DoxyCodeLine{00063\ \ \ \ \ \doxymbox{\hyperlink{class_logs}{Logs}}\ *loger;}
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TCPCLIENT\_H}}
+
+\end{DoxyCode}

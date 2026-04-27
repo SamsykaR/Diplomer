@@ -1,0 +1,22 @@
+2026-04-03 00:07:25 [INF] Проверка пользователя: false
+2026-04-03 00:07:28 [INF] Проверка пользователя: false
+2026-04-03 00:07:32 [INF] Проверка пользователя: true
+2026-04-03 00:07:32 [INF] Логин: role=admin, name=Ђ¤¬Ё­Ёбва в®а
+2026-04-03 16:10:43 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-04-03 16:14:48 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-04-03 16:25:39 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-04-03 16:26:53 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-04-03 16:30:08 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-04-03 16:31:38 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-04-03 16:42:09 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-04-03 16:43:26 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-04-03 20:34:22 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-04-03 20:34:22 [INF] Настройки загружены: хост=127.0.0.1, порт=5432
+2026-04-03 21:23:54 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-04-03 21:23:54 [INF] Настройки загружены: хост=127.0.0.1, порт=5432
+2026-04-07 15:59:34 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-04-07 15:59:34 [INF] Настройки загружены: хост=127.0.0.1, порт=5432
+2026-04-11 22:30:52 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-04-11 22:30:52 [INF] Настройки загружены: хост=127.0.0.1, порт=5432
+2026-04-11 22:32:48 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-04-11 22:32:48 [INF] Настройки загружены: хост=127.0.0.1, порт=5432

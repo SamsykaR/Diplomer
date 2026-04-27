@@ -1,0 +1,347 @@
+{
+    "classes": [
+        {
+            "className": "Api",
+            "lineNumber": 11,
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "login",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "password",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 4,
+                    "name": "checkUser",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "index": 5,
+                    "name": "getFoods",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "index": 6,
+                    "name": "getProducts",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "productId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "newQuantity",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 7,
+                    "name": "updateProductQuantity",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "productId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "delta",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 8,
+                    "name": "addProductQuantity",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "tableNumber",
+                            "type": "int"
+                        },
+                        {
+                            "name": "userId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "specialRequests",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "totalCost",
+                            "type": "double"
+                        },
+                        {
+                            "name": "items",
+                            "type": "QVariantList"
+                        }
+                    ],
+                    "index": 9,
+                    "name": "createOrder",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "orderId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "foodId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "quantity",
+                            "type": "int"
+                        },
+                        {
+                            "name": "price",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 10,
+                    "name": "addOrderItem",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "foodId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "quantity",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 11,
+                    "name": "checkAndConsume",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "foodId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "quantity",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 12,
+                    "name": "returnIngredients",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "foodId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "quantity",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 13,
+                    "name": "getLowStockWarning",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "from",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "to",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "dishId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "tableNumber",
+                            "type": "int"
+                        },
+                        {
+                            "name": "waiterId",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 14,
+                    "name": "getReportRevenue",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "from",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "to",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "dishId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "tableNumber",
+                            "type": "int"
+                        },
+                        {
+                            "name": "waiterId",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 15,
+                    "name": "getRevenueByDay",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "from",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "to",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 16,
+                    "name": "getFoodPopularity",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "index": 17,
+                    "name": "getReportLowStock",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "index": 18,
+                    "name": "getDishesList",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "index": 19,
+                    "name": "getWaitersList",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "index": 20,
+                    "isConst": true,
+                    "name": "getUserName",
+                    "returnType": "QString"
+                },
+                {
+                    "access": "public",
+                    "index": 21,
+                    "isConst": true,
+                    "name": "getUserRole",
+                    "returnType": "QString"
+                },
+                {
+                    "access": "public",
+                    "index": 22,
+                    "isConst": true,
+                    "name": "getUserId",
+                    "returnType": "int"
+                }
+            ],
+            "object": true,
+            "qualifiedClassName": "Api",
+            "signals": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "requestId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "success",
+                            "type": "bool"
+                        },
+                        {
+                            "name": "data",
+                            "type": "QVariantMap"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "response",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 1,
+                    "name": "dataRefreshRequested",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "private",
+                    "arguments": [
+                        {
+                            "name": "requestId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "success",
+                            "type": "bool"
+                        },
+                        {
+                            "name": "data",
+                            "type": "QVariantMap"
+                        }
+                    ],
+                    "index": 2,
+                    "name": "onResponse",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "index": 3,
+                    "name": "onDataChanged",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "api.h",
+    "outputRevision": 69
+}
