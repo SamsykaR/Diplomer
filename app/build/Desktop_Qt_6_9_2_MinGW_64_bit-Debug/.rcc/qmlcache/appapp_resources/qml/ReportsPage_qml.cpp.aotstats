@@ -1,0 +1,236 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": false,
+                        "column": 5,
+                        "durationMicroseconds": 6405,
+                        "errorMessage": "Cannot access value for name dbWorker",
+                        "functionName": "loadFilterData",
+                        "line": 36
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 305,
+                        "errorMessage": "",
+                        "functionName": "onCompleted",
+                        "line": 52
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 17,
+                        "durationMicroseconds": 130,
+                        "errorMessage": "Cannot access value for name window",
+                        "functionName": "target",
+                        "line": 55
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 9,
+                        "durationMicroseconds": 155,
+                        "errorMessage": "method loadFilterData cannot be resolved.",
+                        "functionName": "onDataRefreshRequested",
+                        "line": 56
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 1147,
+                        "errorMessage": "",
+                        "functionName": "fileMode",
+                        "line": 65
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 17,
+                        "durationMicroseconds": 3036,
+                        "errorMessage": "Cannot access value for name appSettings",
+                        "functionName": "folder",
+                        "line": 67
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 21,
+                        "durationMicroseconds": 6281,
+                        "errorMessage": "Cannot access value for name selectedReportIndex",
+                        "functionName": "onAccepted",
+                        "line": 68
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 243,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 104
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 188,
+                        "errorMessage": "",
+                        "functionName": "model",
+                        "line": 111
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 98,
+                        "errorMessage": "Cannot find name selectedReportIndex",
+                        "functionName": "onCurrentIndexChanged",
+                        "line": 113
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 22,
+                        "durationMicroseconds": 86,
+                        "errorMessage": "Cannot access value for name selectedReportIndex",
+                        "functionName": "visible",
+                        "line": 119
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 82,
+                        "durationMicroseconds": 191,
+                        "errorMessage": "",
+                        "functionName": "model",
+                        "line": 127
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 59,
+                        "durationMicroseconds": 139,
+                        "errorMessage": "Cannot find name selectedDishId",
+                        "functionName": "onCurrentIndexChanged",
+                        "line": 128
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 50,
+                        "durationMicroseconds": 96,
+                        "errorMessage": "Cannot find name selectedTable",
+                        "functionName": "onValueChanged",
+                        "line": 131
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 84,
+                        "durationMicroseconds": 174,
+                        "errorMessage": "",
+                        "functionName": "model",
+                        "line": 133
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 59,
+                        "durationMicroseconds": 148,
+                        "errorMessage": "Cannot find name selectedWaiterId",
+                        "functionName": "onCurrentIndexChanged",
+                        "line": 134
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 22,
+                        "durationMicroseconds": 234,
+                        "errorMessage": "Cannot access value for name selectedReportIndex",
+                        "functionName": "visible",
+                        "line": 140
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 22,
+                        "durationMicroseconds": 97,
+                        "errorMessage": "Cannot access value for name selectedReportIndex",
+                        "functionName": "visible",
+                        "line": 151
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 318,
+                        "errorMessage": "",
+                        "functionName": "color",
+                        "line": 154
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 201,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 155
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 206,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 159
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 88883,
+                        "errorMessage": "Cannot access value for name selectedReportIndex",
+                        "functionName": "onClicked",
+                        "line": 170
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 38,
+                        "durationMicroseconds": 289,
+                        "errorMessage": "",
+                        "functionName": "background",
+                        "line": 169
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 40,
+                        "durationMicroseconds": 267,
+                        "errorMessage": "",
+                        "functionName": "onClicked",
+                        "line": 238
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 50,
+                        "durationMicroseconds": 215,
+                        "errorMessage": "",
+                        "functionName": "background",
+                        "line": 237
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 40,
+                        "durationMicroseconds": 229,
+                        "errorMessage": "",
+                        "functionName": "contentHeight",
+                        "line": 248
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 36,
+                        "durationMicroseconds": 223,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 253
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 204,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 257
+                    }
+                ],
+                "filePath": "C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/ReportsPage.qml"
+            }
+        ],
+        "moduleId": "app(appapp)"
+    }
+]

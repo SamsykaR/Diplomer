@@ -67,90 +67,95 @@ include CMakeFiles/module_appapp_aotstats_target.dir/progress.make
 
 CMakeFiles/module_appapp_aotstats_target: .rcc/qmlcache/module_appapp.aotstats
 
-.rcc/qmlcache/module_appapp.aotstats: .rcc/qmlcache/appapp_Main_qml.cpp.aotstats
-.rcc/qmlcache/module_appapp.aotstats: .rcc/qmlcache/appapp_OrderPage_qml.cpp.aotstats
-.rcc/qmlcache/module_appapp.aotstats: .rcc/qmlcache/appapp_StockPage_qml.cpp.aotstats
-.rcc/qmlcache/module_appapp.aotstats: .rcc/qmlcache/appapp_ReportsPage_qml.cpp.aotstats
-.rcc/qmlcache/module_appapp.aotstats: .rcc/qmlcache/appapp_LoginPage_qml.cpp.aotstats
+.rcc/qmlcache/module_appapp.aotstats: .rcc/qmlcache/appapp_resources/qml/Main_qml.cpp.aotstats
+.rcc/qmlcache/module_appapp.aotstats: .rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp.aotstats
+.rcc/qmlcache/module_appapp.aotstats: .rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp.aotstats
+.rcc/qmlcache/module_appapp.aotstats: .rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp.aotstats
+.rcc/qmlcache/module_appapp.aotstats: .rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp.aotstats
 .rcc/qmlcache/module_appapp.aotstats: .rcc/qmlcache/module_appapp.aotstatslist
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating .rcc/qmlcache/module_appapp.aotstats"
 	call .qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.2/mingw_64/bin/qmlaotstats.exe aggregate C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/module_appapp.aotstatslist C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/module_appapp.aotstats
 
-.rcc/qmlcache/appapp_LoginPage_qml.cpp: C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe
-.rcc/qmlcache/appapp_LoginPage_qml.cpp: C:/Users/rodio/Desktop/W/Diplom/app/LoginPage.qml
-.rcc/qmlcache/appapp_LoginPage_qml.cpp: .qt/rcc/qmake_app.qrc
-.rcc/qmlcache/appapp_LoginPage_qml.cpp: .qt/rcc/appapp_raw_qml_0.qrc
-.rcc/qmlcache/appapp_LoginPage_qml.cpp: app/appapp.qmltypes
-.rcc/qmlcache/appapp_LoginPage_qml.cpp: app/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating .rcc/qmlcache/appapp_LoginPage_qml.cpp, .rcc/qmlcache/appapp_LoginPage_qml.cpp.aotstats"
-	C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache
-	call .qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe --bare --resource-path /qt/qml/app/LoginPage.qml -I C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug -I C:/Qt/6.9.2/mingw_64/qml -i C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/app/qmldir --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qmake_app.qrc --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appapp_raw_qml_0.qrc --dump-aot-stats --module-id=app(appapp) -o C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.cpp C:/Users/rodio/Desktop/W/Diplom/app/LoginPage.qml
+.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp: C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe
+.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp: C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/LoginPage.qml
+.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp: .qt/rcc/qmake_app.qrc
+.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp: .qt/rcc/appapp_raw_qml_0.qrc
+.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp: .qt/rcc/appapp_raw_qml_0_extra_qmldirs.qrc
+.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp: app/appapp.qmltypes
+.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp: app/qmldir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating .rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp, .rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp.aotstats"
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml
+	call .qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe --bare --resource-path /qt/qml/app/resources/qml/LoginPage.qml -I C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug -I C:/Qt/6.9.2/mingw_64/qml -i C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/app/qmldir --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qmake_app.qrc --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appapp_raw_qml_0.qrc --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appapp_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats --module-id=app(appapp) -o C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/LoginPage.qml
 
-.rcc/qmlcache/appapp_LoginPage_qml.cpp.aotstats: .rcc/qmlcache/appapp_LoginPage_qml.cpp
-	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\appapp_LoginPage_qml.cpp.aotstats
+.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp.aotstats: .rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\appapp_resources\qml\LoginPage_qml.cpp.aotstats
 
-.rcc/qmlcache/appapp_Main_qml.cpp: C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe
-.rcc/qmlcache/appapp_Main_qml.cpp: C:/Users/rodio/Desktop/W/Diplom/app/Main.qml
-.rcc/qmlcache/appapp_Main_qml.cpp: .qt/rcc/qmake_app.qrc
-.rcc/qmlcache/appapp_Main_qml.cpp: .qt/rcc/appapp_raw_qml_0.qrc
-.rcc/qmlcache/appapp_Main_qml.cpp: app/appapp.qmltypes
-.rcc/qmlcache/appapp_Main_qml.cpp: app/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating .rcc/qmlcache/appapp_Main_qml.cpp, .rcc/qmlcache/appapp_Main_qml.cpp.aotstats"
-	C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache
-	call .qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe --bare --resource-path /qt/qml/app/Main.qml -I C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug -I C:/Qt/6.9.2/mingw_64/qml -i C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/app/qmldir --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qmake_app.qrc --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appapp_raw_qml_0.qrc --dump-aot-stats --module-id=app(appapp) -o C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.cpp C:/Users/rodio/Desktop/W/Diplom/app/Main.qml
+.rcc/qmlcache/appapp_resources/qml/Main_qml.cpp: C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe
+.rcc/qmlcache/appapp_resources/qml/Main_qml.cpp: C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/Main.qml
+.rcc/qmlcache/appapp_resources/qml/Main_qml.cpp: .qt/rcc/qmake_app.qrc
+.rcc/qmlcache/appapp_resources/qml/Main_qml.cpp: .qt/rcc/appapp_raw_qml_0.qrc
+.rcc/qmlcache/appapp_resources/qml/Main_qml.cpp: .qt/rcc/appapp_raw_qml_0_extra_qmldirs.qrc
+.rcc/qmlcache/appapp_resources/qml/Main_qml.cpp: app/appapp.qmltypes
+.rcc/qmlcache/appapp_resources/qml/Main_qml.cpp: app/qmldir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating .rcc/qmlcache/appapp_resources/qml/Main_qml.cpp, .rcc/qmlcache/appapp_resources/qml/Main_qml.cpp.aotstats"
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml
+	call .qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe --bare --resource-path /qt/qml/app/resources/qml/Main.qml -I C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug -I C:/Qt/6.9.2/mingw_64/qml -i C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/app/qmldir --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qmake_app.qrc --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appapp_raw_qml_0.qrc --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appapp_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats --module-id=app(appapp) -o C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.cpp C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/Main.qml
 
-.rcc/qmlcache/appapp_Main_qml.cpp.aotstats: .rcc/qmlcache/appapp_Main_qml.cpp
-	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\appapp_Main_qml.cpp.aotstats
+.rcc/qmlcache/appapp_resources/qml/Main_qml.cpp.aotstats: .rcc/qmlcache/appapp_resources/qml/Main_qml.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\appapp_resources\qml\Main_qml.cpp.aotstats
 
-.rcc/qmlcache/appapp_OrderPage_qml.cpp: C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe
-.rcc/qmlcache/appapp_OrderPage_qml.cpp: C:/Users/rodio/Desktop/W/Diplom/app/OrderPage.qml
-.rcc/qmlcache/appapp_OrderPage_qml.cpp: .qt/rcc/qmake_app.qrc
-.rcc/qmlcache/appapp_OrderPage_qml.cpp: .qt/rcc/appapp_raw_qml_0.qrc
-.rcc/qmlcache/appapp_OrderPage_qml.cpp: app/appapp.qmltypes
-.rcc/qmlcache/appapp_OrderPage_qml.cpp: app/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating .rcc/qmlcache/appapp_OrderPage_qml.cpp, .rcc/qmlcache/appapp_OrderPage_qml.cpp.aotstats"
-	C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache
-	call .qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe --bare --resource-path /qt/qml/app/OrderPage.qml -I C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug -I C:/Qt/6.9.2/mingw_64/qml -i C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/app/qmldir --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qmake_app.qrc --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appapp_raw_qml_0.qrc --dump-aot-stats --module-id=app(appapp) -o C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.cpp C:/Users/rodio/Desktop/W/Diplom/app/OrderPage.qml
+.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp: C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe
+.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp: C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/OrderPage.qml
+.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp: .qt/rcc/qmake_app.qrc
+.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp: .qt/rcc/appapp_raw_qml_0.qrc
+.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp: .qt/rcc/appapp_raw_qml_0_extra_qmldirs.qrc
+.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp: app/appapp.qmltypes
+.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp: app/qmldir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating .rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp, .rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp.aotstats"
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml
+	call .qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe --bare --resource-path /qt/qml/app/resources/qml/OrderPage.qml -I C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug -I C:/Qt/6.9.2/mingw_64/qml -i C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/app/qmldir --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qmake_app.qrc --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appapp_raw_qml_0.qrc --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appapp_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats --module-id=app(appapp) -o C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/OrderPage.qml
 
-.rcc/qmlcache/appapp_OrderPage_qml.cpp.aotstats: .rcc/qmlcache/appapp_OrderPage_qml.cpp
-	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\appapp_OrderPage_qml.cpp.aotstats
+.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp.aotstats: .rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\appapp_resources\qml\OrderPage_qml.cpp.aotstats
 
-.rcc/qmlcache/appapp_ReportsPage_qml.cpp: C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe
-.rcc/qmlcache/appapp_ReportsPage_qml.cpp: C:/Users/rodio/Desktop/W/Diplom/app/ReportsPage.qml
-.rcc/qmlcache/appapp_ReportsPage_qml.cpp: .qt/rcc/qmake_app.qrc
-.rcc/qmlcache/appapp_ReportsPage_qml.cpp: .qt/rcc/appapp_raw_qml_0.qrc
-.rcc/qmlcache/appapp_ReportsPage_qml.cpp: app/appapp.qmltypes
-.rcc/qmlcache/appapp_ReportsPage_qml.cpp: app/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating .rcc/qmlcache/appapp_ReportsPage_qml.cpp, .rcc/qmlcache/appapp_ReportsPage_qml.cpp.aotstats"
-	C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache
-	call .qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe --bare --resource-path /qt/qml/app/ReportsPage.qml -I C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug -I C:/Qt/6.9.2/mingw_64/qml -i C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/app/qmldir --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qmake_app.qrc --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appapp_raw_qml_0.qrc --dump-aot-stats --module-id=app(appapp) -o C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.cpp C:/Users/rodio/Desktop/W/Diplom/app/ReportsPage.qml
+.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp: C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe
+.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp: C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/ReportsPage.qml
+.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp: .qt/rcc/qmake_app.qrc
+.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp: .qt/rcc/appapp_raw_qml_0.qrc
+.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp: .qt/rcc/appapp_raw_qml_0_extra_qmldirs.qrc
+.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp: app/appapp.qmltypes
+.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp: app/qmldir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating .rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp, .rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp.aotstats"
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml
+	call .qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe --bare --resource-path /qt/qml/app/resources/qml/ReportsPage.qml -I C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug -I C:/Qt/6.9.2/mingw_64/qml -i C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/app/qmldir --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qmake_app.qrc --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appapp_raw_qml_0.qrc --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appapp_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats --module-id=app(appapp) -o C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/ReportsPage.qml
 
-.rcc/qmlcache/appapp_ReportsPage_qml.cpp.aotstats: .rcc/qmlcache/appapp_ReportsPage_qml.cpp
-	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\appapp_ReportsPage_qml.cpp.aotstats
+.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp.aotstats: .rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\appapp_resources\qml\ReportsPage_qml.cpp.aotstats
 
-.rcc/qmlcache/appapp_StockPage_qml.cpp: C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe
-.rcc/qmlcache/appapp_StockPage_qml.cpp: C:/Users/rodio/Desktop/W/Diplom/app/StockPage.qml
-.rcc/qmlcache/appapp_StockPage_qml.cpp: .qt/rcc/qmake_app.qrc
-.rcc/qmlcache/appapp_StockPage_qml.cpp: .qt/rcc/appapp_raw_qml_0.qrc
-.rcc/qmlcache/appapp_StockPage_qml.cpp: app/appapp.qmltypes
-.rcc/qmlcache/appapp_StockPage_qml.cpp: app/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating .rcc/qmlcache/appapp_StockPage_qml.cpp, .rcc/qmlcache/appapp_StockPage_qml.cpp.aotstats"
-	C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache
-	call .qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe --bare --resource-path /qt/qml/app/StockPage.qml -I C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug -I C:/Qt/6.9.2/mingw_64/qml -i C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/app/qmldir --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qmake_app.qrc --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appapp_raw_qml_0.qrc --dump-aot-stats --module-id=app(appapp) -o C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.cpp C:/Users/rodio/Desktop/W/Diplom/app/StockPage.qml
+.rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp: C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe
+.rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp: C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/StockPage.qml
+.rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp: .qt/rcc/qmake_app.qrc
+.rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp: .qt/rcc/appapp_raw_qml_0.qrc
+.rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp: .qt/rcc/appapp_raw_qml_0_extra_qmldirs.qrc
+.rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp: app/appapp.qmltypes
+.rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp: app/qmldir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating .rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp, .rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp.aotstats"
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml
+	call .qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.2/mingw_64/bin/qmlcachegen.exe --bare --resource-path /qt/qml/app/resources/qml/StockPage.qml -I C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug -I C:/Qt/6.9.2/mingw_64/qml -i C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/app/qmldir --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qmake_app.qrc --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appapp_raw_qml_0.qrc --resource C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appapp_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats --module-id=app(appapp) -o C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/StockPage.qml
 
-.rcc/qmlcache/appapp_StockPage_qml.cpp.aotstats: .rcc/qmlcache/appapp_StockPage_qml.cpp
-	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\appapp_StockPage_qml.cpp.aotstats
+.rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp.aotstats: .rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\appapp_resources\qml\StockPage_qml.cpp.aotstats
 
-module_appapp_aotstats_target: .rcc/qmlcache/appapp_LoginPage_qml.cpp
-module_appapp_aotstats_target: .rcc/qmlcache/appapp_LoginPage_qml.cpp.aotstats
-module_appapp_aotstats_target: .rcc/qmlcache/appapp_Main_qml.cpp
-module_appapp_aotstats_target: .rcc/qmlcache/appapp_Main_qml.cpp.aotstats
-module_appapp_aotstats_target: .rcc/qmlcache/appapp_OrderPage_qml.cpp
-module_appapp_aotstats_target: .rcc/qmlcache/appapp_OrderPage_qml.cpp.aotstats
-module_appapp_aotstats_target: .rcc/qmlcache/appapp_ReportsPage_qml.cpp
-module_appapp_aotstats_target: .rcc/qmlcache/appapp_ReportsPage_qml.cpp.aotstats
-module_appapp_aotstats_target: .rcc/qmlcache/appapp_StockPage_qml.cpp
-module_appapp_aotstats_target: .rcc/qmlcache/appapp_StockPage_qml.cpp.aotstats
+module_appapp_aotstats_target: .rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp
+module_appapp_aotstats_target: .rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp.aotstats
+module_appapp_aotstats_target: .rcc/qmlcache/appapp_resources/qml/Main_qml.cpp
+module_appapp_aotstats_target: .rcc/qmlcache/appapp_resources/qml/Main_qml.cpp.aotstats
+module_appapp_aotstats_target: .rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp
+module_appapp_aotstats_target: .rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp.aotstats
+module_appapp_aotstats_target: .rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp
+module_appapp_aotstats_target: .rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp.aotstats
+module_appapp_aotstats_target: .rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp
+module_appapp_aotstats_target: .rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp.aotstats
 module_appapp_aotstats_target: .rcc/qmlcache/module_appapp.aotstats
 module_appapp_aotstats_target: CMakeFiles/module_appapp_aotstats_target
 module_appapp_aotstats_target: CMakeFiles/module_appapp_aotstats_target.dir/build.make

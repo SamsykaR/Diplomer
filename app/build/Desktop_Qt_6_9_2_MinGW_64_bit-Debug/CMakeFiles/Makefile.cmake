@@ -848,6 +848,22 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateDependencies.cmake"
   "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateTargets.cmake"
   "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateVersionlessAliasTargets.cmake"
+  "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6Test/Qt6TestAdditionalTargetInfo.cmake"
+  "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6Test/Qt6TestConfig.cmake"
+  "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6Test/Qt6TestConfigVersion.cmake"
+  "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6Test/Qt6TestConfigVersionImpl.cmake"
+  "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6Test/Qt6TestDependencies.cmake"
+  "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6Test/Qt6TestTargets-relwithdebinfo.cmake"
+  "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6Test/Qt6TestTargets.cmake"
+  "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6Test/Qt6TestVersionlessAliasTargets.cmake"
+  "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6Test/QtTestProperties.cmake"
+  "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6TestPrivate/Qt6TestPrivateAdditionalTargetInfo.cmake"
+  "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6TestPrivate/Qt6TestPrivateConfig.cmake"
+  "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6TestPrivate/Qt6TestPrivateConfigVersion.cmake"
+  "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6TestPrivate/Qt6TestPrivateConfigVersionImpl.cmake"
+  "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6TestPrivate/Qt6TestPrivateDependencies.cmake"
+  "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6TestPrivate/Qt6TestPrivateTargets.cmake"
+  "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6TestPrivate/Qt6TestPrivateVersionlessAliasTargets.cmake"
   "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateAdditionalTargetInfo.cmake"
   "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateConfig.cmake"
   "C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateConfigVersion.cmake"
@@ -893,6 +909,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.30.5/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.30.5/CMakeRCCompiler.cmake"
   "CMakeFiles/3.30.5/CMakeSystem.cmake"
+  "C:/Users/rodio/Desktop/W/Diplom/app/tests/CMakeLists.txt"
   )
 
 # The corresponding makefile is:
@@ -906,6 +923,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   ".qt/rcc/qmake_app.qrc"
   "app/appapp_qml_module_dir_map.qrc"
   ".qt/rcc/appapp_raw_qml_0.qrc"
+  "app/resources/qml/qmldir"
+  ".qt/rcc/appapp_raw_qml_0_extra_qmldirs.qrc"
   "app/qmldir"
   "CMakeFiles/appapp_autogen.dir/AutogenInfo.json"
   ".qt/QtDeploySupport.cmake"
@@ -919,6 +938,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   ".qt/QtDeployTargets.cmake"
   ".qt/deploy_qml_imports/appapp.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "tests/CMakeFiles/tst_test_autogen.dir/AutogenInfo.json"
+  "tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -939,4 +960,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/appapp_qmlimportscan.dir/DependInfo.cmake"
   "CMakeFiles/appapp_autogen_timestamp_deps.dir/DependInfo.cmake"
   "CMakeFiles/appapp_autogen.dir/DependInfo.cmake"
+  "tests/CMakeFiles/tst_test.dir/DependInfo.cmake"
+  "tests/CMakeFiles/tst_test_autogen_timestamp_deps.dir/DependInfo.cmake"
+  "tests/CMakeFiles/tst_test_autogen.dir/DependInfo.cmake"
   )

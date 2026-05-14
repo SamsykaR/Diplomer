@@ -64,6 +64,16 @@ CMAKE_BINARY_DIR = C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_Mi
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	C:\Qt\Tools\CMake_64\bin\ctest.exe --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -368,6 +378,45 @@ appapp_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp_autogen.dir\build.make CMakeFiles/appapp_autogen.dir/build
 .PHONY : appapp_autogen/fast
 
+#=============================================================================
+# Target rules for targets named tst_test
+
+# Build rule for target.
+tst_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tst_test
+.PHONY : tst_test
+
+# fast build rule for target.
+tst_test/fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tst_test.dir\build.make tests/CMakeFiles/tst_test.dir/build
+.PHONY : tst_test/fast
+
+#=============================================================================
+# Target rules for targets named tst_test_autogen_timestamp_deps
+
+# Build rule for target.
+tst_test_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tst_test_autogen_timestamp_deps
+.PHONY : tst_test_autogen_timestamp_deps
+
+# fast build rule for target.
+tst_test_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tst_test_autogen_timestamp_deps.dir\build.make tests/CMakeFiles/tst_test_autogen_timestamp_deps.dir/build
+.PHONY : tst_test_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named tst_test_autogen
+
+# Build rule for target.
+tst_test_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tst_test_autogen
+.PHONY : tst_test_autogen
+
+# fast build rule for target.
+tst_test_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tst_test_autogen.dir\build.make tests/CMakeFiles/tst_test_autogen.dir/build
+.PHONY : tst_test_autogen/fast
+
 appapp_autogen/mocs_compilation.obj: appapp_autogen/mocs_compilation.cpp.obj
 .PHONY : appapp_autogen/mocs_compilation.obj
 
@@ -440,6 +489,30 @@ build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0.cpp.s
 .PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0.cpp.s
 
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.obj: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.cpp.obj
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.obj
+
+# target to build an object file
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.cpp.obj
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.cpp.obj
+
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.i: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.cpp.i
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.i
+
+# target to preprocess a source file
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.cpp.i
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.cpp.i
+
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.s: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.cpp.s
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.s
+
+# target to generate assembly for a file
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.cpp.s
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.cpp.s
+
 build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_app.obj: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_app.cpp.obj
 .PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_app.obj
 
@@ -463,126 +536,6 @@ build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_app.s: build/Desktop
 build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_app.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_app.cpp.s
 .PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_app.cpp.s
-
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.obj: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.cpp.obj
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.obj
-
-# target to build an object file
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.cpp.obj
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.cpp.obj
-
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.i: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.cpp.i
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.i
-
-# target to preprocess a source file
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.cpp.i
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.cpp.i
-
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.s: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.cpp.s
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.s
-
-# target to generate assembly for a file
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.cpp.s
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.cpp.s
-
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.obj: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.cpp.obj
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.obj
-
-# target to build an object file
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.cpp.obj
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.cpp.obj
-
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.i: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.cpp.i
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.i
-
-# target to preprocess a source file
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.cpp.i
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.cpp.i
-
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.s: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.cpp.s
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.s
-
-# target to generate assembly for a file
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.cpp.s
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.cpp.s
-
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.obj: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.cpp.obj
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.obj
-
-# target to build an object file
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.cpp.obj
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.cpp.obj
-
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.i: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.cpp.i
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.i
-
-# target to preprocess a source file
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.cpp.i
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.cpp.i
-
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.s: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.cpp.s
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.s
-
-# target to generate assembly for a file
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.cpp.s
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.cpp.s
-
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.obj: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.cpp.obj
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.obj
-
-# target to build an object file
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.cpp.obj
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.cpp.obj
-
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.i: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.cpp.i
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.i
-
-# target to preprocess a source file
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.cpp.i
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.cpp.i
-
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.s: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.cpp.s
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.s
-
-# target to generate assembly for a file
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.cpp.s
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.cpp.s
-
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.obj: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.cpp.obj
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.obj
-
-# target to build an object file
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.cpp.obj
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.cpp.obj
-
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.i: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.cpp.i
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.i
-
-# target to preprocess a source file
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.cpp.i
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.cpp.i
-
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.s: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.cpp.s
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.s
-
-# target to generate assembly for a file
-build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.cpp.s
-.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.cpp.s
 
 build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_qmlcache_loader.obj: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_qmlcache_loader.cpp.obj
 .PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_qmlcache_loader.obj
@@ -608,173 +561,293 @@ build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_qmlcache_loader.c
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_qmlcache_loader.cpp.s
 .PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_qmlcache_loader.cpp.s
 
-dbworker.obj: dbworker.cpp.obj
-.PHONY : dbworker.obj
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.obj: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp.obj
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.obj
 
 # target to build an object file
-dbworker.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/dbworker.cpp.obj
-.PHONY : dbworker.cpp.obj
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp.obj
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp.obj
 
-dbworker.i: dbworker.cpp.i
-.PHONY : dbworker.i
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.i: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp.i
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.i
 
 # target to preprocess a source file
-dbworker.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/dbworker.cpp.i
-.PHONY : dbworker.cpp.i
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp.i
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp.i
 
-dbworker.s: dbworker.cpp.s
-.PHONY : dbworker.s
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.s: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp.s
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.s
 
 # target to generate assembly for a file
-dbworker.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/dbworker.cpp.s
-.PHONY : dbworker.cpp.s
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp.s
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp.s
 
-exceptions.obj: exceptions.cpp.obj
-.PHONY : exceptions.obj
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.obj: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.cpp.obj
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.obj
 
 # target to build an object file
-exceptions.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/exceptions.cpp.obj
-.PHONY : exceptions.cpp.obj
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.cpp.obj
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.cpp.obj
 
-exceptions.i: exceptions.cpp.i
-.PHONY : exceptions.i
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.i: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.cpp.i
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.i
 
 # target to preprocess a source file
-exceptions.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/exceptions.cpp.i
-.PHONY : exceptions.cpp.i
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.cpp.i
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.cpp.i
 
-exceptions.s: exceptions.cpp.s
-.PHONY : exceptions.s
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.s: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.cpp.s
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.s
 
 # target to generate assembly for a file
-exceptions.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/exceptions.cpp.s
-.PHONY : exceptions.cpp.s
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.cpp.s
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.cpp.s
 
-logs.obj: logs.cpp.obj
-.PHONY : logs.obj
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.obj: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp.obj
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.obj
 
 # target to build an object file
-logs.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/logs.cpp.obj
-.PHONY : logs.cpp.obj
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp.obj
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp.obj
 
-logs.i: logs.cpp.i
-.PHONY : logs.i
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.i: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp.i
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.i
 
 # target to preprocess a source file
-logs.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/logs.cpp.i
-.PHONY : logs.cpp.i
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp.i
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp.i
 
-logs.s: logs.cpp.s
-.PHONY : logs.s
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.s: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp.s
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.s
 
 # target to generate assembly for a file
-logs.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/logs.cpp.s
-.PHONY : logs.cpp.s
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp.s
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp.s
 
-main.obj: main.cpp.obj
-.PHONY : main.obj
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.obj: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp.obj
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp.obj
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp.obj
 
-main.i: main.cpp.i
-.PHONY : main.i
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.i: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp.i
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/main.cpp.i
-.PHONY : main.cpp.i
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp.i
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.s: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp.s
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/main.cpp.s
-.PHONY : main.cpp.s
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp.s
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp.s
 
-settings.obj: settings.cpp.obj
-.PHONY : settings.obj
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.obj: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp.obj
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.obj
 
 # target to build an object file
-settings.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/settings.cpp.obj
-.PHONY : settings.cpp.obj
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp.obj
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp.obj
 
-settings.i: settings.cpp.i
-.PHONY : settings.i
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.i: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp.i
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.i
 
 # target to preprocess a source file
-settings.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/settings.cpp.i
-.PHONY : settings.cpp.i
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp.i
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp.i
 
-settings.s: settings.cpp.s
-.PHONY : settings.s
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.s: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp.s
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.s
 
 # target to generate assembly for a file
-settings.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/settings.cpp.s
-.PHONY : settings.cpp.s
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp.s
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp.s
 
-tcpclient.obj: tcpclient.cpp.obj
-.PHONY : tcpclient.obj
+src/dbworker.obj: src/dbworker.cpp.obj
+.PHONY : src/dbworker.obj
 
 # target to build an object file
-tcpclient.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/tcpclient.cpp.obj
-.PHONY : tcpclient.cpp.obj
+src/dbworker.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/src/dbworker.cpp.obj
+.PHONY : src/dbworker.cpp.obj
 
-tcpclient.i: tcpclient.cpp.i
-.PHONY : tcpclient.i
+src/dbworker.i: src/dbworker.cpp.i
+.PHONY : src/dbworker.i
 
 # target to preprocess a source file
-tcpclient.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/tcpclient.cpp.i
-.PHONY : tcpclient.cpp.i
+src/dbworker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/src/dbworker.cpp.i
+.PHONY : src/dbworker.cpp.i
 
-tcpclient.s: tcpclient.cpp.s
-.PHONY : tcpclient.s
+src/dbworker.s: src/dbworker.cpp.s
+.PHONY : src/dbworker.s
 
 # target to generate assembly for a file
-tcpclient.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/tcpclient.cpp.s
-.PHONY : tcpclient.cpp.s
+src/dbworker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/src/dbworker.cpp.s
+.PHONY : src/dbworker.cpp.s
 
-tcpserver.obj: tcpserver.cpp.obj
-.PHONY : tcpserver.obj
+src/exceptions.obj: src/exceptions.cpp.obj
+.PHONY : src/exceptions.obj
 
 # target to build an object file
-tcpserver.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/tcpserver.cpp.obj
-.PHONY : tcpserver.cpp.obj
+src/exceptions.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/src/exceptions.cpp.obj
+.PHONY : src/exceptions.cpp.obj
 
-tcpserver.i: tcpserver.cpp.i
-.PHONY : tcpserver.i
+src/exceptions.i: src/exceptions.cpp.i
+.PHONY : src/exceptions.i
 
 # target to preprocess a source file
-tcpserver.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/tcpserver.cpp.i
-.PHONY : tcpserver.cpp.i
+src/exceptions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/src/exceptions.cpp.i
+.PHONY : src/exceptions.cpp.i
 
-tcpserver.s: tcpserver.cpp.s
-.PHONY : tcpserver.s
+src/exceptions.s: src/exceptions.cpp.s
+.PHONY : src/exceptions.s
 
 # target to generate assembly for a file
-tcpserver.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/tcpserver.cpp.s
-.PHONY : tcpserver.cpp.s
+src/exceptions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/src/exceptions.cpp.s
+.PHONY : src/exceptions.cpp.s
+
+src/logs.obj: src/logs.cpp.obj
+.PHONY : src/logs.obj
+
+# target to build an object file
+src/logs.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/src/logs.cpp.obj
+.PHONY : src/logs.cpp.obj
+
+src/logs.i: src/logs.cpp.i
+.PHONY : src/logs.i
+
+# target to preprocess a source file
+src/logs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/src/logs.cpp.i
+.PHONY : src/logs.cpp.i
+
+src/logs.s: src/logs.cpp.s
+.PHONY : src/logs.s
+
+# target to generate assembly for a file
+src/logs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/src/logs.cpp.s
+.PHONY : src/logs.cpp.s
+
+src/main.obj: src/main.cpp.obj
+.PHONY : src/main.obj
+
+# target to build an object file
+src/main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/src/main.cpp.obj
+.PHONY : src/main.cpp.obj
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/settings.obj: src/settings.cpp.obj
+.PHONY : src/settings.obj
+
+# target to build an object file
+src/settings.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/src/settings.cpp.obj
+.PHONY : src/settings.cpp.obj
+
+src/settings.i: src/settings.cpp.i
+.PHONY : src/settings.i
+
+# target to preprocess a source file
+src/settings.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/src/settings.cpp.i
+.PHONY : src/settings.cpp.i
+
+src/settings.s: src/settings.cpp.s
+.PHONY : src/settings.s
+
+# target to generate assembly for a file
+src/settings.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/src/settings.cpp.s
+.PHONY : src/settings.cpp.s
+
+src/tcpclient.obj: src/tcpclient.cpp.obj
+.PHONY : src/tcpclient.obj
+
+# target to build an object file
+src/tcpclient.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/src/tcpclient.cpp.obj
+.PHONY : src/tcpclient.cpp.obj
+
+src/tcpclient.i: src/tcpclient.cpp.i
+.PHONY : src/tcpclient.i
+
+# target to preprocess a source file
+src/tcpclient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/src/tcpclient.cpp.i
+.PHONY : src/tcpclient.cpp.i
+
+src/tcpclient.s: src/tcpclient.cpp.s
+.PHONY : src/tcpclient.s
+
+# target to generate assembly for a file
+src/tcpclient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/src/tcpclient.cpp.s
+.PHONY : src/tcpclient.cpp.s
+
+src/tcpserver.obj: src/tcpserver.cpp.obj
+.PHONY : src/tcpserver.obj
+
+# target to build an object file
+src/tcpserver.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/src/tcpserver.cpp.obj
+.PHONY : src/tcpserver.cpp.obj
+
+src/tcpserver.i: src/tcpserver.cpp.i
+.PHONY : src/tcpserver.i
+
+# target to preprocess a source file
+src/tcpserver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/src/tcpserver.cpp.i
+.PHONY : src/tcpserver.cpp.i
+
+src/tcpserver.s: src/tcpserver.cpp.s
+.PHONY : src/tcpserver.s
+
+# target to generate assembly for a file
+src/tcpserver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/src/tcpserver.cpp.s
+.PHONY : src/tcpserver.cpp.s
 
 # Help Target
 help:
@@ -788,6 +861,7 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
+	@echo ... test
 	@echo ... all_aotstats
 	@echo ... all_qmllint
 	@echo ... all_qmllint_json
@@ -803,7 +877,10 @@ help:
 	@echo ... appapp_qmllint_module
 	@echo ... appapp_qmltyperegistration
 	@echo ... module_appapp_aotstats_target
+	@echo ... tst_test_autogen
+	@echo ... tst_test_autogen_timestamp_deps
 	@echo ... appapp
+	@echo ... tst_test
 	@echo ... appapp_autogen/mocs_compilation.obj
 	@echo ... appapp_autogen/mocs_compilation.i
 	@echo ... appapp_autogen/mocs_compilation.s
@@ -813,48 +890,51 @@ help:
 	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0.obj
 	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0.i
 	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0.s
+	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.obj
+	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.i
+	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.s
 	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_app.obj
 	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_app.i
 	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_app.s
-	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.obj
-	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.i
-	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_LoginPage_qml.s
-	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.obj
-	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.i
-	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_Main_qml.s
-	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.obj
-	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.i
-	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_OrderPage_qml.s
-	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.obj
-	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.i
-	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_ReportsPage_qml.s
-	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.obj
-	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.i
-	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_StockPage_qml.s
 	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_qmlcache_loader.obj
 	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_qmlcache_loader.i
 	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_qmlcache_loader.s
-	@echo ... dbworker.obj
-	@echo ... dbworker.i
-	@echo ... dbworker.s
-	@echo ... exceptions.obj
-	@echo ... exceptions.i
-	@echo ... exceptions.s
-	@echo ... logs.obj
-	@echo ... logs.i
-	@echo ... logs.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
-	@echo ... settings.obj
-	@echo ... settings.i
-	@echo ... settings.s
-	@echo ... tcpclient.obj
-	@echo ... tcpclient.i
-	@echo ... tcpclient.s
-	@echo ... tcpserver.obj
-	@echo ... tcpserver.i
-	@echo ... tcpserver.s
+	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.obj
+	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.i
+	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.s
+	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.obj
+	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.i
+	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/Main_qml.s
+	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.obj
+	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.i
+	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/OrderPage_qml.s
+	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.obj
+	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.i
+	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.s
+	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.obj
+	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.i
+	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/StockPage_qml.s
+	@echo ... src/dbworker.obj
+	@echo ... src/dbworker.i
+	@echo ... src/dbworker.s
+	@echo ... src/exceptions.obj
+	@echo ... src/exceptions.i
+	@echo ... src/exceptions.s
+	@echo ... src/logs.obj
+	@echo ... src/logs.i
+	@echo ... src/logs.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
+	@echo ... src/settings.obj
+	@echo ... src/settings.i
+	@echo ... src/settings.s
+	@echo ... src/tcpclient.obj
+	@echo ... src/tcpclient.i
+	@echo ... src/tcpclient.s
+	@echo ... src/tcpserver.obj
+	@echo ... src/tcpserver.i
+	@echo ... src/tcpserver.s
 .PHONY : help
 
 

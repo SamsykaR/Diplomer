@@ -70,11 +70,12 @@ CMakeFiles/appapp_qmlimportscan: .qt/qml_imports/appapp_build.cmake
 .qt/qml_imports/appapp_build.cmake: C:/Qt/6.9.2/mingw_64/bin/qmlimportscanner.exe
 .qt/qml_imports/appapp_build.cmake: .qt/rcc/qmake_app.qrc
 .qt/qml_imports/appapp_build.cmake: .qt/rcc/appapp_raw_qml_0.qrc
-.qt/qml_imports/appapp_build.cmake: C:/Users/rodio/Desktop/W/Diplom/app/Main.qml
-.qt/qml_imports/appapp_build.cmake: C:/Users/rodio/Desktop/W/Diplom/app/OrderPage.qml
-.qt/qml_imports/appapp_build.cmake: C:/Users/rodio/Desktop/W/Diplom/app/StockPage.qml
-.qt/qml_imports/appapp_build.cmake: C:/Users/rodio/Desktop/W/Diplom/app/ReportsPage.qml
-.qt/qml_imports/appapp_build.cmake: C:/Users/rodio/Desktop/W/Diplom/app/LoginPage.qml
+.qt/qml_imports/appapp_build.cmake: .qt/rcc/appapp_raw_qml_0_extra_qmldirs.qrc
+.qt/qml_imports/appapp_build.cmake: C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/Main.qml
+.qt/qml_imports/appapp_build.cmake: C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/LoginPage.qml
+.qt/qml_imports/appapp_build.cmake: C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/OrderPage.qml
+.qt/qml_imports/appapp_build.cmake: C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/StockPage.qml
+.qt/qml_imports/appapp_build.cmake: C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/ReportsPage.qml
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running qmlimportscanner for appapp"
 	cd /d C:\Users\rodio\Desktop\W\Diplom\app && call C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.2/mingw_64/bin/qmlimportscanner.exe @C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/qml_imports/appapp_build.rsp
 

@@ -3,14 +3,15 @@
 16807d0df4d35515a133674f458c60d2 .qt/appapp_res.txt
 30b51259ea0b5c4c6a739490cd873ffd .qt/qml_imports/appapp_build.cmake
 4442fc6d0dde725bb19ffaa6bc516605 .qt/rcc/qrc_appapp_raw_qml_0.cpp
+cc1f7984ea8e7e139aaf7dec058c4407 .qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.cpp
 6d886fe39a8499b189324c6c905f11f1 .qt/rcc/qrc_qmake_app.cpp
 259e21856e2a4c993beb471be403c930 .rcc/qmlcache/all_aotstats.aotstats
-37c3cb1c87e8170ca8b1c029176865e9 .rcc/qmlcache/appapp_LoginPage_qml.cpp
-6e03a605913d40afe782fac9f89f3e45 .rcc/qmlcache/appapp_Main_qml.cpp
-375417c6fddff3eb66db7f9359f72691 .rcc/qmlcache/appapp_OrderPage_qml.cpp
-178d4b3af295055e42750a933c0fd565 .rcc/qmlcache/appapp_ReportsPage_qml.cpp
-4d8030605208563ae142f866bcf86210 .rcc/qmlcache/appapp_StockPage_qml.cpp
 ef3edc38a2397f5446437e6eae18070f .rcc/qmlcache/appapp_qmlcache_loader.cpp
+7feb7b418c6ff642614ae4a4ebe4d8ce .rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp
+2e62a739baf26419467d2c0b3d51c8c4 .rcc/qmlcache/appapp_resources/qml/Main_qml.cpp
+0aa630752330ab9cb8d45f7299259314 .rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp
+87746d36e8c55607a36249f394c989c0 .rcc/qmlcache/appapp_resources/qml/ReportsPage_qml.cpp
+1c21510af215f400875d09ff02ea4c80 .rcc/qmlcache/appapp_resources/qml/StockPage_qml.cpp
 f533d26e3639f1ddd49d400dd7b74ac8 .rcc/qmlcache/module_appapp.aotstats
 a73eef62d8b88980d959d43f3d3c6270 CMakeFiles/all_aotstats
 24ac8f9fd1494a54428ec75084f9b251 CMakeFiles/appapp_autogen
@@ -27,4 +28,5 @@ bea906a77f824caf2736906c7ba4770f appapp_qmltyperegistrations.cpp
 60898fd1af211d6b8528efe67b554ffe meta_types/appapp_json_file_list.txt
 dcd5bdd658c06acf03f20d2b7fa91e08 meta_types/qt6appapp_debug_metatypes.json
 1831eb5ff5cef796c5376dd9e739973b meta_types/qt6appapp_debug_metatypes.json.gen
-dcd5bdd658c06acf03f20d2b7fa91e08 meta_types/qt6appapp_release_metatypes.json
+73fcc1cf6906d183baaff58f7dddfc40 tests/CMakeFiles/tst_test_autogen
+bad648ba31d660d22a0b1d1c4ccf7ed7 tests/tst_test_autogen/timestamp

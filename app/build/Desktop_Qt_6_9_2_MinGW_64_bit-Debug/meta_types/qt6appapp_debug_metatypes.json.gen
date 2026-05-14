@@ -3,7 +3,7 @@
         "classes": [
             {
                 "className": "DBWorker",
-                "lineNumber": 14,
+                "lineNumber": 21,
                 "methods": [
                     {
                         "access": "public",
@@ -327,6 +327,42 @@
                         "index": 24,
                         "name": "getLowStockWarning",
                         "returnType": "QVariantList"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "reportType",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "from",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "to",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "dishId",
+                                "type": "int"
+                            },
+                            {
+                                "name": "tableNumber",
+                                "type": "int"
+                            },
+                            {
+                                "name": "waiterId",
+                                "type": "int"
+                            },
+                            {
+                                "name": "fileName",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 25,
+                        "name": "saveReportToCSV",
+                        "returnType": "bool"
                     }
                 ],
                 "object": true,
@@ -366,7 +402,7 @@
         "classes": [
             {
                 "className": "Logs",
-                "lineNumber": 9,
+                "lineNumber": 16,
                 "methods": [
                     {
                         "access": "public",
@@ -434,17 +470,17 @@
         "classes": [
             {
                 "className": "Settings",
-                "lineNumber": 9,
+                "lineNumber": 16,
                 "methods": [
                     {
                         "access": "public",
-                        "index": 9,
+                        "index": 10,
                         "name": "load",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
-                        "index": 10,
+                        "index": 11,
                         "name": "save",
                         "returnType": "void"
                     }
@@ -585,6 +621,21 @@
                         "type": "int",
                         "user": false,
                         "write": "setServerPort"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 9,
+                        "name": "reportsPath",
+                        "notify": "reportsPathChanged",
+                        "read": "reportsPath",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setReportsPath"
                     }
                 ],
                 "qualifiedClassName": "Settings",
@@ -642,6 +693,12 @@
                         "index": 8,
                         "name": "serverPortChanged",
                         "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 9,
+                        "name": "reportsPathChanged",
+                        "returnType": "void"
                     }
                 ],
                 "superClasses": [
@@ -659,7 +716,7 @@
         "classes": [
             {
                 "className": "TcpClient",
-                "lineNumber": 11,
+                "lineNumber": 19,
                 "methods": [
                     {
                         "access": "public",
@@ -965,6 +1022,42 @@
                         "index": 24,
                         "name": "reconnect",
                         "returnType": "bool"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "reportType",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "from",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "to",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "dishId",
+                                "type": "int"
+                            },
+                            {
+                                "name": "tableNumber",
+                                "type": "int"
+                            },
+                            {
+                                "name": "waiterId",
+                                "type": "int"
+                            },
+                            {
+                                "name": "fileName",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 25,
+                        "name": "saveReportToCSV",
+                        "returnType": "bool"
                     }
                 ],
                 "object": true,
@@ -1024,7 +1117,7 @@
         "classes": [
             {
                 "className": "ClientConnection",
-                "lineNumber": 13,
+                "lineNumber": 19,
                 "object": true,
                 "qualifiedClassName": "ClientConnection",
                 "slots": [
@@ -1050,7 +1143,7 @@
             },
             {
                 "className": "TcpServer",
-                "lineNumber": 32,
+                "lineNumber": 57,
                 "object": true,
                 "qualifiedClassName": "TcpServer",
                 "slots": [

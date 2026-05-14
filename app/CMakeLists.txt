@@ -4,53 +4,77 @@ project(app VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Quick Sql)
+find_package(Qt6 REQUIRED COMPONENTS Core Quick Sql Network)
 
 qt_standard_project_setup(REQUIRES 6.8)
 
-qt_add_executable(appapp
-    main.cpp
+# Заголовочные файлы
+set(HEADERS
+    include/dbworker.h
+    include/logs.h
+    include/tcpclient.h
+    include/tcpserver.h
+    include/settings.h
+    include/exceptions.h
 )
 
+# Исходные файлы C++
+set(SOURCES
+    src/dbworker.cpp
+    src/logs.cpp
+    src/tcpclient.cpp
+    src/tcpserver.cpp
+    src/settings.cpp
+    src/exceptions.cpp
+    src/main.cpp
+)
+
+# QML файлы
+set(QML_FILES
+    resources/qml/Main.qml
+    resources/qml/LoginPage.qml
+    resources/qml/OrderPage.qml
+    resources/qml/StockPage.qml
+    resources/qml/ReportsPage.qml
+)
+
+# Создаём исполняемый файл со всеми исходниками
+qt_add_executable(appapp ${SOURCES})
+
+# Добавляем заголовки в проект (чтобы они отображались в IDE)
+target_sources(appapp PRIVATE ${HEADERS})
+
+# QML модуль
 qt_add_qml_module(appapp
     URI app
     VERSION 1.0
-    QML_FILES
-        Main.qml
-        QML_FILES
-        QML_FILES OrderPage.qml
-        QML_FILES StockPage.qml
-        QML_FILES ReportsPage.qml
-        QML_FILES LoginPage.qml
-        SOURCES dbworker.h dbworker.cpp
-        SOURCES logs.h logs.cpp
-        SOURCES
-        SOURCES tcpclient.h tcpclient.cpp
-        SOURCES
-        SOURCES settings.h settings.cpp
-        SOURCES tcpserver.h tcpserver.cpp
-        SOURCES exceptions.h exceptions.cpp
+    QML_FILES ${QML_FILES}
 )
 
-# Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
-# If you are developing for iOS or macOS you should consider setting an
-# explicit, fixed bundle identifier manually though.
-set_target_properties(appapp PROPERTIES
-#    MACOSX_BUNDLE_GUI_IDENTIFIER com.example.appapp
-    MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
-    MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
-    MACOSX_BUNDLE TRUE
-    WIN32_EXECUTABLE TRUE
-)
-
+# Подключаем библиотеки Qt
 target_link_libraries(appapp
+    PRIVATE Qt6::Core
     PRIVATE Qt6::Quick
-    Qt::Sql
+    PRIVATE Qt6::Sql
+    PRIVATE Qt6::Network
 )
 
+# Добавляем путь к заголовкам
+target_include_directories(appapp PRIVATE include)
+
+# Настройки для Windows (консоль не показывать)
+set_target_properties(appapp PROPERTIES
+    WIN32_EXECUTABLE TRUE
+    MACOSX_BUNDLE TRUE
+)
+
+# Установка (опционально)
 include(GNUInstallDirs)
 install(TARGETS appapp
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
+
+enable_testing()
+add_subdirectory(tests)

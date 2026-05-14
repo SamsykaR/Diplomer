@@ -2,8 +2,10 @@
 C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qmake_app.qrc
 --resource
 C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appapp_raw_qml_0.qrc
-/qt/qml/app/Main.qml
-/qt/qml/app/OrderPage.qml
-/qt/qml/app/StockPage.qml
-/qt/qml/app/ReportsPage.qml
-/qt/qml/app/LoginPage.qml
+--resource
+C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appapp_raw_qml_0_extra_qmldirs.qrc
+/qt/qml/app/resources/qml/Main.qml
+/qt/qml/app/resources/qml/LoginPage.qml
+/qt/qml/app/resources/qml/OrderPage.qml
+/qt/qml/app/resources/qml/StockPage.qml
+/qt/qml/app/resources/qml/ReportsPage.qml

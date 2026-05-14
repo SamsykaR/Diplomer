@@ -1,9 +1,11 @@
 appapp_autogen/timestamp: \
+	C:/Qt/6.9.2/mingw_64/include/QtCore/QDir \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/QFile \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/QList \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/QMap \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/QObject \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/QString \
+	C:/Qt/6.9.2/mingw_64/include/QtCore/QStringConverter \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/QTextStream \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/QVariant \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/QVariantList \
@@ -29,6 +31,7 @@ appapp_autogen/timestamp: \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qbytearrayalgorithms.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qbytearraylist.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qbytearrayview.h \
+	C:/Qt/6.9.2/mingw_64/include/QtCore/qcalendar.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qchar.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qcompare.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qcompare_impl.h \
@@ -42,10 +45,14 @@ appapp_autogen/timestamp: \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qcontiguouscache.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qdarwinhelpers.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qdatastream.h \
+	C:/Qt/6.9.2/mingw_64/include/QtCore/qdatetime.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qdebug.h \
+	C:/Qt/6.9.2/mingw_64/include/QtCore/qdir.h \
+	C:/Qt/6.9.2/mingw_64/include/QtCore/qdirlisting.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qexceptionhandling.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qfile.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qfiledevice.h \
+	C:/Qt/6.9.2/mingw_64/include/QtCore/qfileinfo.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qflags.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qfloat16.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qforeach.h \
@@ -62,6 +69,7 @@ appapp_autogen/timestamp: \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qiterator.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qlatin1stringview.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qlist.h \
+	C:/Qt/6.9.2/mingw_64/include/QtCore/qlocale.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qlogging.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qmalloc.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qmap.h \
@@ -115,6 +123,7 @@ appapp_autogen/timestamp: \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qtenvironmentvariables.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qtextstream.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qtformat_impl.h \
+	C:/Qt/6.9.2/mingw_64/include/QtCore/qtimezone.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qtmetamacros.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qtnoop.h \
 	C:/Qt/6.9.2/mingw_64/include/QtCore/qtpreprocessorsupport.h \
@@ -1281,17 +1290,17 @@ appapp_autogen/timestamp: \
 	C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
 	C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake \
 	C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appapp_autogen/moc_predefs.h \
-	C:/Users/rodio/Desktop/W/Diplom/app/dbworker.cpp \
-	C:/Users/rodio/Desktop/W/Diplom/app/dbworker.h \
-	C:/Users/rodio/Desktop/W/Diplom/app/exceptions.cpp \
-	C:/Users/rodio/Desktop/W/Diplom/app/exceptions.h \
-	C:/Users/rodio/Desktop/W/Diplom/app/logs.cpp \
-	C:/Users/rodio/Desktop/W/Diplom/app/logs.h \
-	C:/Users/rodio/Desktop/W/Diplom/app/main.cpp \
-	C:/Users/rodio/Desktop/W/Diplom/app/settings.cpp \
-	C:/Users/rodio/Desktop/W/Diplom/app/settings.h \
-	C:/Users/rodio/Desktop/W/Diplom/app/tcpclient.cpp \
-	C:/Users/rodio/Desktop/W/Diplom/app/tcpclient.h \
-	C:/Users/rodio/Desktop/W/Diplom/app/tcpserver.cpp \
-	C:/Users/rodio/Desktop/W/Diplom/app/tcpserver.h \
+	C:/Users/rodio/Desktop/W/Diplom/app/include/dbworker.h \
+	C:/Users/rodio/Desktop/W/Diplom/app/include/exceptions.h \
+	C:/Users/rodio/Desktop/W/Diplom/app/include/logs.h \
+	C:/Users/rodio/Desktop/W/Diplom/app/include/settings.h \
+	C:/Users/rodio/Desktop/W/Diplom/app/include/tcpclient.h \
+	C:/Users/rodio/Desktop/W/Diplom/app/include/tcpserver.h \
+	C:/Users/rodio/Desktop/W/Diplom/app/src/dbworker.cpp \
+	C:/Users/rodio/Desktop/W/Diplom/app/src/exceptions.cpp \
+	C:/Users/rodio/Desktop/W/Diplom/app/src/logs.cpp \
+	C:/Users/rodio/Desktop/W/Diplom/app/src/main.cpp \
+	C:/Users/rodio/Desktop/W/Diplom/app/src/settings.cpp \
+	C:/Users/rodio/Desktop/W/Diplom/app/src/tcpclient.cpp \
+	C:/Users/rodio/Desktop/W/Diplom/app/src/tcpserver.cpp \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

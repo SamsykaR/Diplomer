@@ -1,5 +1,5 @@
-C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appapp_autogen/include/../EWIEGA46WW/moc_dbworker.cpp.json
-C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appapp_autogen/include/../EWIEGA46WW/moc_logs.cpp.json
-C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appapp_autogen/include/../EWIEGA46WW/moc_settings.cpp.json
-C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appapp_autogen/include/../EWIEGA46WW/moc_tcpclient.cpp.json
-C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appapp_autogen/include/../EWIEGA46WW/moc_tcpserver.cpp.json
+C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appapp_autogen/include/../6YEA5652QU/moc_dbworker.cpp.json
+C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appapp_autogen/include/../6YEA5652QU/moc_logs.cpp.json
+C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appapp_autogen/include/../6YEA5652QU/moc_settings.cpp.json
+C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appapp_autogen/include/../6YEA5652QU/moc_tcpclient.cpp.json
+C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appapp_autogen/include/../6YEA5652QU/moc_tcpserver.cpp.json

@@ -1,9 +1,0 @@
---resource
-C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Release/.qt/rcc/qmake_app.qrc
---resource
-C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Release/.qt/rcc/appapp_raw_qml_0.qrc
-/qt/qml/app/Main.qml
-/qt/qml/app/OrderPage.qml
-/qt/qml/app/StockPage.qml
-/qt/qml/app/ReportsPage.qml
-/qt/qml/app/LoginPage.qml

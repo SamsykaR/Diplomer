@@ -1,7 +1,7 @@
 CMakeFiles/appapp.dir/appapp_autogen/mocs_compilation.cpp.obj: \
  C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\appapp_autogen\mocs_compilation.cpp \
- C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\appapp_autogen\EWIEGA46WW/moc_dbworker.cpp \
- C:/Users/rodio/Desktop/W/Diplom/app/dbworker.h \
+ C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\appapp_autogen\6YEA5652QU/moc_dbworker.cpp \
+ C:/Users/rodio/Desktop/W/Diplom/app/include/dbworker.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/QObject \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qobject.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qobjectdefs.h \
@@ -367,7 +367,9 @@ CMakeFiles/appapp.dir/appapp_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qmap.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/QString \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qstring.h \
- C:/Users/rodio/Desktop/W/Diplom/app/logs.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/QStringConverter \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qstringconverter.h \
+ C:/Users/rodio/Desktop/W/Diplom/app/include/logs.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/QFile \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qfile.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qfiledevice.h \
@@ -407,18 +409,27 @@ CMakeFiles/appapp.dir/appapp_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/QTextStream \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qtextstream.h \
- C:/Users/rodio/Desktop/W/Diplom/app/exceptions.h \
+ C:/Users/rodio/Desktop/W/Diplom/app/include/exceptions.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/QString \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qtmochelpers.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qtmocconstants.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/q20algorithm.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/q23type_traits.h \
- C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\appapp_autogen\EWIEGA46WW/moc_logs.cpp \
- C:/Users/rodio/Desktop/W/Diplom/app/logs.h \
- C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\appapp_autogen\EWIEGA46WW/moc_settings.cpp \
- C:/Users/rodio/Desktop/W/Diplom/app/settings.h \
- C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\appapp_autogen\EWIEGA46WW/moc_tcpclient.cpp \
- C:/Users/rodio/Desktop/W/Diplom/app/tcpclient.h \
+ C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\appapp_autogen\6YEA5652QU/moc_logs.cpp \
+ C:/Users/rodio/Desktop/W/Diplom/app/include/logs.h \
+ C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\appapp_autogen\6YEA5652QU/moc_settings.cpp \
+ C:/Users/rodio/Desktop/W/Diplom/app/include/settings.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/QDir \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qdir.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qdirlisting.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qdatetime.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qcalendar.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qlocale.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qfile.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qfileinfo.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qtimezone.h \
+ C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\appapp_autogen\6YEA5652QU/moc_tcpclient.cpp \
+ C:/Users/rodio/Desktop/W/Diplom/app/include/tcpclient.h \
  C:/Qt/6.9.2/mingw_64/include/QtNetwork/QTcpSocket \
  C:/Qt/6.9.2/mingw_64/include/QtNetwork/qtcpsocket.h \
  C:/Qt/6.9.2/mingw_64/include/QtNetwork/qtnetworkglobal.h \
@@ -426,8 +437,8 @@ CMakeFiles/appapp.dir/appapp_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.9.2/mingw_64/include/QtNetwork/qtnetworkexports.h \
  C:/Qt/6.9.2/mingw_64/include/QtNetwork/qabstractsocket.h \
  C:/Qt/6.9.2/mingw_64/include/QtNetwork/qhostaddress.h \
- C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\appapp_autogen\EWIEGA46WW/moc_tcpserver.cpp \
- C:/Users/rodio/Desktop/W/Diplom/app/tcpserver.h \
+ C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\appapp_autogen\6YEA5652QU/moc_tcpserver.cpp \
+ C:/Users/rodio/Desktop/W/Diplom/app/include/tcpserver.h \
  C:/Qt/6.9.2/mingw_64/include/QtNetwork/QTcpServer \
  C:/Qt/6.9.2/mingw_64/include/QtNetwork/qtcpserver.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/QMap

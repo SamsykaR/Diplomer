@@ -1,10 +1,10 @@
 module app
 typeinfo appapp.qmltypes
 prefer :/qt/qml/app/
-Main 1.0 Main.qml
-OrderPage 1.0 OrderPage.qml
-StockPage 1.0 StockPage.qml
-ReportsPage 1.0 ReportsPage.qml
-LoginPage 1.0 LoginPage.qml
+Main 1.0 resources/qml/Main.qml
+LoginPage 1.0 resources/qml/LoginPage.qml
+OrderPage 1.0 resources/qml/OrderPage.qml
+StockPage 1.0 resources/qml/StockPage.qml
+ReportsPage 1.0 resources/qml/ReportsPage.qml
 depends QtQuick
 
