@@ -1,0 +1,476 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": false,
+                        "column": 33,
+                        "durationMicroseconds": 299,
+                        "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
+                        "functionName": "fullMenuModel",
+                        "line": 17
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 5,
+                        "durationMicroseconds": 565,
+                        "errorMessage": "Cannot access value for name loger",
+                        "functionName": "reloadData",
+                        "line": 26
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 5,
+                        "durationMicroseconds": 472,
+                        "errorMessage": "Cannot access value for name dbWorker",
+                        "functionName": "loadFoods",
+                        "line": 39
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 5,
+                        "durationMicroseconds": 3723,
+                        "errorMessage": "Cannot load property length from (component in C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/OrderPage.qml)::fullMenuModel with type QVariant.",
+                        "functionName": "applyFilters",
+                        "line": 48
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 5,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Functions without type annotations won't be compiled",
+                        "functionName": "addDishToOrder",
+                        "line": 68
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 17,
+                        "durationMicroseconds": 92,
+                        "errorMessage": "Cannot access value for name window",
+                        "functionName": "target",
+                        "line": 32
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 9,
+                        "durationMicroseconds": 98,
+                        "errorMessage": "method reloadData cannot be resolved.",
+                        "functionName": "onDataRefreshRequested",
+                        "line": 33
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 130,
+                        "errorMessage": "",
+                        "functionName": "onCompleted",
+                        "line": 45
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 288,
+                        "errorMessage": "",
+                        "functionName": "standardButtons",
+                        "line": 99
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 12,
+                        "durationMicroseconds": 314,
+                        "errorMessage": "",
+                        "functionName": "x",
+                        "line": 101
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 12,
+                        "durationMicroseconds": 327,
+                        "errorMessage": "",
+                        "functionName": "y",
+                        "line": 102
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 108,
+                        "errorMessage": "",
+                        "functionName": "dishInfo",
+                        "line": 103
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 21,
+                        "durationMicroseconds": 649,
+                        "errorMessage": "Cannot load property foodId from (component in C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/OrderPage.qml)::dishInfo with type QVariant.",
+                        "functionName": "onAccepted",
+                        "line": 105
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 146,
+                        "errorMessage": "",
+                        "functionName": "text",
+                        "line": 109
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 128,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 110
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 213,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 112
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 140,
+                        "errorMessage": "",
+                        "functionName": "standardButtons",
+                        "line": 121
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 12,
+                        "durationMicroseconds": 386,
+                        "errorMessage": "",
+                        "functionName": "x",
+                        "line": 123
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 12,
+                        "durationMicroseconds": 291,
+                        "errorMessage": "",
+                        "functionName": "y",
+                        "line": 124
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 135,
+                        "errorMessage": "",
+                        "functionName": "text",
+                        "line": 127
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 146,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 128
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 216,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 130
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 105,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 135
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 36,
+                        "durationMicroseconds": 241,
+                        "errorMessage": "",
+                        "functionName": "preferredWidth",
+                        "line": 141
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 348,
+                        "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
+                        "functionName": "model",
+                        "line": 150
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 44,
+                        "durationMicroseconds": 703,
+                        "errorMessage": "method applyFilters cannot be resolved.",
+                        "functionName": "onCurrentIndexChanged",
+                        "line": 151
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 39,
+                        "durationMicroseconds": 604,
+                        "errorMessage": "method applyFilters cannot be resolved.",
+                        "functionName": "onCheckedChanged",
+                        "line": 156
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 122,
+                        "errorMessage": "",
+                        "functionName": "model",
+                        "line": 165
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 62,
+                        "errorMessage": "Cannot access value for name menuListView",
+                        "functionName": "width",
+                        "line": 167
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 29,
+                        "durationMicroseconds": 212,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 168
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 333,
+                        "errorMessage": "Cannot access value for name menuListView",
+                        "functionName": "color",
+                        "line": 175
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 99,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 172
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 110,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 182
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 39,
+                        "durationMicroseconds": 74,
+                        "errorMessage": "Cannot access value for name model",
+                        "functionName": "text",
+                        "line": 189
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 39,
+                        "durationMicroseconds": 76,
+                        "errorMessage": "Cannot access value for name model",
+                        "functionName": "text",
+                        "line": 194
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 40,
+                        "durationMicroseconds": 184,
+                        "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: QQuickMaterialStyle::accent with type QVariant (adjusted to QVariant) -> QColor stored as QVariant",
+                        "functionName": "color",
+                        "line": 196
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 51,
+                        "durationMicroseconds": 215,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 197
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 35,
+                        "durationMicroseconds": 81,
+                        "errorMessage": "Cannot access value for name model",
+                        "functionName": "text",
+                        "line": 202
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 35,
+                        "durationMicroseconds": 69,
+                        "errorMessage": "Cannot access value for name model",
+                        "functionName": "text",
+                        "line": 208
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 123,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 211
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 35,
+                        "durationMicroseconds": 76,
+                        "errorMessage": "Cannot access value for name model",
+                        "functionName": "text",
+                        "line": 216
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 124,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 219
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 38,
+                        "durationMicroseconds": 72,
+                        "errorMessage": "Cannot access value for name model",
+                        "functionName": "visible",
+                        "line": 224
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 690,
+                        "errorMessage": "Cannot access value for name menuListView",
+                        "functionName": "onClicked",
+                        "line": 234
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 99,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 233
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 36,
+                        "durationMicroseconds": 206,
+                        "errorMessage": "",
+                        "functionName": "preferredWidth",
+                        "line": 245
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 121,
+                        "errorMessage": "",
+                        "functionName": "model",
+                        "line": 258
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 98,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 256
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 324,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 260
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 38,
+                        "durationMicroseconds": 144,
+                        "errorMessage": "",
+                        "functionName": "highlighted",
+                        "line": 262
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 118,
+                        "errorMessage": "Cannot access value for name model",
+                        "functionName": "text",
+                        "line": 263
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 97,
+                        "errorMessage": "Cannot access value for name orderListView",
+                        "functionName": "onClicked",
+                        "line": 264
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 30,
+                        "durationMicroseconds": 67,
+                        "errorMessage": "Cannot access value for name selectedMenuIndex",
+                        "functionName": "enabled",
+                        "line": 306
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 7590,
+                        "errorMessage": "Cannot access value for name selectedMenuIndex",
+                        "functionName": "onClicked",
+                        "line": 307
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 30,
+                        "durationMicroseconds": 326,
+                        "errorMessage": "",
+                        "functionName": "enabled",
+                        "line": 336
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 971,
+                        "errorMessage": "Cannot access value for name dbWorker",
+                        "functionName": "onClicked",
+                        "line": 337
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 15129,
+                        "errorMessage": "Cannot access value for name dbWorker",
+                        "functionName": "onClicked",
+                        "line": 358
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 38,
+                        "durationMicroseconds": 184,
+                        "errorMessage": "",
+                        "functionName": "background",
+                        "line": 357
+                    }
+                ],
+                "filePath": "C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/OrderPage.qml"
+            }
+        ],
+        "moduleId": "app(appapp)"
+    }
+]

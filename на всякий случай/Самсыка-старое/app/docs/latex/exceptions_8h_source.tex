@@ -1,0 +1,47 @@
+\doxysection{exceptions.\+h}
+\hypertarget{exceptions_8h_source}{}\label{exceptions_8h_source}\index{C:/Users/rodio/Desktop/W/Diplom/app/include/exceptions.h@{C:/Users/rodio/Desktop/W/Diplom/app/include/exceptions.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ EXCEPTIONS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ EXCEPTIONS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_exceptions_a77187770a0e9f0a0a42affd9c8b1ba54}{Exceptions}}\ :\ \textcolor{keyword}{public}\ std::exception}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_exceptions_a77187770a0e9f0a0a42affd9c8b1ba54}{Exceptions}}(\textcolor{keyword}{const}\ QString\ \&message);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ what()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ std::string\ msg;\ }
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }ValidateEx\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_exceptions_a77187770a0e9f0a0a42affd9c8b1ba54}{Exceptions}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{explicit}\ ValidateEx(\textcolor{keyword}{const}\ QString\ \&message)\ :\ \doxymbox{\hyperlink{class_exceptions_a77187770a0e9f0a0a42affd9c8b1ba54}{Exceptions}}(message)\ \{\}}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{class\ }DatabaseEx\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_exceptions_a77187770a0e9f0a0a42affd9c8b1ba54}{Exceptions}}}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{explicit}\ DatabaseEx(\textcolor{keyword}{const}\ QString\ \&message)\ :\ \doxymbox{\hyperlink{class_exceptions_a77187770a0e9f0a0a42affd9c8b1ba54}{Exceptions}}(message)\ \{\}}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{class\ }NetworkEx\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_exceptions_a77187770a0e9f0a0a42affd9c8b1ba54}{Exceptions}}}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{explicit}\ NetworkEx(\textcolor{keyword}{const}\ QString\ \&message)\ :\ \doxymbox{\hyperlink{class_exceptions_a77187770a0e9f0a0a42affd9c8b1ba54}{Exceptions}}(message)\ \{\}}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{class\ }FileEx\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_exceptions_a77187770a0e9f0a0a42affd9c8b1ba54}{Exceptions}}}
+\DoxyCodeLine{00050\ \{}
+\DoxyCodeLine{00051\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{explicit}\ FileEx(\textcolor{keyword}{const}\ QString\ \&message)\ :\ \doxymbox{\hyperlink{class_exceptions_a77187770a0e9f0a0a42affd9c8b1ba54}{Exceptions}}(message)\ \{\}}
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ EXCEPTIONS\_H}}
+
+\end{DoxyCode}

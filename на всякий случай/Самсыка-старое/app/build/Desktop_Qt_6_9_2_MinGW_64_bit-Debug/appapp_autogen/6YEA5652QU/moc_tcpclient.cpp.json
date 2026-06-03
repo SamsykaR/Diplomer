@@ -1,0 +1,401 @@
+{
+    "classes": [
+        {
+            "className": "TcpClient",
+            "lineNumber": 19,
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "login",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "password",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 3,
+                    "name": "checkUser",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "index": 4,
+                    "isConst": true,
+                    "name": "getUserName",
+                    "returnType": "QString"
+                },
+                {
+                    "access": "public",
+                    "index": 5,
+                    "isConst": true,
+                    "name": "getUserRole",
+                    "returnType": "QString"
+                },
+                {
+                    "access": "public",
+                    "index": 6,
+                    "isConst": true,
+                    "name": "getUserId",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "index": 7,
+                    "name": "getFoods",
+                    "returnType": "QVariantList"
+                },
+                {
+                    "access": "public",
+                    "index": 8,
+                    "name": "getProducts",
+                    "returnType": "QVariantList"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "productId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "newQuantity",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 9,
+                    "name": "updateProductQuantity",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "productId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "delta",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 10,
+                    "name": "addProductQuantity",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "tableNumber",
+                            "type": "int"
+                        },
+                        {
+                            "name": "userId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "specialRequests",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "totalCost",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 11,
+                    "name": "createOrder",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "orderId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "foodId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "quantity",
+                            "type": "int"
+                        },
+                        {
+                            "name": "price",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 12,
+                    "name": "addOrderItem",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "foodId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "quantity",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 13,
+                    "name": "checkAndConsume",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "foodId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "quantity",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 14,
+                    "name": "returnIngredients",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "foodId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "quantity",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 15,
+                    "name": "getLowStockWarning",
+                    "returnType": "QVariantList"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "from",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "to",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "dishId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "tableNumber",
+                            "type": "int"
+                        },
+                        {
+                            "name": "waiterId",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 16,
+                    "name": "getReportRevenue",
+                    "returnType": "QVariantMap"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "from",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "to",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "dishId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "tableNumber",
+                            "type": "int"
+                        },
+                        {
+                            "name": "waiterId",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 17,
+                    "name": "getRevenueByDay",
+                    "returnType": "QVariantList"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "from",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "to",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 18,
+                    "name": "getFoodPopularity",
+                    "returnType": "QVariantList"
+                },
+                {
+                    "access": "public",
+                    "index": 19,
+                    "name": "getReportLowStock",
+                    "returnType": "QVariantList"
+                },
+                {
+                    "access": "public",
+                    "index": 20,
+                    "name": "getDishesList",
+                    "returnType": "QVariantList"
+                },
+                {
+                    "access": "public",
+                    "index": 21,
+                    "name": "getWaitersList",
+                    "returnType": "QVariantList"
+                },
+                {
+                    "access": "public",
+                    "index": 22,
+                    "name": "getLocalIps",
+                    "returnType": "QStringList"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "host",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "port",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 23,
+                    "name": "pingServer",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "host",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "port",
+                            "type": "quint16"
+                        }
+                    ],
+                    "index": 24,
+                    "name": "reconnect",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "reportType",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "from",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "to",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "dishId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "tableNumber",
+                            "type": "int"
+                        },
+                        {
+                            "name": "waiterId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "fileName",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 25,
+                    "name": "saveReportToCSV",
+                    "returnType": "bool"
+                }
+            ],
+            "object": true,
+            "qualifiedClassName": "TcpClient",
+            "signals": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "message",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "errorOccurred",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 1,
+                    "name": "dataChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "requestId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "success",
+                            "type": "bool"
+                        },
+                        {
+                            "name": "data",
+                            "type": "QVariantMap"
+                        }
+                    ],
+                    "index": 2,
+                    "name": "responseReceived",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "tcpclient.h",
+    "outputRevision": 69
+}

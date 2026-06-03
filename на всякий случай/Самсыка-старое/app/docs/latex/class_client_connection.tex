@@ -1,0 +1,53 @@
+\doxysection{Client\+Connection Class Reference}
+\hypertarget{class_client_connection}{}\label{class_client_connection}\index{ClientConnection@{ClientConnection}}
+
+
+Обработчик одного клиентского TCP‑соединения.  
+
+
+
+
+{\ttfamily \+\#include $<$tcpserver.\+h$>$}
+
+Inheritance diagram for Client\+Connection:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_client_connection}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_client_connection_a843f08ac47d87153c6b8d31f95358d82}{Client\+Connection}} (\doxymbox{\hyperlink{class_logs}{Logs}} \texorpdfstring{$\ast$}{*}logger, qintptr socket\+Descriptor, \doxymbox{\hyperlink{class_d_b_worker}{DBWorker}} \texorpdfstring{$\ast$}{*}db\+Worker, QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Обработчик одного клиентского TCP‑соединения. 
+
+Принимает JSON‑команды, вызывает соответствующие методы \doxylink{class_d_b_worker}{DBWorker} и отправляет обратно ответ. 
+
+\label{doc-constructors}
+\Hypertarget{class_client_connection_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_client_connection_a843f08ac47d87153c6b8d31f95358d82}\index{ClientConnection@{ClientConnection}!ClientConnection@{ClientConnection}}
+\index{ClientConnection@{ClientConnection}!ClientConnection@{ClientConnection}}
+\doxysubsubsection{\texorpdfstring{ClientConnection()}{ClientConnection()}}
+{\footnotesize\ttfamily \label{class_client_connection_a843f08ac47d87153c6b8d31f95358d82} 
+Client\+Connection::\+\+Client\+Connection (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_logs}{Logs}} \texorpdfstring{$\ast$}{*}}]{logger}{, }\item[{qintptr}]{socket\+Descriptor}{, }\item[{\doxymbox{\hyperlink{class_d_b_worker}{DBWorker}} \texorpdfstring{$\ast$}{*}}]{db\+Worker}{, }\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+
+Конструктор. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logger} & Логгер. \\
+\hline
+{\em socket\+Descriptor} & Дескриптор сокета. \\
+\hline
+{\em db\+Worker} & Указатель на объект работы с БД. \\
+\hline
+{\em parent} & Родительский объект. \\
+\hline
+\end{DoxyParams}

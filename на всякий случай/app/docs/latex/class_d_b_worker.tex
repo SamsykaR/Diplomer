@@ -1,0 +1,437 @@
+\doxysection{DBWorker Class Reference}
+\hypertarget{class_d_b_worker}{}\label{class_d_b_worker}\index{DBWorker@{DBWorker}}
+
+
+Класс для взаимодействия с базой данных Postgre\+SQL ресторана.  
+
+
+
+
+{\ttfamily \+\#include $<$dbworker.\+h$>$}
+
+Inheritance diagram for DBWorker:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_d_b_worker}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_d_b_worker_aa3322617a25970789ce72c60f1c66def}\label{class_d_b_worker_aa3322617a25970789ce72c60f1c66def} 
+void {\bfseries error\+Occurred} (const QString \&message)
+\begin{DoxyCompactList}\small\item\em Сигнал, передающий текст ошибки для отображения в интерфейсе. \end{DoxyCompactList}\item 
+\Hypertarget{class_d_b_worker_a4b303b1e41b5cae3ec23de15b57fae88}\label{class_d_b_worker_a4b303b1e41b5cae3ec23de15b57fae88} 
+void {\bfseries food\+Availability\+Changed} ()
+\begin{DoxyCompactList}\small\item\em Сообщает об изменении доступности блюд (например, после обновления остатков). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_d_b_worker_aa9780c5bc05eab6eb2ce9d09b4906ba3}{DBWorker}} (\doxymbox{\hyperlink{class_logs}{Logs}} \texorpdfstring{$\ast$}{*}logger, QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_d_b_worker_a1632dbe913deb9482384580fb2ecf317}{check\+User}} (const QString \&login, const QString \&password)
+\begin{DoxyCompactList}\small\item\em Проверяет логин и пароль пользователя. \end{DoxyCompactList}\item 
+\Hypertarget{class_d_b_worker_a0cea6bc29f96ecaaaf8658c63dc83367}\label{class_d_b_worker_a0cea6bc29f96ecaaaf8658c63dc83367} 
+Q\+\_\+\+INVOKABLE QString {\bfseries get\+User\+Name} () const
+\begin{DoxyCompactList}\small\item\em Возвращает имя текущего пользователя. \end{DoxyCompactList}\item 
+\Hypertarget{class_d_b_worker_a7ca50ed46388fda2bf966ee48a007d4e}\label{class_d_b_worker_a7ca50ed46388fda2bf966ee48a007d4e} 
+Q\+\_\+\+INVOKABLE QString {\bfseries get\+User\+Role} () const
+\begin{DoxyCompactList}\small\item\em Возвращает роль текущего пользователя. \end{DoxyCompactList}\item 
+\Hypertarget{class_d_b_worker_abeb4d481e6deef155d1a52a2e634f862}\label{class_d_b_worker_abeb4d481e6deef155d1a52a2e634f862} 
+Q\+\_\+\+INVOKABLE int {\bfseries get\+User\+Id} () const
+\begin{DoxyCompactList}\small\item\em Возвращает идентификатор текущего пользователя. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_d_b_worker_a620b9a23df8d7f5d841395fbb310dd29}{check\+And\+Consume}} (int food\+Id, int quantity)
+\begin{DoxyCompactList}\small\item\em Проверяет наличие ингредиентов и списывает их со склада. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_d_b_worker_a98a74e63537a608ffbcab569c92105fe}{return\+Ingredients}} (int food\+Id, int quantity)
+\begin{DoxyCompactList}\small\item\em Возвращает ингредиенты на склад при отмене позиции заказа. \end{DoxyCompactList}\item 
+\Hypertarget{class_d_b_worker_a8e8c5c4585c20c2b91deaaecbce93ed1}\label{class_d_b_worker_a8e8c5c4585c20c2b91deaaecbce93ed1} 
+Q\+\_\+\+INVOKABLE bool {\bfseries refresh\+All\+Foods\+Availability} ()
+\begin{DoxyCompactList}\small\item\em Пересчитывает доступность всех блюд на основе остатков продуктов. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_d_b_worker_ab883b3de60f36bb85a0f25b3ce790998}{reconnect}} (const QString \&host, int port, const QString \&db\+Name, const QString \&user, const QString \&password)
+\begin{DoxyCompactList}\small\item\em Переподключает базу данных с новыми параметрами. \end{DoxyCompactList}\item 
+\Hypertarget{class_d_b_worker_adc2415126bc7c9a82cf56ccb684f5686}\label{class_d_b_worker_adc2415126bc7c9a82cf56ccb684f5686} 
+Q\+\_\+\+INVOKABLE QString\+List {\bfseries get\+Local\+Ips} ()
+\begin{DoxyCompactList}\small\item\em Возвращает список локальных IPv4‑адресов. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_d_b_worker_aff1435f503b992c4bb581e01edba8961}{ping\+Server}} (const QString \&host, int port)
+\begin{DoxyCompactList}\small\item\em Проверяет доступность удалённого сервера (заглушка, всегда true). \end{DoxyCompactList}\item 
+\Hypertarget{class_d_b_worker_a6c621568563fda53aec2b78e35f49189}\label{class_d_b_worker_a6c621568563fda53aec2b78e35f49189} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Foods} ()
+\begin{DoxyCompactList}\small\item\em Загружает меню с составом и доступностью. \end{DoxyCompactList}\item 
+\Hypertarget{class_d_b_worker_a4f3ae45af197d611a249f81040b43981}\label{class_d_b_worker_a4f3ae45af197d611a249f81040b43981} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Products} ()
+\begin{DoxyCompactList}\small\item\em Загружает складские остатки продуктов. \end{DoxyCompactList}\item 
+\Hypertarget{class_d_b_worker_ac690f42b9b6ae8dd692f1c4eddff0d23}\label{class_d_b_worker_ac690f42b9b6ae8dd692f1c4eddff0d23} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Dishes\+List} ()
+\begin{DoxyCompactList}\small\item\em Возвращает краткий список блюд (ID и название). \end{DoxyCompactList}\item 
+\Hypertarget{class_d_b_worker_ace7fc41838e18c5bd013c7321c0c5b92}\label{class_d_b_worker_ace7fc41838e18c5bd013c7321c0c5b92} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Waiters\+List} ()
+\begin{DoxyCompactList}\small\item\em Возвращает список официантов. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_d_b_worker_a8a566ccf8e3f88150d57bd5c2823ae71}{update\+Product\+Quantity}} (int product\+Id, int new\+Quantity)
+\begin{DoxyCompactList}\small\item\em Устанавливает новое абсолютное количество продукта. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_d_b_worker_abe3395aee201eb08c029364481a054b1}{add\+Product\+Quantity}} (int product\+Id, int delta)
+\begin{DoxyCompactList}\small\item\em Изменяет количество продукта на заданную величину. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE int \doxymbox{\hyperlink{class_d_b_worker_ade7c3808032512ef7e804ad83bf65dc5}{create\+Order}} (int table\+Number, int user\+Id, const QString \&special\+Requests, double total\+Cost)
+\begin{DoxyCompactList}\small\item\em Создаёт новый заказ. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_d_b_worker_a8186f7c3e1beb4441e3d6ea1b5c0043c}{add\+Order\+Item}} (int order\+Id, int food\+Id, int quantity, double price)
+\begin{DoxyCompactList}\small\item\em Добавляет позицию в заказ. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE QVariant\+Map \doxymbox{\hyperlink{class_d_b_worker_ac6c0a993e0dc166982ff2f06cc4702f1}{get\+Report\+Revenue}} (const QString \&from, const QString \&to, int dish\+Id, int table\+Number, int waiter\+Id)
+\begin{DoxyCompactList}\small\item\em Возвращает общую выручку за период с применёнными фильтрами. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE QVariant\+List \doxymbox{\hyperlink{class_d_b_worker_a4a8642cecbf77c168246bbb73d837e93}{get\+Revenue\+By\+Day}} (const QString \&from, const QString \&to, int dish\+Id, int table\+Number, int waiter\+Id)
+\begin{DoxyCompactList}\small\item\em Возвращает выручку, сгруппированную по дням. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE QVariant\+List \doxymbox{\hyperlink{class_d_b_worker_a6bdab969c8debd217e3b2b01ddee8dba}{get\+Food\+Popularity}} (const QString \&from, const QString \&to)
+\begin{DoxyCompactList}\small\item\em Получает популярность блюд за период. \end{DoxyCompactList}\item 
+\Hypertarget{class_d_b_worker_aead609c2fdf125f2863020dca2e9dbfc}\label{class_d_b_worker_aead609c2fdf125f2863020dca2e9dbfc} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Report\+Low\+Stock} ()
+\begin{DoxyCompactList}\small\item\em Возвращает продукты, количество которых ниже минимального порога. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE QVariant\+List \doxymbox{\hyperlink{class_d_b_worker_a9a769692eb6878aa8eac94ff19cc48a8}{get\+Low\+Stock\+Warning}} (int food\+Id, int quantity)
+\begin{DoxyCompactList}\small\item\em Предупреждает о продуктах, остаток которых станет ниже порога после приготовления блюда. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_d_b_worker_a72402ee320fd8916517d26267b134729}{save\+Report\+To\+CSV}} (const QString \&report\+Type, const QString \&from, const QString \&to, int dish\+Id, int table\+Number, int waiter\+Id, const QString \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Сохраняет отчёт в CSV‑файл. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для взаимодействия с базой данных Postgre\+SQL ресторана. 
+
+Предоставляет методы аутентификации, работы с меню, складом, заказами и отчётами. Хранит информацию о текущем пользователе. 
+
+\label{doc-constructors}
+\Hypertarget{class_d_b_worker_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_d_b_worker_aa9780c5bc05eab6eb2ce9d09b4906ba3}\index{DBWorker@{DBWorker}!DBWorker@{DBWorker}}
+\index{DBWorker@{DBWorker}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{DBWorker()}{DBWorker()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_aa9780c5bc05eab6eb2ce9d09b4906ba3} 
+DBWorker::\+\+DBWorker (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_logs}{Logs}} \texorpdfstring{$\ast$}{*}}]{logger}{, }\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+
+Конструктор. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logger} & Указатель на объект логирования. \\
+\hline
+{\em parent} & Родительский объект (по умолчанию nullptr). \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_d_b_worker_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_d_b_worker_a8186f7c3e1beb4441e3d6ea1b5c0043c}\index{DBWorker@{DBWorker}!addOrderItem@{addOrderItem}}
+\index{addOrderItem@{addOrderItem}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{addOrderItem()}{addOrderItem()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a8186f7c3e1beb4441e3d6ea1b5c0043c} 
+bool DBWorker::\+add\+Order\+Item (\begin{DoxyParamCaption}\item[{int}]{order\+Id}{, }\item[{int}]{food\+Id}{, }\item[{int}]{quantity}{, }\item[{double}]{price}{}\end{DoxyParamCaption})}
+
+
+
+Добавляет позицию в заказ. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+Id} & ID заказа. \\
+\hline
+{\em food\+Id} & ID блюда. \\
+\hline
+{\em quantity} & Количество. \\
+\hline
+{\em price} & Цена за единицу. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true при успешной вставке. 
+\end{DoxyReturn}
+\Hypertarget{class_d_b_worker_abe3395aee201eb08c029364481a054b1}\index{DBWorker@{DBWorker}!addProductQuantity@{addProductQuantity}}
+\index{addProductQuantity@{addProductQuantity}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{addProductQuantity()}{addProductQuantity()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_abe3395aee201eb08c029364481a054b1} 
+bool DBWorker::\+add\+Product\+Quantity (\begin{DoxyParamCaption}\item[{int}]{product\+Id}{, }\item[{int}]{delta}{}\end{DoxyParamCaption})}
+
+
+
+Изменяет количество продукта на заданную величину. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Id} & ID продукта. \\
+\hline
+{\em delta} & Изменение (может быть отрицательным). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true при успехе. 
+\end{DoxyReturn}
+\Hypertarget{class_d_b_worker_a620b9a23df8d7f5d841395fbb310dd29}\index{DBWorker@{DBWorker}!checkAndConsume@{checkAndConsume}}
+\index{checkAndConsume@{checkAndConsume}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{checkAndConsume()}{checkAndConsume()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a620b9a23df8d7f5d841395fbb310dd29} 
+bool DBWorker::\+check\+And\+Consume (\begin{DoxyParamCaption}\item[{int}]{food\+Id}{, }\item[{int}]{quantity}{}\end{DoxyParamCaption})}
+
+
+
+Проверяет наличие ингредиентов и списывает их со склада. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em food\+Id} & ID блюда. \\
+\hline
+{\em quantity} & Количество порций. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если списание прошло успешно. 
+\end{DoxyReturn}
+\Hypertarget{class_d_b_worker_a1632dbe913deb9482384580fb2ecf317}\index{DBWorker@{DBWorker}!checkUser@{checkUser}}
+\index{checkUser@{checkUser}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{checkUser()}{checkUser()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a1632dbe913deb9482384580fb2ecf317} 
+bool DBWorker::\+check\+User (\begin{DoxyParamCaption}\item[{const QString \&}]{login}{, }\item[{const QString \&}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Проверяет логин и пароль пользователя. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & Логин. \\
+\hline
+{\em password} & Пароль. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true при успешной аутентификации. 
+\end{DoxyReturn}
+\Hypertarget{class_d_b_worker_ade7c3808032512ef7e804ad83bf65dc5}\index{DBWorker@{DBWorker}!createOrder@{createOrder}}
+\index{createOrder@{createOrder}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{createOrder()}{createOrder()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_ade7c3808032512ef7e804ad83bf65dc5} 
+int DBWorker::\+create\+Order (\begin{DoxyParamCaption}\item[{int}]{table\+Number}{, }\item[{int}]{user\+Id}{, }\item[{const QString \&}]{special\+Requests}{, }\item[{double}]{total\+Cost}{}\end{DoxyParamCaption})}
+
+
+
+Создаёт новый заказ. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Number} & Номер столика. \\
+\hline
+{\em user\+Id} & ID официанта. \\
+\hline
+{\em special\+Requests} & Особые пожелания. \\
+\hline
+{\em total\+Cost} & Итоговая стоимость. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ID созданного заказа или -\/1 при ошибке. 
+\end{DoxyReturn}
+\Hypertarget{class_d_b_worker_a6bdab969c8debd217e3b2b01ddee8dba}\index{DBWorker@{DBWorker}!getFoodPopularity@{getFoodPopularity}}
+\index{getFoodPopularity@{getFoodPopularity}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{getFoodPopularity()}{getFoodPopularity()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a6bdab969c8debd217e3b2b01ddee8dba} 
+QVariant\+List DBWorker::\+get\+Food\+Popularity (\begin{DoxyParamCaption}\item[{const QString \&}]{from}{, }\item[{const QString \&}]{to}{}\end{DoxyParamCaption})}
+
+
+
+Получает популярность блюд за период. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & Начальная дата. \\
+\hline
+{\em to} & Конечная дата. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Список словарей с ключами "{}food\+Name"{} и "{}count"{}. 
+\end{DoxyReturn}
+\Hypertarget{class_d_b_worker_a9a769692eb6878aa8eac94ff19cc48a8}\index{DBWorker@{DBWorker}!getLowStockWarning@{getLowStockWarning}}
+\index{getLowStockWarning@{getLowStockWarning}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{getLowStockWarning()}{getLowStockWarning()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a9a769692eb6878aa8eac94ff19cc48a8} 
+QVariant\+List DBWorker::\+get\+Low\+Stock\+Warning (\begin{DoxyParamCaption}\item[{int}]{food\+Id}{, }\item[{int}]{quantity}{}\end{DoxyParamCaption})}
+
+
+
+Предупреждает о продуктах, остаток которых станет ниже порога после приготовления блюда. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em food\+Id} & ID блюда. \\
+\hline
+{\em quantity} & Количество порций. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Список предупреждений с полями product\+Name, current\+Quantity, new\+Quantity, min\+Threshold. 
+\end{DoxyReturn}
+\Hypertarget{class_d_b_worker_ac6c0a993e0dc166982ff2f06cc4702f1}\index{DBWorker@{DBWorker}!getReportRevenue@{getReportRevenue}}
+\index{getReportRevenue@{getReportRevenue}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{getReportRevenue()}{getReportRevenue()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_ac6c0a993e0dc166982ff2f06cc4702f1} 
+QVariant\+Map DBWorker::\+get\+Report\+Revenue (\begin{DoxyParamCaption}\item[{const QString \&}]{from}{, }\item[{const QString \&}]{to}{, }\item[{int}]{dish\+Id}{, }\item[{int}]{table\+Number}{, }\item[{int}]{waiter\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Возвращает общую выручку за период с применёнными фильтрами. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & Начальная дата (ГГГГ-\/ММ-\/ДД). \\
+\hline
+{\em to} & Конечная дата. \\
+\hline
+{\em dish\+Id} & ID блюда (0 – без фильтра). \\
+\hline
+{\em table\+Number} & Номер столика (0 – без фильтра). \\
+\hline
+{\em waiter\+Id} & ID официанта (0 – без фильтра). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Словарь с ключом "{}total\+Revenue"{} или "{}error"{}. 
+\end{DoxyReturn}
+\Hypertarget{class_d_b_worker_a4a8642cecbf77c168246bbb73d837e93}\index{DBWorker@{DBWorker}!getRevenueByDay@{getRevenueByDay}}
+\index{getRevenueByDay@{getRevenueByDay}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{getRevenueByDay()}{getRevenueByDay()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a4a8642cecbf77c168246bbb73d837e93} 
+QVariant\+List DBWorker::\+get\+Revenue\+By\+Day (\begin{DoxyParamCaption}\item[{const QString \&}]{from}{, }\item[{const QString \&}]{to}{, }\item[{int}]{dish\+Id}{, }\item[{int}]{table\+Number}{, }\item[{int}]{waiter\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Возвращает выручку, сгруппированную по дням. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & Начальная дата. \\
+\hline
+{\em to} & Конечная дата. \\
+\hline
+{\em dish\+Id} & Фильтр по блюду (0 – без фильтра). \\
+\hline
+{\em table\+Number} & Фильтр по столику (0 – без фильтра). \\
+\hline
+{\em waiter\+Id} & Фильтр по официанту (0 – без фильтра). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Список словарей с полями "{}date"{} и "{}total"{}. 
+\end{DoxyReturn}
+\Hypertarget{class_d_b_worker_aff1435f503b992c4bb581e01edba8961}\index{DBWorker@{DBWorker}!pingServer@{pingServer}}
+\index{pingServer@{pingServer}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{pingServer()}{pingServer()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_aff1435f503b992c4bb581e01edba8961} 
+bool DBWorker::\+ping\+Server (\begin{DoxyParamCaption}\item[{const QString \&}]{host}{, }\item[{int}]{port}{}\end{DoxyParamCaption})}
+
+
+
+Проверяет доступность удалённого сервера (заглушка, всегда true). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & Адрес. \\
+\hline
+{\em port} & Порт. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true. 
+\end{DoxyReturn}
+\Hypertarget{class_d_b_worker_ab883b3de60f36bb85a0f25b3ce790998}\index{DBWorker@{DBWorker}!reconnect@{reconnect}}
+\index{reconnect@{reconnect}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{reconnect()}{reconnect()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_ab883b3de60f36bb85a0f25b3ce790998} 
+bool DBWorker::\+reconnect (\begin{DoxyParamCaption}\item[{const QString \&}]{host}{, }\item[{int}]{port}{, }\item[{const QString \&}]{db\+Name}{, }\item[{const QString \&}]{user}{, }\item[{const QString \&}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Переподключает базу данных с новыми параметрами. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & Хост. \\
+\hline
+{\em port} & Порт. \\
+\hline
+{\em db\+Name} & Имя базы данных. \\
+\hline
+{\em user} & Пользователь. \\
+\hline
+{\em password} & Пароль. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true при успешном подключении. 
+\end{DoxyReturn}
+\Hypertarget{class_d_b_worker_a98a74e63537a608ffbcab569c92105fe}\index{DBWorker@{DBWorker}!returnIngredients@{returnIngredients}}
+\index{returnIngredients@{returnIngredients}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{returnIngredients()}{returnIngredients()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a98a74e63537a608ffbcab569c92105fe} 
+bool DBWorker::\+return\+Ingredients (\begin{DoxyParamCaption}\item[{int}]{food\+Id}{, }\item[{int}]{quantity}{}\end{DoxyParamCaption})}
+
+
+
+Возвращает ингредиенты на склад при отмене позиции заказа. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em food\+Id} & ID блюда. \\
+\hline
+{\em quantity} & Количество порций. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true в случае успеха. 
+\end{DoxyReturn}
+\Hypertarget{class_d_b_worker_a72402ee320fd8916517d26267b134729}\index{DBWorker@{DBWorker}!saveReportToCSV@{saveReportToCSV}}
+\index{saveReportToCSV@{saveReportToCSV}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{saveReportToCSV()}{saveReportToCSV()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a72402ee320fd8916517d26267b134729} 
+bool DBWorker::\+save\+Report\+To\+CSV (\begin{DoxyParamCaption}\item[{const QString \&}]{report\+Type}{, }\item[{const QString \&}]{from}{, }\item[{const QString \&}]{to}{, }\item[{int}]{dish\+Id}{, }\item[{int}]{table\+Number}{, }\item[{int}]{waiter\+Id}{, }\item[{const QString \&}]{file\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Сохраняет отчёт в CSV‑файл. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em report\+Type} & Тип отчёта ("{}revenue"{}, "{}popularity"{}, "{}lowstock"{}). \\
+\hline
+{\em from} & Начальная дата. \\
+\hline
+{\em to} & Конечная дата. \\
+\hline
+{\em dish\+Id} & Фильтр по блюду. \\
+\hline
+{\em table\+Number} & Фильтр по столику. \\
+\hline
+{\em waiter\+Id} & Фильтр по официанту. \\
+\hline
+{\em file\+Name} & Полный путь к выходному файлу. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true при успешном сохранении. 
+\end{DoxyReturn}
+\Hypertarget{class_d_b_worker_a8a566ccf8e3f88150d57bd5c2823ae71}\index{DBWorker@{DBWorker}!updateProductQuantity@{updateProductQuantity}}
+\index{updateProductQuantity@{updateProductQuantity}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{updateProductQuantity()}{updateProductQuantity()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a8a566ccf8e3f88150d57bd5c2823ae71} 
+bool DBWorker::\+update\+Product\+Quantity (\begin{DoxyParamCaption}\item[{int}]{product\+Id}{, }\item[{int}]{new\+Quantity}{}\end{DoxyParamCaption})}
+
+
+
+Устанавливает новое абсолютное количество продукта. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Id} & ID продукта. \\
+\hline
+{\em new\+Quantity} & Новое количество. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true при успешном обновлении. 
+\end{DoxyReturn}

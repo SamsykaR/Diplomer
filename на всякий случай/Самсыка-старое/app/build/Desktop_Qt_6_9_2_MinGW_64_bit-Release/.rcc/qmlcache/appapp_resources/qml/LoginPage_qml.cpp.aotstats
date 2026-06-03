@@ -1,0 +1,100 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": true,
+                        "column": 16,
+                        "durationMicroseconds": 7356,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 21
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 124,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 20
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 141,
+                        "errorMessage": "",
+                        "functionName": "fillMode",
+                        "line": 29
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 135,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 26
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 196,
+                        "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: QQuickMaterialStyle::primary with type QVariant (adjusted to QVariant) -> QColor stored as QVariant",
+                        "functionName": "color",
+                        "line": 37
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 134,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 38
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 137,
+                        "errorMessage": "",
+                        "functionName": "echoMode",
+                        "line": 55
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 3521,
+                        "errorMessage": "Cannot access value for name dbWorker",
+                        "functionName": "onClicked",
+                        "line": 65
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 34,
+                        "durationMicroseconds": 160,
+                        "errorMessage": "",
+                        "functionName": "background",
+                        "line": 64
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 936,
+                        "errorMessage": "Cannot access value for name window",
+                        "functionName": "onClicked",
+                        "line": 86
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 134,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 102
+                    }
+                ],
+                "filePath": "C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/LoginPage.qml"
+            }
+        ],
+        "moduleId": "app(appapp)"
+    }
+]

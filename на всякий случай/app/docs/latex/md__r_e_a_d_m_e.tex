@@ -1,0 +1,248 @@
+\chapter{Пользовательская документация (RestN) }
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Пользовательская документация (RestN)@{Пользовательская документация (RestN)}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{Обзор проекта}{Обзор проекта}}\label{md__r_e_a_d_m_e_autotoc_md1}
+{\bfseries{Название:\+}} RestN ~\newline
+ {\bfseries{Тип:\+}} кроссплатформенное приложение для планшетов (Android /\+ Windows /\+ Linux) на Qt 6 ~\newline
+ {\bfseries{Назначение:\+}} автоматизация приёма заказов, управления складом и формирования отчётности в ресторане.
+
+{\bfseries{Ключевые возможности:\+}}
+
+
+\begin{DoxyItemize}
+\item Авторизация сотрудников (официант, кладовщик, администратор)
+\item Оформление заказов с автоматическим списанием ингредиентов
+\item Возврат продуктов при удалении позиции из заказа
+\item Управление складскими остатками (добавление, убавка, установка)
+\item Отчёты по выручке, популярности блюд и дефицитным продуктам
+\item Сохранение отчётов в CSV
+\item Ролевое разграничение доступа
+\item Синхронизация данных по локальной сети (клиент-\/сервер)
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{Технологии программирования}{Технологии программирования}}\label{md__r_e_a_d_m_e_autotoc_md3}
+При разработке использовались следующие инструменты и подходы:\+
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Язык C++}} – основная логика приложения, работа с сетью и базой данных.
+\item {\bfseries{Qt 6}} – фреймворк для графического интерфейса (Qt Quick), сетевых сокетов и доступа к SQL.
+\item {\bfseries{Postgre\+SQL}} – централизованная СУБД для серверного режима.
+\item {\bfseries{CMake}} – система сборки проекта.
+\item {\bfseries{Qt Creator}} – интегрированная среда разработки.
+\end{DoxyItemize}
+
+{\bfseries{Архитектурные подходы:\+}} ~\newline
+ Клиент-\/серверная архитектура, паттерн Model-\/\+View (данные передаются через QVariant\+List), механизм сигналов и слотов для коммуникации между объектами, а также Singleton для классов {\ttfamily \doxylink{class_logs}{Logs}} и {\ttfamily \doxylink{class_settings}{Settings}}.
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{\texorpdfstring{Структура проекта}{Структура проекта}}\label{md__r_e_a_d_m_e_autotoc_md5}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{project/}
+\DoxyCodeLine{├──\ CMakeLists.txt}
+\DoxyCodeLine{├──\ include/\ \ \ \ \ \ \ \ \ \ \#\ заголовочные\ файлы\ C++}
+\DoxyCodeLine{│\ \ \ ├──\ dbworker.h}
+\DoxyCodeLine{│\ \ \ ├──\ logs.h}
+\DoxyCodeLine{│\ \ \ ├──\ tcpclient.h}
+\DoxyCodeLine{│\ \ \ ├──\ tcpserver.h}
+\DoxyCodeLine{│\ \ \ ├──\ settings.h}
+\DoxyCodeLine{│\ \ \ └──\ exceptions.h}
+\DoxyCodeLine{├──\ src/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ исходные\ файлы\ C++}
+\DoxyCodeLine{│\ \ \ ├──\ dbworker.cpp}
+\DoxyCodeLine{│\ \ \ ├──\ logs.cpp}
+\DoxyCodeLine{│\ \ \ ├──\ tcpclient.cpp}
+\DoxyCodeLine{│\ \ \ ├──\ tcpserver.cpp}
+\DoxyCodeLine{│\ \ \ ├──\ settings.cpp}
+\DoxyCodeLine{│\ \ \ ├──\ exceptions.cpp}
+\DoxyCodeLine{│\ \ \ └──\ main.cpp}
+\DoxyCodeLine{├──\ resources/\ \ \ \ \ \ \ \ \#\ ресурсы\ (иконки,\ стили)}
+\DoxyCodeLine{│\ \ \ ├──\ qml/\ \ \ \ \ \ \ \ \ \ \#\ файлы\ интерфейса\ QML}
+\DoxyCodeLine{│\ \ \ │\ \ \ ├──\ Main.qml}
+\DoxyCodeLine{│\ \ \ │\ \ \ ├──\ LoginPage.qml}
+\DoxyCodeLine{│\ \ \ │\ \ \ ├──\ OrderPage.qml}
+\DoxyCodeLine{│\ \ \ │\ \ \ ├──\ StockPage.qml}
+\DoxyCodeLine{│\ \ \ │\ \ \ └──\ ReportsPage.qml}
+\DoxyCodeLine{│\ \ \ └──\ icons/}
+\DoxyCodeLine{├──\ tests/\ \ \ \ \ \ \ \ \ \ \ \ \#\ модульные\ тесты}
+\DoxyCodeLine{└──\ build/\ \ \ \ \ \ \ \ \ \ \ \ \#\ каталог\ сборки\ (игнорируется)}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{\texorpdfstring{Описание программных модулей}{Описание программных модулей}}\label{md__r_e_a_d_m_e_autotoc_md7}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysubsection{\texorpdfstring{Модуль работы с базой данных (DBWorker)}{Модуль работы с базой данных (DBWorker)}}\label{md__r_e_a_d_m_e_autotoc_md8}
+Класс {\ttfamily \doxylink{class_d_b_worker}{DBWorker}} предназначен для выполнения всех операций с базой данных Postgre\+SQL. Открывает соединение в конструкторе, поддерживает переподключение через {\ttfamily reconnect}. Основные методы:\+
+
+
+\begin{DoxyItemize}
+\item {\ttfamily check\+User(login, password)} – аутентификация с хешированием SHA3-\/256 + соль.
+\item {\ttfamily get\+Foods()} – возвращает список блюд с доступностью (рассчитывается по остаткам) и составом.
+\item {\ttfamily get\+Products()} – список продуктов с остатками и минимальным порогом.
+\item {\ttfamily update\+Product\+Quantity()} /\+ {\ttfamily add\+Product\+Quantity()} – изменение остатков.
+\item {\ttfamily check\+And\+Consume(food\+Id, quantity)} – в транзакции проверяет наличие ингредиентов и списывает их.
+\item {\ttfamily return\+Ingredients(food\+Id, quantity)} – возвращает ингредиенты на склад.
+\item {\ttfamily create\+Order()} /\+ {\ttfamily add\+Order\+Item()} – создание заказа.
+\item Методы отчётов:\+ {\ttfamily get\+Report\+Revenue}, {\ttfamily get\+Revenue\+By\+Day}, {\ttfamily get\+Food\+Popularity}, {\ttfamily get\+Report\+Low\+Stock}.
+\item {\ttfamily save\+Report\+To\+CSV()} – сохранение отчёта в CSV.
+\end{DoxyItemize}
+
+Все публичные методы обрабатывают исключения ({\ttfamily \doxylink{class_database_ex}{Database\+Ex}}, {\ttfamily \doxylink{class_validate_ex}{Validate\+Ex}}), логируют ошибки и испускают сигнал {\ttfamily error\+Occurred} для QML.\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{\texorpdfstring{Модуль сетевого клиента (Tcp\+Client)}{Модуль сетевого клиента (Tcp\+Client)}}\label{md__r_e_a_d_m_e_autotoc_md9}
+Класс {\ttfamily \doxylink{class_tcp_client}{Tcp\+Client}} дублирует интерфейс {\ttfamily \doxylink{class_d_b_worker}{DBWorker}}, но вместо прямых запросов к БД отправляет JSON-\/команды на сервер. Соединение устанавливается методом {\ttfamily connect\+To\+Server(host, port)}. Протокол обмена:\+ запрос/\+ответ в виде строк JSON, завершённых символом {\ttfamily \textbackslash{}n}. Для синхронного ожидания используется {\ttfamily wait\+For\+Response} с таймаутом 60 секунд. При потере соединения генерируется сигнал {\ttfamily error\+Occurred}.
+
+Пример запроса:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{"{}command"{}:\ "{}checkUser"{},\ "{}requestId"{}:\ 1,\ "{}data"{}:\ \{"{}login"{}:\ "{}waiter1"{},\ "{}password"{}:\ "{}123"{}\}\}}
+
+\end{DoxyCode}
+
+
+Ответ сервера:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{"{}response"{}:\ true,\ "{}requestId"{}:\ 1,\ "{}data"{}:\ \{"{}role"{}:\ "{}waiter"{},\ "{}name"{}:\ "{}Иванов"{},\ "{}userId"{}:\ 5\}\}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysubsection{\texorpdfstring{Модуль сетевого сервера (Tcp\+Server + Client\+Connection)}{Модуль сетевого сервера (Tcp\+Server + Client\+Connection)}}\label{md__r_e_a_d_m_e_autotoc_md10}
+{\ttfamily \doxylink{class_tcp_server}{Tcp\+Server}} запускает серверный сокет и при подключении клиента создаёт объект {\ttfamily \doxylink{class_client_connection}{Client\+Connection}}. В {\ttfamily Client\+Connection::\+on\+Ready\+Read()} данные накапливаются в буфере, извлекаются по разделителю {\ttfamily \textbackslash{}n}, парсится JSON и вызывается соответствующий метод {\ttfamily \doxylink{class_d_b_worker}{DBWorker}}. Результат отправляется обратно в виде JSON. Сервер способен параллельно обрабатывать несколько клиентов.\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysubsection{\texorpdfstring{Модуль логирования (Logs)}{Модуль логирования (Logs)}}\label{md__r_e_a_d_m_e_autotoc_md11}
+Класс {\ttfamily \doxylink{class_logs}{Logs}} записывает сообщения с уровнями {\ttfamily INF}, {\ttfamily WARN}, {\ttfamily ERR} в файл и дублирует их в консоль. При недоступности основного файла использует резервный путь в системной папке приложения. Формат строки:\+ {\ttfamily yyyy-\/\+MM-\/dd hh:\+mm:\+ss \+[УРОВЕНЬ]\+ сообщение}.\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysubsection{\texorpdfstring{Модуль настроек (Settings)}{Модуль настроек (Settings)}}\label{md__r_e_a_d_m_e_autotoc_md12}
+Класс {\ttfamily \doxylink{class_settings}{Settings}} предоставляет {\ttfamily Q\+\_\+\+PROPERTY} для доступа из QML. Параметры (хост, порт БД, сервер, режим, пути к логам и отчётам) сохраняются через {\ttfamily QSettings} в системном реестре/\+конфигурационном файле. Методы {\ttfamily load()} и {\ttfamily save()} вызываются при запуске и при закрытии диалога настроек.\hypertarget{md__r_e_a_d_m_e_autotoc_md13}{}\doxysubsection{\texorpdfstring{Пользовательский интерфейс (QML)}{Пользовательский интерфейс (QML)}}\label{md__r_e_a_d_m_e_autotoc_md13}
+
+\begin{DoxyItemize}
+\item {\bfseries{Login\+Page.\+qml}} – экран входа. Поля «Логин», «Пароль», кнопки «Войти» и «Настройки». При успехе испускает сигнал {\ttfamily login\+Success}.
+\item {\bfseries{Main.\+qml}} – главное окно. Панель инструментов с кнопками меню (☰) и синхронизации (⟳), выдвижное меню (Drawer), пункты которого зависят от роли пользователя.
+\item {\bfseries{Order\+Page.\+qml}} – страница заказа. Левая колонка – меню с фильтрами, правая – корзина. Кнопки «Добавить», «Удалить», «Оформить заказ».
+\item {\bfseries{Stock\+Page.\+qml}} – страница склада. Список продуктов, поле ввода количества, кнопки «Добавить», «Убавить», «Установить».
+\item {\bfseries{Reports\+Page.\+qml}} – страница отчётов. Выбор типа отчёта, фильтры (даты, блюдо, столик, официант), кнопка «Сформировать», вывод результатов и «Сохранить отчёт» (CSV).
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md15}{}\doxysection{\texorpdfstring{Интеграция программных модулей}{Интеграция программных модулей}}\label{md__r_e_a_d_m_e_autotoc_md15}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md16}{}\doxysubsection{\texorpdfstring{Подключаемые внешние модули}{Подключаемые внешние модули}}\label{md__r_e_a_d_m_e_autotoc_md16}
+
+\begin{DoxyItemize}
+\item Qt 6 (Core, Quick, Sql, Network)
+\item Postgre\+SQL client library (libpq) – для драйвера QPSQL.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md17}{}\doxysubsection{\texorpdfstring{Интеграция C++ и QML}{Интеграция C++ и QML}}\label{md__r_e_a_d_m_e_autotoc_md17}
+Объекты регистрируются в контексте через {\ttfamily set\+Context\+Property()}:\+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{engine.rootContext()-\/>setContextProperty(\textcolor{stringliteral}{"{}dbWorker"{}},\ worker);}
+
+\end{DoxyCode}
+
+
+В QML методы вызываются напрямую ({\ttfamily db\+Worker.\+check\+User(...)}). Сигналы (например, {\ttfamily error\+Occurred}) перехватываются через {\ttfamily Connections}.\hypertarget{md__r_e_a_d_m_e_autotoc_md18}{}\doxysubsection{\texorpdfstring{Клиент-\/серверное взаимодействие}{Клиент-\/серверное взаимодействие}}\label{md__r_e_a_d_m_e_autotoc_md18}
+Используется TCP. Каждое сообщение – JSON-\/строка, заканчивающаяся {\ttfamily \textbackslash{}n}. Клиент нумерует запросы (request\+Id) и ожидает соответствующий ответ. Таймаут – 60 секунд. Сервер обрабатывает каждого клиента в отдельном объекте, что позволяет параллельно обслуживать множество подключений.
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md20}{}\doxysection{\texorpdfstring{Руководство пользователя}{Руководство пользователя}}\label{md__r_e_a_d_m_e_autotoc_md20}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md21}{}\doxysubsection{\texorpdfstring{Начальный запуск}{Начальный запуск}}\label{md__r_e_a_d_m_e_autotoc_md21}
+
+\begin{DoxyEnumerate}
+\item Установите приложение на планшет (APK для Android или соберите под Windows).
+\item При первом запуске откроется окно авторизации.
+\item Если приложение работает в {\bfseries{клиентском режиме}}, убедитесь, что {\bfseries{сервер}} (другое устройство с программой в режиме сервера) активен и доступен по сети.
+\item При необходимости настройте подключение через кнопку «Настройки».
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md22}{}\doxysubsection{\texorpdfstring{Окно авторизации}{Окно авторизации}}\label{md__r_e_a_d_m_e_autotoc_md22}
+
+\begin{DoxyItemize}
+\item Поле {\bfseries{«Логин»}} – введите имя пользователя.
+\item Поле {\bfseries{«Пароль»}} – введите пароль.
+\item Кнопка {\bfseries{«Войти»}} – проверка данных. При успехе открывается главное окно с соответствующими правами.
+\item Кнопка {\bfseries{«Настройки»}} – открывает диалог конфигурации.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md23}{}\doxysubsection{\texorpdfstring{Диалог настроек}{Диалог настроек}}\label{md__r_e_a_d_m_e_autotoc_md23}
+{\bfseries{Группа «База данных»}} (видна только в серверном режиме):\+ хост, порт, имя БД, пользователь, пароль; кнопка «Проверить подключение».
+
+{\bfseries{Группа «Сеть»}}:\+ IP сервера, порт; флажок «Режим сервера»; кнопки «Проверить сервер», «Показать IP устройства».
+
+{\bfseries{Группа «Прочее»}}:\+ путь к логам, папка для отчётов.
+
+{\bfseries{Сохранение}} – кнопки «\+OK» (сохранить и закрыть) и «Отмена».\hypertarget{md__r_e_a_d_m_e_autotoc_md24}{}\doxysubsection{\texorpdfstring{Главное окно и выдвижное меню}{Главное окно и выдвижное меню}}\label{md__r_e_a_d_m_e_autotoc_md24}
+
+\begin{DoxyItemize}
+\item {\bfseries{Верхняя панель}}:\+ кнопка ☰ (открыть меню), название «Ресторан», кнопка ⟳ (синхронизация данных).
+\item {\bfseries{Выдвижное меню}}:\+
+\begin{DoxyItemize}
+\item Отображается ФИО пользователя.
+\item Пункты зависят от роли:\+ официант – «Оформление заказа»; кладовщик – «Склад»; администратор – «Оформление заказа», «Склад», «Отчёты».
+\item Кнопки:\+ «Настройки», «Выйти», «Закрыть приложение».
+\end{DoxyItemize}
+\item Меню закрывается касанием вне его или повторным нажатием кнопки ☰.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md25}{}\doxysubsection{\texorpdfstring{Оформление заказа (страница для официанта)}{Оформление заказа (страница для официанта)}}\label{md__r_e_a_d_m_e_autotoc_md25}
+{\bfseries{Левая колонка – меню}}:\+
+\begin{DoxyItemize}
+\item Фильтр по категории (Супы, Горячее, Салаты, Напитки, Все)
+\item Флажок «Только доступные»
+\item Список блюд:\+ название, цена, категория, описание, состав. Недоступные блюда помечены красным.
+\end{DoxyItemize}
+
+{\bfseries{Правая колонка – заказ}}:\+
+\begin{DoxyItemize}
+\item «Текущий заказ» – корзина с добавленными блюдами.
+\item Поля:\+ «Столик №» (1–50), «Кол-\/во» (1–10), «Комментарий».
+\item Кнопка {\bfseries{«Добавить»}} – проверяет наличие ингредиентов. Если после списания остатки падают ниже порога, появляется предупреждение (добавление разрешается). При нехватке продуктов – ошибка.
+\item Кнопка {\bfseries{«Удалить»}} – удаляет позицию из корзины и возвращает ингредиенты.
+\item Кнопка {\bfseries{«Оформить заказ»}} – фиксирует заказ в БД, очищает корзину и обновляет меню.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md26}{}\doxysubsection{\texorpdfstring{Управление складом (страница для кладовщика)}{Управление складом (страница для кладовщика)}}\label{md__r_e_a_d_m_e_autotoc_md26}
+
+\begin{DoxyItemize}
+\item Список продуктов:\+ название, текущее количество (кг, л, шт.). Продукты ниже минимального порога подсвечены розовым.
+\item Выбор продукта – касание строки.
+\item Поле «Количество» (целое число 0–10000).
+\item Кнопки:\+ {\bfseries{«Добавить»}} (увеличить остаток), {\bfseries{«Убавить»}} (уменьшить, если результат ≥0), {\bfseries{«Установить»}} (задать точное значение). Изменения немедленно синхронизируются с сервером.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md27}{}\doxysubsection{\texorpdfstring{Отчёты (страница для администратора)}{Отчёты (страница для администратора)}}\label{md__r_e_a_d_m_e_autotoc_md27}
+Типы отчётов (выпадающий список):\+
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Выручка}} – фильтры:\+ дата «с», «по», блюдо, столик, официант. Выводится общая выручка и разбивка по дням.
+\item {\bfseries{Популярность блюд}} – фильтры:\+ дата «с», «по». Результат – список блюд с количеством проданных порций, отсортированный по убыванию.
+\item {\bfseries{Малые остатки}} – без фильтров. Отображаются продукты, у которых остаток ниже порога.
+\end{DoxyEnumerate}
+
+{\bfseries{Сохранение отчёта:\+}} после формирования нажмите {\bfseries{«Сохранить отчёт»}}, выберите имя файла. Файл будет создан в папке, указанной в настройках (по умолчанию {\ttfamily reports}). Формат – CSV (разделитель запятая, кодировка UTF-\/8).
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md29}{}\doxysection{\texorpdfstring{Настройки и системные файлы}{Настройки и системные файлы}}\label{md__r_e_a_d_m_e_autotoc_md29}
+
+\begin{DoxyItemize}
+\item {\bfseries{Файл настроек}} – хранится через {\ttfamily QSettings} (реестр Windows или конфигурационный файл). Вручную не редактировать.
+\item {\bfseries{Лог-\/файл}} – по умолчанию {\ttfamily logs.\+txt} в рабочей папке. При ошибке записи используется системная папка приложения.
+\item {\bfseries{Папка отчётов}} – задаётся в диалоге настроек, используется для сохранения CSV-\/файлов.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md31}{}\doxysection{\texorpdfstring{Сборка проекта (для разработчиков)}{Сборка проекта (для разработчиков)}}\label{md__r_e_a_d_m_e_autotoc_md31}
+{\bfseries{Требования:\+}}
+\begin{DoxyItemize}
+\item Qt 6.\+8 или новее (Core, Quick, Sql, Network)
+\item CMake ≥ 3.\+16
+\item Postgre\+SQL (серверный режим) либо клиентская часть без БД.
+\end{DoxyItemize}
+
+{\bfseries{Шаги сборки:\+}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ clone\ <url>}
+\DoxyCodeLine{cd\ RestN}
+\DoxyCodeLine{mkdir\ build\ \&\&\ cd\ build}
+\DoxyCodeLine{cmake\ ..}
+\DoxyCodeLine{cmake\ -\/-\/build\ .\ -\/-\/config\ Release}
+
+\end{DoxyCode}
+
+
+{\bfseries{Запуск на Android:\+}} выберите в Qt Creator комплект Android, соберите APK, установите на планшет. На серверном устройстве должно быть установлено приложение (режим сервера) или отдельный Postgre\+SQL.
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md33}{}\doxysection{\texorpdfstring{Контакты}{Контакты}}\label{md__r_e_a_d_m_e_autotoc_md33}
+{\bfseries{Автор:\+}} Самсыка Родион Михайлович ~\newline
+ {\bfseries{Группа:\+}} И-\/42 ~\newline
+ {\bfseries{Специальность:\+}} 09.\+02.\+07 Информационные системы и программирование ~\newline
+ {\bfseries{Научный руководитель:\+}} Фомин Андрей Томасович ~\newline
+ {\bfseries{Год:\+}} 2026 

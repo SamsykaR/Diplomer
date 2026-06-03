@@ -1,0 +1,50 @@
+\doxysection{Exceptions Class Reference}
+\hypertarget{class_exceptions}{}\label{class_exceptions}\index{Exceptions@{Exceptions}}
+
+
+Базовый класс исключений, принимающий QString.  
+
+
+
+
+{\ttfamily \+\#include $<$exceptions.\+h$>$}
+
+Inheritance diagram for Exceptions:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_exceptions}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_exceptions_a77187770a0e9f0a0a42affd9c8b1ba54}{Exceptions}} (const QString \&message)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+\Hypertarget{class_exceptions_a7e6f74294c10e9ec93862e9b32f605db}\label{class_exceptions_a7e6f74294c10e9ec93862e9b32f605db} 
+virtual const char \texorpdfstring{$\ast$}{*} {\bfseries what} () const noexcept override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Базовый класс исключений, принимающий QString. 
+
+Хранит сообщение в std::\+string для совместимости с std::\+exception. Все специализированные исключения наследуют этот класс. 
+
+\label{doc-constructors}
+\Hypertarget{class_exceptions_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_exceptions_a77187770a0e9f0a0a42affd9c8b1ba54}\index{Exceptions@{Exceptions}!Exceptions@{Exceptions}}
+\index{Exceptions@{Exceptions}!Exceptions@{Exceptions}}
+\doxysubsubsection{\texorpdfstring{Exceptions()}{Exceptions()}}
+{\footnotesize\ttfamily \label{class_exceptions_a77187770a0e9f0a0a42affd9c8b1ba54} 
+Exceptions::\+\+Exceptions (\begin{DoxyParamCaption}\item[{const QString \&}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Описание ошибки. \\
+\hline
+\end{DoxyParams}

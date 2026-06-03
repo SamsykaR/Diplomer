@@ -1,0 +1,29 @@
+2026-05-19 16:45:42 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-05-19 16:45:42 [INF] Настройки загружены: хост=saved_host_test, порт=8888
+2026-05-19 16:48:05 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-05-19 16:48:05 [ERR] RESOURCE MISSING: :/icons/logo.png
+2026-05-19 16:48:05 [INF] Настройки загружены: хост=saved_host_test, порт=8888
+2026-05-19 17:01:05 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-05-19 17:01:05 [ERR] RESOURCE MISSING: :/icons/logo.png
+2026-05-19 17:01:05 [INF] Настройки загружены: хост=saved_host_test, порт=8888
+2026-05-19 17:24:57 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-05-19 17:24:57 [ERR] RESOURCE MISSING: :/icons/logo.png
+2026-05-19 17:24:57 [INF] Настройки загружены: хост=saved_host_test, порт=8888
+2026-05-19 17:27:29 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-05-19 17:27:29 [ERR] RESOURCE MISSING: :/icons/logo.png
+2026-05-19 17:27:29 [INF] Настройки загружены: хост=saved_host_test, порт=8888
+2026-05-19 17:28:32 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-05-19 17:28:32 [INF] RESOURCE EXISTS: :/icons/logo.png
+2026-05-19 17:28:32 [INF] Настройки загружены: хост=saved_host_test, порт=8888
+2026-05-19 17:29:21 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-05-19 17:29:21 [INF] Настройки загружены: хост=saved_host_test, порт=8888
+2026-05-19 17:33:26 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-05-19 17:33:26 [INF] Настройки загружены: хост=saved_host_test, порт=8888
+2026-05-19 17:33:52 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-05-19 17:33:52 [INF] Настройки загружены: хост=saved_host_test, порт=8888
+2026-05-19 17:35:10 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-05-19 17:35:10 [INF] Настройки загружены: хост=saved_host_test, порт=8888
+2026-05-19 17:37:20 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-05-19 17:37:20 [INF] Настройки загружены: хост=saved_host_test, порт=8888
+2026-05-19 17:37:44 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/logs.txt
+2026-05-19 17:37:44 [INF] Настройки загружены: хост=saved_host_test, порт=8888

@@ -1,0 +1,161 @@
+psql -h localhost -p 5432 -U postgres
+
+-- Создание базы данных RestN с владельцем R
+CREATE DATABASE RestN OWNER R;
+
+-- Подключаемся к базе RestN (выполнить отдельно или в рамках скрипта, если позволяет среда)
+\c RestN;
+
+-- Создание таблицы пользователей
+CREATE TABLE Users (
+    UserId SERIAL PRIMARY KEY,
+    Login VARCHAR(50) UNIQUE NOT NULL,
+    FullName VARCHAR(100) NOT NULL,
+    PasswordHash BYTEA NOT NULL,      -- хеш пароля
+    Salt TEXT NOT NULL,                -- соль для хеширования
+    Role VARCHAR(20) NOT NULL CHECK (Role IN ('admin', 'waiter', 'storekeeper'))
+);
+
+-- Создание таблицы блюд (Food)
+CREATE TABLE Food (
+    FoodId SERIAL PRIMARY KEY,
+    FullName VARCHAR(100) NOT NULL,
+    Description TEXT,
+    Price NUMERIC(10,2) NOT NULL,
+    Available BOOLEAN DEFAULT TRUE,
+    Category VARCHAR(50)
+);
+
+-- Создание таблицы продуктов (ингредиентов)
+CREATE TABLE Product (
+    ProductId SERIAL PRIMARY KEY,
+    FullName VARCHAR(100) NOT NULL,
+    Unit VARCHAR(20) NOT NULL,          -- единица измерения (кг, шт, л)
+    Quantity NUMERIC(10,2) NOT NULL DEFAULT 0, -- текущий остаток
+    MinThreshold INTEGER NOT NULL DEFAULT 0 -- минимальный порог
+);
+
+-- Создание таблицы состава блюда (FoodComposition)
+CREATE TABLE FoodComposition (
+    FoodId INTEGER REFERENCES Food(FoodId) ON DELETE CASCADE,
+    ProductId INTEGER REFERENCES Product(ProductId) ON DELETE CASCADE,
+    Quantity NUMERIC(10,2) NOT NULL,    -- количество продукта на одну порцию блюда
+    PRIMARY KEY (FoodId, ProductId)
+);
+
+-- Создание таблицы заказов
+CREATE TABLE Orders (
+    OrderId SERIAL PRIMARY KEY,
+    UserId INTEGER REFERENCES Users(UserId) ON DELETE SET NULL,
+    TableNumber INTEGER NOT NULL,
+    OrderDate TIMESTAMP DEFAULT NOW(),
+    SpecialRequests TEXT,
+    TotalCost NUMERIC(10,2)
+);
+
+-- Создание таблицы заказанных блюд (OrderFood)
+CREATE TABLE OrderFood (
+    OrderFoodId SERIAL PRIMARY KEY,
+    OrderId INTEGER REFERENCES Orders(OrderId) ON DELETE CASCADE,
+    FoodId INTEGER REFERENCES Food(FoodId) ON DELETE RESTRICT,
+    Quantity INTEGER NOT NULL CHECK (Quantity > 0),
+    Price NUMERIC(10,2)
+);
+
+-- Назначение прав пользователю R на все таблицы (если требуется)
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO R;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO R;
+
+-------------- Вставка тестовых данных --------------
+-- ======================
+-- ТЕСТОВЫЕ ДАННЫЕ
+-- ======================
+
+-- Включение расширения pgcrypto (если ещё не включено)
+CREATE EXTENSION IF NOT EXISTS pgcrypto;
+
+INSERT INTO Users (Login, FullName, PasswordHash, Salt, Role) VALUES
+('111', 'Администратор', '\x6ee8dc3f9de84dbab3fcfe0ce197f3f2ccea22dd6677d6335fc36d762b91218e', 'my_secret_salt_2026', 'admin'),
+('222', 'Иванов Иван', '\x6ee8dc3f9de84dbab3fcfe0ce197f3f2ccea22dd6677d6335fc36d762b91218e', 'my_secret_salt_2026', 'waiter'),
+('333', 'Петров Пётр', '\x6ee8dc3f9de84dbab3fcfe0ce197f3f2ccea22dd6677d6335fc36d762b91218e', 'my_secret_salt_2026', 'storekeeper');
+
+
+-- 2. Продукты (ингредиенты)
+INSERT INTO Product (FullName, Unit, Quantity, MinThreshold) VALUES
+('Картофель', 'кг', 50, 10),
+('Говядина', 'кг', 20, 5),
+('Помидоры', 'кг', 8, 5),
+('Соль', 'кг', 5, 2),
+('Капуста', 'кг', 15, 5),
+('Морковь', 'кг', 10, 3),
+('Лук', 'кг', 12, 4),
+('Сметана', 'кг', 5, 2),
+('Стейк рибай', 'кг', 8, 2),
+('Розмарин', 'кг', 1, 0.5),
+('Куриное филе', 'кг', 10, 3),
+('Салат романо', 'кг', 5, 2),
+('Пармезан', 'кг', 3, 1),
+('Сухарики', 'кг', 2, 1),
+('Соус Цезарь', 'кг', 4, 1),
+('Чай', 'кг', 2, 0.5),
+('Сахар', 'кг', 5, 1),
+('Вода', 'л', 100, 20);
+
+-- 3. Блюда (Food)
+INSERT INTO Food (FullName, Description, Price, Category, Available) VALUES
+('Борщ', 'Традиционный украинский суп с мясом, свёклой и сметаной', 350.00, 'Супы', TRUE),
+('Стейк Рибай', 'Мраморная говядина, прожарка medium rare', 1200.00, 'Горячее', TRUE),
+('Салат Цезарь', 'Классический салат с курицей, пармезаном и соусом', 450.00, 'Салаты', FALSE),
+('Чай чёрный', 'Индийский чай, можно с лимоном', 150.00, 'Напитки', TRUE);
+
+-- 4. Состав блюд (FoodComposition)
+-- Борщ
+INSERT INTO FoodComposition (FoodId, ProductId, Quantity) VALUES
+(1, 1, 0.2),   -- картофель 200г
+(1, 2, 0.1),   -- говядина 100г
+(1, 5, 0.15),  -- капуста 150г
+(1, 6, 0.05),  -- морковь 50г
+(1, 7, 0.05),  -- лук 50г
+(1, 8, 0.03);  -- сметана 30г
+
+-- Стейк Рибай
+INSERT INTO FoodComposition (FoodId, ProductId, Quantity) VALUES
+(2, 9, 0.3),   -- стейк 300г
+(2, 4, 0.005), -- соль 5г
+(2, 10, 0.002);-- розмарин 2г
+
+-- Салат Цезарь (недоступен, но состав есть)
+INSERT INTO FoodComposition (FoodId, ProductId, Quantity) VALUES
+(3, 11, 0.15), -- куриное филе 150г
+(3, 12, 0.1),  -- салат романо 100г
+(3, 13, 0.05), -- пармезан 50г
+(3, 14, 0.03), -- сухарики 30г
+(3, 15, 0.05); -- соус Цезарь 50г
+
+-- Чай чёрный
+INSERT INTO FoodComposition (FoodId, ProductId, Quantity) VALUES
+(4, 16, 0.01), -- чай 10г
+(4, 17, 0.02), -- сахар 20г
+(4, 18, 0.25); -- вода 250мл
+
+-- 5. Заказы (Orders)
+INSERT INTO Orders (UserId, TableNumber, SpecialRequests) VALUES
+(1, 5, 'Без острого'),
+(2, 3, 'День рождения, нужна свеча');
+
+-- 6. Заказанные блюда (OrderFood)
+INSERT INTO OrderFood (OrderId, FoodId, Quantity) VALUES
+(1, 1, 2),
+(1, 2, 1),
+(2, 4, 1);
+
+
+---------------------------
+SHOW SERVER_ENCODING;
+SHOW CLIENT_ENCODING;
+
+SET CLIENT_ENCODING TO 'UTF8';
+
+chcp 65001
+
+\! chcp 1251

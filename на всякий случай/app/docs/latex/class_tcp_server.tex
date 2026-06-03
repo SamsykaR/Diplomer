@@ -1,0 +1,79 @@
+\doxysection{Tcp\+Server Class Reference}
+\hypertarget{class_tcp_server}{}\label{class_tcp_server}\index{TcpServer@{TcpServer}}
+
+
+TCP‑сервер, принимающий подключения от клиентов.  
+
+
+
+
+{\ttfamily \+\#include $<$tcpserver.\+h$>$}
+
+Inheritance diagram for Tcp\+Server:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tcp_server}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_tcp_server_a2983d809570e6c779cdcd653c9f7cd27}{Tcp\+Server}} (\doxymbox{\hyperlink{class_logs}{Logs}} \texorpdfstring{$\ast$}{*}logger, \doxymbox{\hyperlink{class_d_b_worker}{DBWorker}} \texorpdfstring{$\ast$}{*}db\+Worker, QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_tcp_server_a86e42c1050f7ca9d6598751b231f9e38}{start}} (quint16 port)
+\begin{DoxyCompactList}\small\item\em Запускает прослушивание порта. \end{DoxyCompactList}\item 
+\Hypertarget{class_tcp_server_ada76e8005211cdac93cebc4a3f975aa0}\label{class_tcp_server_ada76e8005211cdac93cebc4a3f975aa0} 
+void {\bfseries stop} ()
+\begin{DoxyCompactList}\small\item\em Останавливает сервер и удаляет все соединения. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+TCP‑сервер, принимающий подключения от клиентов. 
+
+При новом подключении создаёт \doxylink{class_client_connection}{Client\+Connection} и передаёт ему \doxylink{class_d_b_worker}{DBWorker}. 
+
+\label{doc-constructors}
+\Hypertarget{class_tcp_server_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_tcp_server_a2983d809570e6c779cdcd653c9f7cd27}\index{TcpServer@{TcpServer}!TcpServer@{TcpServer}}
+\index{TcpServer@{TcpServer}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{TcpServer()}{TcpServer()}}
+{\footnotesize\ttfamily \label{class_tcp_server_a2983d809570e6c779cdcd653c9f7cd27} 
+Tcp\+Server::\+\+Tcp\+Server (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_logs}{Logs}} \texorpdfstring{$\ast$}{*}}]{logger}{, }\item[{\doxymbox{\hyperlink{class_d_b_worker}{DBWorker}} \texorpdfstring{$\ast$}{*}}]{db\+Worker}{, }\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logger} & Логгер. \\
+\hline
+{\em db\+Worker} & Указатель на \doxylink{class_d_b_worker}{DBWorker}. \\
+\hline
+{\em parent} & Родительский объект. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_tcp_server_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_tcp_server_a86e42c1050f7ca9d6598751b231f9e38}\index{TcpServer@{TcpServer}!start@{start}}
+\index{start@{start}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily \label{class_tcp_server_a86e42c1050f7ca9d6598751b231f9e38} 
+bool Tcp\+Server::\+start (\begin{DoxyParamCaption}\item[{quint16}]{port}{}\end{DoxyParamCaption})}
+
+
+
+Запускает прослушивание порта. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Порт. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true при успехе. 
+\end{DoxyReturn}

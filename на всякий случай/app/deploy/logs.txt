@@ -1,0 +1,2 @@
+2026-05-29 18:40:55 [INF] Лог-файл открыт: C:/Users/rodio/Desktop/W/Diplom/app/deploy/logs.txt
+2026-05-29 18:40:55 [INF] Настройки загружены: хост=saved_host_test, порт=8888

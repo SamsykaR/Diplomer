@@ -1,0 +1,181 @@
+\doxysection{Settings Class Reference}
+\hypertarget{class_settings}{}\label{class_settings}\index{Settings@{Settings}}
+
+
+Класс для хранения и управления настройками приложения.  
+
+
+
+
+{\ttfamily \+\#include $<$settings.\+h$>$}
+
+Inheritance diagram for Settings:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_settings}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_settings_a61fa7df02422f27dcaa32e11d2d299da}\label{class_settings_a61fa7df02422f27dcaa32e11d2d299da} 
+void {\bfseries db\+Host\+Changed} ()
+\item 
+\Hypertarget{class_settings_ae96fd9f87e5ae0d14b99a1596b2fd300}\label{class_settings_ae96fd9f87e5ae0d14b99a1596b2fd300} 
+void {\bfseries db\+Port\+Changed} ()
+\item 
+\Hypertarget{class_settings_a5f9882f5888e7ecebcd9fd9c13754863}\label{class_settings_a5f9882f5888e7ecebcd9fd9c13754863} 
+void {\bfseries db\+Name\+Changed} ()
+\item 
+\Hypertarget{class_settings_aaa58bde83b5c7145f7fd94033f12de42}\label{class_settings_aaa58bde83b5c7145f7fd94033f12de42} 
+void {\bfseries db\+User\+Changed} ()
+\item 
+\Hypertarget{class_settings_ad5bf41b9f6b387e70dda3b13eb086e79}\label{class_settings_ad5bf41b9f6b387e70dda3b13eb086e79} 
+void {\bfseries db\+Password\+Changed} ()
+\item 
+\Hypertarget{class_settings_a23cd5264748d9b8e5a64c8376a0af9a6}\label{class_settings_a23cd5264748d9b8e5a64c8376a0af9a6} 
+void {\bfseries is\+Server\+Mode\+Changed} ()
+\item 
+\Hypertarget{class_settings_a5d2ddf7c14b5da40b64e9c0c94be7320}\label{class_settings_a5d2ddf7c14b5da40b64e9c0c94be7320} 
+void {\bfseries log\+Path\+Changed} ()
+\item 
+\Hypertarget{class_settings_a645120bcc25499516ce5ac163e5ed9e7}\label{class_settings_a645120bcc25499516ce5ac163e5ed9e7} 
+void {\bfseries server\+Host\+Changed} ()
+\item 
+\Hypertarget{class_settings_aa704ccce1f534f4d8119c9424d24a5ba}\label{class_settings_aa704ccce1f534f4d8119c9424d24a5ba} 
+void {\bfseries server\+Port\+Changed} ()
+\item 
+\Hypertarget{class_settings_a731c3573f45ae5815d39a2b8084ca796}\label{class_settings_a731c3573f45ae5815d39a2b8084ca796} 
+void {\bfseries reports\+Path\+Changed} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_settings_aa115184065ca6e679091e16ec14e22c8}{Settings}} (\doxymbox{\hyperlink{class_logs}{Logs}} \texorpdfstring{$\ast$}{*}logger, QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор. Автоматически вызывает \doxylink{class_settings_a1eeeb01f1cc6cf7b841a3e112ee031d6}{load()}. \end{DoxyCompactList}\item 
+\Hypertarget{class_settings_a8110e613feb58c5e1831c06aa922e6c4}\label{class_settings_a8110e613feb58c5e1831c06aa922e6c4} 
+QString {\bfseries db\+Host} () const
+\item 
+\Hypertarget{class_settings_ad89758c4427fee35ff10ffc98ceee4a6}\label{class_settings_ad89758c4427fee35ff10ffc98ceee4a6} 
+void {\bfseries set\+Db\+Host} (const QString \&host)
+\begin{DoxyCompactList}\small\item\em Устанавливает хост БД. \end{DoxyCompactList}\item 
+\Hypertarget{class_settings_a43160fb608f9e9cebb485ff45137ec4b}\label{class_settings_a43160fb608f9e9cebb485ff45137ec4b} 
+int {\bfseries db\+Port} () const
+\item 
+\Hypertarget{class_settings_ac33f66deed703d17543c5444692e7fec}\label{class_settings_ac33f66deed703d17543c5444692e7fec} 
+void {\bfseries set\+Db\+Port} (int port)
+\begin{DoxyCompactList}\small\item\em Устанавливает порт БД. \end{DoxyCompactList}\item 
+\Hypertarget{class_settings_a1a136b8406df512df1c940533816e2bc}\label{class_settings_a1a136b8406df512df1c940533816e2bc} 
+QString {\bfseries db\+Name} () const
+\item 
+\Hypertarget{class_settings_ab38d5030c51b9e1cbd9e07c6d3dbd2e6}\label{class_settings_ab38d5030c51b9e1cbd9e07c6d3dbd2e6} 
+void {\bfseries set\+Db\+Name} (const QString \&name)
+\begin{DoxyCompactList}\small\item\em Устанавливает имя БД. \end{DoxyCompactList}\item 
+\Hypertarget{class_settings_a2201bc613d0e3fe7635162a4f15d96f9}\label{class_settings_a2201bc613d0e3fe7635162a4f15d96f9} 
+QString {\bfseries db\+User} () const
+\item 
+\Hypertarget{class_settings_ad6646405fb51a8af2342d90741c70765}\label{class_settings_ad6646405fb51a8af2342d90741c70765} 
+void {\bfseries set\+Db\+User} (const QString \&user)
+\begin{DoxyCompactList}\small\item\em Устанавливает пользователя БД. \end{DoxyCompactList}\item 
+\Hypertarget{class_settings_a1781b4b3ba22a6154dc2025318391ebe}\label{class_settings_a1781b4b3ba22a6154dc2025318391ebe} 
+QString {\bfseries db\+Password} () const
+\item 
+\Hypertarget{class_settings_a304fdc0096c9f5e3d55f7904ddf96406}\label{class_settings_a304fdc0096c9f5e3d55f7904ddf96406} 
+void {\bfseries set\+Db\+Password} (const QString \&password)
+\begin{DoxyCompactList}\small\item\em Устанавливает пароль БД. \end{DoxyCompactList}\item 
+\Hypertarget{class_settings_a06328d9a5f8740c5abc4947a535c96f9}\label{class_settings_a06328d9a5f8740c5abc4947a535c96f9} 
+bool {\bfseries is\+Server\+Mode} () const
+\item 
+\Hypertarget{class_settings_a887a23312a1a7034a1d779127e3c3538}\label{class_settings_a887a23312a1a7034a1d779127e3c3538} 
+void {\bfseries set\+Is\+Server\+Mode} (bool mode)
+\begin{DoxyCompactList}\small\item\em Включает/\+выключает серверный режим. \end{DoxyCompactList}\item 
+\Hypertarget{class_settings_a0e9fc2aea4b2793dd4f6c554eb231510}\label{class_settings_a0e9fc2aea4b2793dd4f6c554eb231510} 
+QString {\bfseries log\+Path} () const
+\item 
+\Hypertarget{class_settings_a4e588c1a7ab3414ccba71adf0ec3cd82}\label{class_settings_a4e588c1a7ab3414ccba71adf0ec3cd82} 
+void {\bfseries set\+Log\+Path} (const QString \&path)
+\begin{DoxyCompactList}\small\item\em Задаёт путь к лог-\/файлу. \end{DoxyCompactList}\item 
+\Hypertarget{class_settings_ab9d6763e30e1221f314f6ff5c7689a5d}\label{class_settings_ab9d6763e30e1221f314f6ff5c7689a5d} 
+QString {\bfseries server\+Host} () const
+\item 
+\Hypertarget{class_settings_a70011a38a8c13f10f1e18c9214072d30}\label{class_settings_a70011a38a8c13f10f1e18c9214072d30} 
+void {\bfseries set\+Server\+Host} (const QString \&host)
+\begin{DoxyCompactList}\small\item\em Устанавливает IP-\/адрес сервера. \end{DoxyCompactList}\item 
+\Hypertarget{class_settings_ae2e953578fa92a37f5d49b04012d0253}\label{class_settings_ae2e953578fa92a37f5d49b04012d0253} 
+int {\bfseries server\+Port} () const
+\item 
+\Hypertarget{class_settings_a4888b77dd8733593a9923ae53b1c6626}\label{class_settings_a4888b77dd8733593a9923ae53b1c6626} 
+void {\bfseries set\+Server\+Port} (int port)
+\begin{DoxyCompactList}\small\item\em Устанавливает порт сервера. \end{DoxyCompactList}\item 
+\Hypertarget{class_settings_a50b9a0f5890d02ea97a9f59064b1c01d}\label{class_settings_a50b9a0f5890d02ea97a9f59064b1c01d} 
+QString {\bfseries reports\+Path} () const
+\item 
+\Hypertarget{class_settings_a4fe8f8fa353d460caf879437f97f1bf4}\label{class_settings_a4fe8f8fa353d460caf879437f97f1bf4} 
+void {\bfseries set\+Reports\+Path} (const QString \&path)
+\begin{DoxyCompactList}\small\item\em Задаёт каталог для сохранения отчётов. \end{DoxyCompactList}\item 
+\Hypertarget{class_settings_a1eeeb01f1cc6cf7b841a3e112ee031d6}\label{class_settings_a1eeeb01f1cc6cf7b841a3e112ee031d6} 
+Q\+\_\+\+INVOKABLE void {\bfseries load} ()
+\begin{DoxyCompactList}\small\item\em Загружает все настройки из QSettings. \end{DoxyCompactList}\item 
+\Hypertarget{class_settings_a75ab693f2b4228de016603638771eb94}\label{class_settings_a75ab693f2b4228de016603638771eb94} 
+Q\+\_\+\+INVOKABLE void {\bfseries save} ()
+\begin{DoxyCompactList}\small\item\em Сохраняет текущие настройки в QSettings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_settings_ac7ea374fcc3875e3a699e9030795fe51}\label{class_settings_ac7ea374fcc3875e3a699e9030795fe51} 
+QString {\bfseries db\+Host}
+\item 
+\Hypertarget{class_settings_a15cfa11c097d5cd7a39df1a62a164581}\label{class_settings_a15cfa11c097d5cd7a39df1a62a164581} 
+int {\bfseries db\+Port}
+\item 
+\Hypertarget{class_settings_acdf08e50bb01f6e56445569527ef4d27}\label{class_settings_acdf08e50bb01f6e56445569527ef4d27} 
+QString {\bfseries db\+Name}
+\item 
+\Hypertarget{class_settings_a7e993fd0085f19cee702c26dd79c0109}\label{class_settings_a7e993fd0085f19cee702c26dd79c0109} 
+QString {\bfseries db\+User}
+\item 
+\Hypertarget{class_settings_a3ba9c8bc80b648ee59e7a72b4f4f27a0}\label{class_settings_a3ba9c8bc80b648ee59e7a72b4f4f27a0} 
+QString {\bfseries db\+Password}
+\item 
+\Hypertarget{class_settings_aa9d6f1fe7605e25313b12687fd56a773}\label{class_settings_aa9d6f1fe7605e25313b12687fd56a773} 
+bool {\bfseries is\+Server\+Mode}
+\item 
+\Hypertarget{class_settings_a34d07fb459cac11f9a54c1e7d573f266}\label{class_settings_a34d07fb459cac11f9a54c1e7d573f266} 
+QString {\bfseries log\+Path}
+\item 
+\Hypertarget{class_settings_a9d0afd00185e5f3ee7a77e05d1ec97fa}\label{class_settings_a9d0afd00185e5f3ee7a77e05d1ec97fa} 
+QString {\bfseries server\+Host}
+\item 
+\Hypertarget{class_settings_a9bacb7d47cf5ad932376154827775fd9}\label{class_settings_a9bacb7d47cf5ad932376154827775fd9} 
+int {\bfseries server\+Port}
+\item 
+\Hypertarget{class_settings_ab9fdad95d3e762f8162c39229d9623f5}\label{class_settings_ab9fdad95d3e762f8162c39229d9623f5} 
+QString {\bfseries reports\+Path}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для хранения и управления настройками приложения. 
+
+Обёртка над QSettings, предоставляющая свойства QML для доступа к параметрам базы данных, сети и путям. 
+
+\label{doc-constructors}
+\Hypertarget{class_settings_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_settings_aa115184065ca6e679091e16ec14e22c8}\index{Settings@{Settings}!Settings@{Settings}}
+\index{Settings@{Settings}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{Settings()}{Settings()}}
+{\footnotesize\ttfamily \label{class_settings_aa115184065ca6e679091e16ec14e22c8} 
+Settings::\+\+Settings (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_logs}{Logs}} \texorpdfstring{$\ast$}{*}}]{logger}{, }\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор. Автоматически вызывает \doxylink{class_settings_a1eeeb01f1cc6cf7b841a3e112ee031d6}{load()}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logger} & Указатель на логгер. \\
+\hline
+{\em parent} & Родительский объект. \\
+\hline
+\end{DoxyParams}

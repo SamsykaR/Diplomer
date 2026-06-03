@@ -1,0 +1,59 @@
+\doxysection{tcpserver.\+h}
+\hypertarget{tcpserver_8h_source}{}\label{tcpserver_8h_source}\index{C:/Users/rodio/Desktop/W/Diplom/app/include/tcpserver.h@{C:/Users/rodio/Desktop/W/Diplom/app/include/tcpserver.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TCPSERVER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TCPSERVER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QTcpServer>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QTcpSocket>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QMap>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}logs.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}exceptions.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_d_b_worker}{DBWorker}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_client_connection_a843f08ac47d87153c6b8d31f95358d82}{ClientConnection}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \doxymbox{\hyperlink{class_client_connection_a843f08ac47d87153c6b8d31f95358d82}{ClientConnection}}(\doxymbox{\hyperlink{class_logs}{Logs}}\ *logger,\ qintptr\ socketDescriptor,\ \doxymbox{\hyperlink{class_d_b_worker}{DBWorker}}\ *dbWorker,\ QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00031\ \ \ \ \ \doxymbox{\hyperlink{class_client_connection_a843f08ac47d87153c6b8d31f95358d82}{\string~ClientConnection}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ onReadyRead();\ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ onDisconnected();\ \ \ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ sendResponse(\textcolor{keywordtype}{int}\ requestId,\ \textcolor{keywordtype}{bool}\ success,\ \textcolor{keyword}{const}\ QVariantMap\ \&data\ =\ QVariantMap());}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ QTcpSocket\ *socket;\ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \doxymbox{\hyperlink{class_d_b_worker}{DBWorker}}\ *dbWorker;\ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ QByteArray\ buffer;\ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \doxymbox{\hyperlink{class_logs}{Logs}}\ *loger;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_tcp_server_a2983d809570e6c779cdcd653c9f7cd27}{TcpServer}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00058\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00060\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_tcp_server_a2983d809570e6c779cdcd653c9f7cd27}{TcpServer}}(\doxymbox{\hyperlink{class_logs}{Logs}}\ *logger,\ \doxymbox{\hyperlink{class_d_b_worker}{DBWorker}}\ *dbWorker,\ QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00068\ \ \ \ \ \doxymbox{\hyperlink{class_tcp_server_a2983d809570e6c779cdcd653c9f7cd27}{\string~TcpServer}}();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_server_a86e42c1050f7ca9d6598751b231f9e38}{start}}(quint16\ port);}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_tcp_server_ada76e8005211cdac93cebc4a3f975aa0}{stop}}();}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ onNewConnection();\ }
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00083\ \ \ \ \ QTcpServer\ *server;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00084\ \ \ \ \ \doxymbox{\hyperlink{class_d_b_worker}{DBWorker}}\ *dbWorker;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ QList<ClientConnection*>\ connections;\ }
+\DoxyCodeLine{00086\ \ \ \ \ \doxymbox{\hyperlink{class_logs}{Logs}}\ *loger;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00087\ \};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TCPSERVER\_H}}
+
+\end{DoxyCode}

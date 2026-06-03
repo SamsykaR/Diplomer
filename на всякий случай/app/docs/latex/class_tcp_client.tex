@@ -1,0 +1,515 @@
+\doxysection{Tcp\+Client Class Reference}
+\hypertarget{class_tcp_client}{}\label{class_tcp_client}\index{TcpClient@{TcpClient}}
+
+
+Клиент для удалённого взаимодействия с сервером приложения.  
+
+
+
+
+{\ttfamily \+\#include $<$tcpclient.\+h$>$}
+
+Inheritance diagram for Tcp\+Client:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tcp_client}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_tcp_client_a254f1163107f12a902908aa7350d31d8}\label{class_tcp_client_a254f1163107f12a902908aa7350d31d8} 
+void {\bfseries error\+Occurred} (const QString \&message)
+\begin{DoxyCompactList}\small\item\em Сообщение об ошибке для UI. \end{DoxyCompactList}\item 
+\Hypertarget{class_tcp_client_a2a13e8742581e5c9e06f967b9566edbc}\label{class_tcp_client_a2a13e8742581e5c9e06f967b9566edbc} 
+void {\bfseries data\+Changed} ()
+\begin{DoxyCompactList}\small\item\em Уведомление от сервера об изменении данных (data\+\_\+changed). \end{DoxyCompactList}\item 
+\Hypertarget{class_tcp_client_aac3554342664b2932ff03423e720f190}\label{class_tcp_client_aac3554342664b2932ff03423e720f190} 
+void {\bfseries response\+Received} (int request\+Id, bool success, const QVariant\+Map \&data)
+\begin{DoxyCompactList}\small\item\em Пришёл ответ на ранее отправленный запрос. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_tcp_client_a17a79466e7001215a0d65941eb9fb863}{Tcp\+Client}} (\doxymbox{\hyperlink{class_logs}{Logs}} \texorpdfstring{$\ast$}{*}logger, QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_tcp_client_a0c7f3e0bd5443584f03043dd3c739609}{connect\+To\+Server}} (const QString \&host, quint16 port)
+\begin{DoxyCompactList}\small\item\em Подключается к серверу. \end{DoxyCompactList}\item 
+\Hypertarget{class_tcp_client_a394bcc2931190371006b3c3a891a22e8}\label{class_tcp_client_a394bcc2931190371006b3c3a891a22e8} 
+void {\bfseries disconnect\+From\+Server} ()
+\begin{DoxyCompactList}\small\item\em Закрывает соединение и очищает буфер. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_tcp_client_a9848295776a90b6de6acd2e32f69c7c5}{is\+Connected}} () const
+\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_tcp_client_a113cf296d06543a7440cd3c724bd1f4d}{check\+User}} (const QString \&login, const QString \&password)
+\begin{DoxyCompactList}\small\item\em Отправляет на сервер запрос аутентификации. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE QString \doxymbox{\hyperlink{class_tcp_client_af223cf222ebf139f47899151659f9f39}{get\+User\+Name}} () const
+\item 
+Q\+\_\+\+INVOKABLE QString \doxymbox{\hyperlink{class_tcp_client_ae01560db21768a959e4ba34e63d5cc82}{get\+User\+Role}} () const
+\item 
+Q\+\_\+\+INVOKABLE int \doxymbox{\hyperlink{class_tcp_client_a260b320ff0fae17714f42e918a10a131}{get\+User\+Id}} () const
+\item 
+Q\+\_\+\+INVOKABLE QVariant\+List \doxymbox{\hyperlink{class_tcp_client_a941f4186de07d27f2552089616d1b59f}{get\+Foods}} ()
+\begin{DoxyCompactList}\small\item\em Запрашивает меню с сервера. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE QVariant\+List \doxymbox{\hyperlink{class_tcp_client_a5a2d322c628caf861931e3abba256c45}{get\+Products}} ()
+\begin{DoxyCompactList}\small\item\em Запрашивает список продуктов. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_tcp_client_a71b318c7621199531d0f6f7eea332db5}{update\+Product\+Quantity}} (int product\+Id, int new\+Quantity)
+\begin{DoxyCompactList}\small\item\em Отправляет команду установки абсолютного количества продукта. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_tcp_client_a267f834762cf8f2b324573de59e2fac8}{add\+Product\+Quantity}} (int product\+Id, int delta)
+\begin{DoxyCompactList}\small\item\em Отправляет команду изменения количества продукта на дельту. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE int \doxymbox{\hyperlink{class_tcp_client_ab558f612aa1701ac232c8fef56466cd0}{create\+Order}} (int table\+Number, int user\+Id, const QString \&special\+Requests, double total\+Cost)
+\begin{DoxyCompactList}\small\item\em Создаёт заказ на сервере. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_tcp_client_a56460b17d1c1348972e675fa4ca3a2dc}{add\+Order\+Item}} (int order\+Id, int food\+Id, int quantity, double price)
+\begin{DoxyCompactList}\small\item\em Добавляет позицию заказа. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_tcp_client_ad4050d6beba03e7c132d747ee8c3e3d2}{check\+And\+Consume}} (int food\+Id, int quantity)
+\begin{DoxyCompactList}\small\item\em Запрашивает проверку и списание ингредиентов. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_tcp_client_a3052b46770ba183481202436e4eb7f12}{return\+Ingredients}} (int food\+Id, int quantity)
+\begin{DoxyCompactList}\small\item\em Запрашивает возврат ингредиентов на склад. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE QVariant\+List \doxymbox{\hyperlink{class_tcp_client_a59a08ab013c53cfeed6da37a812a7b05}{get\+Low\+Stock\+Warning}} (int food\+Id, int quantity)
+\begin{DoxyCompactList}\small\item\em Получает предупреждения о снижении остатков ниже порога. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE QVariant\+Map \doxymbox{\hyperlink{class_tcp_client_a21e089583bb8a1359c6c96137cf4db90}{get\+Report\+Revenue}} (const QString \&from, const QString \&to, int dish\+Id, int table\+Number, int waiter\+Id)
+\begin{DoxyCompactList}\small\item\em Запрашивает отчёт по общей выручке. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE QVariant\+List \doxymbox{\hyperlink{class_tcp_client_a64b62b2a0ae6a316a286397a32494e3d}{get\+Revenue\+By\+Day}} (const QString \&from, const QString \&to, int dish\+Id, int table\+Number, int waiter\+Id)
+\begin{DoxyCompactList}\small\item\em Запрашивает выручку по дням. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE QVariant\+List \doxymbox{\hyperlink{class_tcp_client_a90d8a11aa1c97c64fdfebea43fd0644a}{get\+Food\+Popularity}} (const QString \&from, const QString \&to)
+\begin{DoxyCompactList}\small\item\em Запрашивает популярность блюд. \end{DoxyCompactList}\item 
+\Hypertarget{class_tcp_client_a0d6677c1f99b7b29b1db8162a2efd034}\label{class_tcp_client_a0d6677c1f99b7b29b1db8162a2efd034} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Report\+Low\+Stock} ()
+\begin{DoxyCompactList}\small\item\em Запрашивает отчёт по продуктам с низким остатком. \end{DoxyCompactList}\item 
+\Hypertarget{class_tcp_client_a401df9d7d2be57835952653a1e2d5011}\label{class_tcp_client_a401df9d7d2be57835952653a1e2d5011} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Dishes\+List} ()
+\begin{DoxyCompactList}\small\item\em Запрашивает краткий список блюд (ID и название). \end{DoxyCompactList}\item 
+\Hypertarget{class_tcp_client_adafa84aeb93f442e9664aac7078485ef}\label{class_tcp_client_adafa84aeb93f442e9664aac7078485ef} 
+Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Waiters\+List} ()
+\begin{DoxyCompactList}\small\item\em Запрашивает список официантов. \end{DoxyCompactList}\item 
+\Hypertarget{class_tcp_client_a0426d13f32105f9b7f3b8fe087e6174c}\label{class_tcp_client_a0426d13f32105f9b7f3b8fe087e6174c} 
+Q\+\_\+\+INVOKABLE QString\+List {\bfseries get\+Local\+Ips} ()
+\begin{DoxyCompactList}\small\item\em Возвращает IP-\/адреса локального устройства. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_tcp_client_ae0467557c39edf4df9bf3a5b1f12b2b9}{ping\+Server}} (const QString \&host, int port)
+\begin{DoxyCompactList}\small\item\em Проверяет доступность удалённого хоста через пробное TCP-\/подключение. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_tcp_client_a328023748dba9e3d6432a229bc1c6ea5}{reconnect}} (const QString \&host, quint16 port)
+\begin{DoxyCompactList}\small\item\em Переподключается к серверу (сначала отключается, затем подключается заново). \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_tcp_client_ac8a5c6cb1c47447da238ef43f4485179}{save\+Report\+To\+CSV}} (const QString \&report\+Type, const QString \&from, const QString \&to, int dish\+Id, int table\+Number, int waiter\+Id, const QString \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Отправляет запрос на сохранение отчёта в CSV на сервер. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Клиент для удалённого взаимодействия с сервером приложения. 
+
+Устанавливает TCP‑соединение, обменивается JSON‑сообщениями. Дублирует интерфейс \doxylink{class_d_b_worker}{DBWorker} для прозрачной работы из QML независимо от режима (локальный или клиент‑сервер). При потере связи генерирует сигнал error\+Occurred. 
+
+\label{doc-constructors}
+\Hypertarget{class_tcp_client_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_tcp_client_a17a79466e7001215a0d65941eb9fb863}\index{TcpClient@{TcpClient}!TcpClient@{TcpClient}}
+\index{TcpClient@{TcpClient}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{TcpClient()}{TcpClient()}}
+{\footnotesize\ttfamily \label{class_tcp_client_a17a79466e7001215a0d65941eb9fb863} 
+Tcp\+Client::\+\+Tcp\+Client (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_logs}{Logs}} \texorpdfstring{$\ast$}{*}}]{logger}{, }\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logger} & Указатель на логгер. \\
+\hline
+{\em parent} & Родительский объект. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_tcp_client_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_tcp_client_a56460b17d1c1348972e675fa4ca3a2dc}\index{TcpClient@{TcpClient}!addOrderItem@{addOrderItem}}
+\index{addOrderItem@{addOrderItem}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{addOrderItem()}{addOrderItem()}}
+{\footnotesize\ttfamily \label{class_tcp_client_a56460b17d1c1348972e675fa4ca3a2dc} 
+bool Tcp\+Client::\+add\+Order\+Item (\begin{DoxyParamCaption}\item[{int}]{order\+Id}{, }\item[{int}]{food\+Id}{, }\item[{int}]{quantity}{, }\item[{double}]{price}{}\end{DoxyParamCaption})}
+
+
+
+Добавляет позицию заказа. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+Id} & ID заказа. \\
+\hline
+{\em food\+Id} & ID блюда. \\
+\hline
+{\em quantity} & Количество. \\
+\hline
+{\em price} & Цена. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true при успехе. 
+\end{DoxyReturn}
+\Hypertarget{class_tcp_client_a267f834762cf8f2b324573de59e2fac8}\index{TcpClient@{TcpClient}!addProductQuantity@{addProductQuantity}}
+\index{addProductQuantity@{addProductQuantity}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{addProductQuantity()}{addProductQuantity()}}
+{\footnotesize\ttfamily \label{class_tcp_client_a267f834762cf8f2b324573de59e2fac8} 
+bool Tcp\+Client::\+add\+Product\+Quantity (\begin{DoxyParamCaption}\item[{int}]{product\+Id}{, }\item[{int}]{delta}{}\end{DoxyParamCaption})}
+
+
+
+Отправляет команду изменения количества продукта на дельту. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Id} & ID продукта. \\
+\hline
+{\em delta} & Изменение (может быть отрицательным). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true при успехе. 
+\end{DoxyReturn}
+\Hypertarget{class_tcp_client_ad4050d6beba03e7c132d747ee8c3e3d2}\index{TcpClient@{TcpClient}!checkAndConsume@{checkAndConsume}}
+\index{checkAndConsume@{checkAndConsume}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{checkAndConsume()}{checkAndConsume()}}
+{\footnotesize\ttfamily \label{class_tcp_client_ad4050d6beba03e7c132d747ee8c3e3d2} 
+bool Tcp\+Client::\+check\+And\+Consume (\begin{DoxyParamCaption}\item[{int}]{food\+Id}{, }\item[{int}]{quantity}{}\end{DoxyParamCaption})}
+
+
+
+Запрашивает проверку и списание ингредиентов. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em food\+Id} & ID блюда. \\
+\hline
+{\em quantity} & Количество порций. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если списание разрешено и выполнено. 
+\end{DoxyReturn}
+\Hypertarget{class_tcp_client_a113cf296d06543a7440cd3c724bd1f4d}\index{TcpClient@{TcpClient}!checkUser@{checkUser}}
+\index{checkUser@{checkUser}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{checkUser()}{checkUser()}}
+{\footnotesize\ttfamily \label{class_tcp_client_a113cf296d06543a7440cd3c724bd1f4d} 
+bool Tcp\+Client::\+check\+User (\begin{DoxyParamCaption}\item[{const QString \&}]{login}{, }\item[{const QString \&}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Отправляет на сервер запрос аутентификации. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & Логин. \\
+\hline
+{\em password} & Пароль. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true при успешной проверке. 
+\end{DoxyReturn}
+\Hypertarget{class_tcp_client_a0c7f3e0bd5443584f03043dd3c739609}\index{TcpClient@{TcpClient}!connectToServer@{connectToServer}}
+\index{connectToServer@{connectToServer}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{connectToServer()}{connectToServer()}}
+{\footnotesize\ttfamily \label{class_tcp_client_a0c7f3e0bd5443584f03043dd3c739609} 
+bool Tcp\+Client::\+connect\+To\+Server (\begin{DoxyParamCaption}\item[{const QString \&}]{host}{, }\item[{quint16}]{port}{}\end{DoxyParamCaption})}
+
+
+
+Подключается к серверу. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & Адрес сервера. \\
+\hline
+{\em port} & Порт. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если соединение установлено. 
+\end{DoxyReturn}
+\Hypertarget{class_tcp_client_ab558f612aa1701ac232c8fef56466cd0}\index{TcpClient@{TcpClient}!createOrder@{createOrder}}
+\index{createOrder@{createOrder}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{createOrder()}{createOrder()}}
+{\footnotesize\ttfamily \label{class_tcp_client_ab558f612aa1701ac232c8fef56466cd0} 
+int Tcp\+Client::\+create\+Order (\begin{DoxyParamCaption}\item[{int}]{table\+Number}{, }\item[{int}]{user\+Id}{, }\item[{const QString \&}]{special\+Requests}{, }\item[{double}]{total\+Cost}{}\end{DoxyParamCaption})}
+
+
+
+Создаёт заказ на сервере. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Number} & Номер столика. \\
+\hline
+{\em user\+Id} & ID пользователя. \\
+\hline
+{\em special\+Requests} & Комментарий. \\
+\hline
+{\em total\+Cost} & Общая стоимость. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ID созданного заказа или -\/1. 
+\end{DoxyReturn}
+\Hypertarget{class_tcp_client_a90d8a11aa1c97c64fdfebea43fd0644a}\index{TcpClient@{TcpClient}!getFoodPopularity@{getFoodPopularity}}
+\index{getFoodPopularity@{getFoodPopularity}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{getFoodPopularity()}{getFoodPopularity()}}
+{\footnotesize\ttfamily \label{class_tcp_client_a90d8a11aa1c97c64fdfebea43fd0644a} 
+QVariant\+List Tcp\+Client::\+get\+Food\+Popularity (\begin{DoxyParamCaption}\item[{const QString \&}]{from}{, }\item[{const QString \&}]{to}{}\end{DoxyParamCaption})}
+
+
+
+Запрашивает популярность блюд. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & Начальная дата. \\
+\hline
+{\em to} & Конечная дата. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Список словарей с ключами "{}food\+Name"{} и "{}count"{}. 
+\end{DoxyReturn}
+\Hypertarget{class_tcp_client_a941f4186de07d27f2552089616d1b59f}\index{TcpClient@{TcpClient}!getFoods@{getFoods}}
+\index{getFoods@{getFoods}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{getFoods()}{getFoods()}}
+{\footnotesize\ttfamily \label{class_tcp_client_a941f4186de07d27f2552089616d1b59f} 
+QVariant\+List Tcp\+Client::\+get\+Foods (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Запрашивает меню с сервера. 
+
+\begin{DoxyReturn}{Returns}
+Список блюд (QVariant\+List). 
+\end{DoxyReturn}
+\Hypertarget{class_tcp_client_a59a08ab013c53cfeed6da37a812a7b05}\index{TcpClient@{TcpClient}!getLowStockWarning@{getLowStockWarning}}
+\index{getLowStockWarning@{getLowStockWarning}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{getLowStockWarning()}{getLowStockWarning()}}
+{\footnotesize\ttfamily \label{class_tcp_client_a59a08ab013c53cfeed6da37a812a7b05} 
+QVariant\+List Tcp\+Client::\+get\+Low\+Stock\+Warning (\begin{DoxyParamCaption}\item[{int}]{food\+Id}{, }\item[{int}]{quantity}{}\end{DoxyParamCaption})}
+
+
+
+Получает предупреждения о снижении остатков ниже порога. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em food\+Id} & ID блюда. \\
+\hline
+{\em quantity} & Количество порций. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Список предупреждений. 
+\end{DoxyReturn}
+\Hypertarget{class_tcp_client_a5a2d322c628caf861931e3abba256c45}\index{TcpClient@{TcpClient}!getProducts@{getProducts}}
+\index{getProducts@{getProducts}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{getProducts()}{getProducts()}}
+{\footnotesize\ttfamily \label{class_tcp_client_a5a2d322c628caf861931e3abba256c45} 
+QVariant\+List Tcp\+Client::\+get\+Products (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Запрашивает список продуктов. 
+
+\begin{DoxyReturn}{Returns}
+Список продуктов. 
+\end{DoxyReturn}
+\Hypertarget{class_tcp_client_a21e089583bb8a1359c6c96137cf4db90}\index{TcpClient@{TcpClient}!getReportRevenue@{getReportRevenue}}
+\index{getReportRevenue@{getReportRevenue}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{getReportRevenue()}{getReportRevenue()}}
+{\footnotesize\ttfamily \label{class_tcp_client_a21e089583bb8a1359c6c96137cf4db90} 
+QVariant\+Map Tcp\+Client::\+get\+Report\+Revenue (\begin{DoxyParamCaption}\item[{const QString \&}]{from}{, }\item[{const QString \&}]{to}{, }\item[{int}]{dish\+Id}{, }\item[{int}]{table\+Number}{, }\item[{int}]{waiter\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Запрашивает отчёт по общей выручке. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & Начальная дата. \\
+\hline
+{\em to} & Конечная дата. \\
+\hline
+{\em dish\+Id} & ID блюда (0 – все). \\
+\hline
+{\em table\+Number} & № столика (0 – все). \\
+\hline
+{\em waiter\+Id} & ID официанта (0 – все). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Словарь с ключом "{}total\+Revenue"{} или "{}error"{}. 
+\end{DoxyReturn}
+\Hypertarget{class_tcp_client_a64b62b2a0ae6a316a286397a32494e3d}\index{TcpClient@{TcpClient}!getRevenueByDay@{getRevenueByDay}}
+\index{getRevenueByDay@{getRevenueByDay}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{getRevenueByDay()}{getRevenueByDay()}}
+{\footnotesize\ttfamily \label{class_tcp_client_a64b62b2a0ae6a316a286397a32494e3d} 
+QVariant\+List Tcp\+Client::\+get\+Revenue\+By\+Day (\begin{DoxyParamCaption}\item[{const QString \&}]{from}{, }\item[{const QString \&}]{to}{, }\item[{int}]{dish\+Id}{, }\item[{int}]{table\+Number}{, }\item[{int}]{waiter\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Запрашивает выручку по дням. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & Начальная дата. \\
+\hline
+{\em to} & Конечная дата. \\
+\hline
+{\em dish\+Id} & ID блюда. \\
+\hline
+{\em table\+Number} & № столика. \\
+\hline
+{\em waiter\+Id} & ID официанта. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Список словарей с ключами "{}date"{} и "{}total"{}. 
+\end{DoxyReturn}
+\Hypertarget{class_tcp_client_a260b320ff0fae17714f42e918a10a131}\index{TcpClient@{TcpClient}!getUserId@{getUserId}}
+\index{getUserId@{getUserId}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{getUserId()}{getUserId()}}
+{\footnotesize\ttfamily \label{class_tcp_client_a260b320ff0fae17714f42e918a10a131} 
+int Tcp\+Client::\+get\+User\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+ID текущего пользователя. 
+\end{DoxyReturn}
+\Hypertarget{class_tcp_client_af223cf222ebf139f47899151659f9f39}\index{TcpClient@{TcpClient}!getUserName@{getUserName}}
+\index{getUserName@{getUserName}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{getUserName()}{getUserName()}}
+{\footnotesize\ttfamily \label{class_tcp_client_af223cf222ebf139f47899151659f9f39} 
+QString Tcp\+Client::\+get\+User\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Имя текущего пользователя. 
+\end{DoxyReturn}
+\Hypertarget{class_tcp_client_ae01560db21768a959e4ba34e63d5cc82}\index{TcpClient@{TcpClient}!getUserRole@{getUserRole}}
+\index{getUserRole@{getUserRole}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{getUserRole()}{getUserRole()}}
+{\footnotesize\ttfamily \label{class_tcp_client_ae01560db21768a959e4ba34e63d5cc82} 
+QString Tcp\+Client::\+get\+User\+Role (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Роль текущего пользователя. 
+\end{DoxyReturn}
+\Hypertarget{class_tcp_client_a9848295776a90b6de6acd2e32f69c7c5}\index{TcpClient@{TcpClient}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{isConnected()}{isConnected()}}
+{\footnotesize\ttfamily \label{class_tcp_client_a9848295776a90b6de6acd2e32f69c7c5} 
+bool Tcp\+Client::\+is\+Connected (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+true, если сокет находится в состоянии Connected\+State. 
+\end{DoxyReturn}
+\Hypertarget{class_tcp_client_ae0467557c39edf4df9bf3a5b1f12b2b9}\index{TcpClient@{TcpClient}!pingServer@{pingServer}}
+\index{pingServer@{pingServer}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{pingServer()}{pingServer()}}
+{\footnotesize\ttfamily \label{class_tcp_client_ae0467557c39edf4df9bf3a5b1f12b2b9} 
+bool Tcp\+Client::\+ping\+Server (\begin{DoxyParamCaption}\item[{const QString \&}]{host}{, }\item[{int}]{port}{}\end{DoxyParamCaption})}
+
+
+
+Проверяет доступность удалённого хоста через пробное TCP-\/подключение. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & Адрес. \\
+\hline
+{\em port} & Порт. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если соединение удалось установить за 2 с. 
+\end{DoxyReturn}
+\Hypertarget{class_tcp_client_a328023748dba9e3d6432a229bc1c6ea5}\index{TcpClient@{TcpClient}!reconnect@{reconnect}}
+\index{reconnect@{reconnect}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{reconnect()}{reconnect()}}
+{\footnotesize\ttfamily \label{class_tcp_client_a328023748dba9e3d6432a229bc1c6ea5} 
+bool Tcp\+Client::\+reconnect (\begin{DoxyParamCaption}\item[{const QString \&}]{host}{, }\item[{quint16}]{port}{}\end{DoxyParamCaption})}
+
+
+
+Переподключается к серверу (сначала отключается, затем подключается заново). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & Новый адрес. \\
+\hline
+{\em port} & Новый порт. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true при успешном подключении. 
+\end{DoxyReturn}
+\Hypertarget{class_tcp_client_a3052b46770ba183481202436e4eb7f12}\index{TcpClient@{TcpClient}!returnIngredients@{returnIngredients}}
+\index{returnIngredients@{returnIngredients}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{returnIngredients()}{returnIngredients()}}
+{\footnotesize\ttfamily \label{class_tcp_client_a3052b46770ba183481202436e4eb7f12} 
+bool Tcp\+Client::\+return\+Ingredients (\begin{DoxyParamCaption}\item[{int}]{food\+Id}{, }\item[{int}]{quantity}{}\end{DoxyParamCaption})}
+
+
+
+Запрашивает возврат ингредиентов на склад. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em food\+Id} & ID блюда. \\
+\hline
+{\em quantity} & Количество порций. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true при успехе. 
+\end{DoxyReturn}
+\Hypertarget{class_tcp_client_ac8a5c6cb1c47447da238ef43f4485179}\index{TcpClient@{TcpClient}!saveReportToCSV@{saveReportToCSV}}
+\index{saveReportToCSV@{saveReportToCSV}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{saveReportToCSV()}{saveReportToCSV()}}
+{\footnotesize\ttfamily \label{class_tcp_client_ac8a5c6cb1c47447da238ef43f4485179} 
+bool Tcp\+Client::\+save\+Report\+To\+CSV (\begin{DoxyParamCaption}\item[{const QString \&}]{report\+Type}{, }\item[{const QString \&}]{from}{, }\item[{const QString \&}]{to}{, }\item[{int}]{dish\+Id}{, }\item[{int}]{table\+Number}{, }\item[{int}]{waiter\+Id}{, }\item[{const QString \&}]{file\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Отправляет запрос на сохранение отчёта в CSV на сервер. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em report\+Type} & Тип отчёта. \\
+\hline
+{\em from} & Начальная дата. \\
+\hline
+{\em to} & Конечная дата. \\
+\hline
+{\em dish\+Id} & ID блюда (0 – все). \\
+\hline
+{\em table\+Number} & № столика (0 – все). \\
+\hline
+{\em waiter\+Id} & ID официанта (0 – все). \\
+\hline
+{\em file\+Name} & Полный путь к сохраняемому файлу. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если сервер успешно создал файл. 
+\end{DoxyReturn}
+\Hypertarget{class_tcp_client_a71b318c7621199531d0f6f7eea332db5}\index{TcpClient@{TcpClient}!updateProductQuantity@{updateProductQuantity}}
+\index{updateProductQuantity@{updateProductQuantity}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{updateProductQuantity()}{updateProductQuantity()}}
+{\footnotesize\ttfamily \label{class_tcp_client_a71b318c7621199531d0f6f7eea332db5} 
+bool Tcp\+Client::\+update\+Product\+Quantity (\begin{DoxyParamCaption}\item[{int}]{product\+Id}{, }\item[{int}]{new\+Quantity}{}\end{DoxyParamCaption})}
+
+
+
+Отправляет команду установки абсолютного количества продукта. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Id} & ID продукта. \\
+\hline
+{\em new\+Quantity} & Новое количество. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true при успехе. 
+\end{DoxyReturn}

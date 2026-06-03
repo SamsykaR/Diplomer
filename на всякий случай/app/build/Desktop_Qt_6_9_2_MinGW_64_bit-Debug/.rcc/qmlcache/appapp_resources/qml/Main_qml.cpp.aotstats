@@ -1,0 +1,452 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": false,
+                        "column": 5,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Functions without type annotations won't be compiled",
+                        "functionName": "handleLogin",
+                        "line": 36
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 21,
+                        "durationMicroseconds": 367,
+                        "errorMessage": "",
+                        "functionName": "theme",
+                        "line": 19
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 25,
+                        "durationMicroseconds": 154,
+                        "errorMessage": "",
+                        "functionName": "target",
+                        "line": 55
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 17,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Functions without type annotations won't be compiled",
+                        "functionName": "onLoginSuccess",
+                        "line": 56
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 22,
+                        "durationMicroseconds": 131,
+                        "errorMessage": "",
+                        "functionName": "initialItem",
+                        "line": 67
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 116,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 66
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 12,
+                        "durationMicroseconds": 375,
+                        "errorMessage": "",
+                        "functionName": "x",
+                        "line": 77
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 12,
+                        "durationMicroseconds": 314,
+                        "errorMessage": "",
+                        "functionName": "y",
+                        "line": 78
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 142,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 84
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 166,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 89
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 34,
+                        "durationMicroseconds": 600,
+                        "errorMessage": "Cannot access value for name appSettings",
+                        "functionName": "visible",
+                        "line": 91
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 43,
+                        "durationMicroseconds": 104,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 94
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 96,
+                        "durationMicroseconds": 829,
+                        "errorMessage": "Cannot access value for name appSettings",
+                        "functionName": "text",
+                        "line": 101
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 114,
+                        "durationMicroseconds": 568,
+                        "errorMessage": "Cannot access value for name appSettings",
+                        "functionName": "value",
+                        "line": 103
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 96,
+                        "durationMicroseconds": 763,
+                        "errorMessage": "Cannot access value for name appSettings",
+                        "functionName": "text",
+                        "line": 105
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 96,
+                        "durationMicroseconds": 757,
+                        "errorMessage": "Cannot access value for name appSettings",
+                        "functionName": "text",
+                        "line": 107
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 100,
+                        "durationMicroseconds": 736,
+                        "errorMessage": "Cannot access value for name appSettings",
+                        "functionName": "text",
+                        "line": 109
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 141,
+                        "durationMicroseconds": 141,
+                        "errorMessage": "",
+                        "functionName": "echoMode",
+                        "line": 109
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 44,
+                        "durationMicroseconds": 831,
+                        "errorMessage": "Cannot access value for name dbWorker",
+                        "functionName": "onClicked",
+                        "line": 114
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 74,
+                        "durationMicroseconds": 133,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 120
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 130,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 128
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 43,
+                        "durationMicroseconds": 100,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 132
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 100,
+                        "durationMicroseconds": 814,
+                        "errorMessage": "Cannot access value for name appSettings",
+                        "functionName": "text",
+                        "line": 139
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 71,
+                        "durationMicroseconds": 725,
+                        "errorMessage": "Cannot access value for name appSettings",
+                        "functionName": "text",
+                        "line": 143
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 70,
+                        "durationMicroseconds": 630,
+                        "errorMessage": "Cannot access value for name appSettings",
+                        "functionName": "checked",
+                        "line": 150
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 79,
+                        "durationMicroseconds": 1189,
+                        "errorMessage": "Cannot access value for name appSettings",
+                        "functionName": "onCheckedChanged",
+                        "line": 151
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 44,
+                        "durationMicroseconds": 782,
+                        "errorMessage": "Cannot access value for name dbWorker",
+                        "functionName": "onClicked",
+                        "line": 156
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 80,
+                        "durationMicroseconds": 150,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 164
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 72,
+                        "durationMicroseconds": 2848,
+                        "errorMessage": "Cannot access value for name dbWorker",
+                        "functionName": "onClicked",
+                        "line": 168
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 98,
+                        "durationMicroseconds": 132,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 179
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 133,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 187
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 43,
+                        "durationMicroseconds": 100,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 191
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 97,
+                        "durationMicroseconds": 840,
+                        "errorMessage": "Cannot access value for name appSettings",
+                        "functionName": "text",
+                        "line": 198
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 71,
+                        "durationMicroseconds": 1432,
+                        "errorMessage": "Cannot access value for name appSettings",
+                        "functionName": "text",
+                        "line": 202
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 30,
+                        "durationMicroseconds": 255,
+                        "errorMessage": "",
+                        "functionName": "standardButtons",
+                        "line": 213
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 25,
+                        "durationMicroseconds": 7660,
+                        "errorMessage": "Cannot access value for name appSettings",
+                        "functionName": "onAccepted",
+                        "line": 214
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 25,
+                        "durationMicroseconds": 188,
+                        "errorMessage": "",
+                        "functionName": "onRejected",
+                        "line": 233
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 18,
+                        "durationMicroseconds": 57,
+                        "errorMessage": "Cannot access value for name currentUser",
+                        "functionName": "visible",
+                        "line": 239
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 30,
+                        "durationMicroseconds": 157,
+                        "errorMessage": "",
+                        "functionName": "background",
+                        "line": 240
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 103,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 243
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 165,
+                        "errorMessage": "",
+                        "functionName": "onClicked",
+                        "line": 255
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 38,
+                        "durationMicroseconds": 128,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 266
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 131,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 264
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 1657,
+                        "errorMessage": "Cannot access value for name loger",
+                        "functionName": "onClicked",
+                        "line": 277
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 17,
+                        "durationMicroseconds": 135,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 290
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 22,
+                        "durationMicroseconds": 51,
+                        "errorMessage": "Cannot access value for name currentUser",
+                        "functionName": "interactive",
+                        "line": 293
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 99,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 298
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 27,
+                        "durationMicroseconds": 119,
+                        "errorMessage": "Cannot access value for name currentUser",
+                        "functionName": "text",
+                        "line": 308
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 98,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 307
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 307,
+                        "errorMessage": "Cannot access value for name currentUser",
+                        "functionName": "model",
+                        "line": 316
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 27,
+                        "durationMicroseconds": 553,
+                        "errorMessage": "Cannot access value for name modelData",
+                        "functionName": "text",
+                        "line": 332
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 630,
+                        "errorMessage": "Cannot access value for name stackView",
+                        "functionName": "onClicked",
+                        "line": 337
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 241,
+                        "errorMessage": "",
+                        "functionName": "onClicked",
+                        "line": 353
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 564,
+                        "errorMessage": "Cannot access value for name loger",
+                        "functionName": "onClicked",
+                        "line": 366
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 448,
+                        "errorMessage": "Cannot access value for name loger",
+                        "functionName": "onClicked",
+                        "line": 381
+                    }
+                ],
+                "filePath": "C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/Main.qml"
+            }
+        ],
+        "moduleId": "app(appapp)"
+    }
+]
