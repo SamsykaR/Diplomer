@@ -1,0 +1,308 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 1005,
+                        "errorMessage": "Cannot access value for name window",
+                        "functionName": "userRole",
+                        "line": 11
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 5,
+                        "durationMicroseconds": 2660,
+                        "errorMessage": "Cannot access value for name dbWorker",
+                        "functionName": "loadOrders",
+                        "line": 13
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 522,
+                        "errorMessage": "Cannot access value for name dbWorker",
+                        "functionName": "onCompleted",
+                        "line": 30
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 16,
+                        "durationMicroseconds": 497,
+                        "errorMessage": "",
+                        "functionName": "title",
+                        "line": 37
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 12,
+                        "durationMicroseconds": 289,
+                        "errorMessage": "",
+                        "functionName": "x",
+                        "line": 41
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 12,
+                        "durationMicroseconds": 297,
+                        "errorMessage": "",
+                        "functionName": "y",
+                        "line": 42
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 9,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Functions without type annotations won't be compiled",
+                        "functionName": "loadCheck",
+                        "line": 46
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 167,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 69
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 30,
+                        "durationMicroseconds": 143,
+                        "errorMessage": "",
+                        "functionName": "standardButtons",
+                        "line": 74
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 25,
+                        "durationMicroseconds": 184,
+                        "errorMessage": "",
+                        "functionName": "onAccepted",
+                        "line": 75
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 100,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 80
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 409,
+                        "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
+                        "functionName": "model",
+                        "line": 89
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 40,
+                        "durationMicroseconds": 888,
+                        "errorMessage": "Cannot find name currentStatusFilter",
+                        "functionName": "onCurrentIndexChanged",
+                        "line": 91
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 35,
+                        "durationMicroseconds": 565,
+                        "errorMessage": "method loadOrders cannot be resolved.",
+                        "functionName": "onCheckedChanged",
+                        "line": 100
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 65,
+                        "errorMessage": "Cannot access value for name orderListView",
+                        "functionName": "width",
+                        "line": 112
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 84,
+                        "errorMessage": "Cannot access value for name index",
+                        "functionName": "color",
+                        "line": 114
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 108,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 119
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 39,
+                        "durationMicroseconds": 143,
+                        "errorMessage": "Cannot access value for name model",
+                        "functionName": "text",
+                        "line": 125
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 39,
+                        "durationMicroseconds": 136,
+                        "errorMessage": "Cannot access value for name model",
+                        "functionName": "text",
+                        "line": 126
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 117,
+                        "durationMicroseconds": 138,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 126
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 39,
+                        "durationMicroseconds": 139,
+                        "errorMessage": "Cannot access value for name model",
+                        "functionName": "text",
+                        "line": 130
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 39,
+                        "durationMicroseconds": 197,
+                        "errorMessage": "Cannot access value for name model",
+                        "functionName": "text",
+                        "line": 135
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 39,
+                        "durationMicroseconds": 167,
+                        "errorMessage": "Cannot access value for name model",
+                        "functionName": "text",
+                        "line": 136
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 169,
+                        "durationMicroseconds": 184,
+                        "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: QQuickMaterialStyle::accent with type QVariant (adjusted to QVariant) -> QColor stored as QVariant",
+                        "functionName": "color",
+                        "line": 136
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 130,
+                        "durationMicroseconds": 160,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 136
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 39,
+                        "durationMicroseconds": 149,
+                        "errorMessage": "Cannot access value for name model",
+                        "functionName": "text",
+                        "line": 140
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 38,
+                        "durationMicroseconds": 145,
+                        "errorMessage": "Cannot access value for name model",
+                        "functionName": "visible",
+                        "line": 145
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 40,
+                        "durationMicroseconds": 670,
+                        "errorMessage": "Cannot access value for name stackView",
+                        "functionName": "onClicked",
+                        "line": 146
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 38,
+                        "durationMicroseconds": 139,
+                        "errorMessage": "Cannot access value for name userRole",
+                        "functionName": "visible",
+                        "line": 152
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 40,
+                        "durationMicroseconds": 1184,
+                        "errorMessage": "Cannot access value for name dbWorker",
+                        "functionName": "onClicked",
+                        "line": 153
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 38,
+                        "durationMicroseconds": 203,
+                        "errorMessage": "Cannot access value for name userRole",
+                        "functionName": "visible",
+                        "line": 162
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 40,
+                        "durationMicroseconds": 6726,
+                        "errorMessage": "Cannot access value for name dbWorker",
+                        "functionName": "onClicked",
+                        "line": 163
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 38,
+                        "durationMicroseconds": 79,
+                        "errorMessage": "Cannot access value for name model",
+                        "functionName": "visible",
+                        "line": 186
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 40,
+                        "durationMicroseconds": 231,
+                        "errorMessage": "Cannot access value for name checkDialog",
+                        "functionName": "onClicked",
+                        "line": 187
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 134,
+                        "errorMessage": "",
+                        "functionName": "standardButtons",
+                        "line": 202
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 36,
+                        "durationMicroseconds": 145,
+                        "errorMessage": "",
+                        "functionName": "text",
+                        "line": 204
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 67,
+                        "durationMicroseconds": 123,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 204
+                    }
+                ],
+                "filePath": "C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/ActiveOrdersPage.qml"
+            }
+        ],
+        "moduleId": "app(appapp)"
+    }
+]

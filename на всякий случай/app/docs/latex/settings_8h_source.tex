@@ -2,92 +2,95 @@
 \hypertarget{settings_8h_source}{}\label{settings_8h_source}\index{C:/Users/rodio/Desktop/W/Diplom/app/include/settings.h@{C:/Users/rodio/Desktop/W/Diplom/app/include/settings.h}}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SETTINGS\_H}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SETTINGS\_H}}
-\DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QString>}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QDir>}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}logs.h"{}}}
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}exceptions.h"{}}}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_settings_aa115184065ca6e679091e16ec14e22c8}{Settings}}\ :\ \textcolor{keyword}{public}\ QObject}
-\DoxyCodeLine{00017\ \{}
-\DoxyCodeLine{00018\ \ \ \ \ Q\_OBJECT}
-\DoxyCodeLine{00019\ \ \ \ \ Q\_PROPERTY(QString\ dbHost\ READ\ dbHost\ WRITE\ \doxymbox{\hyperlink{class_settings_ad89758c4427fee35ff10ffc98ceee4a6}{setDbHost}}\ NOTIFY\ dbHostChanged)}
-\DoxyCodeLine{00020\ \ \ \ \ Q\_PROPERTY(\textcolor{keywordtype}{int}\ dbPort\ READ\ dbPort\ WRITE\ \doxymbox{\hyperlink{class_settings_ac33f66deed703d17543c5444692e7fec}{setDbPort}}\ NOTIFY\ dbPortChanged)}
-\DoxyCodeLine{00021\ \ \ \ \ Q\_PROPERTY(QString\ dbName\ READ\ dbName\ WRITE\ \doxymbox{\hyperlink{class_settings_ab38d5030c51b9e1cbd9e07c6d3dbd2e6}{setDbName}}\ NOTIFY\ dbNameChanged)}
-\DoxyCodeLine{00022\ \ \ \ \ Q\_PROPERTY(QString\ dbUser\ READ\ dbUser\ WRITE\ \doxymbox{\hyperlink{class_settings_ad6646405fb51a8af2342d90741c70765}{setDbUser}}\ NOTIFY\ dbUserChanged)}
-\DoxyCodeLine{00023\ \ \ \ \ Q\_PROPERTY(QString\ dbPassword\ READ\ dbPassword\ WRITE\ \doxymbox{\hyperlink{class_settings_a304fdc0096c9f5e3d55f7904ddf96406}{setDbPassword}}\ NOTIFY\ dbPasswordChanged)}
-\DoxyCodeLine{00024\ \ \ \ \ Q\_PROPERTY(\textcolor{keywordtype}{bool}\ isServerMode\ READ\ isServerMode\ WRITE\ \doxymbox{\hyperlink{class_settings_a887a23312a1a7034a1d779127e3c3538}{setIsServerMode}}\ NOTIFY\ isServerModeChanged)}
-\DoxyCodeLine{00025\ \ \ \ \ Q\_PROPERTY(QString\ logPath\ READ\ logPath\ WRITE\ \doxymbox{\hyperlink{class_settings_a4e588c1a7ab3414ccba71adf0ec3cd82}{setLogPath}}\ NOTIFY\ logPathChanged)}
-\DoxyCodeLine{00026\ \ \ \ \ Q\_PROPERTY(QString\ serverHost\ READ\ serverHost\ WRITE\ \doxymbox{\hyperlink{class_settings_a70011a38a8c13f10f1e18c9214072d30}{setServerHost}}\ NOTIFY\ serverHostChanged)}
-\DoxyCodeLine{00027\ \ \ \ \ Q\_PROPERTY(\textcolor{keywordtype}{int}\ serverPort\ READ\ serverPort\ WRITE\ \doxymbox{\hyperlink{class_settings_a4888b77dd8733593a9923ae53b1c6626}{setServerPort}}\ NOTIFY\ serverPortChanged)}
-\DoxyCodeLine{00028\ \ \ \ \ Q\_PROPERTY(QString\ reportsPath\ READ\ reportsPath\ WRITE\ \doxymbox{\hyperlink{class_settings_a4fe8f8fa353d460caf879437f97f1bf4}{setReportsPath}}\ NOTIFY\ reportsPathChanged)}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_settings_aa115184065ca6e679091e16ec14e22c8}{Settings}}(\doxymbox{\hyperlink{class_logs}{Logs}}\ *logger,\ QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ Геттеры\ и\ сеттеры\ с\ краткими\ пояснениями}}
-\DoxyCodeLine{00039\ \ \ \ \ QString\ dbHost()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_dbHost;\ \}}
-\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_ad89758c4427fee35ff10ffc98ceee4a6}{setDbHost}}(\textcolor{keyword}{const}\ QString\ \&host);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ dbPort()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_dbPort;\ \}}
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_ac33f66deed703d17543c5444692e7fec}{setDbPort}}(\textcolor{keywordtype}{int}\ port);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \ \ \ \ QString\ dbName()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_dbName;\ \}}
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_ab38d5030c51b9e1cbd9e07c6d3dbd2e6}{setDbName}}(\textcolor{keyword}{const}\ QString\ \&name);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \ \ \ \ QString\ dbUser()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_dbUser;\ \}}
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_ad6646405fb51a8af2342d90741c70765}{setDbUser}}(\textcolor{keyword}{const}\ QString\ \&user);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \ \ \ \ QString\ dbPassword()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_dbPassword;\ \}}
-\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_a304fdc0096c9f5e3d55f7904ddf96406}{setDbPassword}}(\textcolor{keyword}{const}\ QString\ \&password);\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{bool}\ isServerMode()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_isServerMode;\ \}}
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_a887a23312a1a7034a1d779127e3c3538}{setIsServerMode}}(\textcolor{keywordtype}{bool}\ mode);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ \ \ \ \ QString\ logPath()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_logPath;\ \}}
-\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_a4e588c1a7ab3414ccba71adf0ec3cd82}{setLogPath}}(\textcolor{keyword}{const}\ QString\ \&path);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00060\ \ \ \ \ QString\ serverHost()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_serverHost;\ \}}
-\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_a70011a38a8c13f10f1e18c9214072d30}{setServerHost}}(\textcolor{keyword}{const}\ QString\ \&host);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00062\ }
-\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ serverPort()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_serverPort;\ \}}
-\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_a4888b77dd8733593a9923ae53b1c6626}{setServerPort}}(\textcolor{keywordtype}{int}\ port);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00065\ }
-\DoxyCodeLine{00066\ \ \ \ \ QString\ reportsPath()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_reportsPath;\ \}}
-\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_a4fe8f8fa353d460caf879437f97f1bf4}{setReportsPath}}(\textcolor{keyword}{const}\ QString\ \&path);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00068\ }
-\DoxyCodeLine{00070\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_a1eeeb01f1cc6cf7b841a3e112ee031d6}{load}}();}
-\DoxyCodeLine{00072\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_a75ab693f2b4228de016603638771eb94}{save}}();}
-\DoxyCodeLine{00073\ }
-\DoxyCodeLine{00074\ signals:}
-\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ dbHostChanged();}
-\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ dbPortChanged();}
-\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ dbNameChanged();}
-\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ dbUserChanged();}
-\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ dbPasswordChanged();}
-\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ isServerModeChanged();}
-\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ logPathChanged();}
-\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ serverHostChanged();}
-\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ serverPortChanged();}
-\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ reportsPathChanged();}
-\DoxyCodeLine{00085\ }
-\DoxyCodeLine{00086\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00087\ \ \ \ \ QString\ m\_dbHost;\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_dbPort;\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00089\ \ \ \ \ QString\ m\_dbName;\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00090\ \ \ \ \ QString\ m\_dbUser;\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00091\ \ \ \ \ QString\ m\_dbPassword;\ \ \ \ \ }
-\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_isServerMode;\ \ \ \ \ \ }
-\DoxyCodeLine{00093\ \ \ \ \ QString\ m\_logPath;\ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00094\ \ \ \ \ \doxymbox{\hyperlink{class_logs}{Logs}}\ *loger;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00095\ \ \ \ \ QString\ m\_serverHost;\ \ \ \ \ }
-\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_serverPort;\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00097\ \ \ \ \ QString\ m\_reportsPath;\ \ \ \ }
-\DoxyCodeLine{00098\ \};}
-\DoxyCodeLine{00099\ }
-\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SETTINGS\_H}}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ SETTINGS\_H}}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ SETTINGS\_H}}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <QDir>}}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <QStandardPaths>}}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <QCoreApplication>}}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}logs.h"{}}}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}exceptions.h"{}}}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00018}\doxymbox{\hyperlink{class_settings}{00018}}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_settings_aa115184065ca6e679091e16ec14e22c8}{Settings}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00019}00019\ \{}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00020}00020\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00021}00021\ \ \ \ \ Q\_PROPERTY(QString\ dbHost\ READ\ dbHost\ WRITE\ \doxymbox{\hyperlink{class_settings_ad89758c4427fee35ff10ffc98ceee4a6}{setDbHost}}\ NOTIFY\ dbHostChanged)}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00022}00022\ \ \ \ \ Q\_PROPERTY(\textcolor{keywordtype}{int}\ dbPort\ READ\ dbPort\ WRITE\ \doxymbox{\hyperlink{class_settings_ac33f66deed703d17543c5444692e7fec}{setDbPort}}\ NOTIFY\ dbPortChanged)}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00023}00023\ \ \ \ \ Q\_PROPERTY(QString\ dbName\ READ\ dbName\ WRITE\ \doxymbox{\hyperlink{class_settings_ab38d5030c51b9e1cbd9e07c6d3dbd2e6}{setDbName}}\ NOTIFY\ dbNameChanged)}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00024}00024\ \ \ \ \ Q\_PROPERTY(QString\ dbUser\ READ\ dbUser\ WRITE\ \doxymbox{\hyperlink{class_settings_ad6646405fb51a8af2342d90741c70765}{setDbUser}}\ NOTIFY\ dbUserChanged)}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00025}00025\ \ \ \ \ Q\_PROPERTY(QString\ dbPassword\ READ\ dbPassword\ WRITE\ \doxymbox{\hyperlink{class_settings_a304fdc0096c9f5e3d55f7904ddf96406}{setDbPassword}}\ NOTIFY\ dbPasswordChanged)}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00026}00026\ \ \ \ \ Q\_PROPERTY(\textcolor{keywordtype}{bool}\ isServerMode\ READ\ isServerMode\ WRITE\ \doxymbox{\hyperlink{class_settings_a887a23312a1a7034a1d779127e3c3538}{setIsServerMode}}\ NOTIFY\ isServerModeChanged)}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00027}00027\ \ \ \ \ Q\_PROPERTY(QString\ logPath\ READ\ logPath\ WRITE\ \doxymbox{\hyperlink{class_settings_a4e588c1a7ab3414ccba71adf0ec3cd82}{setLogPath}}\ NOTIFY\ logPathChanged)}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00028}00028\ \ \ \ \ Q\_PROPERTY(QString\ serverHost\ READ\ serverHost\ WRITE\ \doxymbox{\hyperlink{class_settings_a70011a38a8c13f10f1e18c9214072d30}{setServerHost}}\ NOTIFY\ serverHostChanged)}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00029}00029\ \ \ \ \ Q\_PROPERTY(\textcolor{keywordtype}{int}\ serverPort\ READ\ serverPort\ WRITE\ \doxymbox{\hyperlink{class_settings_a4888b77dd8733593a9923ae53b1c6626}{setServerPort}}\ NOTIFY\ serverPortChanged)}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00030}00030\ \ \ \ \ Q\_PROPERTY(QString\ reportsPath\ READ\ reportsPath\ WRITE\ \doxymbox{\hyperlink{class_settings_a4fe8f8fa353d460caf879437f97f1bf4}{setReportsPath}}\ NOTIFY\ reportsPathChanged)}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00032}00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00038}00038\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_settings_aa115184065ca6e679091e16ec14e22c8}{Settings}}(\doxymbox{\hyperlink{class_logs}{Logs}}\ *logger,\ QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00040}00040\ \ \ \ \ \textcolor{comment}{//\ Геттеры\ и\ сеттеры\ с\ краткими\ пояснениями}}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00041}00041\ \ \ \ \ QString\ dbHost()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_dbHost;\ \}}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_ad89758c4427fee35ff10ffc98ceee4a6}{setDbHost}}(\textcolor{keyword}{const}\ QString\ \&host);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00044}00044\ \ \ \ \ \textcolor{keywordtype}{int}\ dbPort()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_dbPort;\ \}}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00045}00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_ac33f66deed703d17543c5444692e7fec}{setDbPort}}(\textcolor{keywordtype}{int}\ port);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00047}00047\ \ \ \ \ QString\ dbName()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_dbName;\ \}}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00048}00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_ab38d5030c51b9e1cbd9e07c6d3dbd2e6}{setDbName}}(\textcolor{keyword}{const}\ QString\ \&name);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00050}00050\ \ \ \ \ QString\ dbUser()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_dbUser;\ \}}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00051}00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_ad6646405fb51a8af2342d90741c70765}{setDbUser}}(\textcolor{keyword}{const}\ QString\ \&user);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00053}00053\ \ \ \ \ QString\ dbPassword()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_dbPassword;\ \}}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00054}00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_a304fdc0096c9f5e3d55f7904ddf96406}{setDbPassword}}(\textcolor{keyword}{const}\ QString\ \&password);\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00056}00056\ \ \ \ \ \textcolor{keywordtype}{bool}\ isServerMode()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_isServerMode;\ \}}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00057}00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_a887a23312a1a7034a1d779127e3c3538}{setIsServerMode}}(\textcolor{keywordtype}{bool}\ mode);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00059}00059\ \ \ \ \ QString\ logPath()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_logPath;\ \}}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00060}00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_a4e588c1a7ab3414ccba71adf0ec3cd82}{setLogPath}}(\textcolor{keyword}{const}\ QString\ \&path);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00062}00062\ \ \ \ \ QString\ serverHost()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_serverHost;\ \}}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00063}00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_a70011a38a8c13f10f1e18c9214072d30}{setServerHost}}(\textcolor{keyword}{const}\ QString\ \&host);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00065}00065\ \ \ \ \ \textcolor{keywordtype}{int}\ serverPort()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_serverPort;\ \}}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00066}00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_a4888b77dd8733593a9923ae53b1c6626}{setServerPort}}(\textcolor{keywordtype}{int}\ port);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00068}00068\ \ \ \ \ QString\ reportsPath()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_reportsPath;\ \}}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00069}00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_a4fe8f8fa353d460caf879437f97f1bf4}{setReportsPath}}(\textcolor{keyword}{const}\ QString\ \&path);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00072}00072\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_a1eeeb01f1cc6cf7b841a3e112ee031d6}{load}}();}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00074}00074\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_settings_a75ab693f2b4228de016603638771eb94}{save}}();}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00076}00076\ signals:}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00077}00077\ \ \ \ \ \textcolor{keywordtype}{void}\ dbHostChanged();}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00078}00078\ \ \ \ \ \textcolor{keywordtype}{void}\ dbPortChanged();}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00079}00079\ \ \ \ \ \textcolor{keywordtype}{void}\ dbNameChanged();}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00080}00080\ \ \ \ \ \textcolor{keywordtype}{void}\ dbUserChanged();}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00081}00081\ \ \ \ \ \textcolor{keywordtype}{void}\ dbPasswordChanged();}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00082}00082\ \ \ \ \ \textcolor{keywordtype}{void}\ isServerModeChanged();}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00083}00083\ \ \ \ \ \textcolor{keywordtype}{void}\ logPathChanged();}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00084}00084\ \ \ \ \ \textcolor{keywordtype}{void}\ serverHostChanged();}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00085}00085\ \ \ \ \ \textcolor{keywordtype}{void}\ serverPortChanged();}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00086}00086\ \ \ \ \ \textcolor{keywordtype}{void}\ reportsPathChanged();}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00088}00088\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00089}00089\ \ \ \ \ QString\ m\_dbHost;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00090}00090\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_dbPort;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00091}00091\ \ \ \ \ QString\ m\_dbName;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00092}00092\ \ \ \ \ QString\ m\_dbUser;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00093}00093\ \ \ \ \ QString\ m\_dbPassword;\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00094}00094\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_isServerMode;\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00095}00095\ \ \ \ \ QString\ m\_logPath;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00096}00096\ \ \ \ \ \doxymbox{\hyperlink{class_logs}{Logs}}\ *loger;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00097}00097\ \ \ \ \ QString\ m\_serverHost;\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00098}00098\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_serverPort;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00099}00099\ \ \ \ \ QString\ m\_reportsPath;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00100}00100\ \ \ \ \ QString\ getSettingsFilePath()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00101}00101\ \};}
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{settings_8h_source_l00103}00103\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SETTINGS\_H}}
 
 \end{DoxyCode}

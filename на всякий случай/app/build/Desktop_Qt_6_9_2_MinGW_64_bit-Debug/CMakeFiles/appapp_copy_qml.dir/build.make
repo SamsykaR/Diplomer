@@ -73,6 +73,7 @@ CMakeFiles/appapp_copy_qml: .qt/appapp_qml.txt
 .qt/appapp_qml.txt: C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/OrderPage.qml
 .qt/appapp_qml.txt: C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/StockPage.qml
 .qt/appapp_qml.txt: C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/ReportsPage.qml
+.qt/appapp_qml.txt: C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/ActiveOrdersPage.qml
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\rodio\Desktop\W\Diplom\app\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying appapp qml sources into build dir"
 	C:\Qt\Tools\CMake_64\bin\cmake.exe -DFILES_INFO_PATH=C:/Users/rodio/Desktop/W/Diplom/app/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/appapp_qml.cmake -P C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake
 

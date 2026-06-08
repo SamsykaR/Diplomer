@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 5,
-                        "durationMicroseconds": 2055,
+                        "durationMicroseconds": 3242,
                         "errorMessage": "Cannot access value for name dbWorker",
                         "functionName": "loadProducts",
                         "line": 19
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 5,
-                        "durationMicroseconds": 316,
+                        "durationMicroseconds": 314,
                         "errorMessage": "Cannot generate efficient code for call to untyped JavaScript function",
                         "functionName": "reloadData",
                         "line": 27
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 17,
-                        "durationMicroseconds": 85,
+                        "durationMicroseconds": 86,
                         "errorMessage": "Cannot access value for name window",
                         "functionName": "target",
                         "line": 33
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 9,
-                        "durationMicroseconds": 92,
+                        "durationMicroseconds": 111,
                         "errorMessage": "method reloadData cannot be resolved.",
                         "functionName": "onDataRefreshRequested",
                         "line": 34
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 99,
+                        "durationMicroseconds": 101,
                         "errorMessage": "",
                         "functionName": "onCompleted",
                         "line": 39
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 145,
+                        "durationMicroseconds": 172,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 42
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 120,
+                        "durationMicroseconds": 124,
                         "errorMessage": "",
                         "functionName": "model",
                         "line": 51
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 312,
+                        "durationMicroseconds": 354,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 53
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 30,
-                        "durationMicroseconds": 168,
+                        "durationMicroseconds": 179,
                         "errorMessage": "",
                         "functionName": "highlighted",
                         "line": 55
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 181,
+                        "durationMicroseconds": 182,
                         "errorMessage": "Cannot access value for name productListView",
                         "functionName": "onClicked",
                         "line": 77
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 161,
+                        "durationMicroseconds": 155,
                         "errorMessage": "Cannot access value for name model",
                         "functionName": "color",
                         "line": 58
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 106,
+                        "durationMicroseconds": 123,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 62
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 69,
+                        "durationMicroseconds": 71,
                         "errorMessage": "Cannot access value for name model",
                         "functionName": "text",
                         "line": 65
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 126,
+                        "durationMicroseconds": 128,
                         "errorMessage": "Cannot access value for name model",
                         "functionName": "text",
                         "line": 70
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 43,
-                        "durationMicroseconds": 146,
+                        "durationMicroseconds": 150,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 73
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 22,
-                        "durationMicroseconds": 59,
+                        "durationMicroseconds": 60,
                         "errorMessage": "Cannot access value for name selectedProductIndex",
                         "functionName": "enabled",
                         "line": 87
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 125,
+                        "durationMicroseconds": 137,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 90
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 35,
-                        "durationMicroseconds": 219,
+                        "durationMicroseconds": 216,
                         "errorMessage": "Cannot access value for name selectedProductIndex",
                         "functionName": "text",
                         "line": 95
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 36,
-                        "durationMicroseconds": 1055,
+                        "durationMicroseconds": 1138,
                         "errorMessage": "Cannot access value for name selectedProductIndex",
                         "functionName": "onClicked",
                         "line": 113
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 46,
-                        "durationMicroseconds": 156,
+                        "durationMicroseconds": 166,
                         "errorMessage": "",
                         "functionName": "background",
                         "line": 112
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 36,
-                        "durationMicroseconds": 1224,
+                        "durationMicroseconds": 1291,
                         "errorMessage": "Cannot access value for name selectedProductIndex",
                         "functionName": "onClicked",
                         "line": 130
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 46,
-                        "durationMicroseconds": 153,
+                        "durationMicroseconds": 161,
                         "errorMessage": "",
                         "functionName": "background",
                         "line": 129
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 36,
-                        "durationMicroseconds": 1016,
+                        "durationMicroseconds": 1099,
                         "errorMessage": "Cannot access value for name selectedProductIndex",
                         "functionName": "onClicked",
                         "line": 149

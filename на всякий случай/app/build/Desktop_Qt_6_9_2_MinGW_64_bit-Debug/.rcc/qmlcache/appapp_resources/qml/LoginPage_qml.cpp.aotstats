@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 646,
+                        "durationMicroseconds": 1032,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 21
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 139,
+                        "durationMicroseconds": 186,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 20
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 140,
+                        "durationMicroseconds": 220,
                         "errorMessage": "",
                         "functionName": "fillMode",
                         "line": 29
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 134,
+                        "durationMicroseconds": 197,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 26
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 20,
-                        "durationMicroseconds": 191,
+                        "durationMicroseconds": 286,
                         "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: QQuickMaterialStyle::primary with type QVariant (adjusted to QVariant) -> QColor stored as QVariant",
                         "functionName": "color",
                         "line": 37
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 133,
+                        "durationMicroseconds": 202,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 38
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 127,
+                        "durationMicroseconds": 196,
                         "errorMessage": "",
                         "functionName": "echoMode",
                         "line": 55
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 2807,
+                        "durationMicroseconds": 4160,
                         "errorMessage": "Cannot access value for name dbWorker",
                         "functionName": "onClicked",
                         "line": 65
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 34,
-                        "durationMicroseconds": 158,
+                        "durationMicroseconds": 259,
                         "errorMessage": "",
                         "functionName": "background",
                         "line": 64
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 968,
+                        "durationMicroseconds": 1377,
                         "errorMessage": "Cannot access value for name window",
                         "functionName": "onClicked",
                         "line": 86
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 134,
+                        "durationMicroseconds": 211,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 102

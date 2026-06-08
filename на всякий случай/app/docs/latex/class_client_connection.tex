@@ -1,4 +1,4 @@
-\doxysection{Client\+Connection Class Reference}
+\doxysection{Класс Client\+Connection}
 \hypertarget{class_client_connection}{}\label{class_client_connection}\index{ClientConnection@{ClientConnection}}
 
 
@@ -9,27 +9,31 @@
 
 {\ttfamily \+\#include $<$tcpserver.\+h$>$}
 
-Inheritance diagram for Client\+Connection:\+\begin{figure}[H]
+Граф наследования:\+Client\+Connection:\+\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{class_client_connection}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Public Member Functions}
+\doxysubsubsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_client_connection_a843f08ac47d87153c6b8d31f95358d82}{Client\+Connection}} (\doxymbox{\hyperlink{class_logs}{Logs}} \texorpdfstring{$\ast$}{*}logger, qintptr socket\+Descriptor, \doxymbox{\hyperlink{class_d_b_worker}{DBWorker}} \texorpdfstring{$\ast$}{*}db\+Worker, QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
 \begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Подробное описание}
 Обработчик одного клиентского TCP‑соединения. 
 
 Принимает JSON‑команды, вызывает соответствующие методы \doxylink{class_d_b_worker}{DBWorker} и отправляет обратно ответ. 
 
+См. определение в файле \doxymbox{\hyperlink{tcpserver_8h_source}{tcpserver.\+h}} строка \doxymbox{\hyperlink{tcpserver_8h_source_l00019}{19}}
+
+
+
 \label{doc-constructors}
 \Hypertarget{class_client_connection_doc-constructors}
-\doxysubsection{Constructor \& Destructor Documentation}
+\doxysubsection{Конструктор(ы)}
 \Hypertarget{class_client_connection_a843f08ac47d87153c6b8d31f95358d82}\index{ClientConnection@{ClientConnection}!ClientConnection@{ClientConnection}}
 \index{ClientConnection@{ClientConnection}!ClientConnection@{ClientConnection}}
 \doxysubsubsection{\texorpdfstring{ClientConnection()}{ClientConnection()}}
@@ -41,7 +45,7 @@ Client\+Connection::\+\+Client\+Connection (\begin{DoxyParamCaption}\item[{\doxy
 Конструктор. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em logger} & Логгер. \\
 \hline
 {\em socket\+Descriptor} & Дескриптор сокета. \\
@@ -51,3 +55,17 @@ Client\+Connection::\+\+Client\+Connection (\begin{DoxyParamCaption}\item[{\doxy
 {\em parent} & Родительский объект. \\
 \hline
 \end{DoxyParams}
+
+
+См. определение в файле \doxymbox{\hyperlink{tcpserver_8cpp_source}{tcpserver.\+cpp}} строка \doxymbox{\hyperlink{tcpserver_8cpp_source_l00007}{7}}
+
+\Hypertarget{class_client_connection_aef374ec27c751973c07d5e5f0b636d04}\index{ClientConnection@{ClientConnection}!````~ClientConnection@{\texorpdfstring{$\sim$}{\string~}ClientConnection}}
+\index{````~ClientConnection@{\texorpdfstring{$\sim$}{\string~}ClientConnection}!ClientConnection@{ClientConnection}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ClientConnection()}{\string~ClientConnection()}}
+{\footnotesize\ttfamily \label{class_client_connection_aef374ec27c751973c07d5e5f0b636d04} 
+Client\+Connection::\+\texorpdfstring{$\sim$}{\string~}\+Client\+Connection (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{tcpserver_8cpp_source}{tcpserver.\+cpp}} строка \doxymbox{\hyperlink{tcpserver_8cpp_source_l00016}{16}}
+

@@ -53,6 +53,7 @@ qt_add_qml_module(appapp
     URI app
     VERSION 1.0
     QML_FILES ${QML_FILES}
+    QML_FILES resources/qml/ActiveOrdersPage.qml
 )
 
 target_link_libraries(appapp

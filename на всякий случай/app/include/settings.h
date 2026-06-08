@@ -4,6 +4,8 @@
 #include <QObject>
 #include <QString>
 #include <QDir>
+#include <QStandardPaths>
+#include <QCoreApplication>
 #include "logs.h"
 #include "exceptions.h"
 
@@ -95,6 +97,7 @@ private:
     QString m_serverHost;     //!< Адрес TCP‑сервера.
     int m_serverPort;         //!< Порт TCP‑сервера.
     QString m_reportsPath;    //!< Путь к папке отчётов.
+    QString getSettingsFilePath() const;
 };
 
 #endif // SETTINGS_H

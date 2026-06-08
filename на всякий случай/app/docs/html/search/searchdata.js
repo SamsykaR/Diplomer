@@ -1,8 +1,8 @@
 var indexSectionsWithContent =
 {
-  0: "acdefgilnpqrstuvwабвгдзиклмнопрстуф",
+  0: "acdefgilnopqrstuvwабвгдзиклмнопрстуф",
   1: "cdeflnstv",
-  2: "acdefgilprstuw",
+  2: "acdefgiloprstuw",
   3: "cdlqrstабвгдзиклмнопрстуф"
 };
 
@@ -16,9 +16,9 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "All",
-  1: "Classes",
-  2: "Functions",
-  3: "Pages"
+  0: "Указатель",
+  1: "Классы",
+  2: "Функции",
+  3: "Страницы"
 };
 

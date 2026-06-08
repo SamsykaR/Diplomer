@@ -230,6 +230,61 @@ void ClientConnection::onReadyRead()
                 sendResponse(requestId, false, {{"error", e.what()}});
             }
         }
+		else if (command == "getOrders") {
+    try {
+        QString status = data["status"].toString();
+        QVariantList orders = dbWorker->getOrders(status);
+        sendResponse(requestId, true, {{"orders", orders}});
+    } catch (const std::exception &e) {
+        loger->error("Исключение в getOrders: " + QString(e.what()));
+        sendResponse(requestId, false, {{"error", e.what()}});
+    }
+}
+else if (command == "updateOrderStatus") {
+    try {
+        bool ok = dbWorker->updateOrderStatus(data["orderId"].toInt(), data["newStatus"].toString());
+        sendResponse(requestId, ok);
+    } catch (const std::exception &e) {
+        loger->error("Исключение в updateOrderStatus: " + QString(e.what()));
+        sendResponse(requestId, false, {{"error", e.what()}});
+    }
+}
+else if (command == "getOrderItems") {
+    try {
+        QVariantList items = dbWorker->getOrderItems(data["orderId"].toInt());
+        sendResponse(requestId, true, {{"items", items}});
+    } catch (const std::exception &e) {
+        loger->error("Исключение в getOrderItems: " + QString(e.what()));
+        sendResponse(requestId, false, {{"error", e.what()}});
+    }
+}
+else if (command == "closeOrder") {
+    try {
+        bool ok = dbWorker->closeOrder(data["orderId"].toInt(), data["totalSum"].toDouble(), data["items"].toList());
+        sendResponse(requestId, ok);
+    } catch (const std::exception &e) {
+        loger->error("Исключение в closeOrder: " + QString(e.what()));
+        sendResponse(requestId, false, {{"error", e.what()}});
+    }
+}
+else if (command == "getCheckByOrderId") {
+    try {
+        QVariantMap check = dbWorker->getCheckByOrderId(data["orderId"].toInt());
+        sendResponse(requestId, true, check);
+    } catch (const std::exception &e) {
+        loger->error("Исключение в getCheckByOrderId: " + QString(e.what()));
+        sendResponse(requestId, false, {{"error", e.what()}});
+    }
+}
+else if (command == "syncOrderItems") {
+    try {
+        bool ok = dbWorker->syncOrderItems(data["orderId"].toInt(), data["newItems"].toList());
+        sendResponse(requestId, ok);
+    } catch (const std::exception &e) {
+        loger->error("Исключение в syncOrderItems: " + QString(e.what()));
+        sendResponse(requestId, false, {{"error", e.what()}});
+    }
+}
         else {
             sendResponse(requestId, false, {{"error", "Unknown command"}});
         }

@@ -204,6 +204,59 @@ public:
                                      int waiterId,
                                      const QString &fileName);
 
+    /*!
+     * \brief Возвращает список заказов с возможной фильтрацией по статусу.
+     * \param status Статус заказа (пустая строка – все заказы).
+     * \return Список словарей с полями orderId, orderNumber, tableNumber,
+     *         orderDate, specialRequests, totalCost, status, waiterName.
+     */
+    Q_INVOKABLE QVariantList getOrders(const QString &status = QString());
+
+    /*!
+     * \brief Обновляет статус заказа.
+     * \param orderId ID заказа.
+     * \param newStatus Новый статус ("Новый", "Готовится", "Готов", "Закрыт").
+     * \return true при успешном обновлении.
+     */
+    Q_INVOKABLE bool updateOrderStatus(int orderId, const QString &newStatus);
+
+    /*!
+     * \brief Возвращает позиции заказа.
+     * \param orderId ID заказа.
+     * \return Список словарей с полями orderFoodId, foodId, name, quantity, price.
+     */
+    Q_INVOKABLE QVariantList getOrderItems(int orderId);
+
+    /*!
+     * \brief Закрывает заказ, создаёт чек и переводит статус в "Закрыт".
+     * \param orderId ID заказа.
+     * \param totalSum Итоговая сумма заказа.
+     * \param items Список позиций заказа (каждый элемент: {name, quantity, price}).
+     * \return true при успешном закрытии.
+     */
+    Q_INVOKABLE bool closeOrder(int orderId, double totalSum, const QVariantList &items);
+
+    /*!
+     * \brief Возвращает чек по ID заказа.
+     * \param orderId ID заказа.
+     * \return Словарь с ключами checkId, checkNumber, orderNumber, totalSum, checkData, createdAt.
+     */
+    Q_INVOKABLE QVariantMap getCheckByOrderId(int orderId);
+
+    /*!
+     * \brief Синхронизирует позиции заказа при редактировании (вычисляет разницу).
+     * \param orderId ID заказа.
+     * \param newItems Новый список позиций (каждый элемент: {foodId, quantity, price, name}).
+     * \return true при успешной синхронизации.
+     */
+    Q_INVOKABLE bool syncOrderItems(int orderId, const QVariantList &newItems);
+
+    /*!
+     * \brief Возвращает закрытые заказы (статус "Закрыт").
+     * \return Список заказов.
+     */
+    Q_INVOKABLE QVariantList getClosedOrders();
+
 signals:
     //! Сообщение об ошибке для UI.
     void errorOccurred(const QString &message);
@@ -211,6 +264,8 @@ signals:
     void dataChanged();
     //! Пришёл ответ на ранее отправленный запрос.
     void responseReceived(int requestId, bool success, const QVariantMap &data);
+    //! Сигнал об изменении списка заказов (создание, обновление статуса, закрытие).
+    void ordersChanged();
 
 private:
     /*!

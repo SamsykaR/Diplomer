@@ -5,6 +5,7 @@
     <file alias="resources/qml/OrderPage.qml">C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/OrderPage.qml</file>
     <file alias="resources/qml/StockPage.qml">C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/StockPage.qml</file>
     <file alias="resources/qml/ReportsPage.qml">C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/ReportsPage.qml</file>
+    <file alias="resources/qml/ActiveOrdersPage.qml">C:/Users/rodio/Desktop/W/Diplom/app/resources/qml/ActiveOrdersPage.qml</file>
   </qresource>
 </RCC>
 

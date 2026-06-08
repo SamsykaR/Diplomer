@@ -2,7 +2,7 @@
 \xpg@aux {}{russian}
 \contentsline {chapter}{\numberline {1}Пользовательская документация (RestN) }{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Обзор проекта}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Технологии программирования}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.2}Технологии программирования}{2}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Структура проекта}{2}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Описание программных модулей}{2}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Модуль работы с базой данных (DBWorker)}{2}{subsection.1.4.1}%
@@ -11,107 +11,203 @@
 \contentsline {subsection}{\numberline {1.4.4}Модуль логирования (Logs)}{3}{subsection.1.4.4}%
 \contentsline {subsection}{\numberline {1.4.5}Модуль настроек (Settings)}{3}{subsection.1.4.5}%
 \contentsline {subsection}{\numberline {1.4.6}Пользовательский интерфейс (QML)}{3}{subsection.1.4.6}%
-\contentsline {section}{\numberline {1.5}Интеграция программных модулей}{3}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Подключаемые внешние модули}{3}{subsection.1.5.1}%
+\contentsline {section}{\numberline {1.5}Интеграция программных модулей}{4}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Подключаемые внешние модули}{4}{subsection.1.5.1}%
 \contentsline {subsection}{\numberline {1.5.2}Интеграция C++ и QML}{4}{subsection.1.5.2}%
 \contentsline {subsection}{\numberline {1.5.3}Клиент-\/серверное взаимодействие}{4}{subsection.1.5.3}%
 \contentsline {section}{\numberline {1.6}Руководство пользователя}{4}{section.1.6}%
 \contentsline {subsection}{\numberline {1.6.1}Начальный запуск}{4}{subsection.1.6.1}%
 \contentsline {subsection}{\numberline {1.6.2}Окно авторизации}{4}{subsection.1.6.2}%
-\contentsline {subsection}{\numberline {1.6.3}Диалог настроек}{4}{subsection.1.6.3}%
-\contentsline {subsection}{\numberline {1.6.4}Главное окно и выдвижное меню}{4}{subsection.1.6.4}%
+\contentsline {subsection}{\numberline {1.6.3}Диалог настроек}{5}{subsection.1.6.3}%
+\contentsline {subsection}{\numberline {1.6.4}Главное окно и выдвижное меню}{5}{subsection.1.6.4}%
 \contentsline {subsection}{\numberline {1.6.5}Оформление заказа (страница для официанта)}{5}{subsection.1.6.5}%
 \contentsline {subsection}{\numberline {1.6.6}Управление складом (страница для кладовщика)}{5}{subsection.1.6.6}%
-\contentsline {subsection}{\numberline {1.6.7}Отчёты (страница для администратора)}{5}{subsection.1.6.7}%
-\contentsline {section}{\numberline {1.7}Настройки и системные файлы}{5}{section.1.7}%
+\contentsline {subsection}{\numberline {1.6.7}Отчёты (страница для администратора)}{6}{subsection.1.6.7}%
+\contentsline {subsection}{\numberline {1.6.8}Активные заказы (страница для официанта и администратора)}{6}{subsection.1.6.8}%
+\contentsline {section}{\numberline {1.7}Настройки и системные файлы}{6}{section.1.7}%
 \contentsline {section}{\numberline {1.8}Сборка проекта (для разработчиков)}{6}{section.1.8}%
-\contentsline {section}{\numberline {1.9}Контакты}{6}{section.1.9}%
-\contentsline {chapter}{\numberline {2}Hierarchical Index}{7}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Class Hierarchy}{7}{section.2.1}%
-\contentsline {chapter}{\numberline {3}Class Index}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Class List}{9}{section.3.1}%
-\contentsline {chapter}{\numberline {4}File Index}{11}{chapter.4}%
-\contentsline {section}{\numberline {4.1}File List}{11}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Class Documentation}{13}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Client\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Connection Class Reference}{13}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{13}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Constructor \& Destructor Documentation}{13}{subsection.5.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.2.1}ClientConnection()}{13}{subsubsection.5.1.2.1}%
-\contentsline {section}{\numberline {5.2}Database\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ex Class Reference}{14}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Detailed Description}{14}{subsection.5.2.1}%
-\contentsline {section}{\numberline {5.3}DBWorker Class Reference}{14}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{16}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Constructor \& Destructor Documentation}{16}{subsection.5.3.2}%
-\contentsline {subsubsection}{\numberline {5.3.2.1}DBWorker()}{16}{subsubsection.5.3.2.1}%
-\contentsline {subsection}{\numberline {5.3.3}Member Function Documentation}{16}{subsection.5.3.3}%
-\contentsline {subsubsection}{\numberline {5.3.3.1}addOrderItem()}{16}{subsubsection.5.3.3.1}%
-\contentsline {subsubsection}{\numberline {5.3.3.2}addProductQuantity()}{16}{subsubsection.5.3.3.2}%
-\contentsline {subsubsection}{\numberline {5.3.3.3}checkAndConsume()}{17}{subsubsection.5.3.3.3}%
-\contentsline {subsubsection}{\numberline {5.3.3.4}checkUser()}{17}{subsubsection.5.3.3.4}%
-\contentsline {subsubsection}{\numberline {5.3.3.5}createOrder()}{17}{subsubsection.5.3.3.5}%
-\contentsline {subsubsection}{\numberline {5.3.3.6}getFoodPopularity()}{18}{subsubsection.5.3.3.6}%
-\contentsline {subsubsection}{\numberline {5.3.3.7}getLowStockWarning()}{18}{subsubsection.5.3.3.7}%
-\contentsline {subsubsection}{\numberline {5.3.3.8}getReportRevenue()}{18}{subsubsection.5.3.3.8}%
-\contentsline {subsubsection}{\numberline {5.3.3.9}getRevenueByDay()}{19}{subsubsection.5.3.3.9}%
-\contentsline {subsubsection}{\numberline {5.3.3.10}pingServer()}{19}{subsubsection.5.3.3.10}%
-\contentsline {subsubsection}{\numberline {5.3.3.11}reconnect()}{19}{subsubsection.5.3.3.11}%
-\contentsline {subsubsection}{\numberline {5.3.3.12}returnIngredients()}{20}{subsubsection.5.3.3.12}%
-\contentsline {subsubsection}{\numberline {5.3.3.13}saveReportToCSV()}{20}{subsubsection.5.3.3.13}%
-\contentsline {subsubsection}{\numberline {5.3.3.14}updateProductQuantity()}{21}{subsubsection.5.3.3.14}%
-\contentsline {section}{\numberline {5.4}Exceptions Class Reference}{21}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Detailed Description}{21}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Constructor \& Destructor Documentation}{22}{subsection.5.4.2}%
-\contentsline {subsubsection}{\numberline {5.4.2.1}Exceptions()}{22}{subsubsection.5.4.2.1}%
-\contentsline {section}{\numberline {5.5}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ex Class Reference}{22}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{22}{subsection.5.5.1}%
-\contentsline {section}{\numberline {5.6}Logs Class Reference}{22}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Detailed Description}{23}{subsection.5.6.1}%
-\contentsline {subsection}{\numberline {5.6.2}Member Function Documentation}{23}{subsection.5.6.2}%
-\contentsline {subsubsection}{\numberline {5.6.2.1}setLogPath()}{23}{subsubsection.5.6.2.1}%
-\contentsline {section}{\numberline {5.7}Network\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ex Class Reference}{23}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}Detailed Description}{23}{subsection.5.7.1}%
-\contentsline {section}{\numberline {5.8}Settings Class Reference}{24}{section.5.8}%
-\contentsline {subsection}{\numberline {5.8.1}Detailed Description}{25}{subsection.5.8.1}%
-\contentsline {subsection}{\numberline {5.8.2}Constructor \& Destructor Documentation}{25}{subsection.5.8.2}%
-\contentsline {subsubsection}{\numberline {5.8.2.1}Settings()}{25}{subsubsection.5.8.2.1}%
-\contentsline {section}{\numberline {5.9}Tcp\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Client Class Reference}{25}{section.5.9}%
-\contentsline {subsection}{\numberline {5.9.1}Detailed Description}{27}{subsection.5.9.1}%
-\contentsline {subsection}{\numberline {5.9.2}Constructor \& Destructor Documentation}{27}{subsection.5.9.2}%
-\contentsline {subsubsection}{\numberline {5.9.2.1}TcpClient()}{27}{subsubsection.5.9.2.1}%
-\contentsline {subsection}{\numberline {5.9.3}Member Function Documentation}{27}{subsection.5.9.3}%
-\contentsline {subsubsection}{\numberline {5.9.3.1}addOrderItem()}{27}{subsubsection.5.9.3.1}%
-\contentsline {subsubsection}{\numberline {5.9.3.2}addProductQuantity()}{28}{subsubsection.5.9.3.2}%
-\contentsline {subsubsection}{\numberline {5.9.3.3}checkAndConsume()}{28}{subsubsection.5.9.3.3}%
-\contentsline {subsubsection}{\numberline {5.9.3.4}checkUser()}{28}{subsubsection.5.9.3.4}%
-\contentsline {subsubsection}{\numberline {5.9.3.5}connectToServer()}{29}{subsubsection.5.9.3.5}%
-\contentsline {subsubsection}{\numberline {5.9.3.6}createOrder()}{29}{subsubsection.5.9.3.6}%
-\contentsline {subsubsection}{\numberline {5.9.3.7}getFoodPopularity()}{29}{subsubsection.5.9.3.7}%
-\contentsline {subsubsection}{\numberline {5.9.3.8}getFoods()}{30}{subsubsection.5.9.3.8}%
-\contentsline {subsubsection}{\numberline {5.9.3.9}getLowStockWarning()}{30}{subsubsection.5.9.3.9}%
-\contentsline {subsubsection}{\numberline {5.9.3.10}getProducts()}{30}{subsubsection.5.9.3.10}%
-\contentsline {subsubsection}{\numberline {5.9.3.11}getReportRevenue()}{30}{subsubsection.5.9.3.11}%
-\contentsline {subsubsection}{\numberline {5.9.3.12}getRevenueByDay()}{31}{subsubsection.5.9.3.12}%
-\contentsline {subsubsection}{\numberline {5.9.3.13}getUserId()}{31}{subsubsection.5.9.3.13}%
-\contentsline {subsubsection}{\numberline {5.9.3.14}getUserName()}{31}{subsubsection.5.9.3.14}%
-\contentsline {subsubsection}{\numberline {5.9.3.15}getUserRole()}{31}{subsubsection.5.9.3.15}%
-\contentsline {subsubsection}{\numberline {5.9.3.16}isConnected()}{31}{subsubsection.5.9.3.16}%
-\contentsline {subsubsection}{\numberline {5.9.3.17}pingServer()}{32}{subsubsection.5.9.3.17}%
-\contentsline {subsubsection}{\numberline {5.9.3.18}reconnect()}{32}{subsubsection.5.9.3.18}%
-\contentsline {subsubsection}{\numberline {5.9.3.19}returnIngredients()}{32}{subsubsection.5.9.3.19}%
-\contentsline {subsubsection}{\numberline {5.9.3.20}saveReportToCSV()}{32}{subsubsection.5.9.3.20}%
-\contentsline {subsubsection}{\numberline {5.9.3.21}updateProductQuantity()}{33}{subsubsection.5.9.3.21}%
-\contentsline {section}{\numberline {5.10}Tcp\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Server Class Reference}{33}{section.5.10}%
-\contentsline {subsection}{\numberline {5.10.1}Detailed Description}{34}{subsection.5.10.1}%
-\contentsline {subsection}{\numberline {5.10.2}Constructor \& Destructor Documentation}{34}{subsection.5.10.2}%
-\contentsline {subsubsection}{\numberline {5.10.2.1}TcpServer()}{34}{subsubsection.5.10.2.1}%
-\contentsline {subsection}{\numberline {5.10.3}Member Function Documentation}{34}{subsection.5.10.3}%
-\contentsline {subsubsection}{\numberline {5.10.3.1}start()}{34}{subsubsection.5.10.3.1}%
-\contentsline {section}{\numberline {5.11}Validate\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ex Class Reference}{34}{section.5.11}%
-\contentsline {subsection}{\numberline {5.11.1}Detailed Description}{35}{subsection.5.11.1}%
-\contentsline {chapter}{\numberline {6}File Documentation}{37}{chapter.6}%
-\contentsline {section}{\numberline {6.1}dbworker.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{37}{section.6.1}%
-\contentsline {section}{\numberline {6.2}exceptions.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{38}{section.6.2}%
-\contentsline {section}{\numberline {6.3}logs.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{38}{section.6.3}%
-\contentsline {section}{\numberline {6.4}settings.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{39}{section.6.4}%
-\contentsline {section}{\numberline {6.5}tcpclient.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{40}{section.6.5}%
-\contentsline {section}{\numberline {6.6}tcpserver.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{41}{section.6.6}%
+\contentsline {section}{\numberline {1.9}Контакты}{7}{section.1.9}%
+\contentsline {chapter}{\numberline {2}Иерархический список классов}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Иерархия классов}{9}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Алфавитный указатель классов}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Классы}{11}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Список файлов}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Файлы}{13}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Классы}{15}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Класс Client\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Connection}{15}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Подробное описание}{15}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Конструктор(ы)}{15}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}ClientConnection()}{15}{subsubsection.5.1.2.1}%
+\contentsline {subsubsection}{\numberline {5.1.2.2}$\sim $ClientConnection()}{16}{subsubsection.5.1.2.2}%
+\contentsline {section}{\numberline {5.2}Класс Database\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ex}{16}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Подробное описание}{16}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Конструктор(ы)}{16}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}DatabaseEx()}{16}{subsubsection.5.2.2.1}%
+\contentsline {section}{\numberline {5.3}Класс DBWorker}{16}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Подробное описание}{18}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Конструктор(ы)}{18}{subsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}DBWorker()}{18}{subsubsection.5.3.2.1}%
+\contentsline {subsubsection}{\numberline {5.3.2.2}$\sim $DBWorker()}{19}{subsubsection.5.3.2.2}%
+\contentsline {subsection}{\numberline {5.3.3}Методы}{19}{subsection.5.3.3}%
+\contentsline {subsubsection}{\numberline {5.3.3.1}addOrderItem()}{19}{subsubsection.5.3.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.3.2}addProductQuantity()}{19}{subsubsection.5.3.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.3.3}checkAndConsume()}{20}{subsubsection.5.3.3.3}%
+\contentsline {subsubsection}{\numberline {5.3.3.4}checkUser()}{20}{subsubsection.5.3.3.4}%
+\contentsline {subsubsection}{\numberline {5.3.3.5}closeOrder()}{20}{subsubsection.5.3.3.5}%
+\contentsline {subsubsection}{\numberline {5.3.3.6}createOrder()}{21}{subsubsection.5.3.3.6}%
+\contentsline {subsubsection}{\numberline {5.3.3.7}generateOrderNumber()}{21}{subsubsection.5.3.3.7}%
+\contentsline {subsubsection}{\numberline {5.3.3.8}getAllOrdersForReport()}{21}{subsubsection.5.3.3.8}%
+\contentsline {subsubsection}{\numberline {5.3.3.9}getCheckByOrderId()}{21}{subsubsection.5.3.3.9}%
+\contentsline {subsubsection}{\numberline {5.3.3.10}getChecksByDateRange()}{22}{subsubsection.5.3.3.10}%
+\contentsline {subsubsection}{\numberline {5.3.3.11}getClosedOrders()}{22}{subsubsection.5.3.3.11}%
+\contentsline {subsubsection}{\numberline {5.3.3.12}getDishesList()}{22}{subsubsection.5.3.3.12}%
+\contentsline {subsubsection}{\numberline {5.3.3.13}getFoodPopularity()}{22}{subsubsection.5.3.3.13}%
+\contentsline {subsubsection}{\numberline {5.3.3.14}getFoods()}{22}{subsubsection.5.3.3.14}%
+\contentsline {subsubsection}{\numberline {5.3.3.15}getLocalIps()}{23}{subsubsection.5.3.3.15}%
+\contentsline {subsubsection}{\numberline {5.3.3.16}getLowStockWarning()}{23}{subsubsection.5.3.3.16}%
+\contentsline {subsubsection}{\numberline {5.3.3.17}getOrderItems()}{23}{subsubsection.5.3.3.17}%
+\contentsline {subsubsection}{\numberline {5.3.3.18}getOrders()}{23}{subsubsection.5.3.3.18}%
+\contentsline {subsubsection}{\numberline {5.3.3.19}getProducts()}{24}{subsubsection.5.3.3.19}%
+\contentsline {subsubsection}{\numberline {5.3.3.20}getReportLowStock()}{24}{subsubsection.5.3.3.20}%
+\contentsline {subsubsection}{\numberline {5.3.3.21}getReportRevenue()}{24}{subsubsection.5.3.3.21}%
+\contentsline {subsubsection}{\numberline {5.3.3.22}getRevenueByDay()}{24}{subsubsection.5.3.3.22}%
+\contentsline {subsubsection}{\numberline {5.3.3.23}getUserId()}{25}{subsubsection.5.3.3.23}%
+\contentsline {subsubsection}{\numberline {5.3.3.24}getUserName()}{25}{subsubsection.5.3.3.24}%
+\contentsline {subsubsection}{\numberline {5.3.3.25}getUserRole()}{25}{subsubsection.5.3.3.25}%
+\contentsline {subsubsection}{\numberline {5.3.3.26}getWaitersList()}{25}{subsubsection.5.3.3.26}%
+\contentsline {subsubsection}{\numberline {5.3.3.27}pingServer()}{25}{subsubsection.5.3.3.27}%
+\contentsline {subsubsection}{\numberline {5.3.3.28}reconnect()}{25}{subsubsection.5.3.3.28}%
+\contentsline {subsubsection}{\numberline {5.3.3.29}refreshAllFoodsAvailability()}{26}{subsubsection.5.3.3.29}%
+\contentsline {subsubsection}{\numberline {5.3.3.30}returnIngredients()}{26}{subsubsection.5.3.3.30}%
+\contentsline {subsubsection}{\numberline {5.3.3.31}saveReportToCSV()}{26}{subsubsection.5.3.3.31}%
+\contentsline {subsubsection}{\numberline {5.3.3.32}syncOrderItems()}{27}{subsubsection.5.3.3.32}%
+\contentsline {subsubsection}{\numberline {5.3.3.33}updateConnectionParams()}{27}{subsubsection.5.3.3.33}%
+\contentsline {subsubsection}{\numberline {5.3.3.34}updateOrderStatus()}{27}{subsubsection.5.3.3.34}%
+\contentsline {subsubsection}{\numberline {5.3.3.35}updateProductQuantity()}{28}{subsubsection.5.3.3.35}%
+\contentsline {section}{\numberline {5.4}Класс Exceptions}{28}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Подробное описание}{28}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Конструктор(ы)}{29}{subsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.1}Exceptions()}{29}{subsubsection.5.4.2.1}%
+\contentsline {subsection}{\numberline {5.4.3}Методы}{29}{subsection.5.4.3}%
+\contentsline {subsubsection}{\numberline {5.4.3.1}what()}{29}{subsubsection.5.4.3.1}%
+\contentsline {section}{\numberline {5.5}Класс File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ex}{29}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Подробное описание}{29}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Конструктор(ы)}{29}{subsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.2.1}FileEx()}{29}{subsubsection.5.5.2.1}%
+\contentsline {section}{\numberline {5.6}Класс Logs}{30}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Подробное описание}{30}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Конструктор(ы)}{30}{subsection.5.6.2}%
+\contentsline {subsubsection}{\numberline {5.6.2.1}Logs()}{30}{subsubsection.5.6.2.1}%
+\contentsline {subsubsection}{\numberline {5.6.2.2}$\sim $Logs()}{30}{subsubsection.5.6.2.2}%
+\contentsline {subsection}{\numberline {5.6.3}Методы}{30}{subsection.5.6.3}%
+\contentsline {subsubsection}{\numberline {5.6.3.1}error()}{30}{subsubsection.5.6.3.1}%
+\contentsline {subsubsection}{\numberline {5.6.3.2}info()}{30}{subsubsection.5.6.3.2}%
+\contentsline {subsubsection}{\numberline {5.6.3.3}setLogPath()}{31}{subsubsection.5.6.3.3}%
+\contentsline {subsubsection}{\numberline {5.6.3.4}warning()}{31}{subsubsection.5.6.3.4}%
+\contentsline {section}{\numberline {5.7}Класс Network\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ex}{31}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Подробное описание}{31}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Конструктор(ы)}{31}{subsection.5.7.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.1}NetworkEx()}{31}{subsubsection.5.7.2.1}%
+\contentsline {section}{\numberline {5.8}Класс Settings}{32}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Подробное описание}{33}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}Конструктор(ы)}{33}{subsection.5.8.2}%
+\contentsline {subsubsection}{\numberline {5.8.2.1}Settings()}{33}{subsubsection.5.8.2.1}%
+\contentsline {subsection}{\numberline {5.8.3}Методы}{33}{subsection.5.8.3}%
+\contentsline {subsubsection}{\numberline {5.8.3.1}dbHost()}{33}{subsubsection.5.8.3.1}%
+\contentsline {subsubsection}{\numberline {5.8.3.2}dbName()}{33}{subsubsection.5.8.3.2}%
+\contentsline {subsubsection}{\numberline {5.8.3.3}dbPassword()}{34}{subsubsection.5.8.3.3}%
+\contentsline {subsubsection}{\numberline {5.8.3.4}dbPort()}{34}{subsubsection.5.8.3.4}%
+\contentsline {subsubsection}{\numberline {5.8.3.5}dbUser()}{34}{subsubsection.5.8.3.5}%
+\contentsline {subsubsection}{\numberline {5.8.3.6}isServerMode()}{34}{subsubsection.5.8.3.6}%
+\contentsline {subsubsection}{\numberline {5.8.3.7}load()}{34}{subsubsection.5.8.3.7}%
+\contentsline {subsubsection}{\numberline {5.8.3.8}logPath()}{34}{subsubsection.5.8.3.8}%
+\contentsline {subsubsection}{\numberline {5.8.3.9}reportsPath()}{34}{subsubsection.5.8.3.9}%
+\contentsline {subsubsection}{\numberline {5.8.3.10}save()}{34}{subsubsection.5.8.3.10}%
+\contentsline {subsubsection}{\numberline {5.8.3.11}serverHost()}{34}{subsubsection.5.8.3.11}%
+\contentsline {subsubsection}{\numberline {5.8.3.12}serverPort()}{34}{subsubsection.5.8.3.12}%
+\contentsline {subsubsection}{\numberline {5.8.3.13}setDbHost()}{34}{subsubsection.5.8.3.13}%
+\contentsline {subsubsection}{\numberline {5.8.3.14}setDbName()}{35}{subsubsection.5.8.3.14}%
+\contentsline {subsubsection}{\numberline {5.8.3.15}setDbPassword()}{35}{subsubsection.5.8.3.15}%
+\contentsline {subsubsection}{\numberline {5.8.3.16}setDbPort()}{35}{subsubsection.5.8.3.16}%
+\contentsline {subsubsection}{\numberline {5.8.3.17}setDbUser()}{35}{subsubsection.5.8.3.17}%
+\contentsline {subsubsection}{\numberline {5.8.3.18}setIsServerMode()}{35}{subsubsection.5.8.3.18}%
+\contentsline {subsubsection}{\numberline {5.8.3.19}setLogPath()}{35}{subsubsection.5.8.3.19}%
+\contentsline {subsubsection}{\numberline {5.8.3.20}setReportsPath()}{35}{subsubsection.5.8.3.20}%
+\contentsline {subsubsection}{\numberline {5.8.3.21}setServerHost()}{35}{subsubsection.5.8.3.21}%
+\contentsline {subsubsection}{\numberline {5.8.3.22}setServerPort()}{35}{subsubsection.5.8.3.22}%
+\contentsline {subsection}{\numberline {5.8.4}Полный список свойств}{36}{subsection.5.8.4}%
+\contentsline {subsubsection}{\numberline {5.8.4.1}dbHost}{36}{subsubsection.5.8.4.1}%
+\contentsline {subsubsection}{\numberline {5.8.4.2}dbName}{36}{subsubsection.5.8.4.2}%
+\contentsline {subsubsection}{\numberline {5.8.4.3}dbPassword}{36}{subsubsection.5.8.4.3}%
+\contentsline {subsubsection}{\numberline {5.8.4.4}dbPort}{36}{subsubsection.5.8.4.4}%
+\contentsline {subsubsection}{\numberline {5.8.4.5}dbUser}{36}{subsubsection.5.8.4.5}%
+\contentsline {subsubsection}{\numberline {5.8.4.6}isServerMode}{36}{subsubsection.5.8.4.6}%
+\contentsline {subsubsection}{\numberline {5.8.4.7}logPath}{36}{subsubsection.5.8.4.7}%
+\contentsline {subsubsection}{\numberline {5.8.4.8}reportsPath}{36}{subsubsection.5.8.4.8}%
+\contentsline {subsubsection}{\numberline {5.8.4.9}serverHost}{36}{subsubsection.5.8.4.9}%
+\contentsline {subsubsection}{\numberline {5.8.4.10}serverPort}{36}{subsubsection.5.8.4.10}%
+\contentsline {section}{\numberline {5.9}Класс Tcp\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Client}{36}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Подробное описание}{38}{subsection.5.9.1}%
+\contentsline {subsection}{\numberline {5.9.2}Конструктор(ы)}{38}{subsection.5.9.2}%
+\contentsline {subsubsection}{\numberline {5.9.2.1}TcpClient()}{38}{subsubsection.5.9.2.1}%
+\contentsline {subsubsection}{\numberline {5.9.2.2}$\sim $TcpClient()}{39}{subsubsection.5.9.2.2}%
+\contentsline {subsection}{\numberline {5.9.3}Методы}{39}{subsection.5.9.3}%
+\contentsline {subsubsection}{\numberline {5.9.3.1}addOrderItem()}{39}{subsubsection.5.9.3.1}%
+\contentsline {subsubsection}{\numberline {5.9.3.2}addProductQuantity()}{39}{subsubsection.5.9.3.2}%
+\contentsline {subsubsection}{\numberline {5.9.3.3}checkAndConsume()}{40}{subsubsection.5.9.3.3}%
+\contentsline {subsubsection}{\numberline {5.9.3.4}checkUser()}{40}{subsubsection.5.9.3.4}%
+\contentsline {subsubsection}{\numberline {5.9.3.5}closeOrder()}{40}{subsubsection.5.9.3.5}%
+\contentsline {subsubsection}{\numberline {5.9.3.6}connectToServer()}{41}{subsubsection.5.9.3.6}%
+\contentsline {subsubsection}{\numberline {5.9.3.7}createOrder()}{41}{subsubsection.5.9.3.7}%
+\contentsline {subsubsection}{\numberline {5.9.3.8}disconnectFromServer()}{41}{subsubsection.5.9.3.8}%
+\contentsline {subsubsection}{\numberline {5.9.3.9}getCheckByOrderId()}{41}{subsubsection.5.9.3.9}%
+\contentsline {subsubsection}{\numberline {5.9.3.10}getClosedOrders()}{42}{subsubsection.5.9.3.10}%
+\contentsline {subsubsection}{\numberline {5.9.3.11}getDishesList()}{42}{subsubsection.5.9.3.11}%
+\contentsline {subsubsection}{\numberline {5.9.3.12}getFoodPopularity()}{42}{subsubsection.5.9.3.12}%
+\contentsline {subsubsection}{\numberline {5.9.3.13}getFoods()}{42}{subsubsection.5.9.3.13}%
+\contentsline {subsubsection}{\numberline {5.9.3.14}getLocalIps()}{42}{subsubsection.5.9.3.14}%
+\contentsline {subsubsection}{\numberline {5.9.3.15}getLowStockWarning()}{43}{subsubsection.5.9.3.15}%
+\contentsline {subsubsection}{\numberline {5.9.3.16}getOrderItems()}{43}{subsubsection.5.9.3.16}%
+\contentsline {subsubsection}{\numberline {5.9.3.17}getOrders()}{43}{subsubsection.5.9.3.17}%
+\contentsline {subsubsection}{\numberline {5.9.3.18}getProducts()}{43}{subsubsection.5.9.3.18}%
+\contentsline {subsubsection}{\numberline {5.9.3.19}getReportLowStock()}{44}{subsubsection.5.9.3.19}%
+\contentsline {subsubsection}{\numberline {5.9.3.20}getReportRevenue()}{44}{subsubsection.5.9.3.20}%
+\contentsline {subsubsection}{\numberline {5.9.3.21}getRevenueByDay()}{44}{subsubsection.5.9.3.21}%
+\contentsline {subsubsection}{\numberline {5.9.3.22}getUserId()}{45}{subsubsection.5.9.3.22}%
+\contentsline {subsubsection}{\numberline {5.9.3.23}getUserName()}{45}{subsubsection.5.9.3.23}%
+\contentsline {subsubsection}{\numberline {5.9.3.24}getUserRole()}{45}{subsubsection.5.9.3.24}%
+\contentsline {subsubsection}{\numberline {5.9.3.25}getWaitersList()}{45}{subsubsection.5.9.3.25}%
+\contentsline {subsubsection}{\numberline {5.9.3.26}isConnected()}{45}{subsubsection.5.9.3.26}%
+\contentsline {subsubsection}{\numberline {5.9.3.27}pingServer()}{45}{subsubsection.5.9.3.27}%
+\contentsline {subsubsection}{\numberline {5.9.3.28}reconnect()}{46}{subsubsection.5.9.3.28}%
+\contentsline {subsubsection}{\numberline {5.9.3.29}returnIngredients()}{46}{subsubsection.5.9.3.29}%
+\contentsline {subsubsection}{\numberline {5.9.3.30}saveReportToCSV()}{46}{subsubsection.5.9.3.30}%
+\contentsline {subsubsection}{\numberline {5.9.3.31}syncOrderItems()}{47}{subsubsection.5.9.3.31}%
+\contentsline {subsubsection}{\numberline {5.9.3.32}updateOrderStatus()}{47}{subsubsection.5.9.3.32}%
+\contentsline {subsubsection}{\numberline {5.9.3.33}updateProductQuantity()}{47}{subsubsection.5.9.3.33}%
+\contentsline {section}{\numberline {5.10}Класс Tcp\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Server}{48}{section.5.10}%
+\contentsline {subsection}{\numberline {5.10.1}Подробное описание}{48}{subsection.5.10.1}%
+\contentsline {subsection}{\numberline {5.10.2}Конструктор(ы)}{48}{subsection.5.10.2}%
+\contentsline {subsubsection}{\numberline {5.10.2.1}TcpServer()}{48}{subsubsection.5.10.2.1}%
+\contentsline {subsubsection}{\numberline {5.10.2.2}$\sim $TcpServer()}{49}{subsubsection.5.10.2.2}%
+\contentsline {subsection}{\numberline {5.10.3}Методы}{49}{subsection.5.10.3}%
+\contentsline {subsubsection}{\numberline {5.10.3.1}start()}{49}{subsubsection.5.10.3.1}%
+\contentsline {subsubsection}{\numberline {5.10.3.2}stop()}{49}{subsubsection.5.10.3.2}%
+\contentsline {section}{\numberline {5.11}Класс Validate\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ex}{49}{section.5.11}%
+\contentsline {subsection}{\numberline {5.11.1}Подробное описание}{49}{subsection.5.11.1}%
+\contentsline {subsection}{\numberline {5.11.2}Конструктор(ы)}{50}{subsection.5.11.2}%
+\contentsline {subsubsection}{\numberline {5.11.2.1}ValidateEx()}{50}{subsubsection.5.11.2.1}%
+\contentsline {chapter}{\numberline {6}Файлы}{51}{chapter.6}%
+\contentsline {section}{\numberline {6.1}dbworker.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{51}{section.6.1}%
+\contentsline {section}{\numberline {6.2}exceptions.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{52}{section.6.2}%
+\contentsline {section}{\numberline {6.3}logs.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{53}{section.6.3}%
+\contentsline {section}{\numberline {6.4}settings.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{53}{section.6.4}%
+\contentsline {section}{\numberline {6.5}tcpclient.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{54}{section.6.5}%
+\contentsline {section}{\numberline {6.6}tcpserver.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{56}{section.6.6}%
+\contentsline {section}{\numberline {6.7}dbworker.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{56}{section.6.7}%
+\contentsline {section}{\numberline {6.8}exceptions.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{72}{section.6.8}%
+\contentsline {section}{\numberline {6.9}logs.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{72}{section.6.9}%
+\contentsline {section}{\numberline {6.10}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{73}{section.6.10}%
+\contentsline {section}{\numberline {6.11}settings.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{74}{section.6.11}%
+\contentsline {section}{\numberline {6.12}tcpclient.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{75}{section.6.12}%
+\contentsline {section}{\numberline {6.13}tcpserver.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{84}{section.6.13}%

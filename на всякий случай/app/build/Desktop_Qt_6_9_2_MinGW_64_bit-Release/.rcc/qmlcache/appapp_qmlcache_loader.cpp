@@ -40,6 +40,13 @@ namespace _qt_qml_app_resources_qml_ReportsPage_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _qt_qml_app_resources_qml_ActiveOrdersPage_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 
 }
 namespace {
@@ -59,6 +66,7 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/app/resources/qml/OrderPage.qml"), &QmlCacheGeneratedCode::_qt_qml_app_resources_qml_OrderPage_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/app/resources/qml/StockPage.qml"), &QmlCacheGeneratedCode::_qt_qml_app_resources_qml_StockPage_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/app/resources/qml/ReportsPage.qml"), &QmlCacheGeneratedCode::_qt_qml_app_resources_qml_ReportsPage_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/app/resources/qml/ActiveOrdersPage.qml"), &QmlCacheGeneratedCode::_qt_qml_app_resources_qml_ActiveOrdersPage_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

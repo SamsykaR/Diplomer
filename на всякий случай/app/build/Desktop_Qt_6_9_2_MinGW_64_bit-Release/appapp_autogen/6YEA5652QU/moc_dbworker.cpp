@@ -43,6 +43,7 @@ template <> constexpr inline auto DBWorker::qt_create_metaobjectdata<qt_meta_tag
         "",
         "message",
         "foodAvailabilityChanged",
+        "ordersChanged",
         "checkUser",
         "login",
         "password",
@@ -91,7 +92,22 @@ template <> constexpr inline auto DBWorker::qt_create_metaobjectdata<qt_meta_tag
         "getLowStockWarning",
         "saveReportToCSV",
         "reportType",
-        "fileName"
+        "fileName",
+        "getOrders",
+        "status",
+        "updateOrderStatus",
+        "newStatus",
+        "getOrderItems",
+        "closeOrder",
+        "totalSum",
+        "items",
+        "getCheckByOrderId",
+        "getAllOrdersForReport",
+        "syncOrderItems",
+        "newItems",
+        "getClosedOrders",
+        "updateConnectionParams",
+        "getChecksByDateRange"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -101,85 +117,126 @@ template <> constexpr inline auto DBWorker::qt_create_metaobjectdata<qt_meta_tag
         }}),
         // Signal 'foodAvailabilityChanged'
         QtMocHelpers::SignalData<void()>(4, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'ordersChanged'
+        QtMocHelpers::SignalData<void()>(5, 2, QMC::AccessPublic, QMetaType::Void),
         // Method 'checkUser'
-        QtMocHelpers::MethodData<bool(const QString &, const QString &)>(5, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 6 }, { QMetaType::QString, 7 },
+        QtMocHelpers::MethodData<bool(const QString &, const QString &)>(6, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 7 }, { QMetaType::QString, 8 },
         }}),
         // Method 'getUserName'
-        QtMocHelpers::MethodData<QString() const>(8, 2, QMC::AccessPublic, QMetaType::QString),
-        // Method 'getUserRole'
         QtMocHelpers::MethodData<QString() const>(9, 2, QMC::AccessPublic, QMetaType::QString),
+        // Method 'getUserRole'
+        QtMocHelpers::MethodData<QString() const>(10, 2, QMC::AccessPublic, QMetaType::QString),
         // Method 'getUserId'
-        QtMocHelpers::MethodData<int() const>(10, 2, QMC::AccessPublic, QMetaType::Int),
+        QtMocHelpers::MethodData<int() const>(11, 2, QMC::AccessPublic, QMetaType::Int),
         // Method 'checkAndConsume'
-        QtMocHelpers::MethodData<bool(int, int)>(11, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::Int, 12 }, { QMetaType::Int, 13 },
+        QtMocHelpers::MethodData<bool(int, int)>(12, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::Int, 13 }, { QMetaType::Int, 14 },
         }}),
         // Method 'returnIngredients'
-        QtMocHelpers::MethodData<bool(int, int)>(14, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::Int, 12 }, { QMetaType::Int, 13 },
+        QtMocHelpers::MethodData<bool(int, int)>(15, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::Int, 13 }, { QMetaType::Int, 14 },
         }}),
         // Method 'refreshAllFoodsAvailability'
-        QtMocHelpers::MethodData<bool()>(15, 2, QMC::AccessPublic, QMetaType::Bool),
+        QtMocHelpers::MethodData<bool()>(16, 2, QMC::AccessPublic, QMetaType::Bool),
         // Method 'reconnect'
-        QtMocHelpers::MethodData<bool(const QString &, int, const QString &, const QString &, const QString &)>(16, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 17 }, { QMetaType::Int, 18 }, { QMetaType::QString, 19 }, { QMetaType::QString, 20 },
-            { QMetaType::QString, 7 },
+        QtMocHelpers::MethodData<bool(const QString &, int, const QString &, const QString &, const QString &)>(17, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 18 }, { QMetaType::Int, 19 }, { QMetaType::QString, 20 }, { QMetaType::QString, 21 },
+            { QMetaType::QString, 8 },
         }}),
         // Method 'getLocalIps'
-        QtMocHelpers::MethodData<QStringList()>(21, 2, QMC::AccessPublic, QMetaType::QStringList),
+        QtMocHelpers::MethodData<QStringList()>(22, 2, QMC::AccessPublic, QMetaType::QStringList),
         // Method 'pingServer'
-        QtMocHelpers::MethodData<bool(const QString &, int)>(22, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 17 }, { QMetaType::Int, 18 },
+        QtMocHelpers::MethodData<bool(const QString &, int)>(23, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 18 }, { QMetaType::Int, 19 },
         }}),
         // Method 'getFoods'
-        QtMocHelpers::MethodData<QVariantList()>(23, 2, QMC::AccessPublic, 0x80000000 | 24),
+        QtMocHelpers::MethodData<QVariantList()>(24, 2, QMC::AccessPublic, 0x80000000 | 25),
         // Method 'getProducts'
-        QtMocHelpers::MethodData<QVariantList()>(25, 2, QMC::AccessPublic, 0x80000000 | 24),
+        QtMocHelpers::MethodData<QVariantList()>(26, 2, QMC::AccessPublic, 0x80000000 | 25),
         // Method 'getDishesList'
-        QtMocHelpers::MethodData<QVariantList()>(26, 2, QMC::AccessPublic, 0x80000000 | 24),
+        QtMocHelpers::MethodData<QVariantList()>(27, 2, QMC::AccessPublic, 0x80000000 | 25),
         // Method 'getWaitersList'
-        QtMocHelpers::MethodData<QVariantList()>(27, 2, QMC::AccessPublic, 0x80000000 | 24),
+        QtMocHelpers::MethodData<QVariantList()>(28, 2, QMC::AccessPublic, 0x80000000 | 25),
         // Method 'updateProductQuantity'
-        QtMocHelpers::MethodData<bool(int, int)>(28, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::Int, 29 }, { QMetaType::Int, 30 },
+        QtMocHelpers::MethodData<bool(int, int)>(29, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::Int, 30 }, { QMetaType::Int, 31 },
         }}),
         // Method 'addProductQuantity'
-        QtMocHelpers::MethodData<bool(int, int)>(31, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::Int, 29 }, { QMetaType::Int, 32 },
+        QtMocHelpers::MethodData<bool(int, int)>(32, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::Int, 30 }, { QMetaType::Int, 33 },
         }}),
         // Method 'createOrder'
-        QtMocHelpers::MethodData<int(int, int, const QString &, double)>(33, 2, QMC::AccessPublic, QMetaType::Int, {{
-            { QMetaType::Int, 34 }, { QMetaType::Int, 35 }, { QMetaType::QString, 36 }, { QMetaType::Double, 37 },
+        QtMocHelpers::MethodData<int(int, int, const QString &, double)>(34, 2, QMC::AccessPublic, QMetaType::Int, {{
+            { QMetaType::Int, 35 }, { QMetaType::Int, 36 }, { QMetaType::QString, 37 }, { QMetaType::Double, 38 },
         }}),
         // Method 'addOrderItem'
-        QtMocHelpers::MethodData<bool(int, int, int, double)>(38, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::Int, 39 }, { QMetaType::Int, 12 }, { QMetaType::Int, 13 }, { QMetaType::Double, 40 },
+        QtMocHelpers::MethodData<bool(int, int, int, double)>(39, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::Int, 40 }, { QMetaType::Int, 13 }, { QMetaType::Int, 14 }, { QMetaType::Double, 41 },
         }}),
         // Method 'getReportRevenue'
-        QtMocHelpers::MethodData<QVariantMap(const QString &, const QString &, int, int, int)>(41, 2, QMC::AccessPublic, 0x80000000 | 42, {{
-            { QMetaType::QString, 43 }, { QMetaType::QString, 44 }, { QMetaType::Int, 45 }, { QMetaType::Int, 34 },
-            { QMetaType::Int, 46 },
+        QtMocHelpers::MethodData<QVariantMap(const QString &, const QString &, int, int, int)>(42, 2, QMC::AccessPublic, 0x80000000 | 43, {{
+            { QMetaType::QString, 44 }, { QMetaType::QString, 45 }, { QMetaType::Int, 46 }, { QMetaType::Int, 35 },
+            { QMetaType::Int, 47 },
         }}),
         // Method 'getRevenueByDay'
-        QtMocHelpers::MethodData<QVariantList(const QString &, const QString &, int, int, int)>(47, 2, QMC::AccessPublic, 0x80000000 | 24, {{
-            { QMetaType::QString, 43 }, { QMetaType::QString, 44 }, { QMetaType::Int, 45 }, { QMetaType::Int, 34 },
-            { QMetaType::Int, 46 },
+        QtMocHelpers::MethodData<QVariantList(const QString &, const QString &, int, int, int)>(48, 2, QMC::AccessPublic, 0x80000000 | 25, {{
+            { QMetaType::QString, 44 }, { QMetaType::QString, 45 }, { QMetaType::Int, 46 }, { QMetaType::Int, 35 },
+            { QMetaType::Int, 47 },
         }}),
         // Method 'getFoodPopularity'
-        QtMocHelpers::MethodData<QVariantList(const QString &, const QString &)>(48, 2, QMC::AccessPublic, 0x80000000 | 24, {{
-            { QMetaType::QString, 43 }, { QMetaType::QString, 44 },
+        QtMocHelpers::MethodData<QVariantList(const QString &, const QString &)>(49, 2, QMC::AccessPublic, 0x80000000 | 25, {{
+            { QMetaType::QString, 44 }, { QMetaType::QString, 45 },
         }}),
         // Method 'getReportLowStock'
-        QtMocHelpers::MethodData<QVariantList()>(49, 2, QMC::AccessPublic, 0x80000000 | 24),
+        QtMocHelpers::MethodData<QVariantList()>(50, 2, QMC::AccessPublic, 0x80000000 | 25),
         // Method 'getLowStockWarning'
-        QtMocHelpers::MethodData<QVariantList(int, int)>(50, 2, QMC::AccessPublic, 0x80000000 | 24, {{
-            { QMetaType::Int, 12 }, { QMetaType::Int, 13 },
+        QtMocHelpers::MethodData<QVariantList(int, int)>(51, 2, QMC::AccessPublic, 0x80000000 | 25, {{
+            { QMetaType::Int, 13 }, { QMetaType::Int, 14 },
         }}),
         // Method 'saveReportToCSV'
-        QtMocHelpers::MethodData<bool(const QString &, const QString &, const QString &, int, int, int, const QString &)>(51, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 52 }, { QMetaType::QString, 43 }, { QMetaType::QString, 44 }, { QMetaType::Int, 45 },
-            { QMetaType::Int, 34 }, { QMetaType::Int, 46 }, { QMetaType::QString, 53 },
+        QtMocHelpers::MethodData<bool(const QString &, const QString &, const QString &, int, int, int, const QString &)>(52, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 53 }, { QMetaType::QString, 44 }, { QMetaType::QString, 45 }, { QMetaType::Int, 46 },
+            { QMetaType::Int, 35 }, { QMetaType::Int, 47 }, { QMetaType::QString, 54 },
+        }}),
+        // Method 'getOrders'
+        QtMocHelpers::MethodData<QVariantList(const QString &)>(55, 2, QMC::AccessPublic, 0x80000000 | 25, {{
+            { QMetaType::QString, 56 },
+        }}),
+        // Method 'getOrders'
+        QtMocHelpers::MethodData<QVariantList()>(55, 2, QMC::AccessPublic | QMC::MethodCloned, 0x80000000 | 25),
+        // Method 'updateOrderStatus'
+        QtMocHelpers::MethodData<bool(int, const QString &)>(57, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::Int, 40 }, { QMetaType::QString, 58 },
+        }}),
+        // Method 'getOrderItems'
+        QtMocHelpers::MethodData<QVariantList(int)>(59, 2, QMC::AccessPublic, 0x80000000 | 25, {{
+            { QMetaType::Int, 40 },
+        }}),
+        // Method 'closeOrder'
+        QtMocHelpers::MethodData<bool(int, double, const QVariantList &)>(60, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::Int, 40 }, { QMetaType::Double, 61 }, { 0x80000000 | 25, 62 },
+        }}),
+        // Method 'getCheckByOrderId'
+        QtMocHelpers::MethodData<QVariantMap(int)>(63, 2, QMC::AccessPublic, 0x80000000 | 43, {{
+            { QMetaType::Int, 40 },
+        }}),
+        // Method 'getAllOrdersForReport'
+        QtMocHelpers::MethodData<QVariantList()>(64, 2, QMC::AccessPublic, 0x80000000 | 25),
+        // Method 'syncOrderItems'
+        QtMocHelpers::MethodData<bool(int, const QVariantList &)>(65, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::Int, 40 }, { 0x80000000 | 25, 66 },
+        }}),
+        // Method 'getClosedOrders'
+        QtMocHelpers::MethodData<QVariantList()>(67, 2, QMC::AccessPublic, 0x80000000 | 25),
+        // Method 'updateConnectionParams'
+        QtMocHelpers::MethodData<void(const QString &, int, const QString &, const QString &, const QString &)>(68, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 18 }, { QMetaType::Int, 19 }, { QMetaType::QString, 20 }, { QMetaType::QString, 21 },
+            { QMetaType::QString, 8 },
+        }}),
+        // Method 'getChecksByDateRange'
+        QtMocHelpers::MethodData<QVariantList(const QString &, const QString &)>(69, 2, QMC::AccessPublic, 0x80000000 | 25, {{
+            { QMetaType::QString, 44 }, { QMetaType::QString, 45 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -206,54 +263,76 @@ void DBWorker::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         switch (_id) {
         case 0: _t->errorOccurred((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 1: _t->foodAvailabilityChanged(); break;
-        case 2: { bool _r = _t->checkUser((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
+        case 2: _t->ordersChanged(); break;
+        case 3: { bool _r = _t->checkUser((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 3: { QString _r = _t->getUserName();
+        case 4: { QString _r = _t->getUserName();
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
-        case 4: { QString _r = _t->getUserRole();
+        case 5: { QString _r = _t->getUserRole();
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
-        case 5: { int _r = _t->getUserId();
+        case 6: { int _r = _t->getUserId();
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
-        case 6: { bool _r = _t->checkAndConsume((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])));
+        case 7: { bool _r = _t->checkAndConsume((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 7: { bool _r = _t->returnIngredients((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])));
+        case 8: { bool _r = _t->returnIngredients((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 8: { bool _r = _t->refreshAllFoodsAvailability();
+        case 9: { bool _r = _t->refreshAllFoodsAvailability();
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 9: { bool _r = _t->reconnect((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[5])));
+        case 10: { bool _r = _t->reconnect((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[5])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 10: { QStringList _r = _t->getLocalIps();
+        case 11: { QStringList _r = _t->getLocalIps();
             if (_a[0]) *reinterpret_cast< QStringList*>(_a[0]) = std::move(_r); }  break;
-        case 11: { bool _r = _t->pingServer((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])));
+        case 12: { bool _r = _t->pingServer((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 12: { QVariantList _r = _t->getFoods();
+        case 13: { QVariantList _r = _t->getFoods();
             if (_a[0]) *reinterpret_cast< QVariantList*>(_a[0]) = std::move(_r); }  break;
-        case 13: { QVariantList _r = _t->getProducts();
+        case 14: { QVariantList _r = _t->getProducts();
             if (_a[0]) *reinterpret_cast< QVariantList*>(_a[0]) = std::move(_r); }  break;
-        case 14: { QVariantList _r = _t->getDishesList();
+        case 15: { QVariantList _r = _t->getDishesList();
             if (_a[0]) *reinterpret_cast< QVariantList*>(_a[0]) = std::move(_r); }  break;
-        case 15: { QVariantList _r = _t->getWaitersList();
+        case 16: { QVariantList _r = _t->getWaitersList();
             if (_a[0]) *reinterpret_cast< QVariantList*>(_a[0]) = std::move(_r); }  break;
-        case 16: { bool _r = _t->updateProductQuantity((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])));
+        case 17: { bool _r = _t->updateProductQuantity((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 17: { bool _r = _t->addProductQuantity((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])));
+        case 18: { bool _r = _t->addProductQuantity((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 18: { int _r = _t->createOrder((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<double>>(_a[4])));
+        case 19: { int _r = _t->createOrder((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<double>>(_a[4])));
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
-        case 19: { bool _r = _t->addOrderItem((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<double>>(_a[4])));
+        case 20: { bool _r = _t->addOrderItem((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<double>>(_a[4])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 20: { QVariantMap _r = _t->getReportRevenue((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[5])));
+        case 21: { QVariantMap _r = _t->getReportRevenue((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[5])));
             if (_a[0]) *reinterpret_cast< QVariantMap*>(_a[0]) = std::move(_r); }  break;
-        case 21: { QVariantList _r = _t->getRevenueByDay((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[5])));
+        case 22: { QVariantList _r = _t->getRevenueByDay((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[5])));
             if (_a[0]) *reinterpret_cast< QVariantList*>(_a[0]) = std::move(_r); }  break;
-        case 22: { QVariantList _r = _t->getFoodPopularity((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
+        case 23: { QVariantList _r = _t->getFoodPopularity((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
             if (_a[0]) *reinterpret_cast< QVariantList*>(_a[0]) = std::move(_r); }  break;
-        case 23: { QVariantList _r = _t->getReportLowStock();
+        case 24: { QVariantList _r = _t->getReportLowStock();
             if (_a[0]) *reinterpret_cast< QVariantList*>(_a[0]) = std::move(_r); }  break;
-        case 24: { QVariantList _r = _t->getLowStockWarning((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])));
+        case 25: { QVariantList _r = _t->getLowStockWarning((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])));
             if (_a[0]) *reinterpret_cast< QVariantList*>(_a[0]) = std::move(_r); }  break;
-        case 25: { bool _r = _t->saveReportToCSV((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[5])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[6])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[7])));
+        case 26: { bool _r = _t->saveReportToCSV((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[5])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[6])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[7])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 27: { QVariantList _r = _t->getOrders((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QVariantList*>(_a[0]) = std::move(_r); }  break;
+        case 28: { QVariantList _r = _t->getOrders();
+            if (_a[0]) *reinterpret_cast< QVariantList*>(_a[0]) = std::move(_r); }  break;
+        case 29: { bool _r = _t->updateOrderStatus((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 30: { QVariantList _r = _t->getOrderItems((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QVariantList*>(_a[0]) = std::move(_r); }  break;
+        case 31: { bool _r = _t->closeOrder((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<double>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QVariantList>>(_a[3])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 32: { QVariantMap _r = _t->getCheckByOrderId((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QVariantMap*>(_a[0]) = std::move(_r); }  break;
+        case 33: { QVariantList _r = _t->getAllOrdersForReport();
+            if (_a[0]) *reinterpret_cast< QVariantList*>(_a[0]) = std::move(_r); }  break;
+        case 34: { bool _r = _t->syncOrderItems((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QVariantList>>(_a[2])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 35: { QVariantList _r = _t->getClosedOrders();
+            if (_a[0]) *reinterpret_cast< QVariantList*>(_a[0]) = std::move(_r); }  break;
+        case 36: _t->updateConnectionParams((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[5]))); break;
+        case 37: { QVariantList _r = _t->getChecksByDateRange((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
+            if (_a[0]) *reinterpret_cast< QVariantList*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     }
@@ -261,6 +340,8 @@ void DBWorker::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         if (QtMocHelpers::indexOfMethod<void (DBWorker::*)(const QString & )>(_a, &DBWorker::errorOccurred, 0))
             return;
         if (QtMocHelpers::indexOfMethod<void (DBWorker::*)()>(_a, &DBWorker::foodAvailabilityChanged, 1))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (DBWorker::*)()>(_a, &DBWorker::ordersChanged, 2))
             return;
     }
 }
@@ -284,14 +365,14 @@ int DBWorker::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 26)
+        if (_id < 38)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 26;
+        _id -= 38;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 26)
+        if (_id < 38)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 26;
+        _id -= 38;
     }
     return _id;
 }
@@ -306,5 +387,11 @@ void DBWorker::errorOccurred(const QString & _t1)
 void DBWorker::foodAvailabilityChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
+}
+
+// SIGNAL 2
+void DBWorker::ordersChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 2, nullptr);
 }
 QT_WARNING_POP

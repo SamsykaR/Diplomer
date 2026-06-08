@@ -2,6 +2,9 @@
 C:/Users/rodio/Desktop/W/Diplom/app/include/dbworker.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/QFile
+ mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/QJsonArray
+ mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/QJsonDocument
+ mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/QJsonObject
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/QList
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/QMap
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/QObject
@@ -32,6 +35,9 @@ C:/Users/rodio/Desktop/W/Diplom/app/include/dbworker.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qbytearrayalgorithms.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qbytearraylist.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qbytearrayview.h
+ mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qcalendar.h
+ mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qcborcommon.h
+ mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qcborvalue.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qchar.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qcompare.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qcompare_impl.h
@@ -45,7 +51,9 @@ C:/Users/rodio/Desktop/W/Diplom/app/include/dbworker.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qcontiguouscache.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qdarwinhelpers.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qdatastream.h
+ mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qdatetime.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qdebug.h
+ mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qendian.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qexceptionhandling.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qfile.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qfiledevice.h
@@ -63,8 +71,14 @@ C:/Users/rodio/Desktop/W/Diplom/app/include/dbworker.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qiodevicebase.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qiterable.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qiterator.h
+ mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonarray.h
+ mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qjsondocument.h
+ mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonobject.h
+ mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonparseerror.h
+ mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonvalue.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qlatin1stringview.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qlist.h
+ mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qlocale.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qlogging.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qmalloc.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qmap.h
@@ -83,6 +97,7 @@ C:/Users/rodio/Desktop/W/Diplom/app/include/dbworker.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qpair.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qprocessordetection.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qrefcount.h
+ mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qregularexpression.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qscopedpointer.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qscopeguard.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qset.h
@@ -128,7 +143,9 @@ C:/Users/rodio/Desktop/W/Diplom/app/include/dbworker.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qtversionchecks.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qtypeinfo.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qtypes.h
+ mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qurl.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qutf8stringview.h
+ mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/quuid.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qvariant.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qvariantlist.h
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/qvariantmap.h

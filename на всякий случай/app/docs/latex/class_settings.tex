@@ -1,4 +1,4 @@
-\doxysection{Settings Class Reference}
+\doxysection{Класс Settings}
 \hypertarget{class_settings}{}\label{class_settings}\index{Settings@{Settings}}
 
 
@@ -9,13 +9,13 @@
 
 {\ttfamily \+\#include $<$settings.\+h$>$}
 
-Inheritance diagram for Settings:\+\begin{figure}[H]
+Граф наследования:\+Settings:\+\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{class_settings}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Signals}
+\doxysubsubsection*{Сигналы}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_settings_a61fa7df02422f27dcaa32e11d2d299da}\label{class_settings_a61fa7df02422f27dcaa32e11d2d299da} 
@@ -48,120 +48,92 @@ void {\bfseries server\+Port\+Changed} ()
 \Hypertarget{class_settings_a731c3573f45ae5815d39a2b8084ca796}\label{class_settings_a731c3573f45ae5815d39a2b8084ca796} 
 void {\bfseries reports\+Path\+Changed} ()
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Public Member Functions}
+\doxysubsubsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_settings_aa115184065ca6e679091e16ec14e22c8}{Settings}} (\doxymbox{\hyperlink{class_logs}{Logs}} \texorpdfstring{$\ast$}{*}logger, QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
 \begin{DoxyCompactList}\small\item\em Конструктор. Автоматически вызывает \doxylink{class_settings_a1eeeb01f1cc6cf7b841a3e112ee031d6}{load()}. \end{DoxyCompactList}\item 
-\Hypertarget{class_settings_a8110e613feb58c5e1831c06aa922e6c4}\label{class_settings_a8110e613feb58c5e1831c06aa922e6c4} 
-QString {\bfseries db\+Host} () const
+QString \doxymbox{\hyperlink{class_settings_a8110e613feb58c5e1831c06aa922e6c4}{db\+Host}} () const
 \item 
-\Hypertarget{class_settings_ad89758c4427fee35ff10ffc98ceee4a6}\label{class_settings_ad89758c4427fee35ff10ffc98ceee4a6} 
-void {\bfseries set\+Db\+Host} (const QString \&host)
+void \doxymbox{\hyperlink{class_settings_ad89758c4427fee35ff10ffc98ceee4a6}{set\+Db\+Host}} (const QString \&host)
 \begin{DoxyCompactList}\small\item\em Устанавливает хост БД. \end{DoxyCompactList}\item 
-\Hypertarget{class_settings_a43160fb608f9e9cebb485ff45137ec4b}\label{class_settings_a43160fb608f9e9cebb485ff45137ec4b} 
-int {\bfseries db\+Port} () const
+int \doxymbox{\hyperlink{class_settings_a43160fb608f9e9cebb485ff45137ec4b}{db\+Port}} () const
 \item 
-\Hypertarget{class_settings_ac33f66deed703d17543c5444692e7fec}\label{class_settings_ac33f66deed703d17543c5444692e7fec} 
-void {\bfseries set\+Db\+Port} (int port)
+void \doxymbox{\hyperlink{class_settings_ac33f66deed703d17543c5444692e7fec}{set\+Db\+Port}} (int port)
 \begin{DoxyCompactList}\small\item\em Устанавливает порт БД. \end{DoxyCompactList}\item 
-\Hypertarget{class_settings_a1a136b8406df512df1c940533816e2bc}\label{class_settings_a1a136b8406df512df1c940533816e2bc} 
-QString {\bfseries db\+Name} () const
+QString \doxymbox{\hyperlink{class_settings_a1a136b8406df512df1c940533816e2bc}{db\+Name}} () const
 \item 
-\Hypertarget{class_settings_ab38d5030c51b9e1cbd9e07c6d3dbd2e6}\label{class_settings_ab38d5030c51b9e1cbd9e07c6d3dbd2e6} 
-void {\bfseries set\+Db\+Name} (const QString \&name)
+void \doxymbox{\hyperlink{class_settings_ab38d5030c51b9e1cbd9e07c6d3dbd2e6}{set\+Db\+Name}} (const QString \&name)
 \begin{DoxyCompactList}\small\item\em Устанавливает имя БД. \end{DoxyCompactList}\item 
-\Hypertarget{class_settings_a2201bc613d0e3fe7635162a4f15d96f9}\label{class_settings_a2201bc613d0e3fe7635162a4f15d96f9} 
-QString {\bfseries db\+User} () const
+QString \doxymbox{\hyperlink{class_settings_a2201bc613d0e3fe7635162a4f15d96f9}{db\+User}} () const
 \item 
-\Hypertarget{class_settings_ad6646405fb51a8af2342d90741c70765}\label{class_settings_ad6646405fb51a8af2342d90741c70765} 
-void {\bfseries set\+Db\+User} (const QString \&user)
+void \doxymbox{\hyperlink{class_settings_ad6646405fb51a8af2342d90741c70765}{set\+Db\+User}} (const QString \&user)
 \begin{DoxyCompactList}\small\item\em Устанавливает пользователя БД. \end{DoxyCompactList}\item 
-\Hypertarget{class_settings_a1781b4b3ba22a6154dc2025318391ebe}\label{class_settings_a1781b4b3ba22a6154dc2025318391ebe} 
-QString {\bfseries db\+Password} () const
+QString \doxymbox{\hyperlink{class_settings_a1781b4b3ba22a6154dc2025318391ebe}{db\+Password}} () const
 \item 
-\Hypertarget{class_settings_a304fdc0096c9f5e3d55f7904ddf96406}\label{class_settings_a304fdc0096c9f5e3d55f7904ddf96406} 
-void {\bfseries set\+Db\+Password} (const QString \&password)
+void \doxymbox{\hyperlink{class_settings_a304fdc0096c9f5e3d55f7904ddf96406}{set\+Db\+Password}} (const QString \&password)
 \begin{DoxyCompactList}\small\item\em Устанавливает пароль БД. \end{DoxyCompactList}\item 
-\Hypertarget{class_settings_a06328d9a5f8740c5abc4947a535c96f9}\label{class_settings_a06328d9a5f8740c5abc4947a535c96f9} 
-bool {\bfseries is\+Server\+Mode} () const
+bool \doxymbox{\hyperlink{class_settings_a06328d9a5f8740c5abc4947a535c96f9}{is\+Server\+Mode}} () const
 \item 
-\Hypertarget{class_settings_a887a23312a1a7034a1d779127e3c3538}\label{class_settings_a887a23312a1a7034a1d779127e3c3538} 
-void {\bfseries set\+Is\+Server\+Mode} (bool mode)
+void \doxymbox{\hyperlink{class_settings_a887a23312a1a7034a1d779127e3c3538}{set\+Is\+Server\+Mode}} (bool mode)
 \begin{DoxyCompactList}\small\item\em Включает/\+выключает серверный режим. \end{DoxyCompactList}\item 
-\Hypertarget{class_settings_a0e9fc2aea4b2793dd4f6c554eb231510}\label{class_settings_a0e9fc2aea4b2793dd4f6c554eb231510} 
-QString {\bfseries log\+Path} () const
+QString \doxymbox{\hyperlink{class_settings_a0e9fc2aea4b2793dd4f6c554eb231510}{log\+Path}} () const
 \item 
-\Hypertarget{class_settings_a4e588c1a7ab3414ccba71adf0ec3cd82}\label{class_settings_a4e588c1a7ab3414ccba71adf0ec3cd82} 
-void {\bfseries set\+Log\+Path} (const QString \&path)
+void \doxymbox{\hyperlink{class_settings_a4e588c1a7ab3414ccba71adf0ec3cd82}{set\+Log\+Path}} (const QString \&path)
 \begin{DoxyCompactList}\small\item\em Задаёт путь к лог-\/файлу. \end{DoxyCompactList}\item 
-\Hypertarget{class_settings_ab9d6763e30e1221f314f6ff5c7689a5d}\label{class_settings_ab9d6763e30e1221f314f6ff5c7689a5d} 
-QString {\bfseries server\+Host} () const
+QString \doxymbox{\hyperlink{class_settings_ab9d6763e30e1221f314f6ff5c7689a5d}{server\+Host}} () const
 \item 
-\Hypertarget{class_settings_a70011a38a8c13f10f1e18c9214072d30}\label{class_settings_a70011a38a8c13f10f1e18c9214072d30} 
-void {\bfseries set\+Server\+Host} (const QString \&host)
+void \doxymbox{\hyperlink{class_settings_a70011a38a8c13f10f1e18c9214072d30}{set\+Server\+Host}} (const QString \&host)
 \begin{DoxyCompactList}\small\item\em Устанавливает IP-\/адрес сервера. \end{DoxyCompactList}\item 
-\Hypertarget{class_settings_ae2e953578fa92a37f5d49b04012d0253}\label{class_settings_ae2e953578fa92a37f5d49b04012d0253} 
-int {\bfseries server\+Port} () const
+int \doxymbox{\hyperlink{class_settings_ae2e953578fa92a37f5d49b04012d0253}{server\+Port}} () const
 \item 
-\Hypertarget{class_settings_a4888b77dd8733593a9923ae53b1c6626}\label{class_settings_a4888b77dd8733593a9923ae53b1c6626} 
-void {\bfseries set\+Server\+Port} (int port)
+void \doxymbox{\hyperlink{class_settings_a4888b77dd8733593a9923ae53b1c6626}{set\+Server\+Port}} (int port)
 \begin{DoxyCompactList}\small\item\em Устанавливает порт сервера. \end{DoxyCompactList}\item 
-\Hypertarget{class_settings_a50b9a0f5890d02ea97a9f59064b1c01d}\label{class_settings_a50b9a0f5890d02ea97a9f59064b1c01d} 
-QString {\bfseries reports\+Path} () const
+QString \doxymbox{\hyperlink{class_settings_a50b9a0f5890d02ea97a9f59064b1c01d}{reports\+Path}} () const
 \item 
-\Hypertarget{class_settings_a4fe8f8fa353d460caf879437f97f1bf4}\label{class_settings_a4fe8f8fa353d460caf879437f97f1bf4} 
-void {\bfseries set\+Reports\+Path} (const QString \&path)
+void \doxymbox{\hyperlink{class_settings_a4fe8f8fa353d460caf879437f97f1bf4}{set\+Reports\+Path}} (const QString \&path)
 \begin{DoxyCompactList}\small\item\em Задаёт каталог для сохранения отчётов. \end{DoxyCompactList}\item 
-\Hypertarget{class_settings_a1eeeb01f1cc6cf7b841a3e112ee031d6}\label{class_settings_a1eeeb01f1cc6cf7b841a3e112ee031d6} 
-Q\+\_\+\+INVOKABLE void {\bfseries load} ()
+Q\+\_\+\+INVOKABLE void \doxymbox{\hyperlink{class_settings_a1eeeb01f1cc6cf7b841a3e112ee031d6}{load}} ()
 \begin{DoxyCompactList}\small\item\em Загружает все настройки из QSettings. \end{DoxyCompactList}\item 
-\Hypertarget{class_settings_a75ab693f2b4228de016603638771eb94}\label{class_settings_a75ab693f2b4228de016603638771eb94} 
-Q\+\_\+\+INVOKABLE void {\bfseries save} ()
+Q\+\_\+\+INVOKABLE void \doxymbox{\hyperlink{class_settings_a75ab693f2b4228de016603638771eb94}{save}} ()
 \begin{DoxyCompactList}\small\item\em Сохраняет текущие настройки в QSettings. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Properties}
+\doxysubsubsection*{Свойства}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_settings_ac7ea374fcc3875e3a699e9030795fe51}\label{class_settings_ac7ea374fcc3875e3a699e9030795fe51} 
-QString {\bfseries db\+Host}
+QString \doxymbox{\hyperlink{class_settings_ac7ea374fcc3875e3a699e9030795fe51}{db\+Host}}
 \item 
-\Hypertarget{class_settings_a15cfa11c097d5cd7a39df1a62a164581}\label{class_settings_a15cfa11c097d5cd7a39df1a62a164581} 
-int {\bfseries db\+Port}
+int \doxymbox{\hyperlink{class_settings_a15cfa11c097d5cd7a39df1a62a164581}{db\+Port}}
 \item 
-\Hypertarget{class_settings_acdf08e50bb01f6e56445569527ef4d27}\label{class_settings_acdf08e50bb01f6e56445569527ef4d27} 
-QString {\bfseries db\+Name}
+QString \doxymbox{\hyperlink{class_settings_acdf08e50bb01f6e56445569527ef4d27}{db\+Name}}
 \item 
-\Hypertarget{class_settings_a7e993fd0085f19cee702c26dd79c0109}\label{class_settings_a7e993fd0085f19cee702c26dd79c0109} 
-QString {\bfseries db\+User}
+QString \doxymbox{\hyperlink{class_settings_a7e993fd0085f19cee702c26dd79c0109}{db\+User}}
 \item 
-\Hypertarget{class_settings_a3ba9c8bc80b648ee59e7a72b4f4f27a0}\label{class_settings_a3ba9c8bc80b648ee59e7a72b4f4f27a0} 
-QString {\bfseries db\+Password}
+QString \doxymbox{\hyperlink{class_settings_a3ba9c8bc80b648ee59e7a72b4f4f27a0}{db\+Password}}
 \item 
-\Hypertarget{class_settings_aa9d6f1fe7605e25313b12687fd56a773}\label{class_settings_aa9d6f1fe7605e25313b12687fd56a773} 
-bool {\bfseries is\+Server\+Mode}
+bool \doxymbox{\hyperlink{class_settings_aa9d6f1fe7605e25313b12687fd56a773}{is\+Server\+Mode}}
 \item 
-\Hypertarget{class_settings_a34d07fb459cac11f9a54c1e7d573f266}\label{class_settings_a34d07fb459cac11f9a54c1e7d573f266} 
-QString {\bfseries log\+Path}
+QString \doxymbox{\hyperlink{class_settings_a34d07fb459cac11f9a54c1e7d573f266}{log\+Path}}
 \item 
-\Hypertarget{class_settings_a9d0afd00185e5f3ee7a77e05d1ec97fa}\label{class_settings_a9d0afd00185e5f3ee7a77e05d1ec97fa} 
-QString {\bfseries server\+Host}
+QString \doxymbox{\hyperlink{class_settings_a9d0afd00185e5f3ee7a77e05d1ec97fa}{server\+Host}}
 \item 
-\Hypertarget{class_settings_a9bacb7d47cf5ad932376154827775fd9}\label{class_settings_a9bacb7d47cf5ad932376154827775fd9} 
-int {\bfseries server\+Port}
+int \doxymbox{\hyperlink{class_settings_a9bacb7d47cf5ad932376154827775fd9}{server\+Port}}
 \item 
-\Hypertarget{class_settings_ab9fdad95d3e762f8162c39229d9623f5}\label{class_settings_ab9fdad95d3e762f8162c39229d9623f5} 
-QString {\bfseries reports\+Path}
+QString \doxymbox{\hyperlink{class_settings_ab9fdad95d3e762f8162c39229d9623f5}{reports\+Path}}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Подробное описание}
 Класс для хранения и управления настройками приложения. 
 
 Обёртка над QSettings, предоставляющая свойства QML для доступа к параметрам базы данных, сети и путям. 
 
+См. определение в файле \doxymbox{\hyperlink{settings_8h_source}{settings.\+h}} строка \doxymbox{\hyperlink{settings_8h_source_l00018}{18}}
+
+
+
 \label{doc-constructors}
 \Hypertarget{class_settings_doc-constructors}
-\doxysubsection{Constructor \& Destructor Documentation}
+\doxysubsection{Конструктор(ы)}
 \Hypertarget{class_settings_aa115184065ca6e679091e16ec14e22c8}\index{Settings@{Settings}!Settings@{Settings}}
 \index{Settings@{Settings}!Settings@{Settings}}
 \doxysubsubsection{\texorpdfstring{Settings()}{Settings()}}
@@ -173,9 +145,391 @@ Settings::\+\+Settings (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{clas
 Конструктор. Автоматически вызывает \doxylink{class_settings_a1eeeb01f1cc6cf7b841a3e112ee031d6}{load()}. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em logger} & Указатель на логгер. \\
 \hline
 {\em parent} & Родительский объект. \\
 \hline
 \end{DoxyParams}
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8cpp_source}{settings.\+cpp}} строка \doxymbox{\hyperlink{settings_8cpp_source_l00004}{4}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_settings_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{class_settings_a8110e613feb58c5e1831c06aa922e6c4}\index{Settings@{Settings}!dbHost@{dbHost}}
+\index{dbHost@{dbHost}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{dbHost()}{dbHost()}}
+{\footnotesize\ttfamily \label{class_settings_a8110e613feb58c5e1831c06aa922e6c4} 
+QString Settings::\+db\+Host (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8h_source}{settings.\+h}} строка \doxymbox{\hyperlink{settings_8h_source_l00041}{41}}
+
+\Hypertarget{class_settings_a1a136b8406df512df1c940533816e2bc}\index{Settings@{Settings}!dbName@{dbName}}
+\index{dbName@{dbName}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{dbName()}{dbName()}}
+{\footnotesize\ttfamily \label{class_settings_a1a136b8406df512df1c940533816e2bc} 
+QString Settings::\+db\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8h_source}{settings.\+h}} строка \doxymbox{\hyperlink{settings_8h_source_l00047}{47}}
+
+\Hypertarget{class_settings_a1781b4b3ba22a6154dc2025318391ebe}\index{Settings@{Settings}!dbPassword@{dbPassword}}
+\index{dbPassword@{dbPassword}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{dbPassword()}{dbPassword()}}
+{\footnotesize\ttfamily \label{class_settings_a1781b4b3ba22a6154dc2025318391ebe} 
+QString Settings::\+db\+Password (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8h_source}{settings.\+h}} строка \doxymbox{\hyperlink{settings_8h_source_l00053}{53}}
+
+\Hypertarget{class_settings_a43160fb608f9e9cebb485ff45137ec4b}\index{Settings@{Settings}!dbPort@{dbPort}}
+\index{dbPort@{dbPort}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{dbPort()}{dbPort()}}
+{\footnotesize\ttfamily \label{class_settings_a43160fb608f9e9cebb485ff45137ec4b} 
+int Settings::\+db\+Port (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8h_source}{settings.\+h}} строка \doxymbox{\hyperlink{settings_8h_source_l00044}{44}}
+
+\Hypertarget{class_settings_a2201bc613d0e3fe7635162a4f15d96f9}\index{Settings@{Settings}!dbUser@{dbUser}}
+\index{dbUser@{dbUser}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{dbUser()}{dbUser()}}
+{\footnotesize\ttfamily \label{class_settings_a2201bc613d0e3fe7635162a4f15d96f9} 
+QString Settings::\+db\+User (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8h_source}{settings.\+h}} строка \doxymbox{\hyperlink{settings_8h_source_l00050}{50}}
+
+\Hypertarget{class_settings_a06328d9a5f8740c5abc4947a535c96f9}\index{Settings@{Settings}!isServerMode@{isServerMode}}
+\index{isServerMode@{isServerMode}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{isServerMode()}{isServerMode()}}
+{\footnotesize\ttfamily \label{class_settings_a06328d9a5f8740c5abc4947a535c96f9} 
+bool Settings::\+is\+Server\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8h_source}{settings.\+h}} строка \doxymbox{\hyperlink{settings_8h_source_l00056}{56}}
+
+\Hypertarget{class_settings_a1eeeb01f1cc6cf7b841a3e112ee031d6}\index{Settings@{Settings}!load@{load}}
+\index{load@{load}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily \label{class_settings_a1eeeb01f1cc6cf7b841a3e112ee031d6} 
+void Settings::\+load (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Загружает все настройки из QSettings. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8cpp_source}{settings.\+cpp}} строка \doxymbox{\hyperlink{settings_8cpp_source_l00068}{68}}
+
+\Hypertarget{class_settings_a0e9fc2aea4b2793dd4f6c554eb231510}\index{Settings@{Settings}!logPath@{logPath}}
+\index{logPath@{logPath}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{logPath()}{logPath()}}
+{\footnotesize\ttfamily \label{class_settings_a0e9fc2aea4b2793dd4f6c554eb231510} 
+QString Settings::\+log\+Path (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8h_source}{settings.\+h}} строка \doxymbox{\hyperlink{settings_8h_source_l00059}{59}}
+
+\Hypertarget{class_settings_a50b9a0f5890d02ea97a9f59064b1c01d}\index{Settings@{Settings}!reportsPath@{reportsPath}}
+\index{reportsPath@{reportsPath}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{reportsPath()}{reportsPath()}}
+{\footnotesize\ttfamily \label{class_settings_a50b9a0f5890d02ea97a9f59064b1c01d} 
+QString Settings::\+reports\+Path (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8h_source}{settings.\+h}} строка \doxymbox{\hyperlink{settings_8h_source_l00068}{68}}
+
+\Hypertarget{class_settings_a75ab693f2b4228de016603638771eb94}\index{Settings@{Settings}!save@{save}}
+\index{save@{save}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily \label{class_settings_a75ab693f2b4228de016603638771eb94} 
+void Settings::\+save (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Сохраняет текущие настройки в QSettings. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8cpp_source}{settings.\+cpp}} строка \doxymbox{\hyperlink{settings_8cpp_source_l00051}{51}}
+
+\Hypertarget{class_settings_ab9d6763e30e1221f314f6ff5c7689a5d}\index{Settings@{Settings}!serverHost@{serverHost}}
+\index{serverHost@{serverHost}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{serverHost()}{serverHost()}}
+{\footnotesize\ttfamily \label{class_settings_ab9d6763e30e1221f314f6ff5c7689a5d} 
+QString Settings::\+server\+Host (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8h_source}{settings.\+h}} строка \doxymbox{\hyperlink{settings_8h_source_l00062}{62}}
+
+\Hypertarget{class_settings_ae2e953578fa92a37f5d49b04012d0253}\index{Settings@{Settings}!serverPort@{serverPort}}
+\index{serverPort@{serverPort}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{serverPort()}{serverPort()}}
+{\footnotesize\ttfamily \label{class_settings_ae2e953578fa92a37f5d49b04012d0253} 
+int Settings::\+server\+Port (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8h_source}{settings.\+h}} строка \doxymbox{\hyperlink{settings_8h_source_l00065}{65}}
+
+\Hypertarget{class_settings_ad89758c4427fee35ff10ffc98ceee4a6}\index{Settings@{Settings}!setDbHost@{setDbHost}}
+\index{setDbHost@{setDbHost}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{setDbHost()}{setDbHost()}}
+{\footnotesize\ttfamily \label{class_settings_ad89758c4427fee35ff10ffc98ceee4a6} 
+void Settings::\+set\+Db\+Host (\begin{DoxyParamCaption}\item[{const QString \&}]{host}{}\end{DoxyParamCaption})}
+
+
+
+Устанавливает хост БД. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8cpp_source}{settings.\+cpp}} строка \doxymbox{\hyperlink{settings_8cpp_source_l00009}{9}}
+
+\Hypertarget{class_settings_ab38d5030c51b9e1cbd9e07c6d3dbd2e6}\index{Settings@{Settings}!setDbName@{setDbName}}
+\index{setDbName@{setDbName}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{setDbName()}{setDbName()}}
+{\footnotesize\ttfamily \label{class_settings_ab38d5030c51b9e1cbd9e07c6d3dbd2e6} 
+void Settings::\+set\+Db\+Name (\begin{DoxyParamCaption}\item[{const QString \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Устанавливает имя БД. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8cpp_source}{settings.\+cpp}} строка \doxymbox{\hyperlink{settings_8cpp_source_l00023}{23}}
+
+\Hypertarget{class_settings_a304fdc0096c9f5e3d55f7904ddf96406}\index{Settings@{Settings}!setDbPassword@{setDbPassword}}
+\index{setDbPassword@{setDbPassword}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{setDbPassword()}{setDbPassword()}}
+{\footnotesize\ttfamily \label{class_settings_a304fdc0096c9f5e3d55f7904ddf96406} 
+void Settings::\+set\+Db\+Password (\begin{DoxyParamCaption}\item[{const QString \&}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Устанавливает пароль БД. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8cpp_source}{settings.\+cpp}} строка \doxymbox{\hyperlink{settings_8cpp_source_l00037}{37}}
+
+\Hypertarget{class_settings_ac33f66deed703d17543c5444692e7fec}\index{Settings@{Settings}!setDbPort@{setDbPort}}
+\index{setDbPort@{setDbPort}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{setDbPort()}{setDbPort()}}
+{\footnotesize\ttfamily \label{class_settings_ac33f66deed703d17543c5444692e7fec} 
+void Settings::\+set\+Db\+Port (\begin{DoxyParamCaption}\item[{int}]{port}{}\end{DoxyParamCaption})}
+
+
+
+Устанавливает порт БД. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8cpp_source}{settings.\+cpp}} строка \doxymbox{\hyperlink{settings_8cpp_source_l00016}{16}}
+
+\Hypertarget{class_settings_ad6646405fb51a8af2342d90741c70765}\index{Settings@{Settings}!setDbUser@{setDbUser}}
+\index{setDbUser@{setDbUser}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{setDbUser()}{setDbUser()}}
+{\footnotesize\ttfamily \label{class_settings_ad6646405fb51a8af2342d90741c70765} 
+void Settings::\+set\+Db\+User (\begin{DoxyParamCaption}\item[{const QString \&}]{user}{}\end{DoxyParamCaption})}
+
+
+
+Устанавливает пользователя БД. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8cpp_source}{settings.\+cpp}} строка \doxymbox{\hyperlink{settings_8cpp_source_l00030}{30}}
+
+\Hypertarget{class_settings_a887a23312a1a7034a1d779127e3c3538}\index{Settings@{Settings}!setIsServerMode@{setIsServerMode}}
+\index{setIsServerMode@{setIsServerMode}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{setIsServerMode()}{setIsServerMode()}}
+{\footnotesize\ttfamily \label{class_settings_a887a23312a1a7034a1d779127e3c3538} 
+void Settings::\+set\+Is\+Server\+Mode (\begin{DoxyParamCaption}\item[{bool}]{mode}{}\end{DoxyParamCaption})}
+
+
+
+Включает/\+выключает серверный режим. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8cpp_source}{settings.\+cpp}} строка \doxymbox{\hyperlink{settings_8cpp_source_l00084}{84}}
+
+\Hypertarget{class_settings_a4e588c1a7ab3414ccba71adf0ec3cd82}\index{Settings@{Settings}!setLogPath@{setLogPath}}
+\index{setLogPath@{setLogPath}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{setLogPath()}{setLogPath()}}
+{\footnotesize\ttfamily \label{class_settings_a4e588c1a7ab3414ccba71adf0ec3cd82} 
+void Settings::\+set\+Log\+Path (\begin{DoxyParamCaption}\item[{const QString \&}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Задаёт путь к лог-\/файлу. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8cpp_source}{settings.\+cpp}} строка \doxymbox{\hyperlink{settings_8cpp_source_l00091}{91}}
+
+\Hypertarget{class_settings_a4fe8f8fa353d460caf879437f97f1bf4}\index{Settings@{Settings}!setReportsPath@{setReportsPath}}
+\index{setReportsPath@{setReportsPath}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{setReportsPath()}{setReportsPath()}}
+{\footnotesize\ttfamily \label{class_settings_a4fe8f8fa353d460caf879437f97f1bf4} 
+void Settings::\+set\+Reports\+Path (\begin{DoxyParamCaption}\item[{const QString \&}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Задаёт каталог для сохранения отчётов. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8cpp_source}{settings.\+cpp}} строка \doxymbox{\hyperlink{settings_8cpp_source_l00044}{44}}
+
+\Hypertarget{class_settings_a70011a38a8c13f10f1e18c9214072d30}\index{Settings@{Settings}!setServerHost@{setServerHost}}
+\index{setServerHost@{setServerHost}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{setServerHost()}{setServerHost()}}
+{\footnotesize\ttfamily \label{class_settings_a70011a38a8c13f10f1e18c9214072d30} 
+void Settings::\+set\+Server\+Host (\begin{DoxyParamCaption}\item[{const QString \&}]{host}{}\end{DoxyParamCaption})}
+
+
+
+Устанавливает IP-\/адрес сервера. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8cpp_source}{settings.\+cpp}} строка \doxymbox{\hyperlink{settings_8cpp_source_l00098}{98}}
+
+\Hypertarget{class_settings_a4888b77dd8733593a9923ae53b1c6626}\index{Settings@{Settings}!setServerPort@{setServerPort}}
+\index{setServerPort@{setServerPort}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{setServerPort()}{setServerPort()}}
+{\footnotesize\ttfamily \label{class_settings_a4888b77dd8733593a9923ae53b1c6626} 
+void Settings::\+set\+Server\+Port (\begin{DoxyParamCaption}\item[{int}]{port}{}\end{DoxyParamCaption})}
+
+
+
+Устанавливает порт сервера. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8cpp_source}{settings.\+cpp}} строка \doxymbox{\hyperlink{settings_8cpp_source_l00104}{104}}
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_settings_doc-property-members}
+\doxysubsection{Полный список свойств}
+\Hypertarget{class_settings_ac7ea374fcc3875e3a699e9030795fe51}\index{Settings@{Settings}!dbHost@{dbHost}}
+\index{dbHost@{dbHost}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{dbHost}{dbHost}}
+{\footnotesize\ttfamily \label{class_settings_ac7ea374fcc3875e3a699e9030795fe51} 
+QString Settings::\+db\+Host\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8h_source}{settings.\+h}} строка \doxymbox{\hyperlink{settings_8h_source_l00021}{21}}
+
+\Hypertarget{class_settings_acdf08e50bb01f6e56445569527ef4d27}\index{Settings@{Settings}!dbName@{dbName}}
+\index{dbName@{dbName}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{dbName}{dbName}}
+{\footnotesize\ttfamily \label{class_settings_acdf08e50bb01f6e56445569527ef4d27} 
+QString Settings::\+db\+Name\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8h_source}{settings.\+h}} строка \doxymbox{\hyperlink{settings_8h_source_l00023}{23}}
+
+\Hypertarget{class_settings_a3ba9c8bc80b648ee59e7a72b4f4f27a0}\index{Settings@{Settings}!dbPassword@{dbPassword}}
+\index{dbPassword@{dbPassword}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{dbPassword}{dbPassword}}
+{\footnotesize\ttfamily \label{class_settings_a3ba9c8bc80b648ee59e7a72b4f4f27a0} 
+QString Settings::\+db\+Password\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8h_source}{settings.\+h}} строка \doxymbox{\hyperlink{settings_8h_source_l00025}{25}}
+
+\Hypertarget{class_settings_a15cfa11c097d5cd7a39df1a62a164581}\index{Settings@{Settings}!dbPort@{dbPort}}
+\index{dbPort@{dbPort}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{dbPort}{dbPort}}
+{\footnotesize\ttfamily \label{class_settings_a15cfa11c097d5cd7a39df1a62a164581} 
+int Settings::\+db\+Port\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8h_source}{settings.\+h}} строка \doxymbox{\hyperlink{settings_8h_source_l00022}{22}}
+
+\Hypertarget{class_settings_a7e993fd0085f19cee702c26dd79c0109}\index{Settings@{Settings}!dbUser@{dbUser}}
+\index{dbUser@{dbUser}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{dbUser}{dbUser}}
+{\footnotesize\ttfamily \label{class_settings_a7e993fd0085f19cee702c26dd79c0109} 
+QString Settings::\+db\+User\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8h_source}{settings.\+h}} строка \doxymbox{\hyperlink{settings_8h_source_l00024}{24}}
+
+\Hypertarget{class_settings_aa9d6f1fe7605e25313b12687fd56a773}\index{Settings@{Settings}!isServerMode@{isServerMode}}
+\index{isServerMode@{isServerMode}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{isServerMode}{isServerMode}}
+{\footnotesize\ttfamily \label{class_settings_aa9d6f1fe7605e25313b12687fd56a773} 
+bool Settings::\+is\+Server\+Mode\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8h_source}{settings.\+h}} строка \doxymbox{\hyperlink{settings_8h_source_l00026}{26}}
+
+\Hypertarget{class_settings_a34d07fb459cac11f9a54c1e7d573f266}\index{Settings@{Settings}!logPath@{logPath}}
+\index{logPath@{logPath}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{logPath}{logPath}}
+{\footnotesize\ttfamily \label{class_settings_a34d07fb459cac11f9a54c1e7d573f266} 
+QString Settings::\+log\+Path\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8h_source}{settings.\+h}} строка \doxymbox{\hyperlink{settings_8h_source_l00027}{27}}
+
+\Hypertarget{class_settings_ab9fdad95d3e762f8162c39229d9623f5}\index{Settings@{Settings}!reportsPath@{reportsPath}}
+\index{reportsPath@{reportsPath}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{reportsPath}{reportsPath}}
+{\footnotesize\ttfamily \label{class_settings_ab9fdad95d3e762f8162c39229d9623f5} 
+QString Settings::\+reports\+Path\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8h_source}{settings.\+h}} строка \doxymbox{\hyperlink{settings_8h_source_l00030}{30}}
+
+\Hypertarget{class_settings_a9d0afd00185e5f3ee7a77e05d1ec97fa}\index{Settings@{Settings}!serverHost@{serverHost}}
+\index{serverHost@{serverHost}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{serverHost}{serverHost}}
+{\footnotesize\ttfamily \label{class_settings_a9d0afd00185e5f3ee7a77e05d1ec97fa} 
+QString Settings::\+server\+Host\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8h_source}{settings.\+h}} строка \doxymbox{\hyperlink{settings_8h_source_l00028}{28}}
+
+\Hypertarget{class_settings_a9bacb7d47cf5ad932376154827775fd9}\index{Settings@{Settings}!serverPort@{serverPort}}
+\index{serverPort@{serverPort}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{serverPort}{serverPort}}
+{\footnotesize\ttfamily \label{class_settings_a9bacb7d47cf5ad932376154827775fd9} 
+int Settings::\+server\+Port\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{settings_8h_source}{settings.\+h}} строка \doxymbox{\hyperlink{settings_8h_source_l00029}{29}}
+

@@ -481,6 +481,20 @@ CMakeFiles/appapp.dir/src/main.cpp.obj: \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qstring.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/QStringConverter \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qstringconverter.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/QJsonDocument \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qjsondocument.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonparseerror.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/QJsonArray \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonarray.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonvalue.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qcborvalue.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qcborcommon.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qregularexpression.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/quuid.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qendian.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qjsondocument.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/QJsonObject \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonobject.h \
  C:/Users/rodio/Desktop/W/Diplom/app/include/logs.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/QFile \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qfile.h \

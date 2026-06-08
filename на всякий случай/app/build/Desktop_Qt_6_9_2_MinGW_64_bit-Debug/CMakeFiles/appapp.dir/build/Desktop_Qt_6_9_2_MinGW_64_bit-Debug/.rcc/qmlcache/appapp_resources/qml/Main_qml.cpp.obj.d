@@ -363,6 +363,16 @@ CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/ap
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cassert \
  C:/Qt/6.9.2/mingw_64/include/QtCore/q20iterator.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qtyperevision.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qrandom.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/random \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/pmmintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/emmintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/xmmintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mmintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mwaitintrin.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.tcc \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qtimezone.h \
  C:/Qt/6.9.2/mingw_64/include/QtQml/qjsengine.h \
  C:/Qt/6.9.2/mingw_64/include/QtQml/qjsmanagedvalue.h \

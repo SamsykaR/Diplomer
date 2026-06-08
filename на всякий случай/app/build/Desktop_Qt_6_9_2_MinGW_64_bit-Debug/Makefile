@@ -585,6 +585,30 @@ build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_qmlcache_loader.c
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_qmlcache_loader.cpp.s
 .PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_qmlcache_loader.cpp.s
 
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.obj: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.cpp.obj
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.obj
+
+# target to build an object file
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.cpp.obj
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.cpp.obj
+
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.i: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.cpp.i
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.i
+
+# target to preprocess a source file
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.cpp.i
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.cpp.i
+
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.s: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.cpp.s
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.s
+
+# target to generate assembly for a file
+build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appapp.dir\build.make CMakeFiles/appapp.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.cpp.s
+.PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.cpp.s
+
 build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.obj: build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp.obj
 .PHONY : build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.obj
 
@@ -926,6 +950,9 @@ help:
 	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_qmlcache_loader.obj
 	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_qmlcache_loader.i
 	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_qmlcache_loader.s
+	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.obj
+	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.i
+	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.s
 	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.obj
 	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.i
 	@echo ... build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.rcc/qmlcache/appapp_resources/qml/LoginPage_qml.s

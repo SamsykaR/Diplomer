@@ -8,6 +8,7 @@ cc1f7984ea8e7e139aaf7dec058c4407 .qt/rcc/qrc_appapp_raw_qml_0_extra_qmldirs.cpp
 6d886fe39a8499b189324c6c905f11f1 .qt/rcc/qrc_qmake_app.cpp
 259e21856e2a4c993beb471be403c930 .rcc/qmlcache/all_aotstats.aotstats
 ef3edc38a2397f5446437e6eae18070f .rcc/qmlcache/appapp_qmlcache_loader.cpp
+f344b2f10b530d9215704bb65b15ca44 .rcc/qmlcache/appapp_resources/qml/ActiveOrdersPage_qml.cpp
 1cc222a173e5977e4b67c801f7fcf2af .rcc/qmlcache/appapp_resources/qml/LoginPage_qml.cpp
 1d84ec81870fa2c6fd6cc5b589bf1461 .rcc/qmlcache/appapp_resources/qml/Main_qml.cpp
 9df3847e2a235a92f67c153a01924fd8 .rcc/qmlcache/appapp_resources/qml/OrderPage_qml.cpp

@@ -6,5 +6,6 @@ LoginPage 1.0 resources/qml/LoginPage.qml
 OrderPage 1.0 resources/qml/OrderPage.qml
 StockPage 1.0 resources/qml/StockPage.qml
 ReportsPage 1.0 resources/qml/ReportsPage.qml
+ActiveOrdersPage 1.0 resources/qml/ActiveOrdersPage.qml
 depends QtQuick
 

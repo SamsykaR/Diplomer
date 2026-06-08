@@ -1,4 +1,4 @@
-\doxysection{Exceptions Class Reference}
+\doxysection{Класс Exceptions}
 \hypertarget{class_exceptions}{}\label{class_exceptions}\index{Exceptions@{Exceptions}}
 
 
@@ -9,30 +9,33 @@
 
 {\ttfamily \+\#include $<$exceptions.\+h$>$}
 
-Inheritance diagram for Exceptions:\+\begin{figure}[H]
+Граф наследования:\+Exceptions:\+\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=3.000000cm]{class_exceptions}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Public Member Functions}
+\doxysubsubsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_exceptions_a77187770a0e9f0a0a42affd9c8b1ba54}{Exceptions}} (const QString \&message)
 \begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
-\Hypertarget{class_exceptions_a7e6f74294c10e9ec93862e9b32f605db}\label{class_exceptions_a7e6f74294c10e9ec93862e9b32f605db} 
-virtual const char \texorpdfstring{$\ast$}{*} {\bfseries what} () const noexcept override
+virtual const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_exceptions_a7e6f74294c10e9ec93862e9b32f605db}{what}} () const noexcept override
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Подробное описание}
 Базовый класс исключений, принимающий QString. 
 
 Хранит сообщение в std::\+string для совместимости с std::\+exception. Все специализированные исключения наследуют этот класс. 
 
+См. определение в файле \doxymbox{\hyperlink{exceptions_8h_source}{exceptions.\+h}} строка \doxymbox{\hyperlink{exceptions_8h_source_l00013}{13}}
+
+
+
 \label{doc-constructors}
 \Hypertarget{class_exceptions_doc-constructors}
-\doxysubsection{Constructor \& Destructor Documentation}
+\doxysubsection{Конструктор(ы)}
 \Hypertarget{class_exceptions_a77187770a0e9f0a0a42affd9c8b1ba54}\index{Exceptions@{Exceptions}!Exceptions@{Exceptions}}
 \index{Exceptions@{Exceptions}!Exceptions@{Exceptions}}
 \doxysubsubsection{\texorpdfstring{Exceptions()}{Exceptions()}}
@@ -44,7 +47,26 @@ Exceptions::\+\+Exceptions (\begin{DoxyParamCaption}\item[{const QString \&}]{me
 Конструктор. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em message} & Описание ошибки. \\
 \hline
 \end{DoxyParams}
+
+
+См. определение в файле \doxymbox{\hyperlink{exceptions_8cpp_source}{exceptions.\+cpp}} строка \doxymbox{\hyperlink{exceptions_8cpp_source_l00003}{3}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_exceptions_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{class_exceptions_a7e6f74294c10e9ec93862e9b32f605db}\index{Exceptions@{Exceptions}!what@{what}}
+\index{what@{what}!Exceptions@{Exceptions}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily \label{class_exceptions_a7e6f74294c10e9ec93862e9b32f605db} 
+const char \texorpdfstring{$\ast$}{*} Exceptions::\+what (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{exceptions_8cpp_source}{exceptions.\+cpp}} строка \doxymbox{\hyperlink{exceptions_8cpp_source_l00008}{8}}
+

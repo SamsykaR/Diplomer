@@ -2,93 +2,120 @@
 \hypertarget{dbworker_8h_source}{}\label{dbworker_8h_source}\index{C:/Users/rodio/Desktop/W/Diplom/app/include/dbworker.h@{C:/Users/rodio/Desktop/W/Diplom/app/include/dbworker.h}}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DBWORKER\_H}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DBWORKER\_H}}
-\DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QSqlDatabase>}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QSqlQuery>}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QSqlError>}}
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QVariant>}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QVariantList>}}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QVariantMap>}}
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QStringConverter>}}
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}logs.h"{}}}
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}exceptions.h"{}}}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_d_b_worker_aa9780c5bc05eab6eb2ce9d09b4906ba3}{DBWorker}}\ :\ \textcolor{keyword}{public}\ QObject}
-\DoxyCodeLine{00022\ \{}
-\DoxyCodeLine{00023\ \ \ \ \ Q\_OBJECT}
-\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00030\ \ \ \ \ \doxymbox{\hyperlink{class_d_b_worker_aa9780c5bc05eab6eb2ce9d09b4906ba3}{DBWorker}}(\doxymbox{\hyperlink{class_logs}{Logs}}\ *logger,\ QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{00031\ \ \ \ \ \doxymbox{\hyperlink{class_d_b_worker_aa9780c5bc05eab6eb2ce9d09b4906ba3}{\string~DBWorker}}();}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00039\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_a1632dbe913deb9482384580fb2ecf317}{checkUser}}(\textcolor{keyword}{const}\ QString\ \&login,\ \textcolor{keyword}{const}\ QString\ \&password);}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00042\ \ \ \ \ Q\_INVOKABLE\ QString\ \doxymbox{\hyperlink{class_d_b_worker_a0cea6bc29f96ecaaaf8658c63dc83367}{getUserName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ userName;\ \}}
-\DoxyCodeLine{00044\ \ \ \ \ Q\_INVOKABLE\ QString\ \doxymbox{\hyperlink{class_d_b_worker_a7ca50ed46388fda2bf966ee48a007d4e}{getUserRole}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ userRole;\ \}}
-\DoxyCodeLine{00046\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_d_b_worker_abeb4d481e6deef155d1a52a2e634f862}{getUserId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ userId;\ \}}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00054\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_a620b9a23df8d7f5d841395fbb310dd29}{checkAndConsume}}(\textcolor{keywordtype}{int}\ foodId,\ \textcolor{keywordtype}{int}\ quantity);}
-\DoxyCodeLine{00055\ }
-\DoxyCodeLine{00062\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_a98a74e63537a608ffbcab569c92105fe}{returnIngredients}}(\textcolor{keywordtype}{int}\ foodId,\ \textcolor{keywordtype}{int}\ quantity);}
-\DoxyCodeLine{00063\ }
-\DoxyCodeLine{00065\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_a8e8c5c4585c20c2b91deaaecbce93ed1}{refreshAllFoodsAvailability}}();}
-\DoxyCodeLine{00066\ }
-\DoxyCodeLine{00076\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_ab883b3de60f36bb85a0f25b3ce790998}{reconnect}}(\textcolor{keyword}{const}\ QString\ \&host,\ \textcolor{keywordtype}{int}\ port,\ \textcolor{keyword}{const}\ QString\ \&dbName,\ \textcolor{keyword}{const}\ QString\ \&user,\ \textcolor{keyword}{const}\ QString\ \&password);}
-\DoxyCodeLine{00077\ }
-\DoxyCodeLine{00079\ \ \ \ \ Q\_INVOKABLE\ QStringList\ \doxymbox{\hyperlink{class_d_b_worker_adc2415126bc7c9a82cf56ccb684f5686}{getLocalIps}}();}
-\DoxyCodeLine{00080\ }
-\DoxyCodeLine{00087\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_aff1435f503b992c4bb581e01edba8961}{pingServer}}(\textcolor{keyword}{const}\ QString\ \&host,\ \textcolor{keywordtype}{int}\ port);}
-\DoxyCodeLine{00088\ }
-\DoxyCodeLine{00090\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_d_b_worker_a6c621568563fda53aec2b78e35f49189}{getFoods}}();}
-\DoxyCodeLine{00091\ }
-\DoxyCodeLine{00093\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_d_b_worker_a4f3ae45af197d611a249f81040b43981}{getProducts}}();}
-\DoxyCodeLine{00094\ }
-\DoxyCodeLine{00096\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_d_b_worker_ac690f42b9b6ae8dd692f1c4eddff0d23}{getDishesList}}();}
-\DoxyCodeLine{00097\ }
-\DoxyCodeLine{00099\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_d_b_worker_ace7fc41838e18c5bd013c7321c0c5b92}{getWaitersList}}();}
-\DoxyCodeLine{00100\ }
-\DoxyCodeLine{00107\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_a8a566ccf8e3f88150d57bd5c2823ae71}{updateProductQuantity}}(\textcolor{keywordtype}{int}\ productId,\ \textcolor{keywordtype}{int}\ newQuantity);}
-\DoxyCodeLine{00108\ }
-\DoxyCodeLine{00115\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_abe3395aee201eb08c029364481a054b1}{addProductQuantity}}(\textcolor{keywordtype}{int}\ productId,\ \textcolor{keywordtype}{int}\ delta);}
-\DoxyCodeLine{00116\ }
-\DoxyCodeLine{00125\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_d_b_worker_ade7c3808032512ef7e804ad83bf65dc5}{createOrder}}(\textcolor{keywordtype}{int}\ tableNumber,\ \textcolor{keywordtype}{int}\ userId,\ \textcolor{keyword}{const}\ QString\ \&specialRequests,\ \textcolor{keywordtype}{double}\ totalCost);}
-\DoxyCodeLine{00126\ }
-\DoxyCodeLine{00135\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_a8186f7c3e1beb4441e3d6ea1b5c0043c}{addOrderItem}}(\textcolor{keywordtype}{int}\ orderId,\ \textcolor{keywordtype}{int}\ foodId,\ \textcolor{keywordtype}{int}\ quantity,\ \textcolor{keywordtype}{double}\ price);}
-\DoxyCodeLine{00136\ }
-\DoxyCodeLine{00146\ \ \ \ \ Q\_INVOKABLE\ QVariantMap\ \doxymbox{\hyperlink{class_d_b_worker_ac6c0a993e0dc166982ff2f06cc4702f1}{getReportRevenue}}(\textcolor{keyword}{const}\ QString\ \&from,\ \textcolor{keyword}{const}\ QString\ \&to,}
-\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dishId,\ \textcolor{keywordtype}{int}\ tableNumber,\ \textcolor{keywordtype}{int}\ waiterId);}
-\DoxyCodeLine{00148\ }
-\DoxyCodeLine{00158\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_d_b_worker_a4a8642cecbf77c168246bbb73d837e93}{getRevenueByDay}}(\textcolor{keyword}{const}\ QString\ \&from,\ \textcolor{keyword}{const}\ QString\ \&to,}
-\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dishId,\ \textcolor{keywordtype}{int}\ tableNumber,\ \textcolor{keywordtype}{int}\ waiterId);}
-\DoxyCodeLine{00160\ }
-\DoxyCodeLine{00167\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_d_b_worker_a6bdab969c8debd217e3b2b01ddee8dba}{getFoodPopularity}}(\textcolor{keyword}{const}\ QString\ \&from,\ \textcolor{keyword}{const}\ QString\ \&to);}
-\DoxyCodeLine{00168\ }
-\DoxyCodeLine{00170\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_d_b_worker_aead609c2fdf125f2863020dca2e9dbfc}{getReportLowStock}}();}
-\DoxyCodeLine{00171\ }
-\DoxyCodeLine{00178\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_d_b_worker_a9a769692eb6878aa8eac94ff19cc48a8}{getLowStockWarning}}(\textcolor{keywordtype}{int}\ foodId,\ \textcolor{keywordtype}{int}\ quantity);}
-\DoxyCodeLine{00179\ }
-\DoxyCodeLine{00191\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_a72402ee320fd8916517d26267b134729}{saveReportToCSV}}(\textcolor{keyword}{const}\ QString\ \&reportType,}
-\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QString\ \&from,}
-\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QString\ \&to,}
-\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dishId,}
-\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ tableNumber,}
-\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ waiterId,}
-\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QString\ \&fileName);}
-\DoxyCodeLine{00198\ }
-\DoxyCodeLine{00199\ signals:}
-\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_d_b_worker_aa3322617a25970789ce72c60f1c66def}{errorOccurred}}(\textcolor{keyword}{const}\ QString\ \&message);}
-\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_d_b_worker_a4b303b1e41b5cae3ec23de15b57fae88}{foodAvailabilityChanged}}();}
-\DoxyCodeLine{00204\ }
-\DoxyCodeLine{00205\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00206\ \ \ \ \ QSqlDatabase\ db;\ \ \ \ \ \ \ }
-\DoxyCodeLine{00207\ \ \ \ \ QString\ userName;\ \ \ \ \ \ }
-\DoxyCodeLine{00208\ \ \ \ \ QString\ userRole;\ \ \ \ \ \ }
-\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordtype}{int}\ userId;\ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00210\ \ \ \ \ \doxymbox{\hyperlink{class_logs}{Logs}}\ *loger;\ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00211\ \};}
-\DoxyCodeLine{00212\ }
-\DoxyCodeLine{00213\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DBWORKER\_H}}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ DBWORKER\_H}}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ DBWORKER\_H}}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <QSqlDatabase>}}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <QSqlQuery>}}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <QSqlError>}}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <QVariant>}}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <QVariantList>}}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <QVariantMap>}}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <QStringConverter>}}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <QJsonDocument>}}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <QJsonArray>}}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <QJsonObject>}}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}logs.h"{}}}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}exceptions.h"{}}}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00024}\doxymbox{\hyperlink{class_d_b_worker}{00024}}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_d_b_worker_aa9780c5bc05eab6eb2ce9d09b4906ba3}{DBWorker}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00025}00025\ \{}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00026}00026\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00027}00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00033}00033\ \ \ \ \ \doxymbox{\hyperlink{class_d_b_worker_aa9780c5bc05eab6eb2ce9d09b4906ba3}{DBWorker}}(\doxymbox{\hyperlink{class_logs}{Logs}}\ *logger,\ QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00034}00034\ \ \ \ \ \doxymbox{\hyperlink{class_d_b_worker_aa9780c5bc05eab6eb2ce9d09b4906ba3}{\string~DBWorker}}();}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00042}00042\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_a1632dbe913deb9482384580fb2ecf317}{checkUser}}(\textcolor{keyword}{const}\ QString\ \&login,\ \textcolor{keyword}{const}\ QString\ \&password);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00045}\doxymbox{\hyperlink{class_d_b_worker_a0cea6bc29f96ecaaaf8658c63dc83367}{00045}}\ \ \ \ \ Q\_INVOKABLE\ QString\ \doxymbox{\hyperlink{class_d_b_worker_a0cea6bc29f96ecaaaf8658c63dc83367}{getUserName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ userName;\ \}}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00047}\doxymbox{\hyperlink{class_d_b_worker_a7ca50ed46388fda2bf966ee48a007d4e}{00047}}\ \ \ \ \ Q\_INVOKABLE\ QString\ \doxymbox{\hyperlink{class_d_b_worker_a7ca50ed46388fda2bf966ee48a007d4e}{getUserRole}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ userRole;\ \}}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00049}\doxymbox{\hyperlink{class_d_b_worker_abeb4d481e6deef155d1a52a2e634f862}{00049}}\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_d_b_worker_abeb4d481e6deef155d1a52a2e634f862}{getUserId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ userId;\ \}}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00057}00057\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_a620b9a23df8d7f5d841395fbb310dd29}{checkAndConsume}}(\textcolor{keywordtype}{int}\ foodId,\ \textcolor{keywordtype}{int}\ quantity);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00065}00065\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_a98a74e63537a608ffbcab569c92105fe}{returnIngredients}}(\textcolor{keywordtype}{int}\ foodId,\ \textcolor{keywordtype}{int}\ quantity);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00068}00068\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_a8e8c5c4585c20c2b91deaaecbce93ed1}{refreshAllFoodsAvailability}}();}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00079}00079\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_ab883b3de60f36bb85a0f25b3ce790998}{reconnect}}(\textcolor{keyword}{const}\ QString\ \&host,\ \textcolor{keywordtype}{int}\ port,\ \textcolor{keyword}{const}\ QString\ \&dbName,\ \textcolor{keyword}{const}\ QString\ \&user,\ \textcolor{keyword}{const}\ QString\ \&password);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00082}00082\ \ \ \ \ Q\_INVOKABLE\ QStringList\ \doxymbox{\hyperlink{class_d_b_worker_adc2415126bc7c9a82cf56ccb684f5686}{getLocalIps}}();}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00090}00090\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_aff1435f503b992c4bb581e01edba8961}{pingServer}}(\textcolor{keyword}{const}\ QString\ \&host,\ \textcolor{keywordtype}{int}\ port);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00093}00093\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_d_b_worker_a6c621568563fda53aec2b78e35f49189}{getFoods}}();}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00096}00096\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_d_b_worker_a4f3ae45af197d611a249f81040b43981}{getProducts}}();}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00099}00099\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_d_b_worker_ac690f42b9b6ae8dd692f1c4eddff0d23}{getDishesList}}();}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00102}00102\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_d_b_worker_ace7fc41838e18c5bd013c7321c0c5b92}{getWaitersList}}();}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00110}00110\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_a8a566ccf8e3f88150d57bd5c2823ae71}{updateProductQuantity}}(\textcolor{keywordtype}{int}\ productId,\ \textcolor{keywordtype}{int}\ newQuantity);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00118}00118\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_abe3395aee201eb08c029364481a054b1}{addProductQuantity}}(\textcolor{keywordtype}{int}\ productId,\ \textcolor{keywordtype}{int}\ delta);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00128}00128\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_d_b_worker_ade7c3808032512ef7e804ad83bf65dc5}{createOrder}}(\textcolor{keywordtype}{int}\ tableNumber,\ \textcolor{keywordtype}{int}\ userId,\ \textcolor{keyword}{const}\ QString\ \&specialRequests,\ \textcolor{keywordtype}{double}\ totalCost);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00138}00138\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_a8186f7c3e1beb4441e3d6ea1b5c0043c}{addOrderItem}}(\textcolor{keywordtype}{int}\ orderId,\ \textcolor{keywordtype}{int}\ foodId,\ \textcolor{keywordtype}{int}\ quantity,\ \textcolor{keywordtype}{double}\ price);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00149}00149\ \ \ \ \ Q\_INVOKABLE\ QVariantMap\ \doxymbox{\hyperlink{class_d_b_worker_ac6c0a993e0dc166982ff2f06cc4702f1}{getReportRevenue}}(\textcolor{keyword}{const}\ QString\ \&from,\ \textcolor{keyword}{const}\ QString\ \&to,}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dishId,\ \textcolor{keywordtype}{int}\ tableNumber,\ \textcolor{keywordtype}{int}\ waiterId);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00161}00161\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_d_b_worker_a4a8642cecbf77c168246bbb73d837e93}{getRevenueByDay}}(\textcolor{keyword}{const}\ QString\ \&from,\ \textcolor{keyword}{const}\ QString\ \&to,}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dishId,\ \textcolor{keywordtype}{int}\ tableNumber,\ \textcolor{keywordtype}{int}\ waiterId);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00163}00163\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00170}00170\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_d_b_worker_a6bdab969c8debd217e3b2b01ddee8dba}{getFoodPopularity}}(\textcolor{keyword}{const}\ QString\ \&from,\ \textcolor{keyword}{const}\ QString\ \&to);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00173}00173\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_d_b_worker_aead609c2fdf125f2863020dca2e9dbfc}{getReportLowStock}}();}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00174}00174\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00181}00181\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_d_b_worker_a9a769692eb6878aa8eac94ff19cc48a8}{getLowStockWarning}}(\textcolor{keywordtype}{int}\ foodId,\ \textcolor{keywordtype}{int}\ quantity);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00182}00182\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00194}00194\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_a72402ee320fd8916517d26267b134729}{saveReportToCSV}}(\textcolor{keyword}{const}\ QString\ \&reportType,}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QString\ \&from,}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QString\ \&to,}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dishId,}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ tableNumber,}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ waiterId,}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QString\ \&fileName);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00201}00201\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00208}00208\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_d_b_worker_a64b903cafc116c1f0cac841aa8d5170b}{getOrders}}(\textcolor{keyword}{const}\ QString\ \&status\ =\ QString());}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00209}00209\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00216}00216\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_a57611279d82a4da14f20c11d6534f075}{updateOrderStatus}}(\textcolor{keywordtype}{int}\ orderId,\ \textcolor{keyword}{const}\ QString\ \&newStatus);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00217}00217\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00223}00223\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_d_b_worker_ac80b4ee8dd4624b5b5e2cbfbfdab3d62}{getOrderItems}}(\textcolor{keywordtype}{int}\ orderId);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00224}00224\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00232}00232\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_a6e11281c7ddff9e5ae0eedeef86d3d51}{closeOrder}}(\textcolor{keywordtype}{int}\ orderId,\ \textcolor{keywordtype}{double}\ totalSum,\ \textcolor{keyword}{const}\ QVariantList\ \&items);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00233}00233\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00239}00239\ \ \ \ \ Q\_INVOKABLE\ QVariantMap\ \doxymbox{\hyperlink{class_d_b_worker_a2d14c75152990206e471f7bba7eb2b4a}{getCheckByOrderId}}(\textcolor{keywordtype}{int}\ orderId);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00240}00240\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00245}00245\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_d_b_worker_a09f6659d5b660131e2574d96cd6efe1e}{getAllOrdersForReport}}();}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00246}00246\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00253}00253\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_d_b_worker_afc3f20c994c79eabc50988d69e643fe0}{syncOrderItems}}(\textcolor{keywordtype}{int}\ orderId,\ \textcolor{keyword}{const}\ QVariantList\ \&newItems);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00254}00254\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00259}00259\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_d_b_worker_a8188473e632f37ccf5123cf942d8aac3}{getClosedOrders}}();}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00260}00260\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00269}00269\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_d_b_worker_abe927273948f5c29bfa8825e7d6ca118}{updateConnectionParams}}(\textcolor{keyword}{const}\ QString\ \&host,\ \textcolor{keywordtype}{int}\ port,\ \textcolor{keyword}{const}\ QString\ \&dbName,\ \textcolor{keyword}{const}\ QString\ \&user,\ \textcolor{keyword}{const}\ QString\ \&password);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00270}00270\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00277}00277\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_d_b_worker_a26ffeb584310f3373927e17572d5c03f}{getChecksByDateRange}}(\textcolor{keyword}{const}\ QString\ \&from,\ \textcolor{keyword}{const}\ QString\ \&to);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00278}00278\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00280}00280\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_d_b_worker_a65755b702447466a5c27b6323676cbfd}{generateOrderNumber}}();}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00281}00281\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00282}00282\ signals:}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00284}\doxymbox{\hyperlink{class_d_b_worker_aa3322617a25970789ce72c60f1c66def}{00284}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_d_b_worker_aa3322617a25970789ce72c60f1c66def}{errorOccurred}}(\textcolor{keyword}{const}\ QString\ \&message);}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00286}\doxymbox{\hyperlink{class_d_b_worker_a4b303b1e41b5cae3ec23de15b57fae88}{00286}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_d_b_worker_a4b303b1e41b5cae3ec23de15b57fae88}{foodAvailabilityChanged}}();}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00287}00287\ \ \ \ \ \textcolor{comment}{//*!\ Сигнал\ об\ изменении\ списка\ заказов\ (создание,\ обновление\ статуса,\ закрытие).}}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00288}00288\ \ \ \ \ \textcolor{keywordtype}{void}\ ordersChanged();}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00289}00289\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00290}00290\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00291}00291\ \ \ \ \ QSqlDatabase\ db;\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00292}00292\ \ \ \ \ QString\ userName;\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00293}00293\ \ \ \ \ QString\ userRole;\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00294}00294\ \ \ \ \ \textcolor{keywordtype}{int}\ userId;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00295}00295\ \ \ \ \ \doxymbox{\hyperlink{class_logs}{Logs}}\ *loger;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00296}00296\ \};}
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00297}00297\ }
+\DoxyCodeLine{\Hypertarget{dbworker_8h_source_l00298}00298\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DBWORKER\_H}}
 
 \end{DoxyCode}

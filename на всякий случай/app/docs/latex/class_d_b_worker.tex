@@ -1,4 +1,4 @@
-\doxysection{DBWorker Class Reference}
+\doxysection{Класс DBWorker}
 \hypertarget{class_d_b_worker}{}\label{class_d_b_worker}\index{DBWorker@{DBWorker}}
 
 
@@ -9,13 +9,13 @@
 
 {\ttfamily \+\#include $<$dbworker.\+h$>$}
 
-Inheritance diagram for DBWorker:\+\begin{figure}[H]
+Граф наследования:\+DBWorker:\+\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{class_d_b_worker}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Signals}
+\doxysubsubsection*{Сигналы}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_d_b_worker_aa3322617a25970789ce72c60f1c66def}\label{class_d_b_worker_aa3322617a25970789ce72c60f1c66def} 
@@ -23,48 +23,42 @@ void {\bfseries error\+Occurred} (const QString \&message)
 \begin{DoxyCompactList}\small\item\em Сигнал, передающий текст ошибки для отображения в интерфейсе. \end{DoxyCompactList}\item 
 \Hypertarget{class_d_b_worker_a4b303b1e41b5cae3ec23de15b57fae88}\label{class_d_b_worker_a4b303b1e41b5cae3ec23de15b57fae88} 
 void {\bfseries food\+Availability\+Changed} ()
-\begin{DoxyCompactList}\small\item\em Сообщает об изменении доступности блюд (например, после обновления остатков). \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactList}\small\item\em Сообщает об изменении доступности блюд (например, после обновления остатков). \end{DoxyCompactList}\item 
+\Hypertarget{class_d_b_worker_ac205e7ea66674fd2d4b92d908fd18d40}\label{class_d_b_worker_ac205e7ea66674fd2d4b92d908fd18d40} 
+void {\bfseries orders\+Changed} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_d_b_worker_aa9780c5bc05eab6eb2ce9d09b4906ba3}{DBWorker}} (\doxymbox{\hyperlink{class_logs}{Logs}} \texorpdfstring{$\ast$}{*}logger, QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
 \begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
 Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_d_b_worker_a1632dbe913deb9482384580fb2ecf317}{check\+User}} (const QString \&login, const QString \&password)
 \begin{DoxyCompactList}\small\item\em Проверяет логин и пароль пользователя. \end{DoxyCompactList}\item 
-\Hypertarget{class_d_b_worker_a0cea6bc29f96ecaaaf8658c63dc83367}\label{class_d_b_worker_a0cea6bc29f96ecaaaf8658c63dc83367} 
-Q\+\_\+\+INVOKABLE QString {\bfseries get\+User\+Name} () const
+Q\+\_\+\+INVOKABLE QString \doxymbox{\hyperlink{class_d_b_worker_a0cea6bc29f96ecaaaf8658c63dc83367}{get\+User\+Name}} () const
 \begin{DoxyCompactList}\small\item\em Возвращает имя текущего пользователя. \end{DoxyCompactList}\item 
-\Hypertarget{class_d_b_worker_a7ca50ed46388fda2bf966ee48a007d4e}\label{class_d_b_worker_a7ca50ed46388fda2bf966ee48a007d4e} 
-Q\+\_\+\+INVOKABLE QString {\bfseries get\+User\+Role} () const
+Q\+\_\+\+INVOKABLE QString \doxymbox{\hyperlink{class_d_b_worker_a7ca50ed46388fda2bf966ee48a007d4e}{get\+User\+Role}} () const
 \begin{DoxyCompactList}\small\item\em Возвращает роль текущего пользователя. \end{DoxyCompactList}\item 
-\Hypertarget{class_d_b_worker_abeb4d481e6deef155d1a52a2e634f862}\label{class_d_b_worker_abeb4d481e6deef155d1a52a2e634f862} 
-Q\+\_\+\+INVOKABLE int {\bfseries get\+User\+Id} () const
+Q\+\_\+\+INVOKABLE int \doxymbox{\hyperlink{class_d_b_worker_abeb4d481e6deef155d1a52a2e634f862}{get\+User\+Id}} () const
 \begin{DoxyCompactList}\small\item\em Возвращает идентификатор текущего пользователя. \end{DoxyCompactList}\item 
 Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_d_b_worker_a620b9a23df8d7f5d841395fbb310dd29}{check\+And\+Consume}} (int food\+Id, int quantity)
 \begin{DoxyCompactList}\small\item\em Проверяет наличие ингредиентов и списывает их со склада. \end{DoxyCompactList}\item 
 Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_d_b_worker_a98a74e63537a608ffbcab569c92105fe}{return\+Ingredients}} (int food\+Id, int quantity)
 \begin{DoxyCompactList}\small\item\em Возвращает ингредиенты на склад при отмене позиции заказа. \end{DoxyCompactList}\item 
-\Hypertarget{class_d_b_worker_a8e8c5c4585c20c2b91deaaecbce93ed1}\label{class_d_b_worker_a8e8c5c4585c20c2b91deaaecbce93ed1} 
-Q\+\_\+\+INVOKABLE bool {\bfseries refresh\+All\+Foods\+Availability} ()
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_d_b_worker_a8e8c5c4585c20c2b91deaaecbce93ed1}{refresh\+All\+Foods\+Availability}} ()
 \begin{DoxyCompactList}\small\item\em Пересчитывает доступность всех блюд на основе остатков продуктов. \end{DoxyCompactList}\item 
 Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_d_b_worker_ab883b3de60f36bb85a0f25b3ce790998}{reconnect}} (const QString \&host, int port, const QString \&db\+Name, const QString \&user, const QString \&password)
 \begin{DoxyCompactList}\small\item\em Переподключает базу данных с новыми параметрами. \end{DoxyCompactList}\item 
-\Hypertarget{class_d_b_worker_adc2415126bc7c9a82cf56ccb684f5686}\label{class_d_b_worker_adc2415126bc7c9a82cf56ccb684f5686} 
-Q\+\_\+\+INVOKABLE QString\+List {\bfseries get\+Local\+Ips} ()
+Q\+\_\+\+INVOKABLE QString\+List \doxymbox{\hyperlink{class_d_b_worker_adc2415126bc7c9a82cf56ccb684f5686}{get\+Local\+Ips}} ()
 \begin{DoxyCompactList}\small\item\em Возвращает список локальных IPv4‑адресов. \end{DoxyCompactList}\item 
 Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_d_b_worker_aff1435f503b992c4bb581e01edba8961}{ping\+Server}} (const QString \&host, int port)
 \begin{DoxyCompactList}\small\item\em Проверяет доступность удалённого сервера (заглушка, всегда true). \end{DoxyCompactList}\item 
-\Hypertarget{class_d_b_worker_a6c621568563fda53aec2b78e35f49189}\label{class_d_b_worker_a6c621568563fda53aec2b78e35f49189} 
-Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Foods} ()
+Q\+\_\+\+INVOKABLE QVariant\+List \doxymbox{\hyperlink{class_d_b_worker_a6c621568563fda53aec2b78e35f49189}{get\+Foods}} ()
 \begin{DoxyCompactList}\small\item\em Загружает меню с составом и доступностью. \end{DoxyCompactList}\item 
-\Hypertarget{class_d_b_worker_a4f3ae45af197d611a249f81040b43981}\label{class_d_b_worker_a4f3ae45af197d611a249f81040b43981} 
-Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Products} ()
+Q\+\_\+\+INVOKABLE QVariant\+List \doxymbox{\hyperlink{class_d_b_worker_a4f3ae45af197d611a249f81040b43981}{get\+Products}} ()
 \begin{DoxyCompactList}\small\item\em Загружает складские остатки продуктов. \end{DoxyCompactList}\item 
-\Hypertarget{class_d_b_worker_ac690f42b9b6ae8dd692f1c4eddff0d23}\label{class_d_b_worker_ac690f42b9b6ae8dd692f1c4eddff0d23} 
-Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Dishes\+List} ()
+Q\+\_\+\+INVOKABLE QVariant\+List \doxymbox{\hyperlink{class_d_b_worker_ac690f42b9b6ae8dd692f1c4eddff0d23}{get\+Dishes\+List}} ()
 \begin{DoxyCompactList}\small\item\em Возвращает краткий список блюд (ID и название). \end{DoxyCompactList}\item 
-\Hypertarget{class_d_b_worker_ace7fc41838e18c5bd013c7321c0c5b92}\label{class_d_b_worker_ace7fc41838e18c5bd013c7321c0c5b92} 
-Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Waiters\+List} ()
+Q\+\_\+\+INVOKABLE QVariant\+List \doxymbox{\hyperlink{class_d_b_worker_ace7fc41838e18c5bd013c7321c0c5b92}{get\+Waiters\+List}} ()
 \begin{DoxyCompactList}\small\item\em Возвращает список официантов. \end{DoxyCompactList}\item 
 Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_d_b_worker_a8a566ccf8e3f88150d57bd5c2823ae71}{update\+Product\+Quantity}} (int product\+Id, int new\+Quantity)
 \begin{DoxyCompactList}\small\item\em Устанавливает новое абсолютное количество продукта. \end{DoxyCompactList}\item 
@@ -80,23 +74,48 @@ Q\+\_\+\+INVOKABLE QVariant\+List \doxymbox{\hyperlink{class_d_b_worker_a4a8642c
 \begin{DoxyCompactList}\small\item\em Возвращает выручку, сгруппированную по дням. \end{DoxyCompactList}\item 
 Q\+\_\+\+INVOKABLE QVariant\+List \doxymbox{\hyperlink{class_d_b_worker_a6bdab969c8debd217e3b2b01ddee8dba}{get\+Food\+Popularity}} (const QString \&from, const QString \&to)
 \begin{DoxyCompactList}\small\item\em Получает популярность блюд за период. \end{DoxyCompactList}\item 
-\Hypertarget{class_d_b_worker_aead609c2fdf125f2863020dca2e9dbfc}\label{class_d_b_worker_aead609c2fdf125f2863020dca2e9dbfc} 
-Q\+\_\+\+INVOKABLE QVariant\+List {\bfseries get\+Report\+Low\+Stock} ()
+Q\+\_\+\+INVOKABLE QVariant\+List \doxymbox{\hyperlink{class_d_b_worker_aead609c2fdf125f2863020dca2e9dbfc}{get\+Report\+Low\+Stock}} ()
 \begin{DoxyCompactList}\small\item\em Возвращает продукты, количество которых ниже минимального порога. \end{DoxyCompactList}\item 
 Q\+\_\+\+INVOKABLE QVariant\+List \doxymbox{\hyperlink{class_d_b_worker_a9a769692eb6878aa8eac94ff19cc48a8}{get\+Low\+Stock\+Warning}} (int food\+Id, int quantity)
 \begin{DoxyCompactList}\small\item\em Предупреждает о продуктах, остаток которых станет ниже порога после приготовления блюда. \end{DoxyCompactList}\item 
 Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_d_b_worker_a72402ee320fd8916517d26267b134729}{save\+Report\+To\+CSV}} (const QString \&report\+Type, const QString \&from, const QString \&to, int dish\+Id, int table\+Number, int waiter\+Id, const QString \&file\+Name)
-\begin{DoxyCompactList}\small\item\em Сохраняет отчёт в CSV‑файл. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Сохраняет отчёт в CSV‑файл. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE QVariant\+List \doxymbox{\hyperlink{class_d_b_worker_a64b903cafc116c1f0cac841aa8d5170b}{get\+Orders}} (const QString \&status=QString())
+\begin{DoxyCompactList}\small\item\em Возвращает список заказов с возможностью фильтрации по статусу. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_d_b_worker_a57611279d82a4da14f20c11d6534f075}{update\+Order\+Status}} (int order\+Id, const QString \&new\+Status)
+\begin{DoxyCompactList}\small\item\em Обновляет статус заказа. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE QVariant\+List \doxymbox{\hyperlink{class_d_b_worker_ac80b4ee8dd4624b5b5e2cbfbfdab3d62}{get\+Order\+Items}} (int order\+Id)
+\begin{DoxyCompactList}\small\item\em Возвращает позиции заказа. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_d_b_worker_a6e11281c7ddff9e5ae0eedeef86d3d51}{close\+Order}} (int order\+Id, double total\+Sum, const QVariant\+List \&items)
+\begin{DoxyCompactList}\small\item\em Закрывает заказ, создаёт чек и переводит статус в "{}Закрыт"{}. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE QVariant\+Map \doxymbox{\hyperlink{class_d_b_worker_a2d14c75152990206e471f7bba7eb2b4a}{get\+Check\+By\+Order\+Id}} (int order\+Id)
+\begin{DoxyCompactList}\small\item\em Возвращает чек по ID заказа. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE QVariant\+List \doxymbox{\hyperlink{class_d_b_worker_a09f6659d5b660131e2574d96cd6efe1e}{get\+All\+Orders\+For\+Report}} ()
+\begin{DoxyCompactList}\small\item\em Упрощённый список всех заказов (для отчётов). \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{class_d_b_worker_afc3f20c994c79eabc50988d69e643fe0}{sync\+Order\+Items}} (int order\+Id, const QVariant\+List \&new\+Items)
+\begin{DoxyCompactList}\small\item\em Синхронизирует позиции заказа при редактировании (вычисляет разницу). \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE QVariant\+List \doxymbox{\hyperlink{class_d_b_worker_a8188473e632f37ccf5123cf942d8aac3}{get\+Closed\+Orders}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает закрытые заказы (статус "{}Закрыт"{}). \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE void \doxymbox{\hyperlink{class_d_b_worker_abe927273948f5c29bfa8825e7d6ca118}{update\+Connection\+Params}} (const QString \&host, int port, const QString \&db\+Name, const QString \&user, const QString \&password)
+\begin{DoxyCompactList}\small\item\em Обновляет параметры подключения к БД без переподключения. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE QVariant\+List \doxymbox{\hyperlink{class_d_b_worker_a26ffeb584310f3373927e17572d5c03f}{get\+Checks\+By\+Date\+Range}} (const QString \&from, const QString \&to)
+\begin{DoxyCompactList}\small\item\em Возвращает чеки за период с деталями заказа. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_d_b_worker_a65755b702447466a5c27b6323676cbfd}{generate\+Order\+Number}} ()
+\begin{DoxyCompactList}\small\item\em Генерирует уникальный номер заказа для текущего дня (начинается с 1 каждый день). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Подробное описание}
 Класс для взаимодействия с базой данных Postgre\+SQL ресторана. 
 
 Предоставляет методы аутентификации, работы с меню, складом, заказами и отчётами. Хранит информацию о текущем пользователе. 
 
+См. определение в файле \doxymbox{\hyperlink{dbworker_8h_source}{dbworker.\+h}} строка \doxymbox{\hyperlink{dbworker_8h_source_l00024}{24}}
+
+
+
 \label{doc-constructors}
 \Hypertarget{class_d_b_worker_doc-constructors}
-\doxysubsection{Constructor \& Destructor Documentation}
+\doxysubsection{Конструктор(ы)}
 \Hypertarget{class_d_b_worker_aa9780c5bc05eab6eb2ce9d09b4906ba3}\index{DBWorker@{DBWorker}!DBWorker@{DBWorker}}
 \index{DBWorker@{DBWorker}!DBWorker@{DBWorker}}
 \doxysubsubsection{\texorpdfstring{DBWorker()}{DBWorker()}}
@@ -108,7 +127,7 @@ DBWorker::\+\+DBWorker (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{clas
 Конструктор. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em logger} & Указатель на объект логирования. \\
 \hline
 {\em parent} & Родительский объект (по умолчанию nullptr). \\
@@ -116,9 +135,23 @@ DBWorker::\+\+DBWorker (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{clas
 \end{DoxyParams}
 
 
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00009}{9}}
+
+\Hypertarget{class_d_b_worker_a5b3c98063d26d42c67511fb3f565b9f0}\index{DBWorker@{DBWorker}!````~DBWorker@{\texorpdfstring{$\sim$}{\string~}DBWorker}}
+\index{````~DBWorker@{\texorpdfstring{$\sim$}{\string~}DBWorker}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}DBWorker()}{\string~DBWorker()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a5b3c98063d26d42c67511fb3f565b9f0} 
+DBWorker::\+\texorpdfstring{$\sim$}{\string~}\+DBWorker (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00032}{32}}
+
+
+
 \label{doc-func-members}
 \Hypertarget{class_d_b_worker_doc-func-members}
-\doxysubsection{Member Function Documentation}
+\doxysubsection{Методы}
 \Hypertarget{class_d_b_worker_a8186f7c3e1beb4441e3d6ea1b5c0043c}\index{DBWorker@{DBWorker}!addOrderItem@{addOrderItem}}
 \index{addOrderItem@{addOrderItem}!DBWorker@{DBWorker}}
 \doxysubsubsection{\texorpdfstring{addOrderItem()}{addOrderItem()}}
@@ -130,7 +163,7 @@ bool DBWorker::\+add\+Order\+Item (\begin{DoxyParamCaption}\item[{int}]{order\+I
 Добавляет позицию в заказ. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em order\+Id} & ID заказа. \\
 \hline
 {\em food\+Id} & ID блюда. \\
@@ -140,9 +173,13 @@ bool DBWorker::\+add\+Order\+Item (\begin{DoxyParamCaption}\item[{int}]{order\+I
 {\em price} & Цена за единицу. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 true при успешной вставке. 
 \end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00256}{256}}
+
 \Hypertarget{class_d_b_worker_abe3395aee201eb08c029364481a054b1}\index{DBWorker@{DBWorker}!addProductQuantity@{addProductQuantity}}
 \index{addProductQuantity@{addProductQuantity}!DBWorker@{DBWorker}}
 \doxysubsubsection{\texorpdfstring{addProductQuantity()}{addProductQuantity()}}
@@ -154,15 +191,19 @@ bool DBWorker::\+add\+Product\+Quantity (\begin{DoxyParamCaption}\item[{int}]{pr
 Изменяет количество продукта на заданную величину. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em product\+Id} & ID продукта. \\
 \hline
 {\em delta} & Изменение (может быть отрицательным). \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 true при успехе. 
 \end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00199}{199}}
+
 \Hypertarget{class_d_b_worker_a620b9a23df8d7f5d841395fbb310dd29}\index{DBWorker@{DBWorker}!checkAndConsume@{checkAndConsume}}
 \index{checkAndConsume@{checkAndConsume}!DBWorker@{DBWorker}}
 \doxysubsubsection{\texorpdfstring{checkAndConsume()}{checkAndConsume()}}
@@ -174,15 +215,19 @@ bool DBWorker::\+check\+And\+Consume (\begin{DoxyParamCaption}\item[{int}]{food\
 Проверяет наличие ингредиентов и списывает их со склада. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em food\+Id} & ID блюда. \\
 \hline
 {\em quantity} & Количество порций. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 true, если списание прошло успешно. 
 \end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00364}{364}}
+
 \Hypertarget{class_d_b_worker_a1632dbe913deb9482384580fb2ecf317}\index{DBWorker@{DBWorker}!checkUser@{checkUser}}
 \index{checkUser@{checkUser}!DBWorker@{DBWorker}}
 \doxysubsubsection{\texorpdfstring{checkUser()}{checkUser()}}
@@ -194,15 +239,45 @@ bool DBWorker::\+check\+User (\begin{DoxyParamCaption}\item[{const QString \&}]{
 Проверяет логин и пароль пользователя. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em login} & Логин. \\
 \hline
 {\em password} & Пароль. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 true при успешной аутентификации. 
 \end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00038}{38}}
+
+\Hypertarget{class_d_b_worker_a6e11281c7ddff9e5ae0eedeef86d3d51}\index{DBWorker@{DBWorker}!closeOrder@{closeOrder}}
+\index{closeOrder@{closeOrder}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{closeOrder()}{closeOrder()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a6e11281c7ddff9e5ae0eedeef86d3d51} 
+bool DBWorker::\+close\+Order (\begin{DoxyParamCaption}\item[{int}]{order\+Id}{, }\item[{double}]{total\+Sum}{, }\item[{const QVariant\+List \&}]{items}{}\end{DoxyParamCaption})}
+
+
+
+Закрывает заказ, создаёт чек и переводит статус в "{}Закрыт"{}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em order\+Id} & ID заказа. \\
+\hline
+{\em total\+Sum} & Итоговая сумма заказа. \\
+\hline
+{\em items} & Список позиций заказа (каждый элемент:\+ \{name, quantity, price\}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true при успешном закрытии. 
+\end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l01050}{1050}}
+
 \Hypertarget{class_d_b_worker_ade7c3808032512ef7e804ad83bf65dc5}\index{DBWorker@{DBWorker}!createOrder@{createOrder}}
 \index{createOrder@{createOrder}!DBWorker@{DBWorker}}
 \doxysubsubsection{\texorpdfstring{createOrder()}{createOrder()}}
@@ -214,7 +289,7 @@ int DBWorker::\+create\+Order (\begin{DoxyParamCaption}\item[{int}]{table\+Numbe
 Создаёт новый заказ. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em table\+Number} & Номер столика. \\
 \hline
 {\em user\+Id} & ID официанта. \\
@@ -224,9 +299,121 @@ int DBWorker::\+create\+Order (\begin{DoxyParamCaption}\item[{int}]{table\+Numbe
 {\em total\+Cost} & Итоговая стоимость. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 ID созданного заказа или -\/1 при ошибке. 
 \end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00223}{223}}
+
+\Hypertarget{class_d_b_worker_a65755b702447466a5c27b6323676cbfd}\index{DBWorker@{DBWorker}!generateOrderNumber@{generateOrderNumber}}
+\index{generateOrderNumber@{generateOrderNumber}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{generateOrderNumber()}{generateOrderNumber()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a65755b702447466a5c27b6323676cbfd} 
+int DBWorker::\+generate\+Order\+Number (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Генерирует уникальный номер заказа для текущего дня (начинается с 1 каждый день). 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00922}{922}}
+
+\Hypertarget{class_d_b_worker_a09f6659d5b660131e2574d96cd6efe1e}\index{DBWorker@{DBWorker}!getAllOrdersForReport@{getAllOrdersForReport}}
+\index{getAllOrdersForReport@{getAllOrdersForReport}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{getAllOrdersForReport()}{getAllOrdersForReport()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a09f6659d5b660131e2574d96cd6efe1e} 
+QVariant\+List DBWorker::\+get\+All\+Orders\+For\+Report (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Упрощённый список всех заказов (для отчётов). 
+
+\begin{DoxyReturn}{Возвращает}
+Результат вызова \doxylink{class_d_b_worker_a64b903cafc116c1f0cac841aa8d5170b}{get\+Orders()} без фильтра. 
+\end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l01254}{1254}}
+
+\Hypertarget{class_d_b_worker_a2d14c75152990206e471f7bba7eb2b4a}\index{DBWorker@{DBWorker}!getCheckByOrderId@{getCheckByOrderId}}
+\index{getCheckByOrderId@{getCheckByOrderId}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{getCheckByOrderId()}{getCheckByOrderId()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a2d14c75152990206e471f7bba7eb2b4a} 
+QVariant\+Map DBWorker::\+get\+Check\+By\+Order\+Id (\begin{DoxyParamCaption}\item[{int}]{order\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Возвращает чек по ID заказа. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em order\+Id} & ID заказа. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Словарь с ключами check\+Id, check\+Number, order\+Number, total\+Sum, check\+Data, created\+At. 
+\end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l01115}{1115}}
+
+\Hypertarget{class_d_b_worker_a26ffeb584310f3373927e17572d5c03f}\index{DBWorker@{DBWorker}!getChecksByDateRange@{getChecksByDateRange}}
+\index{getChecksByDateRange@{getChecksByDateRange}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{getChecksByDateRange()}{getChecksByDateRange()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a26ffeb584310f3373927e17572d5c03f} 
+QVariant\+List DBWorker::\+get\+Checks\+By\+Date\+Range (\begin{DoxyParamCaption}\item[{const QString \&}]{from}{, }\item[{const QString \&}]{to}{}\end{DoxyParamCaption})}
+
+
+
+Возвращает чеки за период с деталями заказа. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em from} & Начальная дата (ГГГГ-\/ММ-\/ДД). \\
+\hline
+{\em to} & Конечная дата. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Список словарей с полями check\+Number, order\+Number, total\+Sum, created\+At, table\+Number, waiter\+Name, order\+Id. 
+\end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l01274}{1274}}
+
+\Hypertarget{class_d_b_worker_a8188473e632f37ccf5123cf942d8aac3}\index{DBWorker@{DBWorker}!getClosedOrders@{getClosedOrders}}
+\index{getClosedOrders@{getClosedOrders}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{getClosedOrders()}{getClosedOrders()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a8188473e632f37ccf5123cf942d8aac3} 
+QVariant\+List DBWorker::\+get\+Closed\+Orders (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Возвращает закрытые заказы (статус "{}Закрыт"{}). 
+
+\begin{DoxyReturn}{Возвращает}
+Список заказов. 
+\end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l01259}{1259}}
+
+\Hypertarget{class_d_b_worker_ac690f42b9b6ae8dd692f1c4eddff0d23}\index{DBWorker@{DBWorker}!getDishesList@{getDishesList}}
+\index{getDishesList@{getDishesList}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{getDishesList()}{getDishesList()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_ac690f42b9b6ae8dd692f1c4eddff0d23} 
+QVariant\+List DBWorker::\+get\+Dishes\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Возвращает краткий список блюд (ID и название). 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00613}{613}}
+
 \Hypertarget{class_d_b_worker_a6bdab969c8debd217e3b2b01ddee8dba}\index{DBWorker@{DBWorker}!getFoodPopularity@{getFoodPopularity}}
 \index{getFoodPopularity@{getFoodPopularity}!DBWorker@{DBWorker}}
 \doxysubsubsection{\texorpdfstring{getFoodPopularity()}{getFoodPopularity()}}
@@ -238,15 +425,47 @@ QVariant\+List DBWorker::\+get\+Food\+Popularity (\begin{DoxyParamCaption}\item[
 Получает популярность блюд за период. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em from} & Начальная дата. \\
 \hline
 {\em to} & Конечная дата. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 Список словарей с ключами "{}food\+Name"{} и "{}count"{}. 
 \end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00314}{314}}
+
+\Hypertarget{class_d_b_worker_a6c621568563fda53aec2b78e35f49189}\index{DBWorker@{DBWorker}!getFoods@{getFoods}}
+\index{getFoods@{getFoods}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{getFoods()}{getFoods()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a6c621568563fda53aec2b78e35f49189} 
+QVariant\+List DBWorker::\+get\+Foods (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Загружает меню с составом и доступностью. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00081}{81}}
+
+\Hypertarget{class_d_b_worker_adc2415126bc7c9a82cf56ccb684f5686}\index{DBWorker@{DBWorker}!getLocalIps@{getLocalIps}}
+\index{getLocalIps@{getLocalIps}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{getLocalIps()}{getLocalIps()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_adc2415126bc7c9a82cf56ccb684f5686} 
+QString\+List DBWorker::\+get\+Local\+Ips (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Возвращает список локальных IPv4‑адресов. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00824}{824}}
+
 \Hypertarget{class_d_b_worker_a9a769692eb6878aa8eac94ff19cc48a8}\index{DBWorker@{DBWorker}!getLowStockWarning@{getLowStockWarning}}
 \index{getLowStockWarning@{getLowStockWarning}!DBWorker@{DBWorker}}
 \doxysubsubsection{\texorpdfstring{getLowStockWarning()}{getLowStockWarning()}}
@@ -258,15 +477,91 @@ QVariant\+List DBWorker::\+get\+Low\+Stock\+Warning (\begin{DoxyParamCaption}\it
 Предупреждает о продуктах, остаток которых станет ниже порога после приготовления блюда. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em food\+Id} & ID блюда. \\
 \hline
 {\em quantity} & Количество порций. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 Список предупреждений с полями product\+Name, current\+Quantity, new\+Quantity, min\+Threshold. 
 \end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00564}{564}}
+
+\Hypertarget{class_d_b_worker_ac80b4ee8dd4624b5b5e2cbfbfdab3d62}\index{DBWorker@{DBWorker}!getOrderItems@{getOrderItems}}
+\index{getOrderItems@{getOrderItems}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{getOrderItems()}{getOrderItems()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_ac80b4ee8dd4624b5b5e2cbfbfdab3d62} 
+QVariant\+List DBWorker::\+get\+Order\+Items (\begin{DoxyParamCaption}\item[{int}]{order\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Возвращает позиции заказа. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em order\+Id} & ID заказа. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Список словарей с полями order\+Food\+Id, food\+Id, name, quantity, price. 
+\end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l01015}{1015}}
+
+\Hypertarget{class_d_b_worker_a64b903cafc116c1f0cac841aa8d5170b}\index{DBWorker@{DBWorker}!getOrders@{getOrders}}
+\index{getOrders@{getOrders}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{getOrders()}{getOrders()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a64b903cafc116c1f0cac841aa8d5170b} 
+QVariant\+List DBWorker::\+get\+Orders (\begin{DoxyParamCaption}\item[{const QString \&}]{status}{ = {\ttfamily QString()}}\end{DoxyParamCaption})}
+
+
+
+Возвращает список заказов с возможностью фильтрации по статусу. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em status} & Статус заказа (пустая строка – все заказы). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Список словарей с полями order\+Id, order\+Number, table\+Number, order\+Date, special\+Requests, total\+Cost, status, waiter\+Name. 
+\end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00947}{947}}
+
+\Hypertarget{class_d_b_worker_a4f3ae45af197d611a249f81040b43981}\index{DBWorker@{DBWorker}!getProducts@{getProducts}}
+\index{getProducts@{getProducts}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{getProducts()}{getProducts()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a4f3ae45af197d611a249f81040b43981} 
+QVariant\+List DBWorker::\+get\+Products (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Загружает складские остатки продуктов. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00141}{141}}
+
+\Hypertarget{class_d_b_worker_aead609c2fdf125f2863020dca2e9dbfc}\index{DBWorker@{DBWorker}!getReportLowStock@{getReportLowStock}}
+\index{getReportLowStock@{getReportLowStock}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{getReportLowStock()}{getReportLowStock()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_aead609c2fdf125f2863020dca2e9dbfc} 
+QVariant\+List DBWorker::\+get\+Report\+Low\+Stock (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Возвращает продукты, количество которых ниже минимального порога. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00283}{283}}
+
 \Hypertarget{class_d_b_worker_ac6c0a993e0dc166982ff2f06cc4702f1}\index{DBWorker@{DBWorker}!getReportRevenue@{getReportRevenue}}
 \index{getReportRevenue@{getReportRevenue}!DBWorker@{DBWorker}}
 \doxysubsubsection{\texorpdfstring{getReportRevenue()}{getReportRevenue()}}
@@ -278,7 +573,7 @@ QVariant\+Map DBWorker::\+get\+Report\+Revenue (\begin{DoxyParamCaption}\item[{c
 Возвращает общую выручку за период с применёнными фильтрами. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em from} & Начальная дата (ГГГГ-\/ММ-\/ДД). \\
 \hline
 {\em to} & Конечная дата. \\
@@ -290,9 +585,13 @@ QVariant\+Map DBWorker::\+get\+Report\+Revenue (\begin{DoxyParamCaption}\item[{c
 {\em waiter\+Id} & ID официанта (0 – без фильтра). \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 Словарь с ключом "{}total\+Revenue"{} или "{}error"{}. 
 \end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00673}{673}}
+
 \Hypertarget{class_d_b_worker_a4a8642cecbf77c168246bbb73d837e93}\index{DBWorker@{DBWorker}!getRevenueByDay@{getRevenueByDay}}
 \index{getRevenueByDay@{getRevenueByDay}!DBWorker@{DBWorker}}
 \doxysubsubsection{\texorpdfstring{getRevenueByDay()}{getRevenueByDay()}}
@@ -304,7 +603,7 @@ QVariant\+List DBWorker::\+get\+Revenue\+By\+Day (\begin{DoxyParamCaption}\item[
 Возвращает выручку, сгруппированную по дням. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em from} & Начальная дата. \\
 \hline
 {\em to} & Конечная дата. \\
@@ -316,9 +615,69 @@ QVariant\+List DBWorker::\+get\+Revenue\+By\+Day (\begin{DoxyParamCaption}\item[
 {\em waiter\+Id} & Фильтр по официанту (0 – без фильтра). \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 Список словарей с полями "{}date"{} и "{}total"{}. 
 \end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00737}{737}}
+
+\Hypertarget{class_d_b_worker_abeb4d481e6deef155d1a52a2e634f862}\index{DBWorker@{DBWorker}!getUserId@{getUserId}}
+\index{getUserId@{getUserId}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{getUserId()}{getUserId()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_abeb4d481e6deef155d1a52a2e634f862} 
+Q\+\_\+\+INVOKABLE int DBWorker::\+get\+User\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Возвращает идентификатор текущего пользователя. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8h_source}{dbworker.\+h}} строка \doxymbox{\hyperlink{dbworker_8h_source_l00049}{49}}
+
+\Hypertarget{class_d_b_worker_a0cea6bc29f96ecaaaf8658c63dc83367}\index{DBWorker@{DBWorker}!getUserName@{getUserName}}
+\index{getUserName@{getUserName}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{getUserName()}{getUserName()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a0cea6bc29f96ecaaaf8658c63dc83367} 
+Q\+\_\+\+INVOKABLE QString DBWorker::\+get\+User\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Возвращает имя текущего пользователя. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8h_source}{dbworker.\+h}} строка \doxymbox{\hyperlink{dbworker_8h_source_l00045}{45}}
+
+\Hypertarget{class_d_b_worker_a7ca50ed46388fda2bf966ee48a007d4e}\index{DBWorker@{DBWorker}!getUserRole@{getUserRole}}
+\index{getUserRole@{getUserRole}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{getUserRole()}{getUserRole()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a7ca50ed46388fda2bf966ee48a007d4e} 
+Q\+\_\+\+INVOKABLE QString DBWorker::\+get\+User\+Role (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Возвращает роль текущего пользователя. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8h_source}{dbworker.\+h}} строка \doxymbox{\hyperlink{dbworker_8h_source_l00047}{47}}
+
+\Hypertarget{class_d_b_worker_ace7fc41838e18c5bd013c7321c0c5b92}\index{DBWorker@{DBWorker}!getWaitersList@{getWaitersList}}
+\index{getWaitersList@{getWaitersList}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{getWaitersList()}{getWaitersList()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_ace7fc41838e18c5bd013c7321c0c5b92} 
+QVariant\+List DBWorker::\+get\+Waiters\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Возвращает список официантов. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00643}{643}}
+
 \Hypertarget{class_d_b_worker_aff1435f503b992c4bb581e01edba8961}\index{DBWorker@{DBWorker}!pingServer@{pingServer}}
 \index{pingServer@{pingServer}!DBWorker@{DBWorker}}
 \doxysubsubsection{\texorpdfstring{pingServer()}{pingServer()}}
@@ -330,15 +689,19 @@ bool DBWorker::\+ping\+Server (\begin{DoxyParamCaption}\item[{const QString \&}]
 Проверяет доступность удалённого сервера (заглушка, всегда true). 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em host} & Адрес. \\
 \hline
 {\em port} & Порт. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 true. 
 \end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00840}{840}}
+
 \Hypertarget{class_d_b_worker_ab883b3de60f36bb85a0f25b3ce790998}\index{DBWorker@{DBWorker}!reconnect@{reconnect}}
 \index{reconnect@{reconnect}!DBWorker@{DBWorker}}
 \doxysubsubsection{\texorpdfstring{reconnect()}{reconnect()}}
@@ -350,7 +713,7 @@ bool DBWorker::\+reconnect (\begin{DoxyParamCaption}\item[{const QString \&}]{ho
 Переподключает базу данных с новыми параметрами. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em host} & Хост. \\
 \hline
 {\em port} & Порт. \\
@@ -362,9 +725,27 @@ bool DBWorker::\+reconnect (\begin{DoxyParamCaption}\item[{const QString \&}]{ho
 {\em password} & Пароль. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 true при успешном подключении. 
 \end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00801}{801}}
+
+\Hypertarget{class_d_b_worker_a8e8c5c4585c20c2b91deaaecbce93ed1}\index{DBWorker@{DBWorker}!refreshAllFoodsAvailability@{refreshAllFoodsAvailability}}
+\index{refreshAllFoodsAvailability@{refreshAllFoodsAvailability}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{refreshAllFoodsAvailability()}{refreshAllFoodsAvailability()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a8e8c5c4585c20c2b91deaaecbce93ed1} 
+bool DBWorker::\+refresh\+All\+Foods\+Availability (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Пересчитывает доступность всех блюд на основе остатков продуктов. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00497}{497}}
+
 \Hypertarget{class_d_b_worker_a98a74e63537a608ffbcab569c92105fe}\index{DBWorker@{DBWorker}!returnIngredients@{returnIngredients}}
 \index{returnIngredients@{returnIngredients}!DBWorker@{DBWorker}}
 \doxysubsubsection{\texorpdfstring{returnIngredients()}{returnIngredients()}}
@@ -376,15 +757,19 @@ bool DBWorker::\+return\+Ingredients (\begin{DoxyParamCaption}\item[{int}]{food\
 Возвращает ингредиенты на склад при отмене позиции заказа. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em food\+Id} & ID блюда. \\
 \hline
 {\em quantity} & Количество порций. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 true в случае успеха. 
 \end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00441}{441}}
+
 \Hypertarget{class_d_b_worker_a72402ee320fd8916517d26267b134729}\index{DBWorker@{DBWorker}!saveReportToCSV@{saveReportToCSV}}
 \index{saveReportToCSV@{saveReportToCSV}!DBWorker@{DBWorker}}
 \doxysubsubsection{\texorpdfstring{saveReportToCSV()}{saveReportToCSV()}}
@@ -396,7 +781,7 @@ bool DBWorker::\+save\+Report\+To\+CSV (\begin{DoxyParamCaption}\item[{const QSt
 Сохраняет отчёт в CSV‑файл. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em report\+Type} & Тип отчёта ("{}revenue"{}, "{}popularity"{}, "{}lowstock"{}). \\
 \hline
 {\em from} & Начальная дата. \\
@@ -412,9 +797,88 @@ bool DBWorker::\+save\+Report\+To\+CSV (\begin{DoxyParamCaption}\item[{const QSt
 {\em file\+Name} & Полный путь к выходному файлу. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 true при успешном сохранении. 
 \end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00847}{847}}
+
+\Hypertarget{class_d_b_worker_afc3f20c994c79eabc50988d69e643fe0}\index{DBWorker@{DBWorker}!syncOrderItems@{syncOrderItems}}
+\index{syncOrderItems@{syncOrderItems}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{syncOrderItems()}{syncOrderItems()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_afc3f20c994c79eabc50988d69e643fe0} 
+bool DBWorker::\+sync\+Order\+Items (\begin{DoxyParamCaption}\item[{int}]{order\+Id}{, }\item[{const QVariant\+List \&}]{new\+Items}{}\end{DoxyParamCaption})}
+
+
+
+Синхронизирует позиции заказа при редактировании (вычисляет разницу). 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em order\+Id} & ID заказа. \\
+\hline
+{\em new\+Items} & Новый список позиций (каждый элемент:\+ \{food\+Id, quantity, price, name\}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true при успешной синхронизации. 
+\end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l01147}{1147}}
+
+\Hypertarget{class_d_b_worker_abe927273948f5c29bfa8825e7d6ca118}\index{DBWorker@{DBWorker}!updateConnectionParams@{updateConnectionParams}}
+\index{updateConnectionParams@{updateConnectionParams}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{updateConnectionParams()}{updateConnectionParams()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_abe927273948f5c29bfa8825e7d6ca118} 
+void DBWorker::\+update\+Connection\+Params (\begin{DoxyParamCaption}\item[{const QString \&}]{host}{, }\item[{int}]{port}{, }\item[{const QString \&}]{db\+Name}{, }\item[{const QString \&}]{user}{, }\item[{const QString \&}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Обновляет параметры подключения к БД без переподключения. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em host} & Хост. \\
+\hline
+{\em port} & Порт. \\
+\hline
+{\em db\+Name} & Имя БД. \\
+\hline
+{\em user} & Пользователь. \\
+\hline
+{\em password} & Пароль. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l01264}{1264}}
+
+\Hypertarget{class_d_b_worker_a57611279d82a4da14f20c11d6534f075}\index{DBWorker@{DBWorker}!updateOrderStatus@{updateOrderStatus}}
+\index{updateOrderStatus@{updateOrderStatus}!DBWorker@{DBWorker}}
+\doxysubsubsection{\texorpdfstring{updateOrderStatus()}{updateOrderStatus()}}
+{\footnotesize\ttfamily \label{class_d_b_worker_a57611279d82a4da14f20c11d6534f075} 
+bool DBWorker::\+update\+Order\+Status (\begin{DoxyParamCaption}\item[{int}]{order\+Id}{, }\item[{const QString \&}]{new\+Status}{}\end{DoxyParamCaption})}
+
+
+
+Обновляет статус заказа. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em order\+Id} & ID заказа. \\
+\hline
+{\em new\+Status} & Новый статус ("{}Новый"{}, "{}Готовится"{}, "{}Готов"{}, "{}Закрыт"{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true при успешном обновлении. 
+\end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00990}{990}}
+
 \Hypertarget{class_d_b_worker_a8a566ccf8e3f88150d57bd5c2823ae71}\index{DBWorker@{DBWorker}!updateProductQuantity@{updateProductQuantity}}
 \index{updateProductQuantity@{updateProductQuantity}!DBWorker@{DBWorker}}
 \doxysubsubsection{\texorpdfstring{updateProductQuantity()}{updateProductQuantity()}}
@@ -426,12 +890,16 @@ bool DBWorker::\+update\+Product\+Quantity (\begin{DoxyParamCaption}\item[{int}]
 Устанавливает новое абсолютное количество продукта. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em product\+Id} & ID продукта. \\
 \hline
 {\em new\+Quantity} & Новое количество. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 true при успешном обновлении. 
 \end{DoxyReturn}
+
+
+См. определение в файле \doxymbox{\hyperlink{dbworker_8cpp_source}{dbworker.\+cpp}} строка \doxymbox{\hyperlink{dbworker_8cpp_source_l00175}{175}}
+

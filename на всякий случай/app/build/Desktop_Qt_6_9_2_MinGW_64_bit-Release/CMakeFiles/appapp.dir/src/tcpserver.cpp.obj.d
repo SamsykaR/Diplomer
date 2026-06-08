@@ -424,8 +424,8 @@ CMakeFiles/appapp.dir/src/tcpserver.cpp.obj: \
  C:/Qt/6.9.2/mingw_64/include/QtCore/QJsonDocument \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qjsondocument.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonparseerror.h \
- C:/Qt/6.9.2/mingw_64/include/QtCore/QJsonObject \
- C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonobject.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/QJsonArray \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonarray.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonvalue.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qcborvalue.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qcborcommon.h \
@@ -437,5 +437,7 @@ CMakeFiles/appapp.dir/src/tcpserver.cpp.obj: \
  C:/Qt/6.9.2/mingw_64/include/QtCore/quuid.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qendian.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qjsondocument.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/QJsonObject \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonobject.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/QDebug \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qdebug.h

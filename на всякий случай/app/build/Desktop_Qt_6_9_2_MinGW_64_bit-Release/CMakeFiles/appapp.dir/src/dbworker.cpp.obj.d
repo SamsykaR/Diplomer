@@ -368,6 +368,24 @@ CMakeFiles/appapp.dir/src/dbworker.cpp.obj: \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qstring.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/QStringConverter \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qstringconverter.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/QJsonDocument \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qjsondocument.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonparseerror.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/QJsonArray \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonarray.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonvalue.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qcborvalue.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qcborcommon.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qdatetime.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qcalendar.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qlocale.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qregularexpression.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qurl.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/quuid.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qendian.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qjsondocument.h \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/QJsonObject \
+ C:/Qt/6.9.2/mingw_64/include/QtCore/qjsonobject.h \
  C:/Users/rodio/Desktop/W/Diplom/app/include/logs.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/QFile \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qfile.h \
@@ -426,8 +444,6 @@ CMakeFiles/appapp.dir/src/dbworker.cpp.obj: \
  C:/Qt/6.9.2/mingw_64/include/QtSql/QSqlRecord \
  C:/Qt/6.9.2/mingw_64/include/QtSql/qsqlrecord.h \
  C:/Qt/6.9.2/mingw_64/include/QtCore/qdatetime.h \
- C:/Qt/6.9.2/mingw_64/include/QtCore/qcalendar.h \
- C:/Qt/6.9.2/mingw_64/include/QtCore/qlocale.h \
  C:/Qt/6.9.2/mingw_64/include/QtNetwork/QNetworkInterface \
  C:/Qt/6.9.2/mingw_64/include/QtNetwork/qnetworkinterface.h \
  C:/Qt/6.9.2/mingw_64/include/QtNetwork/qtnetworkglobal.h \

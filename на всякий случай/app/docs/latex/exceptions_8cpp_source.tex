@@ -1,0 +1,17 @@
+\doxysection{exceptions.\+cpp}
+\hypertarget{exceptions_8cpp_source}{}\label{exceptions_8cpp_source}\index{C:/Users/rodio/Desktop/W/Diplom/app/src/exceptions.cpp@{C:/Users/rodio/Desktop/W/Diplom/app/src/exceptions.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{exceptions_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}exceptions.h"{}}}
+\DoxyCodeLine{\Hypertarget{exceptions_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{exceptions_8cpp_source_l00003}\doxymbox{\hyperlink{class_exceptions_a77187770a0e9f0a0a42affd9c8b1ba54}{00003}}\ \doxymbox{\hyperlink{class_exceptions_a77187770a0e9f0a0a42affd9c8b1ba54}{Exceptions::Exceptions}}(\textcolor{keyword}{const}\ QString\ \&message)}
+\DoxyCodeLine{\Hypertarget{exceptions_8cpp_source_l00004}00004\ \ \ \ \ :\ msg(message.toStdString())}
+\DoxyCodeLine{\Hypertarget{exceptions_8cpp_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{exceptions_8cpp_source_l00006}00006\ \}}
+\DoxyCodeLine{\Hypertarget{exceptions_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{exceptions_8cpp_source_l00008}00008\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ Exceptions::what()\ const\ noexcept}
+\DoxyCodeLine{\Hypertarget{exceptions_8cpp_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{exceptions_8cpp_source_l00010}00010\ \ \ \ \ \textcolor{keywordflow}{return}\ msg.c\_str();}
+\DoxyCodeLine{\Hypertarget{exceptions_8cpp_source_l00011}00011\ \}}
+
+\end{DoxyCode}

@@ -72,87 +72,110 @@ ApplicationWindow {
         id: settingsDialog
         title: "Настройки"
         modal: true
-        width: 800
-        height: 560
+        width: Math.min(1000, parent.width * 0.9)
+        height: Math.min(700, parent.height * 0.85)
         x: (parent.width - width) / 2
         y: (parent.height - height) / 2
 
-        contentItem: ScrollView {
-            clip: true
-            RowLayout {
-                spacing: 20
-                width: parent.width
+        Material.theme: Material.Light
+        Material.accent: Material.Blue
 
-                // ── Блок База данных ──
-                ColumnLayout {
-                    Layout.fillWidth: true
-                    Layout.alignment: Qt.AlignTop
-                    Frame {
-                        visible: appSettings.isServerMode
-                        Layout.fillWidth: true
-                        ColumnLayout {
-                            anchors.fill: parent
-                            spacing: 12
-                            Label { text: "База данных"; font.pixelSize: 18; font.bold: true }
-                            GridLayout {
-                                                            columns: 2; columnSpacing: 12; rowSpacing: 10
-                                                            Layout.fillWidth: true
-                                                            Label { text: "Хост:" }
-                                                            TextField { id: dbHostField; text: appSettings?.dbHost ?? "127.0.0.1"; Layout.fillWidth: true }
-                                                            Label { text: "Порт:" }
-                                                            SpinBox { id: dbPortSpin; from: 1; to: 65535; value: appSettings?.dbPort ?? 5432; editable: true; Layout.fillWidth: true }
-                                                            Label { text: "Имя БД:" }
-                                                            TextField { id: dbNameField; text: appSettings?.dbName ?? "RestN"; Layout.fillWidth: true }
-                                                            Label { text: "Пользователь:" }
-                                                            TextField { id: dbUserField; text: appSettings?.dbUser ?? "R"; Layout.fillWidth: true }
-                                                            Label { text: "Пароль:" }
-                                                            TextField { id: dbPasswordField; text: appSettings?.dbPassword ?? ""; echoMode: TextInput.Password; Layout.fillWidth: true }
-                                                        }
+        contentItem: ScrollView {
+            id: settingsScroll
+            clip: true
+            ScrollBar.horizontal.policy: ScrollBar.AsNeeded   // горизонтальный скролл при необходимости
+            ScrollBar.vertical.policy: ScrollBar.AsNeeded
+
+            RowLayout {
+                // Ширина контейнера берётся как максимум из видимой области и суммарной потребности фреймов.
+                // Благодаря этому, когда фреймы не помещаются, появляется горизонтальная прокрутка,
+                // а если помещаются – они займут всю доступную ширину без лишнего скролла.
+                width: Math.max(settingsScroll.availableWidth, implicitWidth)
+                height: settingsScroll.availableHeight
+                spacing: 16
+
+                // Группа База данных (видна только в серверном режиме)
+                Frame {
+                    visible: appSettings ? appSettings.isServerMode : false
+                    Layout.preferredWidth: 380        // желаемая ширина
+                    Layout.minimumWidth: 340           // минимальная ширина (чтобы не сжимался слишком сильно)
+                    Layout.fillWidth: false            // не растягиваться, если место остаётся
+                    Layout.fillHeight: true
+                    background: Rectangle { color: "#F8F9FA"; radius: 8; border.color: "#E0E0E0" }
+                    ColumnLayout {
+                        anchors.fill: parent
+                        anchors.margins: 12
+                        spacing: 12
+                        Label { text: "База данных"; font.bold: true; font.pixelSize: 16 }
+                        GridLayout {
+                            columns: 2
+                            columnSpacing: 16
+                            rowSpacing: 12
+                            Layout.fillWidth: true
+                            Label { text: "Хост:"; font.pixelSize: 14 }
+                            TextField { id: dbHostField; text: appSettings?.dbHost ?? "127.0.0.1"; Layout.fillWidth: true; font.pixelSize: 14 }
+                            Label { text: "Порт:"; font.pixelSize: 14 }
+                            SpinBox { id: dbPortSpin; from: 1; to: 65535; value: appSettings?.dbPort ?? 5432; editable: true; Layout.fillWidth: true; font.pixelSize: 14 }
+                            Label { text: "Имя БД:"; font.pixelSize: 14 }
+                            TextField { id: dbNameField; text: appSettings?.dbName ?? "RestN"; Layout.fillWidth: true; font.pixelSize: 14 }
+                            Label { text: "Пользователь:"; font.pixelSize: 14 }
+                            TextField { id: dbUserField; text: appSettings?.dbUser ?? "R"; Layout.fillWidth: true; font.pixelSize: 14 }
+                            Label { text: "Пароль:"; font.pixelSize: 14 }
+                            TextField { id: dbPasswordField; text: appSettings?.dbPassword ?? ""; echoMode: TextInput.Password; Layout.fillWidth: true; font.pixelSize: 14 }
+                        }
+                        RowLayout {
                             Button {
                                 text: "Проверить подключение"
-                                Layout.fillWidth: true
                                 onClicked: {
                                     var ok = dbWorker.reconnect(dbHostField.text, dbPortSpin.value, dbNameField.text, dbUserField.text, dbPasswordField.text)
                                     statusLabel.text = ok ? "Подключено успешно" : "Ошибка подключения"
                                     statusLabel.color = ok ? "green" : "red"
                                 }
                             }
-                            Label { id: statusLabel; text: ""; wrapMode: Text.WordWrap; Layout.fillWidth: true }
+                            Label { id: statusLabel; text: ""; font.pixelSize: 12; Layout.fillWidth: true }
                         }
                     }
                 }
 
-                // ── Блок Сеть ──
-                ColumnLayout {
-                    Layout.fillWidth: true
-                    Layout.alignment: Qt.AlignTop
-                    Frame {
-                        Layout.fillWidth: true
-                        ColumnLayout {
-                            anchors.fill: parent
-                            spacing: 12
-                            Label { text: "Сеть"; font.pixelSize: 18; font.bold: true }
-                            GridLayout {
-                                                            columns: 2; columnSpacing: 12; rowSpacing: 10
-                                                            Layout.fillWidth: true
-                                                            Label { text: "IP сервера:" }
-                                                            TextField { id: serverHostField; text: appSettings.serverHost; Layout.fillWidth: true }
-                                                            Label { text: "Порт:" }
-                                                            TextField {
-                                                                id: serverPortField;
-                                                                text: appSettings.serverPort;
-                                                                validator: IntValidator { bottom: 1024; top: 65535 }
-                                                                Layout.fillWidth: true }
-                                                        }
-                                                        CheckBox {
-                                                            id: serverModeCheck
-                                                            text: "Режим сервера"
-                                                            checked: appSettings?.isServerMode ?? false
-                                                            onCheckedChanged: if (appSettings) appSettings.isServerMode = checked
-                                                        }
+                // Группа Сеть
+                Frame {
+                    Layout.preferredWidth: 380
+                    Layout.minimumWidth: 340
+                    Layout.fillWidth: false
+                    Layout.fillHeight: true
+                    background: Rectangle { color: "#F8F9FA"; radius: 8; border.color: "#E0E0E0" }
+                    ColumnLayout {
+                        anchors.fill: parent
+                        anchors.margins: 12
+                        spacing: 12
+                        Label { text: "Сеть"; font.bold: true; font.pixelSize: 16 }
+                        GridLayout {
+                            columns: 2
+                            columnSpacing: 16
+                            rowSpacing: 12
+                            Layout.fillWidth: true
+                            Label { text: "IP сервера:"; font.pixelSize: 14 }
+                            TextField { id: serverHostField; text: appSettings ? appSettings.serverHost : ""; Layout.fillWidth: true; font.pixelSize: 14 }
+                            Label { text: "Порт сервера:"; font.pixelSize: 14 }
+                            TextField {
+                                id: serverPortField
+                                text: appSettings ? appSettings.serverPort : ""
+                                validator: IntValidator { bottom: 1024; top: 65535 }
+                                Layout.fillWidth: true
+                                font.pixelSize: 14
+                            }
+                            Item { Layout.columnSpan: 2; Layout.fillWidth: true }
+                            CheckBox {
+                                id: serverModeCheck
+                                text: "Режим сервера"
+                                checked: appSettings ? appSettings.isServerMode : false
+                                onCheckedChanged: if (appSettings) appSettings.isServerMode = checked
+                                font.pixelSize: 14
+                            }
+                        }
+                        RowLayout {
                             Button {
                                 text: "Проверить сервер"
-                                Layout.fillWidth: true
                                 onClicked: {
                                     var host = serverHostField.text
                                     var port = parseInt(serverPortField.text)
@@ -161,58 +184,62 @@ ApplicationWindow {
                                     serverStatusLabel.color = ok ? "green" : "red"
                                 }
                             }
-                            Label { id: serverStatusLabel; text: ""; wrapMode: Text.WordWrap; Layout.fillWidth: true }
-                                                        Button {
-                                                            text: "Показать IP устройства"
-                                                            Layout.fillWidth: true
-                                                            onClicked: {
-                                                                var ips = dbWorker.getLocalIps()
-                                                                var port = parseInt(serverPortField.text)
-                                                                var text = ""
-                                                                for (var i = 0; i < ips.length; i++) {
-                                                                    text += ips[i] + ":" + port
-                                                                    if (i < ips.length - 1) text += ", "
-                                                                }
-                                                                ipLabel.text = text ? text : "Нет доступных IP"
-                                                            }
-                                                        }
-                                                        Label { id: ipLabel; text: ""; wrapMode: Text.WordWrap; Layout.fillWidth: true }
-                                                    }
-                                                }
-                                            }
+                            Label { id: serverStatusLabel; text: ""; font.pixelSize: 12; Layout.fillWidth: true }
+                        }
+                        RowLayout {
+                            Button {
+                                text: "Показать IP устройства"
+                                onClicked: {
+                                    var ips = dbWorker.getLocalIps()
+                                    var port = parseInt(serverPortField.text)
+                                    var text = ""
+                                    for (var i = 0; i < ips.length; i++) {
+                                        text += ips[i] + ":" + port
+                                        if (i < ips.length - 1) text += ", "
+                                    }
+                                    ipLabel.text = text ? text : "Нет доступных IP"
+                                }
+                            }
+                            Label { id: ipLabel; text: ""; font.pixelSize: 12; Layout.fillWidth: true; wrapMode: Text.WordWrap }
+                        }
+                    }
+                }
 
-                // ── Блок Прочее ──
-                ColumnLayout {
-                    Layout.fillWidth: true
-                    Layout.alignment: Qt.AlignTop
-                    Frame {
-                        Layout.fillWidth: true
-                        ColumnLayout {
-                            anchors.fill: parent
-                            spacing: 12
-                            Label { text: "Прочее"; font.pixelSize: 18; font.bold: true }
-                            GridLayout {
-                                                            columns: 2; columnSpacing: 12; rowSpacing: 10
-                                                            Layout.fillWidth: true
-                                                            Label { text: "Путь к логам:" }
-                                                            TextField { id: logPathField; text: appSettings?.logPath ?? "logs.txt"; Layout.fillWidth: true }
-                                                            Label { text: "Папка для отчётов:" }
-                                                            TextField {
-                                                                id: reportsPathField
-                                                                text: appSettings ? appSettings.reportsPath : ""
-                                                                Layout.fillWidth: true
-                                                            }
+                // Группа Прочее
+                Frame {
+                    Layout.preferredWidth: 380
+                    Layout.minimumWidth: 340
+                    Layout.fillWidth: false
+                    Layout.fillHeight: true
+                    background: Rectangle { color: "#F8F9FA"; radius: 8; border.color: "#E0E0E0" }
+                    ColumnLayout {
+                        anchors.fill: parent
+                        anchors.margins: 12
+                        spacing: 12
+                        Label { text: "Прочее"; font.bold: true; font.pixelSize: 16 }
+                        GridLayout {
+                            columns: 2
+                            columnSpacing: 16
+                            rowSpacing: 12
+                            Layout.fillWidth: true
+                            Label { text: "Путь к логам:"; font.pixelSize: 14 }
+                            TextField { id: logPathField; text: appSettings?.logPath ?? "logs.txt"; Layout.fillWidth: true; font.pixelSize: 14 }
+                            Label { text: "Папка для отчётов:"; font.pixelSize: 14 }
+                            TextField {
+                                id: reportsPathField
+                                text: appSettings ? appSettings.reportsPath : ""
+                                Layout.fillWidth: true
+                                font.pixelSize: 14
+                            }
                         }
                     }
                 }
             }
         }
-        }
 
         footer: DialogButtonBox {
-            standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
+            // Убрано дублирование кнопок (удалено standardButtons)
             onAccepted: {
-                // Сохранение настроек и вызов reconnect
                 if (appSettings) {
                     appSettings.logPath = logPathField.text
                     appSettings.dbHost = dbHostField.text
@@ -225,12 +252,26 @@ ApplicationWindow {
                     loger.setLogPath(logPathField.text)
                     appSettings.reportsPath = reportsPathField.text
                     appSettings.save()
+                    dbWorker.updateConnectionParams(dbHostField.text, dbPortSpin.value, dbNameField.text, dbUserField.text, dbPasswordField.text)
                     loger.info("Вызов reconnect с хостом "+ serverHostField.text + " порт" + parseInt(serverPortField.text))
                     dbWorker.reconnect(serverHostField.text, parseInt(serverPortField.text))
                 }
                 settingsDialog.close()
             }
             onRejected: settingsDialog.close()
+
+            Button {
+                flat: true
+                font.pixelSize: 18
+                text: "OK"
+                onClicked: settingsDialog.accept()
+            }
+            Button {
+                flat: true
+                font.pixelSize: 18
+                text: "Отмена"
+                onClicked: settingsDialog.reject()
+            }
         }
     }
 
@@ -319,10 +360,14 @@ ApplicationWindow {
                         return [
                             { name: "Оформление заказа", page: "OrderPage.qml" },
                             { name: "Склад", page: "StockPage.qml" },
-                            { name: "Отчёты", page: "ReportsPage.qml" }
+                            { name: "Отчёты", page: "ReportsPage.qml" },
+                            { name: "Активные заказы", page: "ActiveOrdersPage.qml" }
                         ]
                     } else if (currentUser.role === "waiter") {
-                        return [ { name: "Оформление заказа", page: "OrderPage.qml" } ]
+                        return [
+                            { name: "Оформление заказа", page: "OrderPage.qml" },
+                            { name: "Активные заказы", page: "ActiveOrdersPage.qml" }
+                        ]
                     } else if (currentUser.role === "storekeeper") {
                         return [ { name: "Склад", page: "StockPage.qml" } ]
                     }

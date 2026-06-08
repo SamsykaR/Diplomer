@@ -586,3 +586,127 @@ bool TcpClient::saveReportToCSV(const QString &reportType,
         return false;
     }
 }
+
+QVariantList TcpClient::getOrders(const QString &status)
+{
+    loger->info("TcpClient::getOrders, status=" + status);
+    try {
+        QVariantMap data;
+        if (!status.isEmpty())
+            data["status"] = status;
+        int reqId = sendRequest("getOrders", data);
+        QVariantMap res;
+        if (waitForResponse(reqId, res)) {
+            return res["orders"].toList();
+        }
+        return QVariantList();
+    } catch (const NetworkEx &e) {
+        loger->error(QString("getOrders: ") + e.what());
+        emit errorOccurred(e.what());
+        return QVariantList();
+    }
+}
+
+bool TcpClient::updateOrderStatus(int orderId, const QString &newStatus)
+{
+    loger->info("TcpClient::updateOrderStatus: " + QString::number(orderId) + " -> " + newStatus);
+    try {
+        QVariantMap data;
+        data["orderId"] = orderId;
+        data["newStatus"] = newStatus;
+        int reqId = sendRequest("updateOrderStatus", data);
+        QVariantMap res;
+        bool ok = waitForResponse(reqId, res);
+        if (ok)
+            emit ordersChanged(); // уведомить QML об изменении
+        return ok;
+    } catch (const NetworkEx &e) {
+        loger->error(QString("updateOrderStatus: ") + e.what());
+        emit errorOccurred(e.what());
+        return false;
+    }
+}
+
+QVariantList TcpClient::getOrderItems(int orderId)
+{
+    loger->info("TcpClient::getOrderItems, orderId=" + QString::number(orderId));
+    try {
+        QVariantMap data;
+        data["orderId"] = orderId;
+        int reqId = sendRequest("getOrderItems", data);
+        QVariantMap res;
+        if (waitForResponse(reqId, res)) {
+            return res["items"].toList();
+        }
+        return QVariantList();
+    } catch (const NetworkEx &e) {
+        loger->error(QString("getOrderItems: ") + e.what());
+        emit errorOccurred(e.what());
+        return QVariantList();
+    }
+}
+
+bool TcpClient::closeOrder(int orderId, double totalSum, const QVariantList &items)
+{
+    loger->info("TcpClient::closeOrder, orderId=" + QString::number(orderId));
+    try {
+        QVariantMap data;
+        data["orderId"] = orderId;
+        data["totalSum"] = totalSum;
+        data["items"] = items;
+        int reqId = sendRequest("closeOrder", data);
+        QVariantMap res;
+        bool ok = waitForResponse(reqId, res);
+        if (ok)
+            emit ordersChanged();
+        return ok;
+    } catch (const NetworkEx &e) {
+        loger->error(QString("closeOrder: ") + e.what());
+        emit errorOccurred(e.what());
+        return false;
+    }
+}
+
+QVariantMap TcpClient::getCheckByOrderId(int orderId)
+{
+    loger->info("TcpClient::getCheckByOrderId, orderId=" + QString::number(orderId));
+    try {
+        QVariantMap data;
+        data["orderId"] = orderId;
+        int reqId = sendRequest("getCheckByOrderId", data);
+        QVariantMap res;
+        if (waitForResponse(reqId, res)) {
+            return res;
+        }
+        return QVariantMap();
+    } catch (const NetworkEx &e) {
+        loger->error(QString("getCheckByOrderId: ") + e.what());
+        emit errorOccurred(e.what());
+        return QVariantMap();
+    }
+}
+
+bool TcpClient::syncOrderItems(int orderId, const QVariantList &newItems)
+{
+    loger->info("TcpClient::syncOrderItems, orderId=" + QString::number(orderId));
+    try {
+        QVariantMap data;
+        data["orderId"] = orderId;
+        data["newItems"] = newItems;
+        int reqId = sendRequest("syncOrderItems", data);
+        QVariantMap res;
+        bool ok = waitForResponse(reqId, res);
+        if (ok)
+            emit ordersChanged();
+        return ok;
+    } catch (const NetworkEx &e) {
+        loger->error(QString("syncOrderItems: ") + e.what());
+        emit errorOccurred(e.what());
+        return false;
+    }
+}
+
+QVariantList TcpClient::getClosedOrders()
+{
+    return getOrders("Закрыт");
+}

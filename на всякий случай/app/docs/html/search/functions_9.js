@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['reconnect_0',['reconnect',['../class_d_b_worker.html#ab883b3de60f36bb85a0f25b3ce790998',1,'DBWorker::reconnect()'],['../class_tcp_client.html#a328023748dba9e3d6432a229bc1c6ea5',1,'TcpClient::reconnect()']]],
-  ['refreshallfoodsavailability_1',['refreshAllFoodsAvailability',['../class_d_b_worker.html#a8e8c5c4585c20c2b91deaaecbce93ed1',1,'DBWorker']]],
-  ['responsereceived_2',['responseReceived',['../class_tcp_client.html#aac3554342664b2932ff03423e720f190',1,'TcpClient']]],
-  ['returningredients_3',['returnIngredients',['../class_d_b_worker.html#a98a74e63537a608ffbcab569c92105fe',1,'DBWorker::returnIngredients()'],['../class_tcp_client.html#a3052b46770ba183481202436e4eb7f12',1,'TcpClient::returnIngredients()']]]
+  ['pingserver_0',['pingServer',['../class_d_b_worker.html#aff1435f503b992c4bb581e01edba8961',1,'DBWorker::pingServer()'],['../class_tcp_client.html#ae0467557c39edf4df9bf3a5b1f12b2b9',1,'TcpClient::pingServer()']]]
 ];

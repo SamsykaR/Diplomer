@@ -9,6 +9,9 @@
 #include <QVariantList>
 #include <QVariantMap>
 #include <QStringConverter>
+#include <QJsonDocument>
+#include <QJsonArray>
+#include <QJsonObject>
 #include "logs.h"
 #include "exceptions.h"
 
@@ -196,11 +199,93 @@ public:
                                      int waiterId,
                                      const QString &fileName);
 
+    /*!
+     * \brief Возвращает список заказов с возможностью фильтрации по статусу.
+     * \param status Статус заказа (пустая строка – все заказы).
+     * \return Список словарей с полями orderId, orderNumber, tableNumber, orderDate,
+     *         specialRequests, totalCost, status, waiterName.
+     */
+    Q_INVOKABLE QVariantList getOrders(const QString &status = QString());
+
+    /*!
+     * \brief Обновляет статус заказа.
+     * \param orderId ID заказа.
+     * \param newStatus Новый статус ("Новый", "Готовится", "Готов", "Закрыт").
+     * \return true при успешном обновлении.
+     */
+    Q_INVOKABLE bool updateOrderStatus(int orderId, const QString &newStatus);
+
+    /*!
+     * \brief Возвращает позиции заказа.
+     * \param orderId ID заказа.
+     * \return Список словарей с полями orderFoodId, foodId, name, quantity, price.
+     */
+    Q_INVOKABLE QVariantList getOrderItems(int orderId);
+
+    /*!
+     * \brief Закрывает заказ, создаёт чек и переводит статус в "Закрыт".
+     * \param orderId ID заказа.
+     * \param totalSum Итоговая сумма заказа.
+     * \param items Список позиций заказа (каждый элемент: {name, quantity, price}).
+     * \return true при успешном закрытии.
+     */
+    Q_INVOKABLE bool closeOrder(int orderId, double totalSum, const QVariantList &items);
+
+    /*!
+     * \brief Возвращает чек по ID заказа.
+     * \param orderId ID заказа.
+     * \return Словарь с ключами checkId, checkNumber, orderNumber, totalSum, checkData, createdAt.
+     */
+    Q_INVOKABLE QVariantMap getCheckByOrderId(int orderId);
+
+    /*!
+     * \brief Упрощённый список всех заказов (для отчётов).
+     * \return Результат вызова getOrders() без фильтра.
+     */
+    Q_INVOKABLE QVariantList getAllOrdersForReport();
+
+    /*!
+     * \brief Синхронизирует позиции заказа при редактировании (вычисляет разницу).
+     * \param orderId ID заказа.
+     * \param newItems Новый список позиций (каждый элемент: {foodId, quantity, price, name}).
+     * \return true при успешной синхронизации.
+     */
+    Q_INVOKABLE bool syncOrderItems(int orderId, const QVariantList &newItems);
+
+    /*!
+     * \brief Возвращает закрытые заказы (статус "Закрыт").
+     * \return Список заказов.
+     */
+    Q_INVOKABLE QVariantList getClosedOrders();
+
+    /*!
+     * \brief Обновляет параметры подключения к БД без переподключения.
+     * \param host Хост.
+     * \param port Порт.
+     * \param dbName Имя БД.
+     * \param user Пользователь.
+     * \param password Пароль.
+     */
+    Q_INVOKABLE void updateConnectionParams(const QString &host, int port, const QString &dbName, const QString &user, const QString &password);
+
+    /*!
+     * \brief Возвращает чеки за период с деталями заказа.
+     * \param from Начальная дата (ГГГГ-ММ-ДД).
+     * \param to Конечная дата.
+     * \return Список словарей с полями checkNumber, orderNumber, totalSum, createdAt, tableNumber, waiterName, orderId.
+     */
+    Q_INVOKABLE QVariantList getChecksByDateRange(const QString &from, const QString &to);
+
+    //! \brief Генерирует уникальный номер заказа для текущего дня (начинается с 1 каждый день).
+    int generateOrderNumber();
+
 signals:
     //! Сигнал, передающий текст ошибки для отображения в интерфейсе.
     void errorOccurred(const QString &message);
     //! Сообщает об изменении доступности блюд (например, после обновления остатков).
     void foodAvailabilityChanged();
+    //*! Сигнал об изменении списка заказов (создание, обновление статуса, закрытие).
+    void ordersChanged();
 
 private:
     QSqlDatabase db;       //!< Объект подключения к PostgreSQL.

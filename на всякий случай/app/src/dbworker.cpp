@@ -223,16 +223,18 @@ bool DBWorker::addProductQuantity(int productId, int delta)
 int DBWorker::createOrder(int tableNumber, int userId, const QString &specialRequests, double totalCost)
 {
     try {
-        if (!db.isOpen())
-            throw DatabaseEx("База данных не открыта");
+        if (!db.isOpen()) throw DatabaseEx("База данных не открыта");
+        int orderNumber = generateOrderNumber();
+        if (orderNumber == -1) throw DatabaseEx("Не удалось сгенерировать номер заказа");
 
         QSqlQuery query;
-        query.prepare("INSERT INTO Orders (UserId, TableNumber, SpecialRequests, TotalCost) "
-                      "VALUES (:uid, :table, :req, :total) RETURNING OrderId");
+        query.prepare("INSERT INTO Orders (UserId, TableNumber, SpecialRequests, TotalCost, order_number, status) "
+                      "VALUES (:uid, :table, :req, :total, :onum, 'Готовится') RETURNING OrderId");
         query.bindValue(":uid", userId);
         query.bindValue(":table", tableNumber);
         query.bindValue(":req", specialRequests);
         query.bindValue(":total", totalCost);
+        query.bindValue(":onum", orderNumber);
         if (!query.exec())
             throw DatabaseEx("Ошибка createOrder: " + query.lastError().text());
 
@@ -251,7 +253,7 @@ int DBWorker::createOrder(int tableNumber, int userId, const QString &specialReq
     }
 }
 
-bool DBWorker::addOrderItem(int orderId, int foodId, int quantity, double price)
+bool DBWorker::addOrderItem(int OrderId, int foodId, int quantity, double price)
 {
     try {
         if (!db.isOpen())
@@ -260,7 +262,7 @@ bool DBWorker::addOrderItem(int orderId, int foodId, int quantity, double price)
         QSqlQuery query;
         query.prepare("INSERT INTO OrderFood (OrderId, FoodId, Quantity, Price) "
                       "VALUES (:oid, :fid, :qty, :price)");
-        query.bindValue(":oid", orderId);
+        query.bindValue(":oid", OrderId);
         query.bindValue(":fid", foodId);
         query.bindValue(":qty", quantity);
         query.bindValue(":price", price);
@@ -913,5 +915,416 @@ bool DBWorker::saveReportToCSV(const QString &reportType,
         loger->error("saveReportToCSV: " + QString(e.what()));
         emit errorOccurred("Внутренняя ошибка при сохранении отчёта");
         return false;
+    }
+}
+
+// ========== Генератор номера заказа (ежедневный сброс) ==========
+int DBWorker::generateOrderNumber()
+{
+    try {
+        if (!db.isOpen()) throw DatabaseEx("База данных не открыта");
+        QSqlQuery query;
+        // Получаем максимальный номер заказа за сегодня
+        query.prepare("SELECT COALESCE(MAX(order_number), 0) + 1 FROM Orders WHERE DATE(OrderDate) = CURRENT_DATE");
+        if (!query.exec())
+            throw DatabaseEx("Ошибка при генерации номера заказа: " + query.lastError().text());
+        if (query.next())
+            return query.value(0).toInt();
+        else
+            return 1;
+    } catch (const DatabaseEx &e) {
+        loger->error(QString("generateOrderNumber: ") + e.what());
+        emit errorOccurred(e.what());
+        return -1;
+    } catch (const std::exception &e) {
+        loger->error(QString("generateOrderNumber: неизвестная ошибка - ") + e.what());
+        emit errorOccurred("Внутренняя ошибка при генерации номера заказа");
+        return -1;
+    }
+}
+
+// ========== Получение списка заказов ==========
+QVariantList DBWorker::getOrders(const QString &status)
+{
+    try {
+        if (!db.isOpen()) throw DatabaseEx("База данных не открыта");
+        QVariantList result;
+        QString sql = "SELECT o.OrderId, o.order_number, o.TableNumber, o.OrderDate, "
+                      "o.SpecialRequests, o.TotalCost, o.status, u.FullName AS waiterName "
+                      "FROM Orders o "
+                      "LEFT JOIN Users u ON o.UserId = u.UserId ";
+        if (!status.isEmpty())
+            sql += "WHERE status = '" + status + "' ";
+        sql += "ORDER BY o.OrderDate DESC";
+
+        QSqlQuery query;
+        if (!query.exec(sql))
+            throw DatabaseEx("Ошибка getOrders: " + query.lastError().text());
+
+        while (query.next()) {
+            QVariantMap order;
+            order["orderId"] = query.value("OrderId").toInt();                    // было OrderId -> orderId
+            order["orderNumber"] = query.value("order_number").toInt();
+            order["tableNumber"] = query.value("TableNumber").toInt();            // TableNumber -> tableNumber
+            order["orderDate"] = query.value("OrderDate").toDateTime();
+            order["specialRequests"] = query.value("SpecialRequests").toString();
+            order["totalCost"] = query.value("TotalCost").toDouble();             // TotalCost -> totalCost
+            order["status"] = query.value("status").toString();
+            order["waiterName"] = query.value("waiterName").toString();   // новое поле
+            result.append(order);
+        }
+        loger->info("getOrders returned " + QString::number(result.size()) + " orders");
+        return result;
+    } catch (const DatabaseEx &e) {
+        loger->error(QString("getOrders: ") + e.what());
+        emit errorOccurred(e.what());
+        return QVariantList();
+    } catch (const std::exception &e) {
+        loger->error(QString("getOrders: неизвестная ошибка - ") + e.what());
+        emit errorOccurred("Внутренняя ошибка при загрузке заказов");
+        return QVariantList();
+    }
+}
+
+// ========== Обновление статуса заказа ==========
+bool DBWorker::updateOrderStatus(int OrderId, const QString &newStatus)
+{
+    try {
+        if (!db.isOpen()) throw DatabaseEx("База данных не открыта");
+        QSqlQuery query;
+        query.prepare("UPDATE Orders SET status = :status WHERE OrderId = :id");
+        query.bindValue(":status", newStatus);
+        query.bindValue(":id", OrderId);
+        if (!query.exec())
+            throw DatabaseEx("Ошибка updateOrderStatus: " + query.lastError().text());
+        loger->info("Статус заказа " + QString::number(OrderId) + " изменён на " + newStatus);
+        emit ordersChanged();
+        return true;
+    } catch (const DatabaseEx &e) {
+        loger->error(QString("updateOrderStatus: ") + e.what());
+        emit errorOccurred(e.what());
+        return false;
+    } catch (const std::exception &e) {
+        loger->error(QString("updateOrderStatus: неизвестная ошибка - ") + e.what());
+        emit errorOccurred("Ошибка при изменении статуса заказа");
+        return false;
+    }
+}
+
+// ========== Получение позиций заказа ==========
+QVariantList DBWorker::getOrderItems(int OrderId)
+{
+    try {
+        if (!db.isOpen()) throw DatabaseEx("База данных не открыта");
+        QVariantList result;
+        QSqlQuery query;
+        query.prepare("SELECT of.OrderFoodId, of.FoodId, f.FullName, of.Quantity, of.Price "
+                      "FROM OrderFood of "
+                      "JOIN Food f ON of.FoodId = f.FoodId "
+                      "WHERE of.OrderId = :OrderId");
+        query.bindValue(":OrderId", OrderId);
+        if (!query.exec())
+            throw DatabaseEx("Ошибка getOrderItems: " + query.lastError().text());
+        while (query.next()) {
+            QVariantMap item;
+            item["orderFoodId"] = query.value("OrderFoodId").toInt();
+            item["foodId"] = query.value("FoodId").toInt();
+            item["name"] = query.value("FullName").toString();
+            item["quantity"] = query.value("Quantity").toInt();
+            item["price"] = query.value("Price").toDouble();
+            result.append(item);
+        }
+        return result;
+    } catch (const DatabaseEx &e) {
+        loger->error(QString("getOrderItems: ") + e.what());
+        emit errorOccurred(e.what());
+        return QVariantList();
+    } catch (const std::exception &e) {
+        loger->error(QString("getOrderItems: неизвестная ошибка - ") + e.what());
+        emit errorOccurred("Ошибка загрузки позиций заказа");
+        return QVariantList();
+    }
+}
+
+// ========== Закрытие заказа и создание чека ==========
+bool DBWorker::closeOrder(int OrderId, double totalSum, const QVariantList &items)
+{
+    try {
+        if (!db.isOpen()) throw DatabaseEx("База данных не открыта");
+
+        // 1. Получить номер заказа и дату
+        QSqlQuery orderQuery;
+        orderQuery.prepare("SELECT order_number, OrderDate FROM Orders WHERE OrderId = :id");
+        orderQuery.bindValue(":id", OrderId);
+        if (!orderQuery.exec() || !orderQuery.next())
+            throw DatabaseEx("Не удалось получить данные заказа");
+        int orderNumber = orderQuery.value("order_number").toInt();
+        QDate orderDate = orderQuery.value("OrderDate").toDate();
+
+        // 2. Сформировать номер чека: ЧЕК-ГГГГММДД-XXX
+        QString checkNumber = QString("ЧЕК-%1-%2")
+                                  .arg(orderDate.toString("yyyyMMdd"))
+                                  .arg(orderNumber, 3, 10, QChar('0'));
+
+        // 3. Подготовить JSON с позициями
+        QJsonArray itemsArray;
+        for (const QVariant &v : items) {
+            QVariantMap m = v.toMap();
+            QJsonObject obj;
+            obj["name"] = m["name"].toString();
+            obj["quantity"] = m["quantity"].toInt();
+            obj["price"] = m["price"].toDouble();
+            itemsArray.append(obj);
+        }
+        QJsonDocument doc(itemsArray);
+        QString checkData = QString::fromUtf8(doc.toJson(QJsonDocument::Compact));
+
+        // 4. Вставить запись в Checks
+        QSqlQuery insertCheck;
+        insertCheck.prepare("INSERT INTO Checks (order_id, check_number, order_number, total_sum, check_data) "
+                            "VALUES (:oid, :cnum, :onum, :sum, :data)");
+        insertCheck.bindValue(":oid", OrderId);
+        insertCheck.bindValue(":cnum", checkNumber);
+        insertCheck.bindValue(":onum", orderNumber);
+        insertCheck.bindValue(":sum", totalSum);
+        insertCheck.bindValue(":data", checkData);
+        if (!insertCheck.exec())
+            throw DatabaseEx("Ошибка сохранения чека: " + insertCheck.lastError().text());
+
+        QSqlQuery updateOrder;
+        updateOrder.prepare("UPDATE Orders SET status = 'Закрыт', TotalCost = :total WHERE OrderId = :id");
+        updateOrder.bindValue(":total", totalSum);
+        updateOrder.bindValue(":id", OrderId);
+        if (!updateOrder.exec())
+            throw DatabaseEx("Ошибка обновления статуса заказа: " + updateOrder.lastError().text());
+
+        loger->info("Заказ " + QString::number(OrderId) + " закрыт, чек " + checkNumber);
+        emit ordersChanged();
+        return true;
+    } catch (const DatabaseEx &e) {
+        loger->error(QString("closeOrder: ") + e.what());
+        emit errorOccurred(e.what());
+        return false;
+    } catch (const std::exception &e) {
+        loger->error(QString("closeOrder: неизвестная ошибка - ") + e.what());
+        emit errorOccurred("Ошибка при закрытии заказа");
+        return false;
+    }
+}
+
+QVariantMap DBWorker::getCheckByOrderId(int OrderId)
+{
+    try {
+        if (!db.isOpen()) throw DatabaseEx("База данных не открыта");
+        QSqlQuery query;
+        query.prepare("SELECT check_id, check_number, order_number, total_sum, check_data, created_at "
+                      "FROM Checks WHERE order_id = :oid ORDER BY created_at DESC LIMIT 1");
+        query.bindValue(":oid", OrderId);
+        if (!query.exec())
+            throw DatabaseEx("Ошибка getCheckByOrderId: " + query.lastError().text());
+        if (query.next()) {
+            QVariantMap check;
+            check["checkId"] = query.value("check_id").toInt();
+            check["checkNumber"] = query.value("check_number").toString();
+            check["orderNumber"] = query.value("order_number").toInt();
+            check["totalSum"] = query.value("total_sum").toDouble();
+            check["checkData"] = query.value("check_data").toString();
+            check["createdAt"] = query.value("created_at").toDateTime();
+            return check;
+        }
+        return QVariantMap();
+    } catch (const DatabaseEx &e) {
+        loger->error(QString("getCheckByOrderId: ") + e.what());
+        emit errorOccurred(e.what());
+        return QVariantMap();
+    } catch (const std::exception &e) {
+        loger->error(QString("getCheckByOrderId: неизвестная ошибка - ") + e.what());
+        emit errorOccurred("Ошибка получения чека");
+        return QVariantMap();
+    }
+}
+
+bool DBWorker::syncOrderItems(int OrderId, const QVariantList &newItems)
+{
+    try {
+        if (!db.isOpen()) throw DatabaseEx("База данных не открыта");
+
+        if (OrderId <= 0) {
+            loger->error("syncOrderItems: invalid orderId " + QString::number(OrderId));
+            emit errorOccurred("Недействительный идентификатор заказа");
+            return false;
+        }
+
+        QVariantList oldItems = getOrderItems(OrderId);
+        if (oldItems.isEmpty() && !newItems.isEmpty()) {
+            // Если старых нет, просто добавляем новые – но обычно их нет.
+        }
+
+        QMap<int, QVariantMap> oldMap;
+        for (const QVariant &v : oldItems) {
+            QVariantMap m = v.toMap();
+            oldMap[m["foodId"].toInt()] = m;
+        }
+        QMap<int, QVariantMap> newMap;
+        for (const QVariant &v : newItems) {
+            QVariantMap m = v.toMap();
+            newMap[m["foodId"].toInt()] = m;
+        }
+
+        for (auto it = newMap.begin(); it != newMap.end(); ++it) {
+            int foodId = it.key();
+            int newQty = it.value()["quantity"].toInt();
+            if (!oldMap.contains(foodId)) {
+                if (!checkAndConsume(foodId, newQty))
+                    throw ValidateEx("Не удалось списать ингредиенты для блюда " + QString::number(foodId));
+                QSqlQuery insert;
+                insert.prepare("INSERT INTO OrderFood (OrderId, FoodId, Quantity, Price) VALUES (:oid, :fid, :qty, :price)");
+                insert.bindValue(":oid", OrderId);
+                insert.bindValue(":fid", foodId);
+                insert.bindValue(":qty", newQty);
+                insert.bindValue(":price", it.value()["price"].toDouble());
+                if (!insert.exec())
+                    throw DatabaseEx("Ошибка добавления позиции: " + insert.lastError().text());
+            } else {
+                int oldQty = oldMap[foodId]["quantity"].toInt();
+                if (newQty != oldQty) {
+                    if (!returnIngredients(foodId, oldQty))
+                        throw ValidateEx("Ошибка возврата ингредиентов");
+                    if (!checkAndConsume(foodId, newQty))
+                        throw ValidateEx("Ошибка списания ингредиентов при изменении количества");
+                    QSqlQuery update;
+                    update.prepare("UPDATE OrderFood SET Quantity = :qty WHERE OrderFoodId = :id");
+                    update.bindValue(":qty", newQty);
+                    update.bindValue(":id", oldMap[foodId]["orderFoodId"].toInt());
+                    if (!update.exec())
+                        throw DatabaseEx("Ошибка обновления количества: " + update.lastError().text());
+                }
+            }
+        }
+
+        for (auto it = oldMap.begin(); it != oldMap.end(); ++it) {
+            int foodId = it.key();
+            if (!newMap.contains(foodId)) {
+                int oldQty = it.value()["quantity"].toInt();
+                if (!returnIngredients(foodId, oldQty))
+                    throw ValidateEx("Ошибка возврата ингредиентов при удалении блюда");
+                QSqlQuery del;
+                del.prepare("DELETE FROM OrderFood WHERE OrderFoodId = :id");
+                del.bindValue(":id", it.value()["orderFoodId"].toInt());
+                if (!del.exec())
+                    throw DatabaseEx("Ошибка удаления позиции: " + del.lastError().text());
+            }
+        }
+
+        QSqlQuery sumQuery;
+        sumQuery.prepare("SELECT COALESCE(SUM(Quantity * Price), 0) FROM OrderFood WHERE OrderId = :oid");
+        sumQuery.bindValue(":oid", OrderId);
+        if (!sumQuery.exec() || !sumQuery.next())
+            throw DatabaseEx("Ошибка пересчёта суммы");
+        double newTotal = sumQuery.value(0).toDouble();
+        QSqlQuery updateTotal;
+        updateTotal.prepare("UPDATE Orders SET TotalCost = :total WHERE OrderId = :id");
+        updateTotal.bindValue(":total", newTotal);
+        updateTotal.bindValue(":id", OrderId);
+        if (!updateTotal.exec())
+            throw DatabaseEx("Ошибка обновления суммы заказа");
+
+        QSqlQuery updateStatus;
+        updateStatus.prepare("UPDATE Orders SET status = 'Готовится' WHERE OrderId = :id AND status != 'Закрыт'");
+        updateStatus.bindValue(":id", OrderId);
+        updateStatus.exec();
+
+        loger->info("Заказ " + QString::number(OrderId) + " синхронизирован, новая сумма " + QString::number(newTotal));
+        return true;
+    } catch (const DatabaseEx &e) {
+        loger->error(QString("syncOrderItems: ") + e.what());
+        emit errorOccurred(e.what());
+        return false;
+    } catch (const ValidateEx &e) {
+        loger->warning(QString("syncOrderItems: ") + e.what());
+        emit errorOccurred(e.what());
+        return false;
+    } catch (const std::exception &e) {
+        loger->error(QString("syncOrderItems: неизвестная ошибка - ") + e.what());
+        emit errorOccurred("Внутренняя ошибка при синхронизации заказа");
+        return false;
+    }
+}
+
+QVariantList DBWorker::getAllOrdersForReport()
+{
+    return getOrders(QString());
+}
+
+QVariantList DBWorker::getClosedOrders()
+{
+    return getOrders("Закрыт");
+}
+
+void DBWorker::updateConnectionParams(const QString &host, int port, const QString &dbName, const QString &user, const QString &password)
+{
+    db.setHostName(host);
+    db.setPort(port);
+    db.setDatabaseName(dbName);
+    db.setUserName(user);
+    db.setPassword(password);
+    loger->info("Параметры подключения к БД обновлены");
+}
+
+QVariantList DBWorker::getChecksByDateRange(const QString &from, const QString &to)
+{
+    try {
+        if (!db.isOpen())
+            throw DatabaseEx("База данных не открыта");
+
+        QVariantList result;
+        QDate fromDate = QDate::fromString(from, "yyyy-MM-dd");
+        QDate toDate = QDate::fromString(to, "yyyy-MM-dd");
+        if (!fromDate.isValid() || !toDate.isValid())
+            throw ValidateEx("Неверный формат даты. Используйте ГГГГ-ММ-ДД");
+
+        QSqlQuery query;
+        query.prepare(
+            "SELECT c.check_number, c.order_number, c.total_sum, c.created_at, "
+            "       o.TableNumber, u.FullName AS waiterName, o.OrderId "
+            "FROM Checks c "
+            "JOIN Orders o ON c.order_id = o.OrderId "
+            "LEFT JOIN Users u ON o.UserId = u.UserId "
+            "WHERE DATE(c.created_at) BETWEEN :from AND :to "
+            "ORDER BY c.created_at DESC"
+            );
+        query.bindValue(":from", fromDate);
+        query.bindValue(":to", toDate);
+        if (!query.exec())
+            throw DatabaseEx("Ошибка getChecksByDateRange: " + query.lastError().text());
+
+        while (query.next()) {
+            QVariantMap check;
+            check["checkNumber"] = query.value("check_number").toString();
+            check["orderNumber"] = query.value("order_number").toInt();
+            check["totalSum"] = query.value("total_sum").toDouble();
+            check["createdAt"] = query.value("created_at").toDateTime();
+            check["tableNumber"] = query.value("TableNumber").toInt();
+            check["waiterName"] = query.value("waiterName").toString();
+            check["orderId"] = query.value("OrderId").toInt();   // для просмотра чека
+            result.append(check);
+        }
+        loger->info("getChecksByDateRange: найдено " + QString::number(result.size()) + " чеков");
+        return result;
+    }
+    catch (const DatabaseEx &e) {
+        loger->error(QString("getChecksByDateRange: ") + e.what());
+        emit errorOccurred(e.what());
+        return QVariantList();
+    }
+    catch (const ValidateEx &e) {
+        loger->warning(QString("getChecksByDateRange: ") + e.what());
+        emit errorOccurred(e.what());
+        return QVariantList();
+    }
+    catch (const std::exception &e) {
+        loger->error(QString("getChecksByDateRange: неизвестная ошибка - ") + e.what());
+        emit errorOccurred("Внутренняя ошибка при загрузке чеков");
+        return QVariantList();
     }
 }

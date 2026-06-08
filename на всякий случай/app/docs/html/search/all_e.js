@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['updateproductquantity_0',['updateProductQuantity',['../class_d_b_worker.html#a8a566ccf8e3f88150d57bd5c2823ae71',1,'DBWorker::updateProductQuantity()'],['../class_tcp_client.html#a71b318c7621199531d0f6f7eea332db5',1,'TcpClient::updateProductQuantity()']]]
+  ['tcpclient_0',['TcpClient',['../md__r_e_a_d_m_e.html#autotoc_md9',1,'Модуль сетевого клиента (TcpClient)'],['../class_tcp_client.html',1,'TcpClient'],['../class_tcp_client.html#a17a79466e7001215a0d65941eb9fb863',1,'TcpClient::TcpClient()']]],
+  ['tcpserver_1',['TcpServer',['../class_tcp_server.html',1,'TcpServer'],['../class_tcp_server.html#a2983d809570e6c779cdcd653c9f7cd27',1,'TcpServer::TcpServer()']]],
+  ['tcpserver_20clientconnection_2',['Модуль сетевого сервера (TcpServer + ClientConnection)',['../md__r_e_a_d_m_e.html#autotoc_md10',1,'']]]
 ];

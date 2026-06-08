@@ -2,98 +2,113 @@
 \hypertarget{tcpclient_8h_source}{}\label{tcpclient_8h_source}\index{C:/Users/rodio/Desktop/W/Diplom/app/include/tcpclient.h@{C:/Users/rodio/Desktop/W/Diplom/app/include/tcpclient.h}}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TCPCLIENT\_H}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TCPCLIENT\_H}}
-\DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QTcpSocket>}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QVariantList>}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QVariantMap>}}
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}logs.h"{}}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}exceptions.h"{}}}
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_tcp_client_a17a79466e7001215a0d65941eb9fb863}{TcpClient}}\ :\ \textcolor{keyword}{public}\ QObject}
-\DoxyCodeLine{00020\ \{}
-\DoxyCodeLine{00021\ \ \ \ \ Q\_OBJECT}
-\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_tcp_client_a17a79466e7001215a0d65941eb9fb863}{TcpClient}}(\doxymbox{\hyperlink{class_logs}{Logs}}\ *logger,\ QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{00029\ \ \ \ \ \doxymbox{\hyperlink{class_tcp_client_a17a79466e7001215a0d65941eb9fb863}{\string~TcpClient}}();}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_a0c7f3e0bd5443584f03043dd3c739609}{connectToServer}}(\textcolor{keyword}{const}\ QString\ \&host,\ quint16\ port);}
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_tcp_client_a394bcc2931190371006b3c3a891a22e8}{disconnectFromServer}}();}
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_a9848295776a90b6de6acd2e32f69c7c5}{isConnected}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00049\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_a113cf296d06543a7440cd3c724bd1f4d}{checkUser}}(\textcolor{keyword}{const}\ QString\ \&login,\ \textcolor{keyword}{const}\ QString\ \&password);}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00052\ \ \ \ \ Q\_INVOKABLE\ QString\ \doxymbox{\hyperlink{class_tcp_client_af223cf222ebf139f47899151659f9f39}{getUserName}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00054\ \ \ \ \ Q\_INVOKABLE\ QString\ \doxymbox{\hyperlink{class_tcp_client_ae01560db21768a959e4ba34e63d5cc82}{getUserRole}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00056\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_tcp_client_a260b320ff0fae17714f42e918a10a131}{getUserId}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00062\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_tcp_client_a941f4186de07d27f2552089616d1b59f}{getFoods}}();}
-\DoxyCodeLine{00063\ }
-\DoxyCodeLine{00068\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_tcp_client_a5a2d322c628caf861931e3abba256c45}{getProducts}}();}
-\DoxyCodeLine{00069\ }
-\DoxyCodeLine{00076\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_a71b318c7621199531d0f6f7eea332db5}{updateProductQuantity}}(\textcolor{keywordtype}{int}\ productId,\ \textcolor{keywordtype}{int}\ newQuantity);}
-\DoxyCodeLine{00077\ }
-\DoxyCodeLine{00084\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_a267f834762cf8f2b324573de59e2fac8}{addProductQuantity}}(\textcolor{keywordtype}{int}\ productId,\ \textcolor{keywordtype}{int}\ delta);}
-\DoxyCodeLine{00085\ }
-\DoxyCodeLine{00094\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_tcp_client_ab558f612aa1701ac232c8fef56466cd0}{createOrder}}(\textcolor{keywordtype}{int}\ tableNumber,\ \textcolor{keywordtype}{int}\ userId,\ \textcolor{keyword}{const}\ QString\ \&specialRequests,\ \textcolor{keywordtype}{double}\ totalCost);}
-\DoxyCodeLine{00095\ }
-\DoxyCodeLine{00104\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_a56460b17d1c1348972e675fa4ca3a2dc}{addOrderItem}}(\textcolor{keywordtype}{int}\ orderId,\ \textcolor{keywordtype}{int}\ foodId,\ \textcolor{keywordtype}{int}\ quantity,\ \textcolor{keywordtype}{double}\ price);}
-\DoxyCodeLine{00105\ }
-\DoxyCodeLine{00112\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_ad4050d6beba03e7c132d747ee8c3e3d2}{checkAndConsume}}(\textcolor{keywordtype}{int}\ foodId,\ \textcolor{keywordtype}{int}\ quantity);}
-\DoxyCodeLine{00113\ }
-\DoxyCodeLine{00120\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_a3052b46770ba183481202436e4eb7f12}{returnIngredients}}(\textcolor{keywordtype}{int}\ foodId,\ \textcolor{keywordtype}{int}\ quantity);}
-\DoxyCodeLine{00121\ }
-\DoxyCodeLine{00128\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_tcp_client_a59a08ab013c53cfeed6da37a812a7b05}{getLowStockWarning}}(\textcolor{keywordtype}{int}\ foodId,\ \textcolor{keywordtype}{int}\ quantity);}
-\DoxyCodeLine{00129\ }
-\DoxyCodeLine{00139\ \ \ \ \ Q\_INVOKABLE\ QVariantMap\ \doxymbox{\hyperlink{class_tcp_client_a21e089583bb8a1359c6c96137cf4db90}{getReportRevenue}}(\textcolor{keyword}{const}\ QString\ \&from,\ \textcolor{keyword}{const}\ QString\ \&to,\ \textcolor{keywordtype}{int}\ dishId,\ \textcolor{keywordtype}{int}\ tableNumber,\ \textcolor{keywordtype}{int}\ waiterId);}
-\DoxyCodeLine{00140\ }
-\DoxyCodeLine{00150\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_tcp_client_a64b62b2a0ae6a316a286397a32494e3d}{getRevenueByDay}}(\textcolor{keyword}{const}\ QString\ \&from,\ \textcolor{keyword}{const}\ QString\ \&to,\ \textcolor{keywordtype}{int}\ dishId,\ \textcolor{keywordtype}{int}\ tableNumber,\ \textcolor{keywordtype}{int}\ waiterId);}
-\DoxyCodeLine{00151\ }
-\DoxyCodeLine{00158\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_tcp_client_a90d8a11aa1c97c64fdfebea43fd0644a}{getFoodPopularity}}(\textcolor{keyword}{const}\ QString\ \&from,\ \textcolor{keyword}{const}\ QString\ \&to);}
-\DoxyCodeLine{00159\ }
-\DoxyCodeLine{00161\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_tcp_client_a0d6677c1f99b7b29b1db8162a2efd034}{getReportLowStock}}();}
-\DoxyCodeLine{00162\ }
-\DoxyCodeLine{00164\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_tcp_client_a401df9d7d2be57835952653a1e2d5011}{getDishesList}}();}
-\DoxyCodeLine{00165\ }
-\DoxyCodeLine{00167\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_tcp_client_adafa84aeb93f442e9664aac7078485ef}{getWaitersList}}();}
-\DoxyCodeLine{00168\ }
-\DoxyCodeLine{00170\ \ \ \ \ Q\_INVOKABLE\ QStringList\ \doxymbox{\hyperlink{class_tcp_client_a0426d13f32105f9b7f3b8fe087e6174c}{getLocalIps}}();}
-\DoxyCodeLine{00171\ }
-\DoxyCodeLine{00178\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_ae0467557c39edf4df9bf3a5b1f12b2b9}{pingServer}}(\textcolor{keyword}{const}\ QString\ \&host,\ \textcolor{keywordtype}{int}\ port);}
-\DoxyCodeLine{00179\ }
-\DoxyCodeLine{00186\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_a328023748dba9e3d6432a229bc1c6ea5}{reconnect}}(\textcolor{keyword}{const}\ QString\ \&host,\ quint16\ port);}
-\DoxyCodeLine{00187\ }
-\DoxyCodeLine{00199\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_ac8a5c6cb1c47447da238ef43f4485179}{saveReportToCSV}}(\textcolor{keyword}{const}\ QString\ \&reportType,}
-\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QString\ \&from,}
-\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QString\ \&to,}
-\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dishId,}
-\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ tableNumber,}
-\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ waiterId,}
-\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QString\ \&fileName);}
-\DoxyCodeLine{00206\ }
-\DoxyCodeLine{00207\ signals:}
-\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_tcp_client_a254f1163107f12a902908aa7350d31d8}{errorOccurred}}(\textcolor{keyword}{const}\ QString\ \&message);}
-\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_tcp_client_a2a13e8742581e5c9e06f967b9566edbc}{dataChanged}}();}
-\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_tcp_client_aac3554342664b2932ff03423e720f190}{responseReceived}}(\textcolor{keywordtype}{int}\ requestId,\ \textcolor{keywordtype}{bool}\ success,\ \textcolor{keyword}{const}\ QVariantMap\ \&data);}
-\DoxyCodeLine{00214\ }
-\DoxyCodeLine{00215\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keywordtype}{int}\ sendRequest(\textcolor{keyword}{const}\ QString\ \&command,\ \textcolor{keyword}{const}\ QVariantMap\ \&data\ =\ QVariantMap());}
-\DoxyCodeLine{00223\ }
-\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordtype}{bool}\ waitForResponse(\textcolor{keywordtype}{int}\ requestId,\ QVariantMap\ \&resultData);}
-\DoxyCodeLine{00231\ }
-\DoxyCodeLine{00232\ \ \ \ \ QTcpSocket\ *socket;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00233\ \ \ \ \ QByteArray\ buffer;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00234\ \ \ \ \ \textcolor{keywordtype}{int}\ nextRequestId;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00235\ \ \ \ \ QMap<int,\ QVariantMap>\ pendingResponses;\ }
-\DoxyCodeLine{00236\ }
-\DoxyCodeLine{00237\ \ \ \ \ QString\ userName;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00238\ \ \ \ \ QString\ userRole;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordtype}{int}\ userId;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00240\ \ \ \ \ \doxymbox{\hyperlink{class_logs}{Logs}}\ *loger;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00241\ \};}
-\DoxyCodeLine{00242\ }
-\DoxyCodeLine{00243\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TCPCLIENT\_H}}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ TCPCLIENT\_H}}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ TCPCLIENT\_H}}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <QTcpSocket>}}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <QVariantList>}}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <QVariantMap>}}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}logs.h"{}}}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}exceptions.h"{}}}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00019}\doxymbox{\hyperlink{class_tcp_client}{00019}}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_tcp_client_a17a79466e7001215a0d65941eb9fb863}{TcpClient}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00020}00020\ \{}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00021}00021\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00022}00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00028}00028\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_tcp_client_a17a79466e7001215a0d65941eb9fb863}{TcpClient}}(\doxymbox{\hyperlink{class_logs}{Logs}}\ *logger,\ QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00029}00029\ \ \ \ \ \doxymbox{\hyperlink{class_tcp_client_a17a79466e7001215a0d65941eb9fb863}{\string~TcpClient}}();}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00037}00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_a0c7f3e0bd5443584f03043dd3c739609}{connectToServer}}(\textcolor{keyword}{const}\ QString\ \&host,\ quint16\ port);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_tcp_client_a394bcc2931190371006b3c3a891a22e8}{disconnectFromServer}}();}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00041}00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_a9848295776a90b6de6acd2e32f69c7c5}{isConnected}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00049}00049\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_a113cf296d06543a7440cd3c724bd1f4d}{checkUser}}(\textcolor{keyword}{const}\ QString\ \&login,\ \textcolor{keyword}{const}\ QString\ \&password);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00052}00052\ \ \ \ \ Q\_INVOKABLE\ QString\ \doxymbox{\hyperlink{class_tcp_client_af223cf222ebf139f47899151659f9f39}{getUserName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00054}00054\ \ \ \ \ Q\_INVOKABLE\ QString\ \doxymbox{\hyperlink{class_tcp_client_ae01560db21768a959e4ba34e63d5cc82}{getUserRole}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00056}00056\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_tcp_client_a260b320ff0fae17714f42e918a10a131}{getUserId}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00062}00062\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_tcp_client_a941f4186de07d27f2552089616d1b59f}{getFoods}}();}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00068}00068\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_tcp_client_a5a2d322c628caf861931e3abba256c45}{getProducts}}();}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00076}00076\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_a71b318c7621199531d0f6f7eea332db5}{updateProductQuantity}}(\textcolor{keywordtype}{int}\ productId,\ \textcolor{keywordtype}{int}\ newQuantity);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00084}00084\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_a267f834762cf8f2b324573de59e2fac8}{addProductQuantity}}(\textcolor{keywordtype}{int}\ productId,\ \textcolor{keywordtype}{int}\ delta);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00094}00094\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_tcp_client_ab558f612aa1701ac232c8fef56466cd0}{createOrder}}(\textcolor{keywordtype}{int}\ tableNumber,\ \textcolor{keywordtype}{int}\ userId,\ \textcolor{keyword}{const}\ QString\ \&specialRequests,\ \textcolor{keywordtype}{double}\ totalCost);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00104}00104\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_a56460b17d1c1348972e675fa4ca3a2dc}{addOrderItem}}(\textcolor{keywordtype}{int}\ orderId,\ \textcolor{keywordtype}{int}\ foodId,\ \textcolor{keywordtype}{int}\ quantity,\ \textcolor{keywordtype}{double}\ price);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00112}00112\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_ad4050d6beba03e7c132d747ee8c3e3d2}{checkAndConsume}}(\textcolor{keywordtype}{int}\ foodId,\ \textcolor{keywordtype}{int}\ quantity);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00120}00120\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_a3052b46770ba183481202436e4eb7f12}{returnIngredients}}(\textcolor{keywordtype}{int}\ foodId,\ \textcolor{keywordtype}{int}\ quantity);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00128}00128\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_tcp_client_a59a08ab013c53cfeed6da37a812a7b05}{getLowStockWarning}}(\textcolor{keywordtype}{int}\ foodId,\ \textcolor{keywordtype}{int}\ quantity);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00139}00139\ \ \ \ \ Q\_INVOKABLE\ QVariantMap\ \doxymbox{\hyperlink{class_tcp_client_a21e089583bb8a1359c6c96137cf4db90}{getReportRevenue}}(\textcolor{keyword}{const}\ QString\ \&from,\ \textcolor{keyword}{const}\ QString\ \&to,\ \textcolor{keywordtype}{int}\ dishId,\ \textcolor{keywordtype}{int}\ tableNumber,\ \textcolor{keywordtype}{int}\ waiterId);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00140}00140\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00150}00150\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_tcp_client_a64b62b2a0ae6a316a286397a32494e3d}{getRevenueByDay}}(\textcolor{keyword}{const}\ QString\ \&from,\ \textcolor{keyword}{const}\ QString\ \&to,\ \textcolor{keywordtype}{int}\ dishId,\ \textcolor{keywordtype}{int}\ tableNumber,\ \textcolor{keywordtype}{int}\ waiterId);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00158}00158\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_tcp_client_a90d8a11aa1c97c64fdfebea43fd0644a}{getFoodPopularity}}(\textcolor{keyword}{const}\ QString\ \&from,\ \textcolor{keyword}{const}\ QString\ \&to);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00161}00161\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_tcp_client_a0d6677c1f99b7b29b1db8162a2efd034}{getReportLowStock}}();}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00164}00164\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_tcp_client_a401df9d7d2be57835952653a1e2d5011}{getDishesList}}();}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00165}00165\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00167}00167\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_tcp_client_adafa84aeb93f442e9664aac7078485ef}{getWaitersList}}();}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00168}00168\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00170}00170\ \ \ \ \ Q\_INVOKABLE\ QStringList\ \doxymbox{\hyperlink{class_tcp_client_a0426d13f32105f9b7f3b8fe087e6174c}{getLocalIps}}();}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00178}00178\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_ae0467557c39edf4df9bf3a5b1f12b2b9}{pingServer}}(\textcolor{keyword}{const}\ QString\ \&host,\ \textcolor{keywordtype}{int}\ port);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00179}00179\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00186}00186\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_a328023748dba9e3d6432a229bc1c6ea5}{reconnect}}(\textcolor{keyword}{const}\ QString\ \&host,\ quint16\ port);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00187}00187\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00199}00199\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_ac8a5c6cb1c47447da238ef43f4485179}{saveReportToCSV}}(\textcolor{keyword}{const}\ QString\ \&reportType,}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QString\ \&from,}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QString\ \&to,}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dishId,}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ tableNumber,}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ waiterId,}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QString\ \&fileName);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00213}00213\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_tcp_client_a80b39eaeea1734ffbe54fe8ea1af437c}{getOrders}}(\textcolor{keyword}{const}\ QString\ \&status\ =\ QString());}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00221}00221\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_a9dd49f933d0ecd18d0ea08b803255ebc}{updateOrderStatus}}(\textcolor{keywordtype}{int}\ orderId,\ \textcolor{keyword}{const}\ QString\ \&newStatus);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00228}00228\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_tcp_client_afae4c678eb2204ecf2835bf948226983}{getOrderItems}}(\textcolor{keywordtype}{int}\ orderId);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00229}00229\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00237}00237\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_aa1be1c7a39d914fbfae11c6a58a71ce7}{closeOrder}}(\textcolor{keywordtype}{int}\ orderId,\ \textcolor{keywordtype}{double}\ totalSum,\ \textcolor{keyword}{const}\ QVariantList\ \&items);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00238}00238\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00244}00244\ \ \ \ \ Q\_INVOKABLE\ QVariantMap\ \doxymbox{\hyperlink{class_tcp_client_abbea02380a3b2bbdd301207476c8d89c}{getCheckByOrderId}}(\textcolor{keywordtype}{int}\ orderId);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00245}00245\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00252}00252\ \ \ \ \ Q\_INVOKABLE\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_tcp_client_acad2429dbd9663ce9e41e4aa727f6116}{syncOrderItems}}(\textcolor{keywordtype}{int}\ orderId,\ \textcolor{keyword}{const}\ QVariantList\ \&newItems);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00253}00253\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00258}00258\ \ \ \ \ Q\_INVOKABLE\ QVariantList\ \doxymbox{\hyperlink{class_tcp_client_ad02c74382a5b810a57049c176e87734a}{getClosedOrders}}();}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00259}00259\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00260}00260\ signals:}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00262}\doxymbox{\hyperlink{class_tcp_client_a254f1163107f12a902908aa7350d31d8}{00262}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_tcp_client_a254f1163107f12a902908aa7350d31d8}{errorOccurred}}(\textcolor{keyword}{const}\ QString\ \&message);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00264}\doxymbox{\hyperlink{class_tcp_client_a2a13e8742581e5c9e06f967b9566edbc}{00264}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_tcp_client_a2a13e8742581e5c9e06f967b9566edbc}{dataChanged}}();}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00266}\doxymbox{\hyperlink{class_tcp_client_aac3554342664b2932ff03423e720f190}{00266}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_tcp_client_aac3554342664b2932ff03423e720f190}{responseReceived}}(\textcolor{keywordtype}{int}\ requestId,\ \textcolor{keywordtype}{bool}\ success,\ \textcolor{keyword}{const}\ QVariantMap\ \&data);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00268}\doxymbox{\hyperlink{class_tcp_client_acd85c622837037109f90bff7719f6132}{00268}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_tcp_client_acd85c622837037109f90bff7719f6132}{ordersChanged}}();}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00269}00269\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00270}00270\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00277}00277\ \ \ \ \ \textcolor{keywordtype}{int}\ sendRequest(\textcolor{keyword}{const}\ QString\ \&command,\ \textcolor{keyword}{const}\ QVariantMap\ \&data\ =\ QVariantMap());}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00278}00278\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00285}00285\ \ \ \ \ \textcolor{keywordtype}{bool}\ waitForResponse(\textcolor{keywordtype}{int}\ requestId,\ QVariantMap\ \&resultData);}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00286}00286\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00287}00287\ \ \ \ \ QTcpSocket\ *socket;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00288}00288\ \ \ \ \ QByteArray\ buffer;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00289}00289\ \ \ \ \ \textcolor{keywordtype}{int}\ nextRequestId;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00290}00290\ \ \ \ \ QMap<int,\ QVariantMap>\ pendingResponses;\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00291}00291\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00292}00292\ \ \ \ \ QString\ userName;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00293}00293\ \ \ \ \ QString\ userRole;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00294}00294\ \ \ \ \ \textcolor{keywordtype}{int}\ userId;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00295}00295\ \ \ \ \ \doxymbox{\hyperlink{class_logs}{Logs}}\ *loger;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00296}00296\ \};}
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00297}00297\ }
+\DoxyCodeLine{\Hypertarget{tcpclient_8h_source_l00298}00298\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TCPCLIENT\_H}}
 
 \end{DoxyCode}

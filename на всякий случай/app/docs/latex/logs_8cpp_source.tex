@@ -1,0 +1,80 @@
+\doxysection{logs.\+cpp}
+\hypertarget{logs_8cpp_source}{}\label{logs_8cpp_source}\index{C:/Users/rodio/Desktop/W/Diplom/app/src/logs.cpp@{C:/Users/rodio/Desktop/W/Diplom/app/src/logs.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}logs.h"{}}}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <QDateTime>}}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <QDebug>}}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <QStandardPaths>}}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <QDir>}}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00007}00007\ Logs::Logs(QObject\ *parent)\ :\ QObject(parent),\ m\_logPath(\textcolor{stringliteral}{"{}logs.txt"{}})}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00009}00009\ \ \ \ \ openLogFile();}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00010}00010\ \}}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00012}00012\ Logs::\string~Logs()}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{if}\ (logFile.isOpen())}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ logFile.close();}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00016}00016\ \}}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00018}\doxymbox{\hyperlink{class_logs_ae959cb1ebf2b3606e1accb7fb451c2d0}{00018}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_logs_ae959cb1ebf2b3606e1accb7fb451c2d0}{Logs::setLogPath}}(\textcolor{keyword}{const}\ QString\ \&path)}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00019}00019\ \{}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_logPath\ ==\ path)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00021}00021\ \ \ \ \ m\_logPath\ =\ path;}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00022}00022\ \ \ \ \ openLogFile();}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00025}00025\ \textcolor{keywordtype}{void}\ Logs::openLogFile()}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00026}00026\ \{}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{if}\ (logFile.isOpen())}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ logFile.close();}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00030}00030\ \ \ \ \ QString\ actualPath\ =\ m\_logPath;}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00031}00031\ \ \ \ \ QFileInfo\ \doxymbox{\hyperlink{class_logs_aeab1a9b8f2dd7f50cd9890934d5adcb2}{info}}(actualPath);}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_logs_aeab1a9b8f2dd7f50cd9890934d5adcb2}{info}}.isRelative())\ \{}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ actualPath\ =\ QDir::current().absoluteFilePath(actualPath);}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00036}00036\ \ \ \ \ logFile.setFileName(actualPath);}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{if}\ (logFile.open(QIODevice::Append\ |\ QIODevice::Text))\ \{}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ out.setDevice(\&logFile);}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ writeLog(\textcolor{stringliteral}{"{}INF"{}},\ \textcolor{stringliteral}{"{}Лог-\/файл\ открыт:\ "{}}\ +\ actualPath);}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00043}00043\ \ \ \ \ QString\ fallbackDir\ =\ QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation);}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{if}\ (fallbackDir.isEmpty())}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ fallbackDir\ =\ QDir::tempPath();}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ QDir().mkpath(fallbackDir);}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00049}00049\ \ \ \ \ QString\ fallbackPath\ =\ fallbackDir\ +\ \textcolor{stringliteral}{"{}/logs.txt"{}};}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00050}00050\ \ \ \ \ logFile.setFileName(fallbackPath);}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{if}\ (logFile.open(QIODevice::Append\ |\ QIODevice::Text))\ \{}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ out.setDevice(\&logFile);}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ writeLog(\textcolor{stringliteral}{"{}WARN"{}},\ \textcolor{stringliteral}{"{}Не\ удалось\ открыть\ лог\ по\ пути\ "{}}\ +\ actualPath\ +\ \textcolor{stringliteral}{"{},\ используется\ "{}}\ +\ fallbackPath);}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00054}00054\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ qWarning()\ <<\ \textcolor{stringliteral}{"{}Критическая\ ошибка:\ не\ удалось\ открыть\ лог-\/файл\ даже\ в\ системной\ папке"{}};}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00057}00057\ \}}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00059}00059\ \textcolor{keywordtype}{void}\ Logs::writeLog(\textcolor{keyword}{const}\ QString\ \&level,\ \textcolor{keyword}{const}\ QString\ \&message)}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00060}00060\ \{}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{if}\ (!logFile.isOpen())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00062}00062\ \ \ \ \ QString\ timestamp\ =\ QDateTime::currentDateTime().toString(\textcolor{stringliteral}{"{}yyyy-\/MM-\/dd\ hh:mm:ss"{}});}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00063}00063\ \ \ \ \ QString\ line\ =\ QString(\textcolor{stringliteral}{"{}\%1\ [\%2]\ \%3\(\backslash\)n"{}}).arg(timestamp,\ level,\ message);}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00064}00064\ \ \ \ \ out\ <<\ line;}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00065}00065\ \ \ \ \ out.flush();}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00067}00067\ \ \ \ \ \textcolor{keywordflow}{if}\ (level\ ==\ \textcolor{stringliteral}{"{}ERR"{}})\ qCritical()\ <<\ message;}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00068}00068\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (level\ ==\ \textcolor{stringliteral}{"{}WARN"{}})\ qWarning()\ <<\ message;}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00069}00069\ \ \ \ \ \textcolor{keywordflow}{else}\ qInfo()\ <<\ message;}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00070}00070\ \}}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00072}\doxymbox{\hyperlink{class_logs_aeab1a9b8f2dd7f50cd9890934d5adcb2}{00072}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_logs_aeab1a9b8f2dd7f50cd9890934d5adcb2}{Logs::info}}(\textcolor{keyword}{const}\ QString\ \&msg)\ \ \ \ \{\ writeLog(\textcolor{stringliteral}{"{}INF"{}},\ msg);\ \}}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00073}\doxymbox{\hyperlink{class_logs_ac0ae3f6324e2473643f7dcd794209a7d}{00073}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_logs_ac0ae3f6324e2473643f7dcd794209a7d}{Logs::warning}}(\textcolor{keyword}{const}\ QString\ \&msg)\ \{\ writeLog(\textcolor{stringliteral}{"{}WARN"{}},\ msg);\ \}}
+\DoxyCodeLine{\Hypertarget{logs_8cpp_source_l00074}\doxymbox{\hyperlink{class_logs_a3f49ea6b6d3c9c372cf5d31a928505a4}{00074}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_logs_a3f49ea6b6d3c9c372cf5d31a928505a4}{Logs::error}}(\textcolor{keyword}{const}\ QString\ \&msg)\ \ \ \{\ writeLog(\textcolor{stringliteral}{"{}ERR"{}},\ msg);\ \}}
+
+\end{DoxyCode}

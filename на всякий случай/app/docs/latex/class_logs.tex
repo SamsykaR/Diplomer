@@ -1,4 +1,4 @@
-\doxysection{Logs Class Reference}
+\doxysection{Класс Logs}
 \hypertarget{class_logs}{}\label{class_logs}\index{Logs@{Logs}}
 
 
@@ -9,39 +9,92 @@
 
 {\ttfamily \+\#include $<$logs.\+h$>$}
 
-Inheritance diagram for Logs:\+\begin{figure}[H]
+Граф наследования:\+Logs:\+\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{class_logs}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Public Member Functions}
+\doxysubsubsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_logs_adbe73026f6bf43e4f806126e7b8dcb8e}\label{class_logs_adbe73026f6bf43e4f806126e7b8dcb8e} 
-{\bfseries Logs} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\doxymbox{\hyperlink{class_logs_adbe73026f6bf43e4f806126e7b8dcb8e}{Logs}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
 \item 
-\Hypertarget{class_logs_aeab1a9b8f2dd7f50cd9890934d5adcb2}\label{class_logs_aeab1a9b8f2dd7f50cd9890934d5adcb2} 
-Q\+\_\+\+INVOKABLE void {\bfseries info} (const QString \&msg)
+Q\+\_\+\+INVOKABLE void \doxymbox{\hyperlink{class_logs_aeab1a9b8f2dd7f50cd9890934d5adcb2}{info}} (const QString \&msg)
 \begin{DoxyCompactList}\small\item\em Записывает информационное сообщение. \end{DoxyCompactList}\item 
-\Hypertarget{class_logs_ac0ae3f6324e2473643f7dcd794209a7d}\label{class_logs_ac0ae3f6324e2473643f7dcd794209a7d} 
-Q\+\_\+\+INVOKABLE void {\bfseries warning} (const QString \&msg)
+Q\+\_\+\+INVOKABLE void \doxymbox{\hyperlink{class_logs_ac0ae3f6324e2473643f7dcd794209a7d}{warning}} (const QString \&msg)
 \begin{DoxyCompactList}\small\item\em Записывает предупреждение. \end{DoxyCompactList}\item 
-\Hypertarget{class_logs_a3f49ea6b6d3c9c372cf5d31a928505a4}\label{class_logs_a3f49ea6b6d3c9c372cf5d31a928505a4} 
-Q\+\_\+\+INVOKABLE void {\bfseries error} (const QString \&msg)
+Q\+\_\+\+INVOKABLE void \doxymbox{\hyperlink{class_logs_a3f49ea6b6d3c9c372cf5d31a928505a4}{error}} (const QString \&msg)
 \begin{DoxyCompactList}\small\item\em Записывает сообщение об ошибке. \end{DoxyCompactList}\item 
 Q\+\_\+\+INVOKABLE void \doxymbox{\hyperlink{class_logs_ae959cb1ebf2b3606e1accb7fb451c2d0}{set\+Log\+Path}} (const QString \&path)
 \begin{DoxyCompactList}\small\item\em Устанавливает путь к лог-\/файлу и переоткрывает его. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Подробное описание}
 Сервис логирования сообщений в файл. 
 
 Записывает сообщения с меткой времени и уровнем (INF, WARN, ERR). Если основной файл не может быть открыт, использует резервный путь в директории App\+Local\+Data\+Location. 
 
+См. определение в файле \doxymbox{\hyperlink{logs_8h_source}{logs.\+h}} строка \doxymbox{\hyperlink{logs_8h_source_l00016}{16}}
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_logs_doc-constructors}
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_logs_adbe73026f6bf43e4f806126e7b8dcb8e}\index{Logs@{Logs}!Logs@{Logs}}
+\index{Logs@{Logs}!Logs@{Logs}}
+\doxysubsubsection{\texorpdfstring{Logs()}{Logs()}}
+{\footnotesize\ttfamily \label{class_logs_adbe73026f6bf43e4f806126e7b8dcb8e} 
+Logs::\+\+Logs (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{logs_8cpp_source}{logs.\+cpp}} строка \doxymbox{\hyperlink{logs_8cpp_source_l00007}{7}}
+
+\Hypertarget{class_logs_a6227976848fb64144ff93587479df43d}\index{Logs@{Logs}!````~Logs@{\texorpdfstring{$\sim$}{\string~}Logs}}
+\index{````~Logs@{\texorpdfstring{$\sim$}{\string~}Logs}!Logs@{Logs}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Logs()}{\string~Logs()}}
+{\footnotesize\ttfamily \label{class_logs_a6227976848fb64144ff93587479df43d} 
+Logs::\+\texorpdfstring{$\sim$}{\string~}\+Logs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+См. определение в файле \doxymbox{\hyperlink{logs_8cpp_source}{logs.\+cpp}} строка \doxymbox{\hyperlink{logs_8cpp_source_l00012}{12}}
+
+
+
 \label{doc-func-members}
 \Hypertarget{class_logs_doc-func-members}
-\doxysubsection{Member Function Documentation}
+\doxysubsection{Методы}
+\Hypertarget{class_logs_a3f49ea6b6d3c9c372cf5d31a928505a4}\index{Logs@{Logs}!error@{error}}
+\index{error@{error}!Logs@{Logs}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily \label{class_logs_a3f49ea6b6d3c9c372cf5d31a928505a4} 
+void Logs::\+error (\begin{DoxyParamCaption}\item[{const QString \&}]{msg}{}\end{DoxyParamCaption})}
+
+
+
+Записывает сообщение об ошибке. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{logs_8cpp_source}{logs.\+cpp}} строка \doxymbox{\hyperlink{logs_8cpp_source_l00074}{74}}
+
+\Hypertarget{class_logs_aeab1a9b8f2dd7f50cd9890934d5adcb2}\index{Logs@{Logs}!info@{info}}
+\index{info@{info}!Logs@{Logs}}
+\doxysubsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily \label{class_logs_aeab1a9b8f2dd7f50cd9890934d5adcb2} 
+void Logs::\+info (\begin{DoxyParamCaption}\item[{const QString \&}]{msg}{}\end{DoxyParamCaption})}
+
+
+
+Записывает информационное сообщение. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{logs_8cpp_source}{logs.\+cpp}} строка \doxymbox{\hyperlink{logs_8cpp_source_l00072}{72}}
+
 \Hypertarget{class_logs_ae959cb1ebf2b3606e1accb7fb451c2d0}\index{Logs@{Logs}!setLogPath@{setLogPath}}
 \index{setLogPath@{setLogPath}!Logs@{Logs}}
 \doxysubsubsection{\texorpdfstring{setLogPath()}{setLogPath()}}
@@ -53,7 +106,25 @@ void Logs::\+set\+Log\+Path (\begin{DoxyParamCaption}\item[{const QString \&}]{p
 Устанавливает путь к лог-\/файлу и переоткрывает его. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em path} & Новый путь. \\
 \hline
 \end{DoxyParams}
+
+
+См. определение в файле \doxymbox{\hyperlink{logs_8cpp_source}{logs.\+cpp}} строка \doxymbox{\hyperlink{logs_8cpp_source_l00018}{18}}
+
+\Hypertarget{class_logs_ac0ae3f6324e2473643f7dcd794209a7d}\index{Logs@{Logs}!warning@{warning}}
+\index{warning@{warning}!Logs@{Logs}}
+\doxysubsubsection{\texorpdfstring{warning()}{warning()}}
+{\footnotesize\ttfamily \label{class_logs_ac0ae3f6324e2473643f7dcd794209a7d} 
+void Logs::\+warning (\begin{DoxyParamCaption}\item[{const QString \&}]{msg}{}\end{DoxyParamCaption})}
+
+
+
+Записывает предупреждение. 
+
+
+
+См. определение в файле \doxymbox{\hyperlink{logs_8cpp_source}{logs.\+cpp}} строка \doxymbox{\hyperlink{logs_8cpp_source_l00073}{73}}
+
